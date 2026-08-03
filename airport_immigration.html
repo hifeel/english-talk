@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛂 입국 심사 - 공항 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="airport.html" class="back-link">← 공항 목록으로</a>
+            <h1>🛂 입국 심사 (Immigration)</h1>
+            <p>여권 검사, 방문 목적, 체류 기간</p>
+        </header>
+
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+            </div>
+            <div class="play-controls">
+                <button id="repeatSentenceBtn" class="repeat-btn" onclick="toggleRepeatSentence()">문장 반복</button>
+                <button id="repeatFullBtn" class="repeat-btn" onclick="toggleRepeatFull()">전체 반복</button>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 1: Passport & Purpose -->
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Immigration Officer</div>
+                <div class="english">Good afternoon. May I see your passport, please?</div>
+                <div class="korean">안녕하십니까. 여권을 보여주시겠습니까?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_1.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Traveler</div>
+                <div class="english">Here it is. I'm traveling on a tourist visa.</div>
+                <div class="korean">여기 있습니다. 관광 비자로 여행 중입니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_2.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Immigration Officer</div>
+                <div class="english">What is the purpose of your visit to the United States?</div>
+                <div class="korean">미국 방문 목적이 무엇입니까?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_3.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Traveler</div>
+                <div class="english">I'm here for a two-week vacation. I plan to visit New York and Los Angeles.</div>
+                <div class="korean">2주간의 휴가차 왔습니다. 뉴욕과 로스앤젤레스를 방문할 계획입니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_4.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Immigration Officer</div>
+                <div class="english">Do you have a return ticket?</div>
+                <div class="korean">귀국 항공권이 있습니까?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_5.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Traveler</div>
+                <div class="english">Yes, I have a confirmed return flight on the fifteenth of next month.</div>
+                <div class="korean">네, 다음 달 15일 확정된 귀국 항공편이 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_6.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Accommodation & Funds -->
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Immigration Officer</div>
+                <div class="english">Where will you be staying during your visit?</div>
+                <div class="korean">방문 기간 중 어디에 머무실 겁니까?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_7.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Traveler</div>
+                <div class="english">I have a hotel reservation in Manhattan for the first week, then I'm staying with a friend in Los Angeles.</div>
+                <div class="korean">첫 주는 맨해튼 호텔 예약이 있고, 그 다음은 로스앤젤레스에 있는 친구 집에 머물 예정입니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_8.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Immigration Officer</div>
+                <div class="english">Do you have enough funds for your stay?</div>
+                <div class="korean">체류 기간 동안 충분한 자금이 있습니까?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_9.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Traveler</div>
+                <div class="english">Yes, I have a credit card and sufficient cash for the entire trip.</div>
+                <div class="korean">네, 신용카드와 전체 여행에 필요한 현금이 충분합니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_10.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Previous Visit & Declaration -->
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Immigration Officer</div>
+                <div class="english">Have you visited this country before?</div>
+                <div class="korean">이전에 이 나라를 방문한 적이 있습니까?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_11.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Traveler</div>
+                <div class="english">Yes, I came here three years ago for a business conference.</div>
+                <div class="korean">네, 3년 전에 비즈니스 컨퍼런스를 위해 방문한 적이 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_12.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Immigration Officer</div>
+                <div class="english">Do you have anything to declare? Any food, alcohol, or large amounts of cash?</div>
+                <div class="korean">신고할 것이 있습니까? 음식이나 주류, 또는 큰 금액의 현금이 있습니까?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_13.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Traveler</div>
+                <div class="english">No, I only have personal items and a small amount of duty-free purchases.</div>
+                <div class="korean">아니요, 개인 소지품과 소량의 면세 구매품만 가지고 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_14.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Occupation & Duration -->
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Immigration Officer</div>
+                <div class="english">What do you do for a living back home?</div>
+                <div class="korean">원래 나라에서 어떤 직업을 갖고 계십니까?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_15.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Traveler</div>
+                <div class="english">I'm a software engineer at a technology company in Seoul.</div>
+                <div class="korean">서울의 한 기술 회사에서 소프트웨어 엔지니어로 일하고 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_16.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Immigration Officer</div>
+                <div class="english">How long do you plan to stay in the United States?</div>
+                <div class="korean">미국에 얼마나 체류하실 계획입니까?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_17.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Traveler</div>
+                <div class="english">Exactly fourteen days. I'll be departing on the twentieth of this month.</div>
+                <div class="korean">정확히 14일입니다. 이달 20일에 출국할 예정입니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_18.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Documents & Welcome -->
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Immigration Officer</div>
+                <div class="english">I see. Do you have your accommodation details?</div>
+                <div class="korean">알겠습니다. 숙소 관련 서류가 있습니까?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_19.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Traveler</div>
+                <div class="english">Yes, here's my hotel confirmation email and my friend's invitation letter.</div>
+                <div class="korean">네, 호텔 예약 확인 이메일과 친구의 초대장이 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_20.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Immigration Officer</div>
+                <div class="english">Everything looks good. Welcome to the United States. Enjoy your stay.</div>
+                <div class="korean">모두 확인되었습니다. 미국에 오신 것을 환영합니다. 좋은 시간 보내세요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_21.mp3"></audio>
+                </div>
+            </div>
+            <div class="dialogue">
+                <div class="speaker">Traveler</div>
+                <div class="english">Thank you very much! Have a great day.</div>
+                <div class="korean">대단히 감사합니다! 좋은 하루 보내세요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_immigration_22.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+
+    <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
+</body>
+</html>

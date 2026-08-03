@@ -1,4 +1,35 @@
-/* Control bar layout */
+/* Google search button - small */
+.google-search-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+    z-index: 10;
+    padding: 0;
+}
+
+.google-search-btn:hover {
+    background: #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transform: scale(1.1);
+}
+
+.google-search-btn img {
+    width: 14px;
+    height: 14px;
+}
+
+/* Control bar */
 .control-bar {
     display: flex;
     justify-content: space-between;
@@ -8,10 +39,9 @@
     gap: 10px;
 }
 
-/* Toggle buttons - left side */
 .toggle-container {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     flex-wrap: wrap;
 }
 
@@ -19,10 +49,10 @@
     background: rgba(255,255,255,0.2);
     color: white;
     border: 2px solid rgba(255,255,255,0.5);
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 6px 14px;
+    border-radius: 16px;
     cursor: pointer;
-    font-size: 0.85em;
+    font-size: 0.8em;
     transition: all 0.2s;
 }
 
@@ -36,10 +66,9 @@
     border-color: white;
 }
 
-/* Play controls - right side */
 .play-controls {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     align-items: center;
 }
 
@@ -47,40 +76,36 @@
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
-    padding: 10px 24px;
-    font-size: 1em;
-    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 0.9em;
+    border-radius: 16px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 3px 12px rgba(102, 126, 234, 0.4);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .play-all-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
-}
-
-.play-all-btn:active {
-    transform: translateY(0);
+    box-shadow: 0 5px 16px rgba(102, 126, 234, 0.5);
 }
 
 .play-all-progress {
-    font-size: 0.85em;
+    font-size: 0.8em;
     color: white;
     background: rgba(255,255,255,0.2);
-    padding: 6px 14px;
-    border-radius: 15px;
+    padding: 5px 12px;
+    border-radius: 12px;
 }
 
-/* Repeat buttons */
+/* Single repeat button */
 .repeat-btn {
     background: rgba(255,255,255,0.2);
     color: white;
     border: 2px solid rgba(255,255,255,0.5);
-    padding: 8px 14px;
-    border-radius: 20px;
+    padding: 6px 14px;
+    border-radius: 16px;
     cursor: pointer;
-    font-size: 0.85em;
+    font-size: 0.8em;
     transition: all 0.2s;
 }
 
@@ -94,21 +119,21 @@
     border-color: #ff9800;
 }
 
-/* Hide classes */
-.hide-english .english { display: none; }
-.hide-korean .korean { display: none; }
-.hide-speaker .speaker { display: none; }
-
-/* Dialogue transitions */
+/* Dialogue */
 .dialogue {
+    position: relative;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-/* Playing highlight */
+.dialogue:hover {
+    background-color: #e8f4fd;
+}
+
 .dialogue.playing {
     background: #e8f5e9;
     border-left-color: #4caf50;
-    box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+    box-shadow: 0 0 12px rgba(76, 175, 80, 0.3);
 }
 
 .dialogue.playing .speaker {

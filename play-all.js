@@ -2,8 +2,7 @@
 let isPlaying = false;
 let currentAudioIndex = 0;
 let audioElements = [];
-let repeatSentence = false;
-let repeatFull = false;
+let repeatMode = false;
 
 function initAudioList() {
     audioElements = Array.from(document.querySelectorAll('audio'));
@@ -31,8 +30,7 @@ function startAll() {
 
 function playNext() {
     if (!isPlaying || currentAudioIndex >= audioElements.length) {
-        if (repeatFull && isPlaying) {
-            // Repeat full dialogue
+        if (repeatMode && isPlaying) {
             currentAudioIndex = 0;
             playNext();
         } else {
@@ -48,15 +46,8 @@ function playNext() {
     
     audio.onended = function() {
         unhighlightDialogue(currentAudioIndex);
-        
-        if (repeatSentence && isPlaying) {
-            // Repeat same sentence
-            audio.currentTime = 0;
-            audio.play();
-        } else {
-            currentAudioIndex++;
-            playNext();
-        }
+        currentAudioIndex++;
+        playNext();
     };
     
     audio.currentTime = 0;
@@ -102,39 +93,12 @@ function unhighlightDialogue(index) {
     }
 }
 
-// Repeat toggle functions
-function toggleRepeatSentence() {
-    repeatSentence = !repeatSentence;
-    const btn = document.getElementById('repeatSentenceBtn');
+// Single repeat toggle
+function toggleRepeat() {
+    repeatMode = !repeatMode;
+    const btn = document.getElementById('repeatBtn');
     if (btn) {
-        btn.classList.toggle('active', repeatSentence);
-        btn.textContent = repeatSentence ? '문장 반복 ON' : '문장 반복';
-    }
-    // If sentence repeat is on, turn off full repeat
-    if (repeatSentence) {
-        repeatFull = false;
-        const fullBtn = document.getElementById('repeatFullBtn');
-        if (fullBtn) {
-            fullBtn.classList.remove('active');
-            fullBtn.textContent = '전체 반복';
-        }
-    }
-}
-
-function toggleRepeatFull() {
-    repeatFull = !repeatFull;
-    const btn = document.getElementById('repeatFullBtn');
-    if (btn) {
-        btn.classList.toggle('active', repeatFull);
-        btn.textContent = repeatFull ? '전체 반복 ON' : '전체 반복';
-    }
-    // If full repeat is on, turn off sentence repeat
-    if (repeatFull) {
-        repeatSentence = false;
-        const sentBtn = document.getElementById('repeatSentenceBtn');
-        if (sentBtn) {
-            sentBtn.classList.remove('active');
-            sentBtn.textContent = '문장 반복';
-        }
+        btn.classList.toggle('active', repeatMode);
+        btn.textContent = repeatMode ? '반복 ON' : '반복';
     }
 }
