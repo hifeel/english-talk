@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨 응급 상황 - 병원 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="hospital.html" class="back-link">← 병원 목록으로</a>
+            <h1>🚨 응급 상황 (Emergency)</h1>
+            <p>긴급 상황 대처</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 4</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Patient</div>
+                <div class="english">I need to see a doctor immediately.</div>
+                <div class="korean">즉시 진료를 받아야 합니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hospital_emergency_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Patient</div>
+                <div class="english">It's an emergency. My chest hurts.</div>
+                <div class="korean">응급상황입니다. 가슴이 아파요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hospital_emergency_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Patient</div>
+                <div class="english">Please call an ambulance.</div>
+                <div class="korean">구급차를 불러주세요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hospital_emergency_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Patient</div>
+                <div class="english">I'm having trouble breathing.</div>
+                <div class="korean">호흡이 힘듭니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hospital_emergency_4.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>

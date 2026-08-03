@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😤 불만 접수 - 호텔 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="hotel.html" class="back-link">← 호텔 목록으로</a>
+            <h1>😤 불만 접수 (Complaints)</h1>
+            <p>호텔 문제 해결을 위한 영어 회화</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 8</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="scenario-title">🔇 시끄러운 방 (Noisy Room)</div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Excuse me, I'd like to report a problem. The room next door is extremely noisy. I can hear loud music and people talking.</div>
+                <div class="korean">실례합니다, 문제를 보고하고 싶습니다. 옆방이 너무 시끄럽습니다. 큰 음악 소리와 사람들이 말하는 소리가 들려요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_complaint_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">I'm very sorry about the disturbance. Let me contact the guests next door right away and ask them to keep the noise down.</div>
+                <div class="korean">소음으로 불편을 드려서 정말 죄송합니다. 옆방 투숙객에게 즉시 연락하여 소음을 줄여달라고 요청하겠습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_complaint_2.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="scenario-title">🧹 더러운 욕실 (Dirty Bathroom)</div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Hello, I just checked into my room and the bathroom is not clean. There are stains on the towels and the floor is sticky.</div>
+                <div class="korean">안녕하세요, 방에 체크인했는데 욕실이 깨끗하지 않습니다. 수건에 얼룩이 있고 바닥이 끈적거려요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_complaint_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">That is unacceptable and I sincerely apologize. I'll send housekeeping to your room immediately and we'll replace all the towels.</div>
+                <div class="korean">감히 용납할 수 없는 상황이며 진심으로 사과드립니다. 즉시 하우스키핑을 방으로 보내고 모든 수건을 교체하겠습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_complaint_4.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="scenario-title">❄️ 고장난 에어컨 (Broken AC)</div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Hi, the air conditioning in my room isn't working. It's been blowing warm air all afternoon and it's really hot in here.</div>
+                <div class="korean">안녕하세요, 방의 에어컨이 작동하지 않습니다. 오후 내내 따뜻한 바람이 나오고 있어서 정말 더워요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_complaint_5.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">I understand how uncomfortable that must be. I'll send a maintenance technician to your room right away to fix the AC.</div>
+                <div class="korean">얼마나 불편하실지 이해합니다. 즉시 정비 기술자를 방으로 보내 에어컨을 수리하겠습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_complaint_6.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="scenario-title">📶 느린 와이파이 (Slow WiFi)</div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Excuse me, the WiFi in my room is very slow. I've been trying to join a video call for work but the connection keeps dropping.</div>
+                <div class="korean">실례합니다, 방의 와이파이가 매우 느립니다. 업무용 화상 회의에 참석하려고 했는데 연결이 계속 끊겨요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_complaint_7.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">I apologize for the inconvenience. Let me reset the router for your floor. If the problem persists, please call the front desk again.</div>
+                <div class="korean">불편을 드려서 죄송합니다. 해당 층의 라우터를 재설정하겠습니다. 문제가 지속되면 프런트 데스크로 다시 전화해주세요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_complaint_8.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>
