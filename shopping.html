@@ -14,6 +14,17 @@
             <p>옷 고르기, 가격 확인, 결제</p>
         </header>
         
+        <!-- Play All Button -->
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 18</span>
+            </div>
+        </div>
+        
         <!-- Shopping Dialogues -->
         <div class="scenario">
             <div class="scenario-title">
@@ -210,5 +221,111 @@
             <p>제작: Hermes Agent</p>
         </footer>
     </div>
+    
+    <script>
+        let isPlaying = false;
+        let currentAudioIndex = 0;
+        let audioElements = [];
+        
+        // Get all audio elements in order
+        function initAudioList() {
+            audioElements = Array.from(document.querySelectorAll('audio'));
+        }
+        
+        // Toggle play all
+        function togglePlayAll() {
+            if (isPlaying) {
+                stopAll();
+            } else {
+                startAll();
+            }
+        }
+        
+        // Start playing all
+        function startAll() {
+            initAudioList();
+            isPlaying = true;
+            currentAudioIndex = 0;
+            
+            // Update UI
+            document.getElementById('playAllIcon').textContent = '⏸️';
+            document.getElementById('playAllText').textContent = '일시정지';
+            document.getElementById('playAllProgress').style.display = 'inline-block';
+            
+            playNext();
+        }
+        
+        // Play next audio
+        function playNext() {
+            if (!isPlaying || currentAudioIndex >= audioElements.length) {
+                stopAll();
+                return;
+            }
+            
+            // Update progress
+            updateProgress();
+            
+            // Highlight current dialogue
+            highlightDialogue(currentAudioIndex);
+            
+            const audio = audioElements[currentAudioIndex];
+            
+            // When audio ends, play next
+            audio.onended = function() {
+                unhighlightDialogue(currentAudioIndex);
+                currentAudioIndex++;
+                playNext();
+            };
+            
+            // Play current audio
+            audio.currentTime = 0;
+            audio.play();
+        }
+        
+        // Stop all
+        function stopAll() {
+            isPlaying = false;
+            
+            // Stop current audio
+            if (currentAudioIndex < audioElements.length) {
+                audioElements[currentAudioIndex].pause();
+                audioElements[currentAudioIndex].currentTime = 0;
+            }
+            
+            // Remove all highlights
+            document.querySelectorAll('.dialogue').forEach(d => {
+                d.classList.remove('playing');
+            });
+            
+            // Update UI
+            document.getElementById('playAllIcon').textContent = '▶️';
+            document.getElementById('playAllText').textContent = '전체 재생';
+            document.getElementById('playAllProgress').style.display = 'none';
+        }
+        
+        // Update progress display
+        function updateProgress() {
+            const total = audioElements.length;
+            const current = currentAudioIndex + 1;
+            document.getElementById('progressText').textContent = `${current} / ${total}`;
+        }
+        
+        // Highlight current dialogue
+        function highlightDialogue(index) {
+            const dialogue = audioElements[index].closest('.dialogue');
+            if (dialogue) {
+                dialogue.classList.add('playing');
+                dialogue.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+        
+        // Remove highlight from dialogue
+        function unhighlightDialogue(index) {
+            const dialogue = audioElements[index].closest('.dialogue');
+            if (dialogue) {
+                dialogue.classList.remove('playing');
+            }
+        }
+    </script>
 </body>
 </html>

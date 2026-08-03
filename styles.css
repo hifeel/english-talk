@@ -104,6 +104,54 @@ audio {
     border-radius: 18px;
 }
 
+/* Play All Button */
+.play-all-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.play-all-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.play-all-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.play-all-btn:active {
+    transform: translateY(0);
+}
+
+.play-all-progress {
+    margin-top: 15px;
+    font-size: 1em;
+    color: white;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Playing highlight */
+.dialogue.playing {
+    background: #e8f5e9;
+    border-left-color: #4caf50;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+}
+
+.dialogue.playing .speaker {
+    color: #4caf50;
+}
+
 footer {
     text-align: center;
     color: white;
