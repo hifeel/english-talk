@@ -16,15 +16,16 @@
         </header>
 
         <!-- Control Bar -->
+        
+        <!-- Control Bar -->
         <div class="control-bar">
             <div class="toggle-container">
                 <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
                 <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
                 <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복</button>
             </div>
             <div class="play-controls">
-                <button id="repeatSentenceBtn" class="repeat-btn" onclick="toggleRepeatSentence()">문장 반복</button>
-                <button id="repeatFullBtn" class="repeat-btn" onclick="toggleRepeatFull()">전체 반복</button>
                 <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
                     <span id="playAllIcon">▶️</span>
                     <span id="playAllText">전체 재생</span>
@@ -34,9 +35,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- Dialogue 1: Passport & Purpose -->
-        <div class="scenario">
+<div class="scenario">
             <div class="dialogue">
                 <div class="speaker">Immigration Officer</div>
                 <div class="english">Good afternoon. May I see your passport, please?</div>
