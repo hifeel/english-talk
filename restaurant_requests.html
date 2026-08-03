@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛎️ 요청 - 레스토랑 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="restaurant.html" class="back-link">← 레스토랑 목록으로</a>
+            <h1>🛎️ 요청 (Requests)</h1>
+            <p>추가 요청, 서비스 요청</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 3</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Excuse me, could I get some extra napkins, please?</div>
+                <div class="korean">실례합니다, 냅킨 좀 더 주실 수 있을까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_9.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Of course. Is there anything else you need?</div>
+                <div class="korean">물론이죠. 다른 필요한 것은 없으신가요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_10.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">No, that's all. Thank you very much.</div>
+                <div class="korean">아니요, 그게 다입니다. 대단히 감사합니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_11.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚌 버스 - 교통편 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="transport.html" class="back-link">← 교통편 목록으로</a>
+            <h1>🚌 버스 (Bus)</h1>
+            <p>버스 탑승, 정류장 안내, 요금 지불</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 3</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Does this bus go to the downtown area?</div>
+                <div class="korean">이 버스가 시내로 가나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/transport_8.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Driver</div>
+                <div class="english">Yes, it does. The fare is two dollars. You can pay with coins or a card.</div>
+                <div class="korean">네, 갑니다. 요금은 2달러입니다. 동전이나 카드로 지불할 수 있어요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/transport_9.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Can you let me know when we get to Main Street?</div>
+                <div class="korean">메인 스트리트에 도착하면 알려주시겠어요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/transport_10.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>

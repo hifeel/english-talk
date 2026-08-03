@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚗 렌터카 - 교통편 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="transport.html" class="back-link">← 교통편 목록으로</a>
+            <h1>🚗 렌터카 (Rental Car)</h1>
+            <p>예약, 차량 인수, 반납</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 4</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Hi, I have a reservation for a compact car under the name Lee.</div>
+                <div class="korean">안녕하세요, 이 이름으로 소형차 예약을 했습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/transport_11.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Welcome. May I see your driver's license and the credit card used for the reservation?</div>
+                <div class="korean">환영합니다. 운전면허증과 예약에 사용한 신용카드를 볼 수 있을까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/transport_12.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Here you go. Does the car have GPS?</div>
+                <div class="korean">여기 있습니다. 차에 GPS가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/transport_13.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, it does. The tank is full, so please return it with a full tank as well.</div>
+                <div class="korean">네, 있습니다. 연료탱크가 가득 차 있으니 반납 시에도 가득 채워서 반납해 주세요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/transport_14.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>

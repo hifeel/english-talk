@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛫 공항 영어 회화 - English Talk</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .scenario-list {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .scenario-item {
+            background: white;
+            border-radius: 15px;
+            padding: 20px 25px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .scenario-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .scenario-icon {
+            font-size: 2em;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .scenario-info {
+            flex: 1;
+        }
+        
+        .scenario-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .scenario-desc {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .scenario-count {
+            font-size: 0.85em;
+            color: #999;
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+        }
+        
+        .arrow {
+            font-size: 1.5em;
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link">← 메인으로 돌아가기</a>
+            <h1>🛫 공항 (Airport)</h1>
+            <p>공항에서 필요한 영어 회화</p>
+        </header>
+        
+        <div class="scenario-list">
+            <a href="airport_checkin.html" class="scenario-item">
+                <div class="scenario-icon">🛂</div>
+                <div class="scenario-info">
+                    <div class="scenario-name">체크인 (Check-in)</div>
+                    <div class="scenario-desc">탑승권 발급, 수하물 처리</div>
+                </div>
+                <div class="scenario-count">4개 대화</div>
+                <div class="arrow">→</div>
+            </a>
+            
+            <a href="airport_security.html" class="scenario-item">
+                <div class="scenario-icon">🔍</div>
+                <div class="scenario-info">
+                    <div class="scenario-name">보안검색 (Security)</div>
+                    <div class="scenario-desc">보안 검색대 통과</div>
+                </div>
+                <div class="scenario-count">3개 대화</div>
+                <div class="arrow">→</div>
+            </a>
+            
+            <a href="airport_boarding.html" class="scenario-item">
+                <div class="scenario-icon">✈️</div>
+                <div class="scenario-info">
+                    <div class="scenario-name">탑승 (Boarding)</div>
+                    <div class="scenario-desc">탑승 게이트, 좌석 배정</div>
+                </div>
+                <div class="scenario-count">4개 대화</div>
+                <div class="arrow">→</div>
+            </a>
+            
+            <a href="airport_dutyfree.html" class="scenario-item">
+                <div class="scenario-icon">🛍️</div>
+                <div class="scenario-info">
+                    <div class="scenario-name">면세점 (Duty Free)</div>
+                    <div class="scenario-desc">면세점 쇼핑, 선물 구매</div>
+                </div>
+                <div class="scenario-count">3개 대화</div>
+                <div class="arrow">→</div>
+            </a>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+</body>
+</html>

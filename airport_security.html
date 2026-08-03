@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔍 보안검색 - 공항 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="airport.html" class="back-link">← 공항 목록으로</a>
+            <h1>🔍 보안검색 (Security)</h1>
+            <p>보안 검색대 통과</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 3</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Please remove your laptop and liquids from your bag.</div>
+                <div class="korean">가방에서 노트북과 액체류를 꺼내주세요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_5.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Sure, everything is out now. Do I need to take off my shoes?</div>
+                <div class="korean">네, 다 꺼냈습니다. 신발도 벗어야 하나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_6.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, please remove your shoes and place them in the bin.</div>
+                <div class="korean">네, 신발을 벗어서 바구니에 넣어주세요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_7.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>

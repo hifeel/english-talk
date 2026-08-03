@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚕 택시 - 교통편 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="transport.html" class="back-link">← 교통편 목록으로</a>
+            <h1>🚕 택시 (Taxi)</h1>
+            <p>택시 호출, 목적지 안내, 요금 확인</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 4</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Could you take me to the airport, please?</div>
+                <div class="korean">공항까지 가주세요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/transport_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Driver</div>
+                <div class="english">Sure. Do you want to go via the highway or the city road?</div>
+                <div class="korean">물론이죠. 고속도로로 갈까요, 아니면 시내도로로 갈까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/transport_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">The highway, please. How much will it cost?</div>
+                <div class="korean">고속도로로 가주세요. 비용이 얼마나 나올까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/transport_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Driver</div>
+                <div class="english">It should be around thirty dollars. We'll be there in about twenty minutes.</div>
+                <div class="korean">약 30달러 정도 나올 겁니다. 약 20분 안에 도착할 거예요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/transport_4.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛂 체크인 - 공항 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="airport.html" class="back-link">← 공항 목록으로</a>
+            <h1>🛂 체크인 (Check-in)</h1>
+            <p>탑승권 발급, 수하물 처리</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 4</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Good morning! How may I help you?</div>
+                <div class="korean">좋은 아침이에요! 어떻게 도와드릴까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Hi, I'd like to check in for my flight to New York.</div>
+                <div class="korean">안녕하세요, 뉴욕행 비행기 탑승 수속을 하고 싶습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">May I see your passport and booking confirmation?</div>
+                <div class="korean">여권과 예약 확인서를 볼 수 있을까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Here's my passport. My booking reference is A B one two three four.</div>
+                <div class="korean">여기 제 여권입니다. 예약 번호는 A B one two three four입니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_4.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>

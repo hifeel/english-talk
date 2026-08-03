@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛍️ 면세점 - 공항 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="airport.html" class="back-link">← 공항 목록으로</a>
+            <h1>🛍️ 면세점 (Duty Free)</h1>
+            <p>면세점 쇼핑, 선물 구매</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 3</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Welcome to the duty free shop! Can I help you find anything?</div>
+                <div class="korean">면세점에 오신 것을 환영합니다! 찾으시는 것이 있으신가요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_12.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Yes, I'm looking for perfume. Do you have Chanel?</div>
+                <div class="korean">네, 향수를 찾고 있습니다. 샤넬 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_13.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Of course! We have several Chanel fragrances. This one is very popular.</div>
+                <div class="korean">물론이죠! 여러 종류의 샤넬 향수가 있습니다. 이건 아주 인기가 많답니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/airport_14.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>
