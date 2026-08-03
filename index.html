@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗣️ English Talk - 영어 회화 학습</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .topic-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .topic-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .topic-title {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .topic-subtitle {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .topic-count {
+            font-size: 0.9em;
+            color: #999;
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        
+        .coming-soon {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        .coming-soon .topic-card {
+            background: #f5f5f5;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 20px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🗣️ English Talk</h1>
+            <p>상황별 영어 회화 학습</p>
+        </header>
+        
+        <div class="topics-grid">
+            <!-- Hotel -->
+            <a href="hotel.html" class="topic-card">
+                <div class="topic-icon">🏨</div>
+                <div class="topic-title">호텔 (Hotel)</div>
+                <div class="topic-subtitle">체크인, 체크아웃, 요청, 문제 해결</div>
+                <div class="topic-count">17개 대화</div>
+            </a>
+            
+            <!-- Shopping -->
+            <a href="shopping.html" class="topic-card">
+                <div class="topic-icon">🛍️</div>
+                <div class="topic-title">쇼핑 (Shopping)</div>
+                <div class="topic-subtitle">옷 고르기, 가격 확인, 결제</div>
+                <div class="topic-count">18개 대화</div>
+            </a>
+            
+            <!-- Airport - Coming Soon -->
+            <div class="coming-soon">
+                <div class="topic-card">
+                    <div class="topic-icon">🛫</div>
+                    <div class="topic-title">공항 (Airport)</div>
+                    <div class="topic-subtitle">체크인, 탑승, 면세점</div>
+                    <div class="topic-count">준비 중</div>
+                </div>
+            </div>
+            
+            <!-- Restaurant - Coming Soon -->
+            <div class="coming-soon">
+                <div class="topic-card">
+                    <div class="topic-icon">🍽️</div>
+                    <div class="topic-title">레스토랑 (Restaurant)</div>
+                    <div class="topic-subtitle">주문, 요청, 계산</div>
+                    <div class="topic-count">준비 중</div>
+                </div>
+            </div>
+            
+            <!-- Transportation - Coming Soon -->
+            <div class="coming-soon">
+                <div class="topic-card">
+                    <div class="topic-icon">🚕</div>
+                    <div class="topic-title">교통 (Transportation)</div>
+                    <div class="topic-subtitle">택시, 지하철, 버스</div>
+                    <div class="topic-count">준비 중</div>
+                </div>
+            </div>
+            
+            <!-- Hospital - Coming Soon -->
+            <div class="coming-soon">
+                <div class="topic-card">
+                    <div class="topic-icon">🏥</div>
+                    <div class="topic-title">병원 (Hospital)</div>
+                    <div class="topic-subtitle">진료, 증상 설명, 처방전</div>
+                    <div class="topic-count">준비 중</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+</body>
+</html>
