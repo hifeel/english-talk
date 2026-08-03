@@ -1,24 +1,50 @@
-// Toggle visibility for English/Korean text
+// Toggle visibility for English/Korean text - with localStorage persistence
 let showEnglish = true;
 let showKorean = true;
 let showSpeaker = true;
+let repeatMode = false;
+
+// Load saved states from localStorage
+function loadStates() {
+    const saved = localStorage.getItem('englishTalk_states');
+    if (saved) {
+        const states = JSON.parse(saved);
+        showEnglish = states.showEnglish !== undefined ? states.showEnglish : true;
+        showKorean = states.showKorean !== undefined ? states.showKorean : true;
+        showSpeaker = states.showSpeaker !== undefined ? states.showSpeaker : true;
+        repeatMode = states.repeatMode !== undefined ? states.repeatMode : false;
+    }
+}
+
+// Save states to localStorage
+function saveStates() {
+    localStorage.setItem('englishTalk_states', JSON.stringify({
+        showEnglish,
+        showKorean,
+        showSpeaker,
+        repeatMode
+    }));
+}
 
 function toggleEnglish() {
     showEnglish = !showEnglish;
     updateVisibility();
     updateButtonState('toggleEnglishBtn', showEnglish, '영어 ON', '영어 OFF');
+    saveStates();
 }
 
 function toggleKorean() {
     showKorean = !showKorean;
     updateVisibility();
     updateButtonState('toggleKoreanBtn', showKorean, '한국어 ON', '한국어 OFF');
+    saveStates();
 }
 
 function toggleSpeaker() {
     showSpeaker = !showSpeaker;
     updateVisibility();
     updateButtonState('toggleSpeakerBtn', showSpeaker, '화자 ON', '화자 OFF');
+    saveStates();
 }
 
 function updateVisibility() {
@@ -46,6 +72,48 @@ function updateButtonState(btnId, isActive, activeText, inactiveText) {
     }
 }
 
+// Single repeat toggle - shows ON/OFF
+function toggleRepeat() {
+    repeatMode = !repeatMode;
+    const btn = document.getElementById('repeatBtn');
+    if (btn) {
+        btn.classList.toggle('active', repeatMode);
+        btn.textContent = repeatMode ? '반복 ON' : '반복 OFF';
+    }
+    saveStates();
+}
+
+// Play single audio with repeat support
+function playAudioWithRepeat(audio) {
+    // Stop all other audios first
+    document.querySelectorAll('audio').forEach(a => {
+        if (a !== audio) {
+            a.pause();
+            a.currentTime = 0;
+            a.onended = null;
+        }
+    });
+    
+    if (repeatMode) {
+        audio.onended = function() {
+            audio.currentTime = 0;
+            audio.play();
+        };
+    } else {
+        audio.onended = null;
+    }
+    
+    audio.currentTime = 0;
+    audio.play();
+}
+
+// Stop single audio
+function stopAudio(audio) {
+    audio.pause();
+    audio.currentTime = 0;
+    audio.onended = null;
+}
+
 // Click-to-play functionality with repeat support
 function initClickToPlay() {
     document.querySelectorAll('.dialogue').forEach(dialogue => {
@@ -62,31 +130,9 @@ function initClickToPlay() {
             const audio = this.querySelector('audio');
             if (audio) {
                 if (audio.paused) {
-                    // Stop all other audios first
-                    document.querySelectorAll('audio').forEach(a => {
-                        if (a !== audio) {
-                            a.pause();
-                            a.currentTime = 0;
-                            a.onended = null;
-                        }
-                    });
-                    
-                    // Use repeat-aware play function
-                    if (typeof playAudioWithRepeat === 'function') {
-                        playAudioWithRepeat(audio);
-                    } else {
-                        audio.currentTime = 0;
-                        audio.play();
-                    }
+                    playAudioWithRepeat(audio);
                 } else {
-                    // Stop this audio
-                    if (typeof stopAudio === 'function') {
-                        stopAudio(audio);
-                    } else {
-                        audio.pause();
-                        audio.currentTime = 0;
-                        audio.onended = null;
-                    }
+                    stopAudio(audio);
                 }
             }
         });
@@ -135,15 +181,23 @@ function initGoogleSearchButtons() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
+    // Load saved states
+    loadStates();
+    
+    // Apply saved states to buttons
     updateButtonState('toggleEnglishBtn', showEnglish, '영어 ON', '영어 OFF');
     updateButtonState('toggleKoreanBtn', showKorean, '한국어 ON', '한국어 OFF');
     updateButtonState('toggleSpeakerBtn', showSpeaker, '화자 ON', '화자 OFF');
     
-    // Set initial repeat button state
+    // Apply saved repeat state
     const repeatBtn = document.getElementById('repeatBtn');
     if (repeatBtn) {
-        repeatBtn.textContent = '반복 OFF';
+        repeatBtn.classList.toggle('active', repeatMode);
+        repeatBtn.textContent = repeatMode ? '반복 ON' : '반복 OFF';
     }
+    
+    // Apply visibility
+    updateVisibility();
     
     initClickToPlay();
     initGoogleSearchButtons();
