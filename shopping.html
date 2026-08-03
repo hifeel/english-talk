@@ -5,6 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🛍️ 쇼핑 영어 회화 - English Talk</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .scenario-list {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .scenario-item {
+            background: white;
+            border-radius: 15px;
+            padding: 20px 25px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .scenario-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .scenario-icon {
+            font-size: 2em;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .scenario-info {
+            flex: 1;
+        }
+        
+        .scenario-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .scenario-desc {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .scenario-count {
+            font-size: 0.85em;
+            color: #999;
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+        }
+        
+        .arrow {
+            font-size: 1.5em;
+            color: #667eea;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -14,206 +78,46 @@
             <p>옷 고르기, 가격 확인, 결제</p>
         </header>
         
-        <!-- Play All Button -->
-        <div class="play-all-container">
-            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
-                <span id="playAllIcon">▶️</span>
-                <span id="playAllText">전체 재생</span>
-            </button>
-            <div id="playAllProgress" class="play-all-progress" style="display: none;">
-                <span id="progressText">0 / 18</span>
-            </div>
-        </div>
-        
-        <!-- Shopping Dialogues -->
-        <div class="scenario">
-            <div class="scenario-title">
-                <span>🏪</span>
-                <span>가게 입장 & 물건 찾기</span>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Customer</div>
-                <div class="english">Hi, I'm just looking around.</div>
-                <div class="korean">안녕하세요, 그냥 둘러보고 있어요.</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_1.mp3"></audio>
+        <div class="scenario-list">
+            <a href="shopping_store.html" class="scenario-item">
+                <div class="scenario-icon">🏪</div>
+                <div class="scenario-info">
+                    <div class="scenario-name">가게 입장 & 물건 찾기</div>
+                    <div class="scenario-desc">둘러보기, 직원 응대</div>
                 </div>
-            </div>
+                <div class="scenario-count">5개 대화</div>
+                <div class="arrow">→</div>
+            </a>
             
-            <div class="dialogue">
-                <div class="speaker">Staff</div>
-                <div class="english">Can I help you find something?</div>
-                <div class="korean">물건 찾는 걸 도와드릴까요?</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_2.mp3"></audio>
+            <a href="shopping_fitting.html" class="scenario-item">
+                <div class="scenario-icon">👔</div>
+                <div class="scenario-info">
+                    <div class="scenario-name">탈의실 & 사이즈</div>
+                    <div class="scenario-desc">탈의실 위치, 사이즈 변경</div>
                 </div>
-            </div>
+                <div class="scenario-count">4개 대화</div>
+                <div class="arrow">→</div>
+            </a>
             
-            <div class="dialogue">
-                <div class="speaker">Customer</div>
-                <div class="english">Yes, I'm looking for a jacket.</div>
-                <div class="korean">네, 재킷을 찾고 있어요.</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_3.mp3"></audio>
+            <a href="shopping_price.html" class="scenario-item">
+                <div class="scenario-icon">💰</div>
+                <div class="scenario-info">
+                    <div class="scenario-name">가격 & 할인</div>
+                    <div class="scenario-desc">가격 문의, 할인 확인</div>
                 </div>
-            </div>
+                <div class="scenario-count">4개 대화</div>
+                <div class="arrow">→</div>
+            </a>
             
-            <div class="dialogue">
-                <div class="speaker">Staff</div>
-                <div class="english">What size do you wear?</div>
-                <div class="korean">몇 사이즈 입으세요?</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_4.mp3"></audio>
+            <a href="shopping_payment.html" class="scenario-item">
+                <div class="scenario-icon">💳</div>
+                <div class="scenario-info">
+                    <div class="scenario-name">결제</div>
+                    <div class="scenario-desc">구매 결정, 결제 방법</div>
                 </div>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Customer</div>
-                <div class="english">I wear medium.</div>
-                <div class="korean">미디엄 사이즈 입어요.</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_5.mp3"></audio>
-                </div>
-            </div>
-        </div>
-        
-        <div class="scenario">
-            <div class="scenario-title">
-                <span>👔</span>
-                <span>탈의실 & 사이즈</span>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Customer</div>
-                <div class="english">Where is the fitting room?</div>
-                <div class="korean">탈의실이 어디에 있나요?</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_6.mp3"></audio>
-                </div>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Staff</div>
-                <div class="english">It's in the back, on the left.</div>
-                <div class="korean">뒤쪽 왼쪽에 있어요.</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_7.mp3"></audio>
-                </div>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Customer</div>
-                <div class="english">This is too small. Do you have a larger size?</div>
-                <div class="korean">이건 너무 작아요. 더 큰 사이즈 있나요?</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_8.mp3"></audio>
-                </div>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Staff</div>
-                <div class="english">Let me check for you.</div>
-                <div class="korean">확인해보겠습니다.</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_9.mp3"></audio>
-                </div>
-            </div>
-        </div>
-        
-        <div class="scenario">
-            <div class="scenario-title">
-                <span>💰</span>
-                <span>가격 & 할인</span>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Customer</div>
-                <div class="english">How much is this?</div>
-                <div class="korean">이거 얼마인가요?</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_10.mp3"></audio>
-                </div>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Staff</div>
-                <div class="english">It's 50 dollars.</div>
-                <div class="korean">50달러입니다.</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_11.mp3"></audio>
-                </div>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Customer</div>
-                <div class="english">Is there a discount?</div>
-                <div class="korean">할인 있나요?</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_12.mp3"></audio>
-                </div>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Staff</div>
-                <div class="english">Yes, it's 20% off today.</div>
-                <div class="korean">네, 오늘 20% 할인입니다.</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_13.mp3"></audio>
-                </div>
-            </div>
-        </div>
-        
-        <div class="scenario">
-            <div class="scenario-title">
-                <span>💳</span>
-                <span>결제</span>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Customer</div>
-                <div class="english">I'll take this one.</div>
-                <div class="korean">이거 살게요.</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_14.mp3"></audio>
-                </div>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Staff</div>
-                <div class="english">Would you like a bag?</div>
-                <div class="korean">봉투 필요하신가요?</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_15.mp3"></audio>
-                </div>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Customer</div>
-                <div class="english">Yes, please. Can I pay by card?</div>
-                <div class="korean">네, 주세요. 카드로 결제해도 되나요?</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_16.mp3"></audio>
-                </div>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Staff</div>
-                <div class="english">Of course. Here's your receipt.</div>
-                <div class="korean">물론이죠. 영수증 여기 있습니다.</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_17.mp3"></audio>
-                </div>
-            </div>
-            
-            <div class="dialogue">
-                <div class="speaker">Customer</div>
-                <div class="english">Thank you. Have a nice day!</div>
-                <div class="korean">감사합니다. 좋은 하루 보내세요!</div>
-                <div class="audio-controls">
-                    <audio controls src="audio/shop_18.mp3"></audio>
-                </div>
-            </div>
+                <div class="scenario-count">5개 대화</div>
+                <div class="arrow">→</div>
+            </a>
         </div>
         
         <footer>
@@ -221,111 +125,5 @@
             <p>제작: Hermes Agent</p>
         </footer>
     </div>
-    
-    <script>
-        let isPlaying = false;
-        let currentAudioIndex = 0;
-        let audioElements = [];
-        
-        // Get all audio elements in order
-        function initAudioList() {
-            audioElements = Array.from(document.querySelectorAll('audio'));
-        }
-        
-        // Toggle play all
-        function togglePlayAll() {
-            if (isPlaying) {
-                stopAll();
-            } else {
-                startAll();
-            }
-        }
-        
-        // Start playing all
-        function startAll() {
-            initAudioList();
-            isPlaying = true;
-            currentAudioIndex = 0;
-            
-            // Update UI
-            document.getElementById('playAllIcon').textContent = '⏸️';
-            document.getElementById('playAllText').textContent = '일시정지';
-            document.getElementById('playAllProgress').style.display = 'inline-block';
-            
-            playNext();
-        }
-        
-        // Play next audio
-        function playNext() {
-            if (!isPlaying || currentAudioIndex >= audioElements.length) {
-                stopAll();
-                return;
-            }
-            
-            // Update progress
-            updateProgress();
-            
-            // Highlight current dialogue
-            highlightDialogue(currentAudioIndex);
-            
-            const audio = audioElements[currentAudioIndex];
-            
-            // When audio ends, play next
-            audio.onended = function() {
-                unhighlightDialogue(currentAudioIndex);
-                currentAudioIndex++;
-                playNext();
-            };
-            
-            // Play current audio
-            audio.currentTime = 0;
-            audio.play();
-        }
-        
-        // Stop all
-        function stopAll() {
-            isPlaying = false;
-            
-            // Stop current audio
-            if (currentAudioIndex < audioElements.length) {
-                audioElements[currentAudioIndex].pause();
-                audioElements[currentAudioIndex].currentTime = 0;
-            }
-            
-            // Remove all highlights
-            document.querySelectorAll('.dialogue').forEach(d => {
-                d.classList.remove('playing');
-            });
-            
-            // Update UI
-            document.getElementById('playAllIcon').textContent = '▶️';
-            document.getElementById('playAllText').textContent = '전체 재생';
-            document.getElementById('playAllProgress').style.display = 'none';
-        }
-        
-        // Update progress display
-        function updateProgress() {
-            const total = audioElements.length;
-            const current = currentAudioIndex + 1;
-            document.getElementById('progressText').textContent = `${current} / ${total}`;
-        }
-        
-        // Highlight current dialogue
-        function highlightDialogue(index) {
-            const dialogue = audioElements[index].closest('.dialogue');
-            if (dialogue) {
-                dialogue.classList.add('playing');
-                dialogue.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-        }
-        
-        // Remove highlight from dialogue
-        function unhighlightDialogue(index) {
-            const dialogue = audioElements[index].closest('.dialogue');
-            if (dialogue) {
-                dialogue.classList.remove('playing');
-            }
-        }
-    </script>
 </body>
 </html>

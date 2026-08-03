@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚪 체크아웃 - 호텔 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="hotel.html" class="back-link">← 호텔 목록으로</a>
+            <h1>🚪 체크아웃 (Check-out)</h1>
+            <p>퇴실, 영수증 요청</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 3</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Hi, I'd like to check out, please.</div>
+                <div class="korean">안녕하세요, 체크아웃하려고 합니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/checkout_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Did you enjoy your stay?</div>
+                <div class="korean">머무르는 동안 잘 지내셨나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/checkout_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Yes, it was great. Can I get a receipt?</div>
+                <div class="korean">네, 아주 좋았어요. 영수증 받을 수 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/checkout_3.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>

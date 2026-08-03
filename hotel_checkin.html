@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔑 체크인 - 호텔 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="hotel.html" class="back-link">← 호텔 목록으로</a>
+            <h1>🔑 체크인 (Check-in)</h1>
+            <p>예약 확인, 체크인 절차</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 4</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Hi, I have a reservation under Kim.</div>
+                <div class="korean">안녕하세요, 김으로 예약했습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/checkin_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Welcome! May I see your ID and credit card?</div>
+                <div class="korean">환영합니다! 신분증과 신용카드 좀 볼 수 있을까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/checkin_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Here you are. What time is checkout?</div>
+                <div class="korean">여기 있습니다. 체크아웃 몇 시인가요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/checkin_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Checkout is at 11 AM. Here's your key card.</div>
+                <div class="korean">체크아웃은 오전 11시입니다. 키 카드 여기 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/checkin_4.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>

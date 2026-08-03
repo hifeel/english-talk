@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🛎️ 요청하기 - 호텔 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="hotel.html" class="back-link">← 호텔 목록으로</a>
+            <h1>🛎️ 요청하기 (Making Requests)</h1>
+            <p>서비스 요청, 추가 용품</p>
+        </header>
+        
+        <div class="play-all-container">
+            <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                <span id="playAllIcon">▶️</span>
+                <span id="playAllText">전체 재생</span>
+            </button>
+            <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                <span id="progressText">0 / 3</span>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Could I get extra towels, please?</div>
+                <div class="korean">수건 추가로 받을 수 있을까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/request_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Can I have a wake-up call at 7 AM?</div>
+                <div class="korean">오전 7시에 모닝콜 부탁드려도 될까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/request_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">I'd like to make a long-distance call.</div>
+                <div class="korean">장거리 전화를 걸고 싶습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/request_3.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+</body>
+</html>
