@@ -93,12 +93,45 @@ function unhighlightDialogue(index) {
     }
 }
 
-// Single repeat toggle
+// Single repeat toggle - shows ON/OFF
 function toggleRepeat() {
     repeatMode = !repeatMode;
     const btn = document.getElementById('repeatBtn');
     if (btn) {
         btn.classList.toggle('active', repeatMode);
-        btn.textContent = repeatMode ? '반복 ON' : '반복';
+        btn.textContent = repeatMode ? '반복 ON' : '반복 OFF';
     }
+}
+
+// Play single audio with repeat support
+function playAudioWithRepeat(audio) {
+    // Stop all other audios first
+    document.querySelectorAll('audio').forEach(a => {
+        if (a !== audio) {
+            a.pause();
+            a.currentTime = 0;
+            a.onended = null;
+        }
+    });
+    
+    if (repeatMode) {
+        // Repeat mode: loop this audio
+        audio.onended = function() {
+            audio.currentTime = 0;
+            audio.play();
+        };
+    } else {
+        // Normal mode: play once
+        audio.onended = null;
+    }
+    
+    audio.currentTime = 0;
+    audio.play();
+}
+
+// Stop single audio
+function stopAudio(audio) {
+    audio.pause();
+    audio.currentTime = 0;
+    audio.onended = null;
 }

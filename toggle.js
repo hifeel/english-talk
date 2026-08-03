@@ -46,7 +46,7 @@ function updateButtonState(btnId, isActive, activeText, inactiveText) {
     }
 }
 
-// Click-to-play functionality
+// Click-to-play functionality with repeat support
 function initClickToPlay() {
     document.querySelectorAll('.dialogue').forEach(dialogue => {
         dialogue.style.cursor = 'pointer';
@@ -62,17 +62,31 @@ function initClickToPlay() {
             const audio = this.querySelector('audio');
             if (audio) {
                 if (audio.paused) {
+                    // Stop all other audios first
                     document.querySelectorAll('audio').forEach(a => {
                         if (a !== audio) {
                             a.pause();
                             a.currentTime = 0;
+                            a.onended = null;
                         }
                     });
-                    audio.currentTime = 0;
-                    audio.play();
+                    
+                    // Use repeat-aware play function
+                    if (typeof playAudioWithRepeat === 'function') {
+                        playAudioWithRepeat(audio);
+                    } else {
+                        audio.currentTime = 0;
+                        audio.play();
+                    }
                 } else {
-                    audio.pause();
-                    audio.currentTime = 0;
+                    // Stop this audio
+                    if (typeof stopAudio === 'function') {
+                        stopAudio(audio);
+                    } else {
+                        audio.pause();
+                        audio.currentTime = 0;
+                        audio.onended = null;
+                    }
                 }
             }
         });
@@ -124,6 +138,12 @@ document.addEventListener('DOMContentLoaded', function() {
     updateButtonState('toggleEnglishBtn', showEnglish, '영어 ON', '영어 OFF');
     updateButtonState('toggleKoreanBtn', showKorean, '한국어 ON', '한국어 OFF');
     updateButtonState('toggleSpeakerBtn', showSpeaker, '화자 ON', '화자 OFF');
+    
+    // Set initial repeat button state
+    const repeatBtn = document.getElementById('repeatBtn');
+    if (repeatBtn) {
+        repeatBtn.textContent = '반복 OFF';
+    }
     
     initClickToPlay();
     initGoogleSearchButtons();
