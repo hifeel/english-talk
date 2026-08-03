@@ -49,10 +49,56 @@ function updateButtonState(btnId, isActive, activeText, inactiveText) {
     }
 }
 
-// Initialize buttons on page load
+// Click-to-play functionality
+function initClickToPlay() {
+    document.querySelectorAll('.dialogue').forEach(dialogue => {
+        dialogue.style.cursor = 'pointer';
+        
+        dialogue.addEventListener('click', function(e) {
+            // Don't trigger if clicking on audio controls or buttons
+            if (e.target.closest('.audio-controls') || 
+                e.target.closest('button') || 
+                e.target.closest('input')) {
+                return;
+            }
+            
+            const audio = this.querySelector('audio');
+            if (audio) {
+                if (audio.paused) {
+                    // Stop all other audios first
+                    document.querySelectorAll('audio').forEach(a => {
+                        if (a !== audio) {
+                            a.pause();
+                            a.currentTime = 0;
+                        }
+                    });
+                    audio.currentTime = 0;
+                    audio.play();
+                } else {
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+            }
+        });
+        
+        // Add hover effect
+        dialogue.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = '#e8f4fd';
+        });
+        
+        dialogue.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = '';
+        });
+    });
+}
+
+// Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
     // Set initial button states
     updateButtonState('toggleEnglishBtn', showEnglish, '영어 ON', '영어 OFF');
     updateButtonState('toggleKoreanBtn', showKorean, '한국어 ON', '한국어 OFF');
     updateButtonState('toggleSpeakerBtn', showSpeaker, '화자 ON', '화자 OFF');
+    
+    // Initialize click-to-play
+    initClickToPlay();
 });
