@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>💳 계산 - 레스토랑 영어 회화</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+
 </head>
 <body>
     <div class="container">
@@ -22,6 +24,14 @@
             <div id="playAllProgress" class="play-all-progress" style="display: none;">
                 <span id="progressText">0 / 3</span>
             </div>
+
+        <!-- Toggle Buttons -->
+        <div class="toggle-container">
+            <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+            <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+            <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+        </div>
+
         </div>
         
         <div class="scenario">
@@ -59,6 +69,7 @@
         </footer>
     </div>
     
+    <script src="toggle.js"></script>
     <script src="play-all.js"></script>
 </body>
 </html>
