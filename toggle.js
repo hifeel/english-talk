@@ -91,23 +91,11 @@ function initClickToPlay() {
     });
 }
 
-// Google Search Modal
+// Google Search - open in new tab
 function openGoogleSearch(sentence) {
-    const modal = document.getElementById('googleModal');
-    const iframe = document.getElementById('googleFrame');
     const searchTerm = encodeURIComponent(sentence + ' 이 문장을 설명해줘');
     const searchUrl = `https://www.google.com/search?q=${searchTerm}`;
-    
-    iframe.src = searchUrl;
-    modal.classList.add('active');
-}
-
-function closeGoogleSearch() {
-    const modal = document.getElementById('googleModal');
-    const iframe = document.getElementById('googleFrame');
-    
-    modal.classList.remove('active');
-    iframe.src = '';
+    window.open(searchUrl, '_blank');
 }
 
 // Add Google search buttons to dialogues
@@ -139,18 +127,4 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initClickToPlay();
     initGoogleSearchButtons();
-    
-    // Close modal on overlay click
-    document.getElementById('googleModal')?.addEventListener('click', function(e) {
-        if (e.target === this) {
-            closeGoogleSearch();
-        }
-    });
-    
-    // Close modal on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeGoogleSearch();
-        }
-    });
 });
