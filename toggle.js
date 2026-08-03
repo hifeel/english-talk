@@ -1,98 +1,109 @@
-// Toggle visibility for English/Korean text - with localStorage persistence
-let showEnglish = true;
-let showKorean = true;
-let showSpeaker = true;
-let repeatMode = false;
+// Simple toggle functionality
+var showEnglish = true;
+var showKorean = true;
+var showSpeaker = true;
+var repeatMode = false;
 
-// Load saved states from localStorage
+// Load states from localStorage
 function loadStates() {
-    const saved = localStorage.getItem('englishTalk_states');
-    if (saved) {
-        const states = JSON.parse(saved);
-        showEnglish = states.showEnglish !== undefined ? states.showEnglish : true;
-        showKorean = states.showKorean !== undefined ? states.showKorean : true;
-        showSpeaker = states.showSpeaker !== undefined ? states.showSpeaker : true;
-        repeatMode = states.repeatMode !== undefined ? states.repeatMode : false;
-    }
+    try {
+        var saved = localStorage.getItem('englishTalk_states');
+        if (saved) {
+            var states = JSON.parse(saved);
+            showEnglish = states.showEnglish !== false;
+            showKorean = states.showKorean !== false;
+            showSpeaker = states.showSpeaker !== false;
+            repeatMode = states.repeatMode === true;
+        }
+    } catch(e) {}
 }
 
 // Save states to localStorage
 function saveStates() {
-    localStorage.setItem('englishTalk_states', JSON.stringify({
-        showEnglish,
-        showKorean,
-        showSpeaker,
-        repeatMode
-    }));
+    try {
+        localStorage.setItem('englishTalk_states', JSON.stringify({
+            showEnglish: showEnglish,
+            showKorean: showKorean,
+            showSpeaker: showSpeaker,
+            repeatMode: repeatMode
+        }));
+    } catch(e) {}
 }
 
 function toggleEnglish() {
     showEnglish = !showEnglish;
     updateVisibility();
-    updateButtonState('toggleEnglishBtn', showEnglish, '영어 ON', '영어 OFF');
+    var btn = document.getElementById('toggleEnglishBtn');
+    if (btn) {
+        btn.textContent = showEnglish ? '영어 ON' : '영어 OFF';
+        btn.classList.toggle('active', showEnglish);
+    }
     saveStates();
 }
 
 function toggleKorean() {
     showKorean = !showKorean;
     updateVisibility();
-    updateButtonState('toggleKoreanBtn', showKorean, '한국어 ON', '한국어 OFF');
+    var btn = document.getElementById('toggleKoreanBtn');
+    if (btn) {
+        btn.textContent = showKorean ? '한국어 ON' : '한국어 OFF';
+        btn.classList.toggle('active', showKorean);
+    }
     saveStates();
 }
 
 function toggleSpeaker() {
     showSpeaker = !showSpeaker;
     updateVisibility();
-    updateButtonState('toggleSpeakerBtn', showSpeaker, '화자 ON', '화자 OFF');
+    var btn = document.getElementById('toggleSpeakerBtn');
+    if (btn) {
+        btn.textContent = showSpeaker ? '화자 ON' : '화자 OFF';
+        btn.classList.toggle('active', showSpeaker);
+    }
+    saveStates();
+}
+
+function toggleRepeat() {
+    repeatMode = !repeatMode;
+    var btn = document.getElementById('repeatBtn');
+    if (btn) {
+        btn.textContent = repeatMode ? '반복 ON' : '반복 OFF';
+        btn.classList.toggle('active', repeatMode);
+    }
     saveStates();
 }
 
 function updateVisibility() {
-    const scenario = document.querySelector('.scenario');
+    var scenario = document.querySelector('.scenario');
     if (!scenario) return;
     
-    scenario.querySelectorAll('.english').forEach(el => {
-        el.style.display = showEnglish ? '' : 'none';
-    });
+    var englishEls = scenario.querySelectorAll('.english');
+    for (var i = 0; i < englishEls.length; i++) {
+        englishEls[i].style.display = showEnglish ? '' : 'none';
+    }
     
-    scenario.querySelectorAll('.korean').forEach(el => {
-        el.style.display = showKorean ? '' : 'none';
-    });
+    var koreanEls = scenario.querySelectorAll('.korean');
+    for (var i = 0; i < koreanEls.length; i++) {
+        koreanEls[i].style.display = showKorean ? '' : 'none';
+    }
     
-    scenario.querySelectorAll('.speaker').forEach(el => {
-        el.style.display = showSpeaker ? '' : 'none';
-    });
-}
-
-function updateButtonState(btnId, isActive, activeText, inactiveText) {
-    const btn = document.getElementById(btnId);
-    if (btn) {
-        btn.textContent = isActive ? activeText : inactiveText;
-        btn.classList.toggle('active', isActive);
+    var speakerEls = scenario.querySelectorAll('.speaker');
+    for (var i = 0; i < speakerEls.length; i++) {
+        speakerEls[i].style.display = showSpeaker ? '' : 'none';
     }
 }
 
-// Single repeat toggle - shows ON/OFF
-function toggleRepeat() {
-    repeatMode = !repeatMode;
-    const btn = document.getElementById('repeatBtn');
-    if (btn) {
-        btn.classList.toggle('active', repeatMode);
-        btn.textContent = repeatMode ? '반복 ON' : '반복 OFF';
-    }
-    saveStates();
-}
-
-// Play single audio with repeat support
+// Play audio with repeat support
 function playAudioWithRepeat(audio) {
-    // Stop all other audios first
-    document.querySelectorAll('audio').forEach(a => {
-        if (a !== audio) {
-            a.pause();
-            a.currentTime = 0;
-            a.onended = null;
+    // Stop all other audios
+    var allAudios = document.querySelectorAll('audio');
+    for (var i = 0; i < allAudios.length; i++) {
+        if (allAudios[i] !== audio) {
+            allAudios[i].pause();
+            allAudios[i].currentTime = 0;
+            allAudios[i].onended = null;
         }
-    });
+    }
     
     if (repeatMode) {
         audio.onended = function() {
@@ -107,98 +118,101 @@ function playAudioWithRepeat(audio) {
     audio.play();
 }
 
-// Stop single audio
 function stopAudio(audio) {
     audio.pause();
     audio.currentTime = 0;
     audio.onended = null;
 }
 
-// Click-to-play functionality with repeat support
-function initClickToPlay() {
-    document.querySelectorAll('.dialogue').forEach(dialogue => {
-        dialogue.style.cursor = 'pointer';
-        
-        dialogue.addEventListener('click', function(e) {
-            if (e.target.closest('.audio-controls') || 
-                e.target.closest('button') || 
-                e.target.closest('input') ||
-                e.target.closest('.google-search-btn')) {
-                return;
-            }
-            
-            const audio = this.querySelector('audio');
-            if (audio) {
-                if (audio.paused) {
-                    playAudioWithRepeat(audio);
-                } else {
-                    stopAudio(audio);
-                }
-            }
-        });
-        
-        dialogue.addEventListener('mouseenter', function() {
-            if (!this.classList.contains('playing')) {
-                this.style.backgroundColor = '#e8f4fd';
-            }
-        });
-        
-        dialogue.addEventListener('mouseleave', function() {
-            if (!this.classList.contains('playing')) {
-                this.style.backgroundColor = '';
-            }
-        });
-    });
-}
-
-// Google Search - open in new tab
+// Google Search
 function openGoogleSearch(sentence) {
-    const searchTerm = encodeURIComponent(sentence + ' 이 문장을 설명해줘');
-    const searchUrl = `https://www.google.com/search?q=${searchTerm}`;
-    window.open(searchUrl, '_blank');
+    var searchTerm = encodeURIComponent(sentence + ' 이 문장을 설명해줘');
+    window.open('https://www.google.com/search?q=' + searchTerm, '_blank');
 }
 
-// Add Google search buttons to dialogues
-function initGoogleSearchButtons() {
-    document.querySelectorAll('.dialogue').forEach(dialogue => {
-        const englishEl = dialogue.querySelector('.english');
-        if (!englishEl) return;
-        
-        const sentence = englishEl.textContent.trim();
-        
-        const searchBtn = document.createElement('button');
-        searchBtn.className = 'google-search-btn';
-        searchBtn.innerHTML = `<img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google">`;
-        searchBtn.title = '구글 검색';
-        searchBtn.onclick = function(e) {
-            e.stopPropagation();
-            openGoogleSearch(sentence);
-        };
-        
-        dialogue.appendChild(searchBtn);
-    });
-}
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', function() {
-    // Load saved states
+// Initialize
+function initEnglishTalk() {
     loadStates();
     
-    // Apply saved states to buttons
-    updateButtonState('toggleEnglishBtn', showEnglish, '영어 ON', '영어 OFF');
-    updateButtonState('toggleKoreanBtn', showKorean, '한국어 ON', '한국어 OFF');
-    updateButtonState('toggleSpeakerBtn', showSpeaker, '화자 ON', '화자 OFF');
+    // Apply states to buttons
+    var btn = document.getElementById('toggleEnglishBtn');
+    if (btn) { btn.textContent = showEnglish ? '영어 ON' : '영어 OFF'; btn.classList.toggle('active', showEnglish); }
     
-    // Apply saved repeat state
-    const repeatBtn = document.getElementById('repeatBtn');
-    if (repeatBtn) {
-        repeatBtn.classList.toggle('active', repeatMode);
-        repeatBtn.textContent = repeatMode ? '반복 ON' : '반복 OFF';
-    }
+    btn = document.getElementById('toggleKoreanBtn');
+    if (btn) { btn.textContent = showKorean ? '한국어 ON' : '한국어 OFF'; btn.classList.toggle('active', showKorean); }
     
-    // Apply visibility
+    btn = document.getElementById('toggleSpeakerBtn');
+    if (btn) { btn.textContent = showSpeaker ? '화자 ON' : '화자 OFF'; btn.classList.toggle('active', showSpeaker); }
+    
+    btn = document.getElementById('repeatBtn');
+    if (btn) { btn.textContent = repeatMode ? '반복 ON' : '반복 OFF'; btn.classList.toggle('active', repeatMode); }
+    
     updateVisibility();
     
-    initClickToPlay();
-    initGoogleSearchButtons();
-});
+    // Add click-to-play
+    var dialogues = document.querySelectorAll('.dialogue');
+    for (var i = 0; i < dialogues.length; i++) {
+        addClickToPlay(dialogues[i]);
+    }
+    
+    // Add Google search buttons
+    for (var i = 0; i < dialogues.length; i++) {
+        addGoogleButton(dialogues[i]);
+    }
+}
+
+function addClickToPlay(dialogue) {
+    dialogue.style.cursor = 'pointer';
+    
+    dialogue.addEventListener('click', function(e) {
+        if (e.target.closest('button') || e.target.closest('input') || e.target.closest('.google-search-btn')) {
+            return;
+        }
+        
+        var audio = this.querySelector('audio');
+        if (audio) {
+            if (audio.paused) {
+                playAudioWithRepeat(audio);
+            } else {
+                stopAudio(audio);
+            }
+        }
+    });
+    
+    dialogue.addEventListener('mouseenter', function() {
+        if (!this.classList.contains('playing')) {
+            this.style.backgroundColor = '#e8f4fd';
+        }
+    });
+    
+    dialogue.addEventListener('mouseleave', function() {
+        if (!this.classList.contains('playing')) {
+            this.style.backgroundColor = '';
+        }
+    });
+}
+
+function addGoogleButton(dialogue) {
+    var englishEl = dialogue.querySelector('.english');
+    if (!englishEl) return;
+    
+    var sentence = englishEl.textContent.trim();
+    
+    var searchBtn = document.createElement('button');
+    searchBtn.className = 'google-search-btn';
+    searchBtn.innerHTML = '<img src="https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png" alt="Google">';
+    searchBtn.title = '구글 검색';
+    searchBtn.onclick = function(e) {
+        e.stopPropagation();
+        openGoogleSearch(sentence);
+    };
+    
+    dialogue.appendChild(searchBtn);
+}
+
+// Run on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initEnglishTalk);
+} else {
+    initEnglishTalk();
+}
