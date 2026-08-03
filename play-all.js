@@ -2,6 +2,8 @@
 let isPlaying = false;
 let currentAudioIndex = 0;
 let audioElements = [];
+let repeatSentence = false;
+let repeatFull = false;
 
 function initAudioList() {
     audioElements = Array.from(document.querySelectorAll('audio'));
@@ -29,7 +31,13 @@ function startAll() {
 
 function playNext() {
     if (!isPlaying || currentAudioIndex >= audioElements.length) {
-        stopAll();
+        if (repeatFull && isPlaying) {
+            // Repeat full dialogue
+            currentAudioIndex = 0;
+            playNext();
+        } else {
+            stopAll();
+        }
         return;
     }
     
@@ -40,8 +48,15 @@ function playNext() {
     
     audio.onended = function() {
         unhighlightDialogue(currentAudioIndex);
-        currentAudioIndex++;
-        playNext();
+        
+        if (repeatSentence && isPlaying) {
+            // Repeat same sentence
+            audio.currentTime = 0;
+            audio.play();
+        } else {
+            currentAudioIndex++;
+            playNext();
+        }
     };
     
     audio.currentTime = 0;
@@ -58,6 +73,7 @@ function stopAll() {
     
     document.querySelectorAll('.dialogue').forEach(d => {
         d.classList.remove('playing');
+        d.style.backgroundColor = '';
     });
     
     document.getElementById('playAllIcon').textContent = '▶️';
@@ -83,5 +99,42 @@ function unhighlightDialogue(index) {
     const dialogue = audioElements[index].closest('.dialogue');
     if (dialogue) {
         dialogue.classList.remove('playing');
+    }
+}
+
+// Repeat toggle functions
+function toggleRepeatSentence() {
+    repeatSentence = !repeatSentence;
+    const btn = document.getElementById('repeatSentenceBtn');
+    if (btn) {
+        btn.classList.toggle('active', repeatSentence);
+        btn.textContent = repeatSentence ? '문장 반복 ON' : '문장 반복';
+    }
+    // If sentence repeat is on, turn off full repeat
+    if (repeatSentence) {
+        repeatFull = false;
+        const fullBtn = document.getElementById('repeatFullBtn');
+        if (fullBtn) {
+            fullBtn.classList.remove('active');
+            fullBtn.textContent = '전체 반복';
+        }
+    }
+}
+
+function toggleRepeatFull() {
+    repeatFull = !repeatFull;
+    const btn = document.getElementById('repeatFullBtn');
+    if (btn) {
+        btn.classList.toggle('active', repeatFull);
+        btn.textContent = repeatFull ? '전체 반복 ON' : '전체 반복';
+    }
+    // If full repeat is on, turn off sentence repeat
+    if (repeatFull) {
+        repeatSentence = false;
+        const sentBtn = document.getElementById('repeatSentenceBtn');
+        if (sentBtn) {
+            sentBtn.classList.remove('active');
+            sentBtn.textContent = '문장 반복';
+        }
     }
 }

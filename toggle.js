@@ -78,11 +78,15 @@ function initClickToPlay() {
         });
         
         dialogue.addEventListener('mouseenter', function() {
-            this.style.backgroundColor = '#e8f4fd';
+            if (!this.classList.contains('playing')) {
+                this.style.backgroundColor = '#e8f4fd';
+            }
         });
         
         dialogue.addEventListener('mouseleave', function() {
-            this.style.backgroundColor = '';
+            if (!this.classList.contains('playing')) {
+                this.style.backgroundColor = '';
+            }
         });
     });
 }
