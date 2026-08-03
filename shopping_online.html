@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📦 온라인 쇼핑 - 쇼핑 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="shopping.html" class="back-link">← 쇼핑 목록으로</a>
+            <h1>📦 온라인 쇼핑 (Online Shopping)</h1>
+            <p>주문 조회, 배송, 반품</p>
+        </header>
+        
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+            </div>
+            <div class="play-controls">
+                <button id="repeatSentenceBtn" class="repeat-btn" onclick="toggleRepeatSentence()">문장 반복</button>
+                <button id="repeatFullBtn" class="repeat-btn" onclick="toggleRepeatFull()">전체 반복</button>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 4</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Where is my order?</div>
+                <div class="korean">제 주문은 어디에 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_online_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Can I track my delivery?</div>
+                <div class="korean">배송 추적할 수 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_online_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">My package hasn't arrived yet.</div>
+                <div class="korean">제 패키지가 아직 도착하지 않았어요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_online_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">How do I return an online purchase?</div>
+                <div class="korean">온라인 구매는 어떻게 반품하나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_online_4.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
+</body>
+</html>

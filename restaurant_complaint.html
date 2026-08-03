@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😤 불만 처리 (Handling Complaints) - 레스토랑 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="restaurant.html" class="back-link">← 레스토랑 목록으로</a>
+            <h1>😤 불만 처리 (Handling Complaints)</h1>
+            <p>잘못된 주문, 차가운 음식, 느린 서비스, 매니저 요청</p>
+        </header>
+        
+        
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+            </div>
+            <div class="play-controls">
+                <button id="repeatSentenceBtn" class="repeat-btn" onclick="toggleRepeatSentence()">문장 반복</button>
+                <button id="repeatFullBtn" class="repeat-btn" onclick="toggleRepeatFull()">전체 반복</button>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 0</span>
+                </div>
+            </div>
+        </div>
+<div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Excuse me, I think there's been a mistake. I ordered the chicken breast, but this looks like fish.</div>
+                <div class="korean">실례합니다, 실수가 있는 것 같아요. 닭가슴살을 주문했는데 이건 생선처럼 보여요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_complaint_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Oh, I'm terribly sorry about that. Let me take this back right away and get you the correct order.</div>
+                <div class="korean">아, 정말 죄송합니다. 바로 가져가서 올바른 주문으로 교환해드리겠습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_complaint_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Thank you. Also, the food has taken quite a long time. We've been waiting for over forty minutes now.</div>
+                <div class="korean">감사합니다. 그리고 음식이 너무 오래 걸렸어요. 벌써 40분 이상 기다렸습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_complaint_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">I sincerely apologize for the delay. We had an unexpectedly busy evening. Let me bring you some complimentary appetizers while you wait.</div>
+                <div class="korean">지연에 대해 진심으로 사과드립니다. 예상치 못하게 붐빈 저녁이었어요. 기다리시는 동안 무료 에피타이저를 가져다드리겠습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_complaint_4.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">I appreciate that, but I'd also like to speak with the manager, please. I'd like to discuss the wait time and see if a discount is possible.</div>
+                <div class="korean">감사하지만, 매니저님과도 말씀드리고 싶습니다. 대기 시간에 대해 논의하고 할인이 가능한지 확인하고 싶어요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_complaint_5.mp3"></audio>
+                </div>
+            </div>
+            
+        </div>
+        
+<footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+
+        <script src="play-all.js"></script>
+    <script src="toggle.js"></script>

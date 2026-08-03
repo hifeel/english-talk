@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💊 약국 - 병원 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="hospital.html" class="back-link">← 병원 목록으로</a>
+            <h1>💊 약국 (Pharmacy)</h1>
+            <p>처방전, 약 복용법, 부작용</p>
+        </header>
+        
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+            </div>
+            <div class="play-controls">
+                <button id="repeatSentenceBtn" class="repeat-btn" onclick="toggleRepeatSentence()">문장 반복</button>
+                <button id="repeatFullBtn" class="repeat-btn" onclick="toggleRepeatFull()">전체 반복</button>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 5</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Patient</div>
+                <div class="english">I have a prescription to fill.</div>
+                <div class="korean">처방전을 가지고 왔습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hospital_pharmacy_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Patient</div>
+                <div class="english">How many times a day should I take this?</div>
+                <div class="korean">이 약은 하루에 몇 번 먹어야 하나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hospital_pharmacy_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Patient</div>
+                <div class="english">Are there any side effects?</div>
+                <div class="korean">부작용이 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hospital_pharmacy_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Patient</div>
+                <div class="english">Can I take this with other medication?</div>
+                <div class="korean">다른 약과 같이 먹어도 되나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hospital_pharmacy_4.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Patient</div>
+                <div class="english">Is this covered by insurance?</div>
+                <div class="korean">이 약은 보험 적용되나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hospital_pharmacy_5.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
+</body>
+</html>
