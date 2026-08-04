@@ -170,6 +170,9 @@ header p {
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .dialogue {
@@ -181,6 +184,7 @@ header p {
     background: #f8f9fa;
     border-radius: 10px;
     border-left: 4px solid #667eea;
+    max-width: 98%;
 }
 
 .dialogue:last-child {
