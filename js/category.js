@@ -35,6 +35,7 @@ function etBuildCategoryPage() {
         for (var i = 0; i < cat.scenarios.length; i++) {
             var s = cat.scenarios[i];
             var isDone = etIsDone(s.key);
+            var doneMark = isDone ? '<div class="scenario-done-mark">✔️ 완료</div>' : '';
             html +=
                 '<a href="scenario.html?cat=' + cat.key + '&name=' + s.key + '" class="scenario-item' + (isDone ? ' done' : '') + '">' +
                 '<div class="scenario-icon">' + etEsc(s.icon || '💬') + '</div>' +
@@ -42,7 +43,10 @@ function etBuildCategoryPage() {
                 '<div class="scenario-name">' + etEsc(s.title) + '</div>' +
                 '<div class="scenario-desc">' + etEsc(s.subtitle) + '</div>' +
                 '</div>' +
+                '<div class="scenario-side">' +
+                doneMark +
                 '<div class="scenario-count">' + s.dialogues.length + '문장</div>' +
+                '</div>' +
                 '</a>';
         }
         document.getElementById('scenarioList').innerHTML = html;

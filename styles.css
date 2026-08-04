@@ -437,9 +437,19 @@ footer {
     color: #2e7d32;
 }
 
-/* checkmark marker on done items */
-.scenario-item.done::after {
-    content: ' ✔️';
+/* checkmark marker above count for done items */
+.scenario-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.scenario-done-mark {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #2e7d32;
 }
 
 /* Done button (in control bar) */
@@ -515,6 +525,9 @@ footer {
     }
     .scenario-item.done .scenario-name,
     .scenario-row.done .scenario-name {
+        color: #81c784;
+    }
+    .scenario-done-mark {
         color: #81c784;
     }
     .done-btn {
