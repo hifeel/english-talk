@@ -71,6 +71,13 @@
     align-items: center;
 }
 
+/* Right group: play + done button */
+.right-controls {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
 .play-all-progress {
     font-size: 0.8rem;
     font-weight: 600;
@@ -185,6 +192,11 @@
         border-radius: 16px;
     }
     .play-controls {
+        justify-content: flex-end;
+        gap: 4px;
+        flex-shrink: 0;
+    }
+    .right-controls {
         justify-content: flex-end;
         gap: 4px;
         flex-shrink: 0;

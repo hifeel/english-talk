@@ -24,15 +24,17 @@
                     <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자</button>
                     <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복</button>
                 </div>
-                <div class="play-controls">
-                    <div id="playAllProgress" class="play-all-progress" style="display: none;">
-                        <span id="progressText">0 / 0</span>
+                <div class="right-controls">
+                    <div class="play-controls">
+                        <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                            <span id="progressText">0 / 0</span>
+                        </div>
+                        <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                            <span id="playAllIcon">▶️</span>
+                        </button>
                     </div>
-                    <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
-                        <span id="playAllIcon">▶️</span>
-                    </button>
+                    <button id="doneBtn" class="done-btn" onclick="etToggleDoneBtn()">☐ 완료</button>
                 </div>
-                <button id="doneBtn" class="done-btn" onclick="etToggleDoneBtn()">☐ 완료</button>
             </div>
         </div>
 
