@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚚 배달/배송 - 쇼핑 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="shopping.html" class="back-link">← 쇼핑 목록으로</a>
+            <h1>🚚 배달/배송 (Delivery)</h1>
+            <p>홈 딜리버리, 오늘 배송, 픽업</p>
+        </header>
+        
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복 OFF</button>
+            </div>
+            <div class="play-controls">
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 5</span>
+                </div>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Do you offer home delivery?</div>
+                <div class="korean">홈 딜리버리 서비스가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_delivery_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, delivery is $5 for orders under $50.</div>
+                <div class="korean">네, 50달러 미만은 배송비 5달러입니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_delivery_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Can I get this delivered today?</div>
+                <div class="korean">오늘 배송 가능한가요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_delivery_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">I'd like to pick up in store.</div>
+                <div class="korean">매장에서 픽업하고 싶습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_delivery_4.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Sure, it will be ready in 2 hours.</div>
+                <div class="korean">네, 2시간 후 준비됩니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_delivery_5.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
+</body>
+</html>

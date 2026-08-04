@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎁 선물 포장 - 쇼핑 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="shopping.html" class="back-link">← 쇼핑 목록으로</a>
+            <h1>🎁 선물 포장 (Gift Wrapping)</h1>
+            <p>선물 포장, 메시지, 영수증</p>
+        </header>
+        
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복 OFF</button>
+            </div>
+            <div class="play-controls">
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 4</span>
+                </div>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Can you gift wrap this for me?</div>
+                <div class="korean">이것 선물 포장해 주실 수 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_gift_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Of course! What kind of wrapping would you like?</div>
+                <div class="korean">물론이죠! 어떤 포장으로 해드릴까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_gift_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">I'd like a gift receipt please.</div>
+                <div class="korean">선물용 영수증 주세요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_gift_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Sure, would you like to add a gift message?</div>
+                <div class="korean">네, 선물 메시지를 추가하시겠어요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_gift_4.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
+</body>
+</html>

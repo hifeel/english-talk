@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎫 쿠폰/할인 - 쇼핑 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="shopping.html" class="back-link">← 쇼핑 목록으로</a>
+            <h1>🎫 쿠폰/할인 (Coupons & Discounts)</h1>
+            <p>쿠폰 사용, 멤버십 할인, 프로모션</p>
+        </header>
+        
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복 OFF</button>
+            </div>
+            <div class="play-controls">
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 5</span>
+                </div>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">I have a coupon. Can I use it?</div>
+                <div class="korean">쿠폰이 있는데 사용할 수 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_coupon_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, but it can't be combined with other discounts.</div>
+                <div class="korean">네, 하지만 다른 할인과 중복은 안 됩니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_coupon_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Do you have any promotions today?</div>
+                <div class="korean">오늘 프로모션이 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_coupon_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Can I combine this with other discounts?</div>
+                <div class="korean">이것 다른 할인과 같이 사용할 수 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_coupon_4.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">How do I sign up for the loyalty program?</div>
+                <div class="korean">로열티 프로그램에 어떻게 가입하나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_coupon_5.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>😤 불만/클레임 - 쇼핑 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="shopping.html" class="back-link">← 쇼핑 목록으로</a>
+            <h1>😤 불만/클레임 (Complaints)</h1>
+            <p>파손, 가격 오류, 잘못된 요금</p>
+        </header>
+        
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복 OFF</button>
+            </div>
+            <div class="play-controls">
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 4</span>
+                </div>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+            </div>
+        </div>
+        
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">This item is damaged.</div>
+                <div class="korean">이 제품이 손상되어 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_complaint_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">I'm sorry. Would you like a replacement?</div>
+                <div class="korean">죄송합니다. 교환하시겠어요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_complaint_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">I was charged the wrong amount.</div>
+                <div class="korean">잘못된 금액이 청구되었습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_complaint_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Can I speak to the manager?</div>
+                <div class="korean">매니저와 통화할 수 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/shop_complaint_4.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+    <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
+</body>
+</html>
