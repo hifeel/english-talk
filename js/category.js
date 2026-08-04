@@ -24,10 +24,19 @@ function etBuildCategoryPage() {
         };
         document.getElementById('pageSubtitle').textContent = subMap[catKey] || '';
 
+        // Progress bar
+        var prog = etCategoryProgress(catKey);
+        var progBar = document.getElementById('progressArea');
+        progBar.innerHTML =
+            '<div class="progress-text">공부 완료 ' + prog.done + ' / ' + prog.total + ' 시나리오 (' + prog.percent + '%)</div>' +
+            '<div class="progress-track"><div class="progress-fill" style="width:' + prog.percent + '%"></div></div>';
+
         var html = '';
         for (var i = 0; i < cat.scenarios.length; i++) {
             var s = cat.scenarios[i];
+            var isDone = etIsDone(s.key);
             html +=
+                '<div class="scenario-row' + (isDone ? ' done' : '') + '">' +
                 '<a href="scenario.html?cat=' + cat.key + '&name=' + s.key + '" class="scenario-item">' +
                 '<div class="scenario-icon">' + etEsc(s.icon || '💬') + '</div>' +
                 '<div class="scenario-info">' +
@@ -35,10 +44,19 @@ function etBuildCategoryPage() {
                 '<div class="scenario-desc">' + etEsc(s.subtitle) + '</div>' +
                 '</div>' +
                 '<div class="scenario-count">' + s.dialogues.length + '문장</div>' +
-                '</a>';
+                '</a>' +
+                '<button class="done-btn' + (isDone ? ' checked' : '') + '" onclick="etToggleScenarioDone(\'' + s.key + '\')">' +
+                (isDone ? '✔️' : '☐') +
+                '</button>' +
+                '</div>';
         }
         document.getElementById('scenarioList').innerHTML = html;
     });
+}
+
+function etToggleScenarioDone(key) {
+    etToggleDone(key);
+    etBuildCategoryPage();
 }
 
 if (document.readyState === 'loading') {

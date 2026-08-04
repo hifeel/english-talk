@@ -21,6 +21,7 @@ function etBuildIndex() {
             for (var j = 0; j < c.scenarios.length; j++) {
                 totalDialogues += c.scenarios[j].dialogues.length;
             }
+            var prog = etCategoryProgress(c.key);
             var shortTitle = c.title.replace(/^[^\s]+\s/, '');
             html +=
                 '<a href="category.html?cat=' + c.key + '" class="topic-card">' +
@@ -28,8 +29,20 @@ function etBuildIndex() {
                 '<div class="topic-title">' + etEsc(shortTitle) + '</div>' +
                 '<div class="topic-subtitle">' + etEsc(meta.subtitle) + '</div>' +
                 '<div class="topic-count">' + totalDialogues + '문장</div>' +
+                '<div class="topic-progress">' +
+                '<div class="topic-progress-text">' + prog.done + ' / ' + prog.total + ' 완료</div>' +
+                '<div class="topic-progress-track"><div class="topic-progress-fill" style="width:' + prog.percent + '%"></div></div>' +
+                '</div>' +
                 '</a>';
         }
+
+        // Overall progress banner at top
+        var overall = etTotalProgress();
+        var banner = document.getElementById('overallProgress');
+        banner.innerHTML =
+            '<div class="overall-text">📚 전체 공부 진행률: ' + overall.done + ' / ' + overall.total + ' 시나리오 (' + overall.percent + '%)</div>' +
+            '<div class="progress-track"><div class="progress-fill" style="width:' + overall.percent + '%"></div></div>';
+
         document.getElementById('topicsGrid').innerHTML = html;
     });
 }

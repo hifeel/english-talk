@@ -46,3 +46,58 @@ function etEsc(s) {
     if (s === null || s === undefined) return '';
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
+
+// ============ Study progress (localStorage) ============
+
+var ET_DONE_KEY = 'englishTalk_done';
+
+function etGetDone() {
+    try {
+        var saved = localStorage.getItem(ET_DONE_KEY);
+        return saved ? JSON.parse(saved) : {};
+    } catch(e) { return {}; }
+}
+
+function etSaveDone(obj) {
+    try { localStorage.setItem(ET_DONE_KEY, JSON.stringify(obj)); } catch(e) {}
+}
+
+function etIsDone(key) {
+    return !!etGetDone()[key];
+}
+
+function etToggleDone(key) {
+    var done = etGetDone();
+    if (done[key]) { delete done[key]; } else { done[key] = true; }
+    etSaveDone(done);
+    return !done[key];
+}
+
+// Progress for a category: {done: n, total: n, percent: int}
+function etCategoryProgress(catKey) {
+    var cat = etFindCategory(catKey);
+    if (!cat) return { done: 0, total: 0, percent: 0 };
+    var done = etGetDone();
+    var total = cat.scenarios.length;
+    var count = 0;
+    for (var i = 0; i < cat.scenarios.length; i++) {
+        if (done[cat.scenarios[i].key]) count++;
+    }
+    var percent = total > 0 ? Math.round(count / total * 100) : 0;
+    return { done: count, total: total, percent: percent };
+}
+
+// Total progress across all categories
+function etTotalProgress() {
+    var cats = etGetCategories();
+    var done = etGetDone();
+    var total = 0, count = 0;
+    for (var c = 0; c < cats.length; c++) {
+        for (var i = 0; i < cats[c].scenarios.length; i++) {
+            total++;
+            if (done[cats[c].scenarios[i].key]) count++;
+        }
+    }
+    var percent = total > 0 ? Math.round(count / total * 100) : 0;
+    return { done: count, total: total, percent: percent };
+}
