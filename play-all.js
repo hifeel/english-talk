@@ -21,7 +21,8 @@ function startAll() {
     currentAudioIndex = 0;
     
     document.getElementById('playAllIcon').textContent = '⏸️';
-    document.getElementById('playAllText').textContent = '일시정지';
+    var txt = document.getElementById('playAllText');
+    if (txt) txt.textContent = '일시정지';
     document.getElementById('playAllProgress').style.display = 'inline-block';
     
     playNext();
@@ -69,7 +70,8 @@ function stopAll() {
     }
     
     document.getElementById('playAllIcon').textContent = '▶️';
-    document.getElementById('playAllText').textContent = '전체 재생';
+    var txt = document.getElementById('playAllText');
+    if (txt) txt.textContent = '전체 재생';
     document.getElementById('playAllProgress').style.display = 'none';
 }
 
