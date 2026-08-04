@@ -98,16 +98,28 @@ header {
     flex-wrap: wrap;
 }
 
-@media (prefers-color-scheme: dark) {
-    .sticky-top { background: #111111; }
-    .sticky-top .back-link { background: transparent; }
+/* Control bar: sticks below the back-nav bar */
+.sticky-controls {
+    position: sticky;
+    top: 44px;
+    background: #ffffff;
+    z-index: 99;
+    border-bottom: 1px solid #eef0ff;
 }
 
-/* Inner control bar uses parent sticky only */
-.sticky-top .control-bar {
+@media (prefers-color-scheme: dark) {
+    .sticky-controls { background: #111111; }
+}
+
+.sticky-controls .control-bar {
     position: static;
     margin-bottom: 0;
     padding: 6px 4px 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .sticky-top { background: #111111; }
+    .sticky-top .back-link { background: transparent; }
 }
 
 /* ============ Main page cards ============ */
