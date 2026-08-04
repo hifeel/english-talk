@@ -50,13 +50,13 @@ function etBuildScenarioPage() {
         var navHtml = '';
         if (idx > 0) {
             var prev = cat.scenarios[idx - 1];
-            navHtml += '<a href="scenario.html?cat=' + cat.key + '&name=' + prev.key + '">← 이전: ' + etEsc(prev.title) + '</a>';
+            navHtml += '<a href="scenario.html?cat=' + cat.key + '&name=' + prev.key + '">←</a>';
         } else {
             navHtml += '<span></span>';
         }
         if (idx >= 0 && idx < cat.scenarios.length - 1) {
             var next = cat.scenarios[idx + 1];
-            navHtml += '<a href="scenario.html?cat=' + cat.key + '&name=' + next.key + '">다음: ' + etEsc(next.title) + ' →</a>';
+            navHtml += '<a href="scenario.html?cat=' + cat.key + '&name=' + next.key + '">→</a>';
         } else {
             navHtml += '<span></span>';
         }
