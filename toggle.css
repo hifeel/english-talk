@@ -91,22 +91,33 @@
     .play-all-progress { background: #2a2a2a; color: #cccccc; }
 }
 
-/* Play all button - plain icon, no box */
+/* Play all button - icon + label, pill like the toggle buttons */
 .play-all-btn {
-    background: transparent;
-    border: none;
+    background: #667eea;
+    color: #ffffff;
+    border: 1px solid #667eea;
     cursor: pointer;
-    padding: 4px;
-    font-size: 1.4rem;
-    color: #667eea;
-    transition: transform 0.2s;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s;
+    user-select: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5px;
+    white-space: nowrap;
 }
 
 .play-all-btn:hover {
-    transform: scale(1.15);
+    background: #5a6fd8;
+    border-color: #5a6fd8;
+}
+
+#playAllIcon {
+    font-size: 0.95rem;
+    line-height: 1;
 }
 
 /* ============ Dialogue action buttons ============ */
@@ -201,6 +212,12 @@
         gap: 4px;
         flex-shrink: 0;
     }
-    .play-all-btn { font-size: 1.4rem; }
+    .play-all-btn {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        border-radius: 16px;
+        gap: 4px;
+    }
+    #playAllIcon { font-size: 0.85rem; }
     .play-all-progress { display: none; }
 }
