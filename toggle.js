@@ -4,7 +4,6 @@ var showKorean = true;
 var showSpeaker = true;
 var repeatMode = false;
 
-// Load states from localStorage
 function loadStates() {
     try {
         var saved = localStorage.getItem('englishTalk_states');
@@ -18,7 +17,6 @@ function loadStates() {
     } catch(e) {}
 }
 
-// Save states to localStorage
 function saveStates() {
     try {
         localStorage.setItem('englishTalk_states', JSON.stringify({
@@ -35,7 +33,7 @@ function toggleEnglish() {
     updateVisibility();
     var btn = document.getElementById('toggleEnglishBtn');
     if (btn) {
-        btn.textContent = showEnglish ? '영어 ON' : '영어 OFF';
+        btn.textContent = '영어';
         btn.classList.toggle('active', showEnglish);
     }
     saveStates();
@@ -46,7 +44,7 @@ function toggleKorean() {
     updateVisibility();
     var btn = document.getElementById('toggleKoreanBtn');
     if (btn) {
-        btn.textContent = showKorean ? '한국어 ON' : '한국어 OFF';
+        btn.textContent = '한국어';
         btn.classList.toggle('active', showKorean);
     }
     saveStates();
@@ -57,7 +55,7 @@ function toggleSpeaker() {
     updateVisibility();
     var btn = document.getElementById('toggleSpeakerBtn');
     if (btn) {
-        btn.textContent = showSpeaker ? '화자 ON' : '화자 OFF';
+        btn.textContent = '화자';
         btn.classList.toggle('active', showSpeaker);
     }
     saveStates();
@@ -67,7 +65,7 @@ function toggleRepeat() {
     repeatMode = !repeatMode;
     var btn = document.getElementById('repeatBtn');
     if (btn) {
-        btn.textContent = repeatMode ? '반복 ON' : '반복 OFF';
+        btn.textContent = '반복';
         btn.classList.toggle('active', repeatMode);
     }
     saveStates();
@@ -87,7 +85,6 @@ function updateVisibility() {
     for (var i = 0; i < els.length; i++) els[i].style.display = showSpeaker ? '' : 'none';
 }
 
-// Play audio with repeat support
 function playAudioWithRepeat(audio) {
     var allAudios = document.querySelectorAll('audio');
     for (var i = 0; i < allAudios.length; i++) {
@@ -114,13 +111,11 @@ function stopAudio(audio) {
     audio.onended = null;
 }
 
-// Google Search
 function openGoogleSearch(sentence) {
     var searchTerm = encodeURIComponent(sentence + ' 이 문장을 설명해줘');
     window.open('https://www.google.com/search?q=' + searchTerm, '_blank');
 }
 
-// Regenerate audio
 function regenerateAudio(dialogue) {
     var englishEl = dialogue.querySelector('.english');
     var audioEl = dialogue.querySelector('audio');
@@ -129,7 +124,6 @@ function regenerateAudio(dialogue) {
     var sentence = englishEl.textContent.trim();
     if (!confirm('이 음성을 다시 생성하시겠습니까?\n"' + sentence + '"')) return;
     
-    // Show loading state
     var btn = dialogue.querySelector('.refresh-btn');
     if (btn) btn.textContent = '⏳';
     
@@ -140,12 +134,8 @@ function regenerateAudio(dialogue) {
         .then(function(res) { return res.json(); })
         .then(function(data) {
             if (data.status === 'success' && data.audio_url) {
-                var newAudioUrl = 'https://englishtalk.duckdns.org' + data.audio_url;
-                
-                // Update audio source
-                audioEl.src = newAudioUrl;
+                audioEl.src = 'https://englishtalk.duckdns.org' + data.audio_url;
                 audioEl.load();
-                
                 if (btn) btn.textContent = '🔄';
                 alert('음성이 다시 생성되었습니다! ✓');
             } else {
@@ -159,21 +149,20 @@ function regenerateAudio(dialogue) {
         });
 }
 
-// Initialize
 function initEnglishTalk() {
     loadStates();
     
     var btn = document.getElementById('toggleEnglishBtn');
-    if (btn) { btn.textContent = showEnglish ? '영어 ON' : '영어 OFF'; btn.classList.toggle('active', showEnglish); }
+    if (btn) { btn.textContent = '영어'; btn.classList.toggle('active', showEnglish); }
     
     btn = document.getElementById('toggleKoreanBtn');
-    if (btn) { btn.textContent = showKorean ? '한국어 ON' : '한국어 OFF'; btn.classList.toggle('active', showKorean); }
+    if (btn) { btn.textContent = '한국어'; btn.classList.toggle('active', showKorean); }
     
     btn = document.getElementById('toggleSpeakerBtn');
-    if (btn) { btn.textContent = showSpeaker ? '화자 ON' : '화자 OFF'; btn.classList.toggle('active', showSpeaker); }
+    if (btn) { btn.textContent = '화자'; btn.classList.toggle('active', showSpeaker); }
     
     btn = document.getElementById('repeatBtn');
-    if (btn) { btn.textContent = repeatMode ? '반복 ON' : '반복 OFF'; btn.classList.toggle('active', repeatMode); }
+    if (btn) { btn.textContent = '반복'; btn.classList.toggle('active', repeatMode); }
     
     updateVisibility();
     
@@ -203,14 +192,6 @@ function addClickToPlay(dialogue) {
                 stopAudio(audio);
             }
         }
-    });
-    
-    dialogue.addEventListener('mouseenter', function() {
-        if (!this.classList.contains('playing')) this.style.backgroundColor = '#e8f4fd';
-    });
-    
-    dialogue.addEventListener('mouseleave', function() {
-        if (!this.classList.contains('playing')) this.style.backgroundColor = '';
     });
 }
 
@@ -245,7 +226,6 @@ function addRefreshButton(dialogue) {
     dialogue.appendChild(refreshBtn);
 }
 
-// Run on page load
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initEnglishTalk);
 } else {
