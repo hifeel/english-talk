@@ -4,123 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🗣️ English Talk - 영어 회화 학습</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: white;
-            color: #333;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        @media (prefers-color-scheme: dark) {
-            body { background: #1a1a1a; color: #e0e0e0; }
-            header h1 { color: #fff; }
-            header p { color: #ccc; }
-            .topic-card { background: #2a2a2a; }
-            .topic-title { color: #fff; }
-            .topic-subtitle { color: #aaa; }
-            .topic-count { background: #444; color: #ccc; }
-            footer { color: #666; }
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        header {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-        }
-        
-        header h1 {
-            font-size: 2.8em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        header p {
-            font-size: 1.3em;
-            opacity: 0.9;
-        }
-        
-        .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-        
-        .topic-card {
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            text-decoration: none;
-            color: inherit;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .topic-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-        
-        .topic-icon {
-            font-size: 2.5em;
-            margin-bottom: 12px;
-        }
-        
-        .topic-title {
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 8px;
-        }
-        
-        .topic-subtitle {
-            font-size: 0.9em;
-            font-weight: 500;
-            color: #555;
-            margin-bottom: 12px;
-        }
-        
-        .topic-count {
-            font-size: 0.85em;
-            font-weight: bold;
-            color: #666;
-            background: #e0e0e0;
-            padding: 6px 12px;
-            border-radius: 12px;
-            display: inline-block;
-        }
-        
-        footer {
-            text-align: center;
-            color: white;
-            margin-top: 50px;
-            padding: 20px;
-            opacity: 0.8;
-        }
-        
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2em;
-            }
-            
-            .topics-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -130,7 +14,6 @@
         </header>
         
         <div class="topics-grid">
-            <!-- Hotel -->
             <a href="hotel.html" class="topic-card">
                 <div class="topic-icon">🏨</div>
                 <div class="topic-title">호텔 (Hotel)</div>
@@ -138,7 +21,6 @@
                 <div class="topic-count">16개 대화문</div>
             </a>
             
-            <!-- Shopping -->
             <a href="shopping.html" class="topic-card">
                 <div class="topic-icon">🛍️</div>
                 <div class="topic-title">쇼핑 (Shopping)</div>
@@ -146,7 +28,6 @@
                 <div class="topic-count">15개 대화문</div>
             </a>
             
-            <!-- Airport -->
             <a href="airport.html" class="topic-card">
                 <div class="topic-icon">🛫</div>
                 <div class="topic-title">공항 (Airport)</div>
@@ -154,7 +35,6 @@
                 <div class="topic-count">10개 대화문</div>
             </a>
             
-            <!-- Restaurant -->
             <a href="restaurant.html" class="topic-card">
                 <div class="topic-icon">🍽️</div>
                 <div class="topic-title">레스토랑 (Restaurant)</div>
@@ -162,7 +42,6 @@
                 <div class="topic-count">14개 대화문</div>
             </a>
             
-            <!-- Transportation -->
             <a href="transport.html" class="topic-card">
                 <div class="topic-icon">🚕</div>
                 <div class="topic-title">교통 (Transportation)</div>
@@ -170,7 +49,6 @@
                 <div class="topic-count">8개 대화문</div>
             </a>
             
-            <!-- Hospital -->
             <a href="hospital.html" class="topic-card">
                 <div class="topic-icon">🏥</div>
                 <div class="topic-title">병원 (Hospital)</div>
@@ -178,7 +56,6 @@
                 <div class="topic-count">8개 대화문</div>
             </a>
             
-            <!-- Travel -->
             <a href="travel.html" class="topic-card">
                 <div class="topic-icon">✈️</div>
                 <div class="topic-title">여행 (Travel)</div>
