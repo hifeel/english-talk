@@ -70,6 +70,20 @@ header {
     text-decoration: underline;
 }
 
+/* Breadcrumb separator between nav links */
+.nav-sep {
+    color: #aaa;
+    font-size: 1rem;
+    padding: 0 2px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.back-nav .back-link {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 @media (prefers-color-scheme: dark) {
     .back-link {
         background: #111111;

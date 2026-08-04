@@ -16,11 +16,13 @@ function etBuildScenarioPage() {
             return;
         }
 
-        // Back nav
+        // Back nav: 메인 > 카테고리 (e.g. 쇼핑)
         var backNav = document.getElementById('backNav');
+        var catShort = etEsc(cat.title.replace(/^[^\s]+\s/, ''));
         backNav.innerHTML =
             '<a href="index.html" class="back-link">🏠 메인</a>' +
-            '<a href="' + cat.key + '.html" class="back-link">← ' + etEsc(cat.title.replace(/^[^\s]+\s/, '')) + ' 목록으로</a>';
+            '<span class="nav-sep">›</span>' +
+            '<a href="' + cat.key + '.html" class="back-link">' + catShort + '</a>';
         // Title
         document.getElementById('pageTitle').textContent = scenario.icon + ' ' + scenario.title;
         document.getElementById('pageSubtitle').textContent = scenario.subtitle;
