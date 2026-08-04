@@ -52,3 +52,10 @@ if (document.readyState === 'loading') {
 } else {
     etBuildIndex();
 }
+
+// Re-render when returning from bfcache (back button) so progress updates instantly
+window.addEventListener('pageshow', function(e) {
+    if (e.persisted) {
+        etBuildIndex();
+    }
+});

@@ -58,3 +58,10 @@ if (document.readyState === 'loading') {
 } else {
     etBuildCategoryPage();
 }
+
+// Re-render when returning from bfcache (back button) so done marks update instantly
+window.addEventListener('pageshow', function(e) {
+    if (e.persisted) {
+        etBuildCategoryPage();
+    }
+});
