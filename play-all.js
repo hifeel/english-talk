@@ -57,6 +57,7 @@ function playNext() {
     
     audio.onended = function() {
         unhighlightDialogue(currentAudioIndex);
+        audio.removeAttribute('data-playall');
         currentAudioIndex++;
         playNext();
     };
@@ -74,7 +75,12 @@ function stopAll() {
         audioElements[currentAudioIndex].pause();
         audioElements[currentAudioIndex].currentTime = 0;
         audioElements[currentAudioIndex].onended = null;
-        audioElements[currentAudioIndex].removeAttribute('data-playall');
+    }
+
+    // Clear the play-all marker everywhere; a stale one would make a later
+    // click on that sentence fail to stop play-all (toggle.js play handler)
+    for (var k = 0; k < audioElements.length; k++) {
+        audioElements[k].removeAttribute('data-playall');
     }
     
     var dialogues = document.querySelectorAll('.dialogue');

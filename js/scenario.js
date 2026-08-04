@@ -22,7 +22,7 @@ function etBuildScenarioPage() {
         backNav.innerHTML =
             '<a href="index.html" class="back-link">🏠 메인</a>' +
             '<span class="nav-sep">></span>' +
-            '<a href="' + cat.key + '.html" class="back-link">' + catShort + '</a>';
+            '<a href="category.html?cat=' + cat.key + '" class="back-link">' + catShort + '</a>';
         // Title
         document.getElementById('pageTitle').textContent = scenario.icon + ' ' + scenario.title;
         document.getElementById('pageSubtitle').textContent = scenario.subtitle;

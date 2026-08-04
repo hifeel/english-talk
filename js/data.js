@@ -70,7 +70,7 @@ function etToggleDone(key) {
     var done = etGetDone();
     if (done[key]) { delete done[key]; } else { done[key] = true; }
     etSaveDone(done);
-    return !done[key];
+    return !!done[key];  // true if the scenario is now marked done
 }
 
 // Progress for a category: {done: n, total: n, percent: int}

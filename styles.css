@@ -414,26 +414,12 @@ footer {
     margin-bottom: 8px;
 }
 
-/* Scenario row with check button */
-.scenario-row {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.scenario-row .scenario-item {
-    flex: 1;
-    min-width: 0;
-}
-
-.scenario-item.done,
-.scenario-row.done .scenario-item {
+.scenario-item.done {
     background: #e8f5e9;
     box-shadow: 0 3px 12px rgba(76,175,80,0.15);
 }
 
-.scenario-item.done .scenario-name,
-.scenario-row.done .scenario-name {
+.scenario-item.done .scenario-name {
     color: #2e7d32;
 }
 
@@ -519,12 +505,10 @@ footer {
     .progress-track, .topic-progress-track {
         background: #3a3a3a;
     }
-    .scenario-item.done,
-    .scenario-row.done .scenario-item {
+    .scenario-item.done {
         background: #1e2e20;
     }
-    .scenario-item.done .scenario-name,
-    .scenario-row.done .scenario-name {
+    .scenario-item.done .scenario-name {
         color: #81c784;
     }
     .scenario-done-mark {
