@@ -169,6 +169,11 @@ function addClickToPlay(dialogue) {
             return;
         }
         
+        // Stop play all mode when clicking a sentence
+        if (typeof stopPlayAllForClick === 'function') {
+            stopPlayAllForClick();
+        }
+        
         var audio = this.querySelector('audio');
         if (audio) {
             if (audio.paused) {

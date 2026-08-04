@@ -59,6 +59,7 @@ function stopAll() {
     if (currentAudioIndex < audioElements.length) {
         audioElements[currentAudioIndex].pause();
         audioElements[currentAudioIndex].currentTime = 0;
+        audioElements[currentAudioIndex].onended = null;
     }
     
     var dialogues = document.querySelectorAll('.dialogue');
@@ -90,5 +91,12 @@ function unhighlightDialogue(index) {
     var dialogue = audioElements[index].closest('.dialogue');
     if (dialogue) {
         dialogue.classList.remove('playing');
+    }
+}
+
+// Stop play all when clicking a sentence
+function stopPlayAllForClick() {
+    if (isPlaying) {
+        stopAll();
     }
 }
