@@ -426,13 +426,20 @@ footer {
     min-width: 0;
 }
 
+.scenario-item.done,
 .scenario-row.done .scenario-item {
     background: #e8f5e9;
     box-shadow: 0 3px 12px rgba(76,175,80,0.15);
 }
 
+.scenario-item.done .scenario-name,
 .scenario-row.done .scenario-name {
     color: #2e7d32;
+}
+
+/* checkmark marker on done items */
+.scenario-item.done::after {
+    content: ' ✔️';
 }
 
 /* Done button (in control bar) */
@@ -502,9 +509,11 @@ footer {
     .progress-track, .topic-progress-track {
         background: #3a3a3a;
     }
+    .scenario-item.done,
     .scenario-row.done .scenario-item {
         background: #1e2e20;
     }
+    .scenario-item.done .scenario-name,
     .scenario-row.done .scenario-name {
         color: #81c784;
     }
