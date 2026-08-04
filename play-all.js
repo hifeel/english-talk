@@ -20,12 +20,23 @@ function startAll() {
     isPlaying = true;
     currentAudioIndex = 0;
     
+    // Stop any currently playing individual audio first
+    stopAllIndividualAudio();
+    
     document.getElementById('playAllIcon').textContent = '⏸️';
     var txt = document.getElementById('playAllText');
     if (txt) txt.textContent = '일시정지';
     document.getElementById('playAllProgress').style.display = 'inline-block';
     
     playNext();
+}
+
+function stopAllIndividualAudio() {
+    for (var i = 0; i < audioElements.length; i++) {
+        audioElements[i].pause();
+        audioElements[i].currentTime = 0;
+        audioElements[i].onended = null;
+    }
 }
 
 function playNext() {
@@ -51,6 +62,8 @@ function playNext() {
     };
     
     audio.currentTime = 0;
+    // Mark this audio as being driven by play-all
+    audio.setAttribute('data-playall', '1');
     audio.play();
 }
 
@@ -61,6 +74,7 @@ function stopAll() {
         audioElements[currentAudioIndex].pause();
         audioElements[currentAudioIndex].currentTime = 0;
         audioElements[currentAudioIndex].onended = null;
+        audioElements[currentAudioIndex].removeAttribute('data-playall');
     }
     
     var dialogues = document.querySelectorAll('.dialogue');

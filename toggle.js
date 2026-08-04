@@ -105,6 +105,13 @@ function playAudioWithRepeat(audio) {
     audio.play();
 }
 
+// Stop play-all when a sentence audio starts playing
+function stopPlayAllIfActive() {
+    if (typeof isPlaying !== 'undefined' && isPlaying && typeof stopAll === 'function') {
+        stopAll();
+    }
+}
+
 function stopAudio(audio) {
     audio.pause();
     audio.currentTime = 0;
@@ -171,6 +178,15 @@ function initEnglishTalk() {
         addClickToPlay(dialogues[i]);
         addGoogleButton(dialogues[i]);
         addRefreshButton(dialogues[i]);
+    }
+    
+    // When any sentence audio starts playing (user-initiated), stop play-all
+    var audios = document.querySelectorAll('audio');
+    for (var j = 0; j < audios.length; j++) {
+        audios[j].addEventListener('play', function() {
+            if (this.getAttribute('data-playall')) return;
+            stopPlayAllIfActive();
+        });
     }
 }
 
