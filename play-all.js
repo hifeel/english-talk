@@ -1,8 +1,7 @@
 // Play All functionality for English Talk
-let isPlaying = false;
-let currentAudioIndex = 0;
-let audioElements = [];
-let repeatMode = false;
+var isPlaying = false;
+var currentAudioIndex = 0;
+var audioElements = [];
 
 function initAudioList() {
     audioElements = Array.from(document.querySelectorAll('audio'));
@@ -42,7 +41,7 @@ function playNext() {
     updateProgress();
     highlightDialogue(currentAudioIndex);
     
-    const audio = audioElements[currentAudioIndex];
+    var audio = audioElements[currentAudioIndex];
     
     audio.onended = function() {
         unhighlightDialogue(currentAudioIndex);
@@ -62,10 +61,11 @@ function stopAll() {
         audioElements[currentAudioIndex].currentTime = 0;
     }
     
-    document.querySelectorAll('.dialogue').forEach(d => {
-        d.classList.remove('playing');
-        d.style.backgroundColor = '';
-    });
+    var dialogues = document.querySelectorAll('.dialogue');
+    for (var i = 0; i < dialogues.length; i++) {
+        dialogues[i].classList.remove('playing');
+        dialogues[i].style.backgroundColor = '';
+    }
     
     document.getElementById('playAllIcon').textContent = '▶️';
     document.getElementById('playAllText').textContent = '전체 재생';
@@ -73,13 +73,13 @@ function stopAll() {
 }
 
 function updateProgress() {
-    const total = audioElements.length;
-    const current = currentAudioIndex + 1;
-    document.getElementById('progressText').textContent = `${current} / ${total}`;
+    var total = audioElements.length;
+    var current = currentAudioIndex + 1;
+    document.getElementById('progressText').textContent = current + ' / ' + total;
 }
 
 function highlightDialogue(index) {
-    const dialogue = audioElements[index].closest('.dialogue');
+    var dialogue = audioElements[index].closest('.dialogue');
     if (dialogue) {
         dialogue.classList.add('playing');
         dialogue.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -87,51 +87,8 @@ function highlightDialogue(index) {
 }
 
 function unhighlightDialogue(index) {
-    const dialogue = audioElements[index].closest('.dialogue');
+    var dialogue = audioElements[index].closest('.dialogue');
     if (dialogue) {
         dialogue.classList.remove('playing');
     }
-}
-
-// Single repeat toggle - shows ON/OFF
-function toggleRepeat() {
-    repeatMode = !repeatMode;
-    const btn = document.getElementById('repeatBtn');
-    if (btn) {
-        btn.classList.toggle('active', repeatMode);
-        btn.textContent = repeatMode ? '반복 ON' : '반복 OFF';
-    }
-}
-
-// Play single audio with repeat support
-function playAudioWithRepeat(audio) {
-    // Stop all other audios first
-    document.querySelectorAll('audio').forEach(a => {
-        if (a !== audio) {
-            a.pause();
-            a.currentTime = 0;
-            a.onended = null;
-        }
-    });
-    
-    if (repeatMode) {
-        // Repeat mode: loop this audio
-        audio.onended = function() {
-            audio.currentTime = 0;
-            audio.play();
-        };
-    } else {
-        // Normal mode: play once
-        audio.onended = null;
-    }
-    
-    audio.currentTime = 0;
-    audio.play();
-}
-
-// Stop single audio
-function stopAudio(audio) {
-    audio.pause();
-    audio.currentTime = 0;
-    audio.onended = null;
 }
