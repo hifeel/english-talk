@@ -51,18 +51,20 @@ header {
     padding-top: 8px;
 }
 
-/* Back-link: sticky at top on ALL pages */
+/* Back-link: sticky full-width bar at top */
 .back-link {
-    display: inline-block;
+    display: block;
     color: #667eea;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
-    padding: 10px 14px;
+    padding: 12px 4px;
     position: sticky;
     top: 0;
     background: #ffffff;
     z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-bottom: 1px solid #eef0ff;
 }
 
 .back-link:hover {
