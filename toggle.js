@@ -134,10 +134,15 @@ function regenerateAudio(dialogue) {
     var btn = dialogue.querySelector('.refresh-btn');
     if (btn) btn.textContent = '⏳';
     
-    var encodedText = encodeURIComponent(sentence);
-    var apiUrl = 'https://englishtalk.duckdns.org/tts?text=' + encodedText + '&voice=en-US-GuyNeural';
+    // Choose voice based on speaker (Guest/Customer/Staff...)
+    var spkEl = dialogue.querySelector('.speaker');
+    var spk = spkEl ? spkEl.textContent.trim() : '';
+    var femaleVoices = ['Guest', 'Customer', 'Traveler', 'Receptionist'];
+    var voice = (femaleVoices.indexOf(spk) !== -1) ? 'en-US-JennyNeural' : 'en-US-GuyNeural';
     
-    fetch(apiUrl)
+    var apiUrl = 'https://englishtalk.duckdns.org/tts?text=' + encodeURIComponent(sentence) + '&voice=' + voice;
+    
+    fetch(apiUrl, { method: 'POST' })
         .then(function(res) { return res.json(); })
         .then(function(data) {
             if (data.status === 'success' && data.audio_url) {
