@@ -74,14 +74,22 @@ header {
 .nav-sep {
     color: #aaa;
     font-size: 1rem;
-    padding: 0 2px;
-    display: inline-block;
-    vertical-align: middle;
+    padding: 0 4px;
+    line-height: 1;
+}
+
+.back-nav {
+    display: flex;
+    gap: 2px;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .back-nav .back-link {
     display: inline-block;
     vertical-align: middle;
+    padding: 8px 6px;
+    line-height: 1;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -108,8 +116,9 @@ header {
 
 .back-nav {
     display: flex;
-    gap: 6px;
+    gap: 2px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 /* Control bar: sticks below the back-nav bar */
