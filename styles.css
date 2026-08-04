@@ -75,12 +75,36 @@ header {
     }
 }
 
-/* Dialogue pages: hide title/desc already handled in HTML; keep control-bar sticky below back-link */
-.scenario-page .control-bar {
+/* Dialogue pages: back-links + control bar stay together in a sticky container */
+.sticky-top {
     position: sticky;
-    top: 44px;
+    top: 0;
     background: #ffffff;
-    z-index: 99;
+    z-index: 100;
+    padding: 6px 0;
+}
+
+.sticky-top .back-link {
+    position: static;
+    padding: 8px 12px;
+}
+
+.back-nav {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+@media (prefers-color-scheme: dark) {
+    .sticky-top { background: #111111; }
+    .sticky-top .back-link { background: transparent; }
+}
+
+/* Inner control bar uses parent sticky only */
+.sticky-top .control-bar {
+    position: static;
+    margin-bottom: 0;
+    padding: 6px 4px 8px;
 }
 
 /* ============ Main page cards ============ */
