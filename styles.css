@@ -233,7 +233,7 @@ header {
 .dialogue.playing .speaker { color: #4caf50; }
 
 .english {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     color: #333333;
     margin-bottom: 6px;
     padding-right: 72px;
@@ -306,7 +306,7 @@ footer {
     
     .scenario { padding: 14px; }
     .dialogue { padding: 12px; }
-    .english { font-size: 1rem; padding-right: 68px; }
+    .english { font-size: 1.1rem; padding-right: 68px; }
     .korean { font-size: 0.9rem; padding-right: 68px; }
     audio { height: 30px; }
     
