@@ -78,21 +78,23 @@ header p {
 }
 
 .topic-title {
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: bold;
     color: #333;
 }
 
 .topic-subtitle {
-    font-size: 0.85em;
-    color: #666;
+    font-size: 1em;
+    font-weight: 500;
+    color: #555;
 }
 
 .topic-count {
-    font-size: 0.8em;
-    color: #999;
-    background: #f0f0f0;
-    padding: 5px 12px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #666;
+    background: #e0e0e0;
+    padding: 6px 14px;
     border-radius: 12px;
     display: inline-block;
     width: fit-content;
