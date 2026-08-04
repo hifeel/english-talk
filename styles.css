@@ -310,8 +310,8 @@ footer {
     .korean { font-size: 0.9rem; padding-right: 68px; }
     audio { height: 30px; }
     
-    .page-nav { flex-direction: column; gap: 8px; }
-    .page-nav a { width: 100%; text-align: center; }
+    .page-nav { flex-direction: row; gap: 8px; }
+    .page-nav a { width: 50%; text-align: center; padding: 10px 8px; }
 }
 
 @media (max-width: 380px) {
