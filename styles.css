@@ -399,15 +399,16 @@ footer {
     color: #2e7d32;
 }
 
+/* Done button (in control bar) */
 .done-btn {
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    margin-left: 8px;
-    border: 2px solid #cccccc;
-    background: white;
-    border-radius: 10px;
-    font-size: 1.1rem;
+    padding: 8px 12px;
+    border: 1px solid #cccccc;
+    background: #f0f0f0;
+    color: #444444;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -418,6 +419,14 @@ footer {
 .done-btn.checked {
     border-color: #4caf50;
     background: #e8f5e9;
+    color: #2e7d32;
+}
+
+@media (max-width: 600px) {
+    .done-btn {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+    }
 }
 
 /* Topic card progress */
@@ -466,9 +475,11 @@ footer {
     .done-btn {
         background: #2a2a2a;
         border-color: #555555;
+        color: #dddddd;
     }
     .done-btn.checked {
         background: #1e2e20;
         border-color: #81c784;
+        color: #81c784;
     }
 }

@@ -36,27 +36,17 @@ function etBuildCategoryPage() {
             var s = cat.scenarios[i];
             var isDone = etIsDone(s.key);
             html +=
-                '<div class="scenario-row' + (isDone ? ' done' : '') + '">' +
-                '<a href="scenario.html?cat=' + cat.key + '&name=' + s.key + '" class="scenario-item">' +
+                '<a href="scenario.html?cat=' + cat.key + '&name=' + s.key + '" class="scenario-item' + (isDone ? ' done' : '') + '">' +
                 '<div class="scenario-icon">' + etEsc(s.icon || '💬') + '</div>' +
                 '<div class="scenario-info">' +
                 '<div class="scenario-name">' + etEsc(s.title) + '</div>' +
                 '<div class="scenario-desc">' + etEsc(s.subtitle) + '</div>' +
                 '</div>' +
                 '<div class="scenario-count">' + s.dialogues.length + '문장</div>' +
-                '</a>' +
-                '<button class="done-btn' + (isDone ? ' checked' : '') + '" onclick="etToggleScenarioDone(\'' + s.key + '\')">' +
-                (isDone ? '✔️' : '☐') +
-                '</button>' +
-                '</div>';
+                '</a>';
         }
         document.getElementById('scenarioList').innerHTML = html;
     });
-}
-
-function etToggleScenarioDone(key) {
-    etToggleDone(key);
-    etBuildCategoryPage();
 }
 
 if (document.readyState === 'loading') {

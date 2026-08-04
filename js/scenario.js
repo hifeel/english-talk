@@ -25,6 +25,9 @@ function etBuildScenarioPage() {
         document.getElementById('pageTitle').textContent = scenario.icon + ' ' + scenario.title;
         document.getElementById('pageSubtitle').textContent = scenario.subtitle;
 
+        // Done button state
+        etUpdateDoneBtn(scenario.key);
+
         // Build dialogues
         var html = '';
         for (var i = 0; i < scenario.dialogues.length; i++) {
@@ -65,6 +68,29 @@ function etBuildScenarioPage() {
         // Re-run init for new dynamic content
         if (typeof initEnglishTalk === 'function') initEnglishTalk();
     });
+}
+
+function etToggleScenarioDone(key) {
+    etToggleDone(key);
+    etUpdateDoneBtn(key);
+}
+
+// Update the done button in the control bar
+var etCurrentScenarioKey = null;
+
+function etUpdateDoneBtn(key) {
+    etCurrentScenarioKey = key;
+    var btn = document.getElementById('doneBtn');
+    if (!btn) return;
+    var isDone = etIsDone(key);
+    btn.textContent = isDone ? '✔️ 완료됨' : '☐ 완료';
+    btn.classList.toggle('checked', isDone);
+}
+
+function etToggleDoneBtn() {
+    if (!etCurrentScenarioKey) return;
+    etToggleDone(etCurrentScenarioKey);
+    etUpdateDoneBtn(etCurrentScenarioKey);
 }
 
 if (document.readyState === 'loading') {
