@@ -7,9 +7,54 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: white;
+    color: #333;
     min-height: 100vh;
     padding: 15px;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #1a1a1a;
+        color: #e0e0e0;
+    }
+    
+    .scenario {
+        background: #2a2a2a;
+    }
+    
+    .dialogue {
+        background: #333;
+    }
+    
+    .english {
+        color: #fff;
+    }
+    
+    .korean {
+        color: #ccc;
+    }
+    
+    .speaker {
+        color: #90caf9;
+    }
+    
+    .topic-card, .scenario-item {
+        background: #2a2a2a;
+    }
+    
+    .topic-title, .scenario-name {
+        color: #fff;
+    }
+    
+    .topic-subtitle, .scenario-desc {
+        color: #aaa;
+    }
+    
+    .page-nav a {
+        background: #333;
+        color: #90caf9;
+    }
 }
 
 .container {
@@ -20,17 +65,24 @@ body {
 /* Header */
 header {
     text-align: center;
-    color: white;
+    color: #333;
     margin-bottom: 20px;
     position: sticky;
     top: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: white;
     z-index: 99;
     padding: 10px 0;
 }
 
+@media (prefers-color-scheme: dark) {
+    header {
+        background: #1a1a1a;
+        color: #fff;
+    }
+}
+
 .back-link {
-    color: white;
+    color: #667eea;
     text-decoration: none;
     font-size: 1em;
     opacity: 0.9;
@@ -40,6 +92,7 @@ header {
 
 .back-link:hover {
     opacity: 1;
+    text-decoration: underline;
 }
 
 header h1 {
@@ -266,11 +319,16 @@ audio {
 /* Footer */
 footer {
     text-align: center;
-    color: white;
+    color: #999;
     margin-top: 25px;
     padding: 15px;
-    opacity: 0.8;
     font-size: 0.9em;
+}
+
+@media (prefers-color-scheme: dark) {
+    footer {
+        color: #666;
+    }
 }
 
 /* Responsive - Mobile */
