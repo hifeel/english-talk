@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💪 피트니스 - 호텔 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display:flex;gap:10px;margin-bottom:15px;">
+                <a href="index.html" class="back-link">🏠 메인</a>
+                <a href="hotel.html" class="back-link">← 호텔 목록으로</a>
+            </div>
+            <h1>💪 피트니스 (Fitness)</h1>
+            <p>헬스장, 수영장, 운동 기구 관련 영어 회화</p>
+        </header>
+
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복 OFF</button>
+            </div>
+            <div class="play-controls">
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 4</span>
+                </div>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">What are the gym hours?</div>
+                <div class="korean">헬스장 운영 시간이 어떻게 되나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Our fitness center is open from five AM to ten PM every day.</div>
+                <div class="korean">피트니스 센터는 매일 오전 5시부터 오후 10시까지 운영됩니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Do I need a key card to access it?</div>
+                <div class="korean">출입하려면 키 카드가 필요한가요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, you can use your room key card. The gym is on the third floor.</div>
+                <div class="korean">네, 객실 키 카드를 사용하시면 됩니다. 헬스장은 3층에 있어요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Is there a swimming pool in the hotel?</div>
+                <div class="korean">호텔에 수영장이 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, we have an indoor heated pool on the fourth floor. It's open from six AM to nine PM.</div>
+                <div class="korean">네, 4층에 온수 실내 수영장이 있습니다. 오전 6시부터 오후 9시까지 운영됩니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Are there towels available by the pool?</div>
+                <div class="korean">수영장 옆에 수건이 비치되어 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, complimentary towels are provided at the pool entrance.</div>
+                <div class="korean">네, 수영장 입구에서 무료 수건을 제공합니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">What equipment does the gym have?</div>
+                <div class="korean">헬스장에는 어떤 기구가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">We have treadmills, ellipticals, free weights, and a yoga studio.</div>
+                <div class="korean">트레드밀, 일립티컬, 프리 웨이트, 요가 스튜디오가 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Are there personal trainers available?</div>
+                <div class="korean">개인 트레이너가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, personal training sessions can be booked at the front desk. The first session is complimentary.</div>
+                <div class="korean">네, 프런트 데스크에서 개인 트레이닝 세션을 예약하실 수 있습니다. 첫 세션은 무료입니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Do you offer any fitness classes?</div>
+                <div class="korean">피트니스 수업이 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_4.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, we have yoga at seven AM and spinning at six PM. Classes are complimentary for guests.</div>
+                <div class="korean">네, 오전 7시에 요가, 오후 6시에 스피닝 수업이 있습니다. 투숙객에게는 무료입니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_4.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Do I need to reserve a spot?</div>
+                <div class="korean">자리를 예약해야 하나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_4.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, please sign up at the front desk or call from your room by six PM the day before.</div>
+                <div class="korean">네, 프런트 데스크에서 신청하시거나 전날 오후 6시까지 객실에서 전화로 신청해 주세요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_fitness_4.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-nav">
+            <a href="hotel_breakfast.html">← 이전: 조식</a>
+            <a href="hotel_parking.html">다음: 주차 →</a>
+        </div>
+
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+
+    <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍷 와인 - 레스토랑 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display:flex;gap:10px;margin-bottom:15px;">
+            <a href="index.html" class="back-link">🏠 메인</a>
+            <a href="restaurant.html" class="back-link">← 레스토랑 목록으로</a>
+        </div>
+            <h1>🍷 와인 (Wine)</h1>
+            <p>와인 선택, 페어링, 코르키지 비용</p>
+        </header>
+        
+        
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복 OFF</button>
+            </div>
+            <div class="play-controls">
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 1: Wine Selection -->
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Good evening. Do you have a preference for red or white wine tonight?</div>
+                <div class="korean">좋은 저녁이에요. 오늘 저녁 레드 와인이나 화이트 와인 중에 선호하시는 게 있으신가요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">I'm thinking red wine. What do you recommend with the steak?</div>
+                <div class="korean">레드 와인을 생각하고 있어요. 스테이크에 뭘 추천하시나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Our Napa Valley Cabernet Sauvignon pairs beautifully with our ribeye. It has rich dark fruit flavors with a hint of oak.</div>
+                <div class="korean">나파밸리 카베르네 소비뇽이 립아이와 잘 어울립니다. 오크 향이 가미된 풍부한 다크 프루트 맛이에요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">That sounds perfect. We'll take a bottle of that, please.</div>
+                <div class="korean">완벽하네요. 한 병 주세요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_4.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Excellent choice. Would you like me to pour a taste first?</div>
+                <div class="korean">훌륭한 선택이에요. 먼저 시음해 보시겠어요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_5.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Wine Pairing -->
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">I see you've ordered the tasting menu. Can I suggest some wine pairings?</div>
+                <div class="korean">테이스팅 메뉴를 주문하셨군요. 와인 페어링을 추천드려도 될까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_6.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Yes, please! I'm not very familiar with wine pairings.</div>
+                <div class="korean">네, 부탁드려요! 와인 페어링에 대해 잘 모르거든요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_7.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">For the appetizer, we'll start with a crisp Sauvignon Blanc. For the main course, I recommend a Pinot Noir. And we'll finish with a sweet Riesling for dessert.</div>
+                <div class="korean">에피타이저에는 상큼한 소비뇽 블랑으로 시작하겠습니다. 메인에는 피노 누아를 추천드리고, 디저트에는 달콤한 리슬링으로 마무리하겠습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_8.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">That sounds wonderful. How much is the wine pairing?</div>
+                <div class="korean">정말 좋네요. 와인 페어링은 얼마인가요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_9.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">The full wine pairing is forty-five dollars per person.</div>
+                <div class="korean">풀 와인 페어링은 1인당 45달러입니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_10.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Corkage Fee -->
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Excuse me, we brought our own bottle of wine. Is that okay?</div>
+                <div class="korean">실례합니다만, 저희가 직접 와인을 가져왔는데 괜찮을까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_11.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Absolutely! We do charge a corkage fee of twenty-five dollars per bottle.</div>
+                <div class="korean">물론이죠! 병당 코르키지 비용 25달러가 부과됩니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_12.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Twenty-five dollars? That's quite reasonable. Could you open it for us?</div>
+                <div class="korean">25달러요? 상당히 합리적이네요. 열어주시겠어요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_13.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Of course. Let me take care of that for you right away.</div>
+                <div class="korean">물론이죠. 바로 처리해 드리겠습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_14.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">Thank you. Should we let it breathe before pouring?</div>
+                <div class="korean">감사합니다. 따르기 전에 숨을 쉬게 해줘야 하나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_15.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Wine Recommendation -->
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Are you ready to order drinks, or would you like to see our wine list?</div>
+                <div class="korean">음료를 주문하시겠어요, 아니면 와인 리스트를 보시겠어요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_16.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">I'd love to see the wine list. I'm looking for something light and fruity.</div>
+                <div class="korean">와인 리스트를 보고 싶어요. 가볍고 과일향이 나는 걸 찾고 있어요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_17.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">In that case, I'd recommend our Rosé from Provence. It's refreshing with notes of strawberry and citrus.</div>
+                <div class="korean">그렇다면 프로방스 로제를 추천드립니다. 딸기와 감귤 향이 나는 상큼한 와인이에요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_18.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Customer</div>
+                <div class="english">I'll try a glass of that. My friend prefers bold reds. What would you suggest?</div>
+                <div class="korean">한 잔 시켜볼게요. 제 친구는 진한 레드를 좋아하는데 뭘 추천하시나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_19.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">For bold reds, our Malbec from Argentina is outstanding. Full-bodied with smooth tannins.</div>
+                <div class="korean">진한 레드라면 아르헨티나 말벡을 추천드립니다. 부드러운 탄닌의 풀바디 와인이에요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/restaurant_wine_20.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-nav">
+    <a href="restaurant_tipping.html">← 이전: 팁</a>
+    <span></span>
+</div>
+<footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+
+        <script src="play-all.js"></script>
+    <script src="toggle.js"></script>

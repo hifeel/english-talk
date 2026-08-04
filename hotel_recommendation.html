@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🗺️ 컨시어지 추천 - 호텔 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display:flex;gap:10px;margin-bottom:15px;">
+                <a href="index.html" class="back-link">🏠 메인</a>
+                <a href="hotel.html" class="back-link">← 호텔 목록으로</a>
+            </div>
+            <h1>🗺️ 컨시어지 추천 (Concierge Recommendations)</h1>
+            <p>레스토랑 추천, 관광 명소, 투어 관련 영어 회화</p>
+        </header>
+
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복 OFF</button>
+            </div>
+            <div class="play-controls">
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 4</span>
+                </div>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Can you recommend a good restaurant nearby?</div>
+                <div class="korean">근처에 괜찮은 레스토랑을 추천해 주시겠어요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Absolutely! What type of cuisine are you in the mood for?</div>
+                <div class="korean">물론이에요! 어떤 종류의 음식이 드시고 싶으세요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Something local and authentic.</div>
+                <div class="korean">현지에서 진짜 맛있는 곳이요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">I'd recommend Blue Harbor, a seafood restaurant just two blocks away. Would you like me to make a reservation?</div>
+                <div class="korean">블루 하버를 추천드립니다. 해산물 레스토랑인데 두 블록 정도 떨어져 있어요. 예약해 드릴까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">What are the top attractions in this area?</div>
+                <div class="korean">이 지역의 주요 관광 명소가 뭐가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">The historic district is a must-see. You can walk there in about ten minutes. The art museum is also nearby.</div>
+                <div class="korean">역사 지구는 꼭 가보셔야 합니다. 걸어서 10분 정도면 도착합니다. 미술관도 가까이에 있어요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Is there a good walking tour?</div>
+                <div class="korean">괜찮은 도보 투어가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, there's a free walking tour that starts at the city square every morning at nine AM.</div>
+                <div class="korean">네, 매일 아침 9시에 시청 광장에서 출발하는 무료 도보 투어가 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Are there any day trips or tours you'd recommend?</div>
+                <div class="korean">추천할 만한 당일 여행이나 투어가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">We have partnerships with several tour companies. The wine country tour and the coastal boat tour are very popular.</div>
+                <div class="korean">여러 투어 회사와 제휴하고 있습니다. 와인 컨트리 투어와 해안 보트 투어가 인기가 많아요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">How do I book one?</div>
+                <div class="korean">어떻게 예약하나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">I can book it for you right here, or you can visit the tour desk in the lobby.</div>
+                <div class="korean">여기서 바로 예약해 드리거나, 로비에 있는 투어 데스크를 방문하셔도 됩니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">What's there to do around here at night?</div>
+                <div class="korean">밤에 이 근처에서 할 수 있는 게 뭐가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_4.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">There are several great bars and live music venues within walking distance. The jazz club on Main Street is very popular.</div>
+                <div class="korean">걸어서 갈 수 있는 거리에 멋진 바와 라이브 음악 공연장이 여러 곳 있습니다. 메인 스트리트에 있는 재즈 클럽이 인기가 많아요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_4.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Is there a show or performance tonight?</div>
+                <div class="korean">오늘 밤 공연이나 쇼가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_4.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, there's a comedy show at the theater downtown. I can get you tickets if you're interested.</div>
+                <div class="korean">네, 시내 극장에서 코미디 쇼가 있습니다. 관심 있으시면 티켓을 구해드릴 수 있어요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_recommendation_4.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-nav">
+            <a href="hotel_parking.html">← 이전: 주차</a>
+            <span></span>
+        </div>
+
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+
+    <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
+</body>
+</html>

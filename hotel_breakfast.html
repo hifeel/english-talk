@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍳 조식 - 호텔 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div style="display:flex;gap:10px;margin-bottom:15px;">
+                <a href="index.html" class="back-link">🏠 메인</a>
+                <a href="hotel.html" class="back-link">← 호텔 목록으로</a>
+            </div>
+            <h1>🍳 조식 (Breakfast)</h1>
+            <p>뷔페, 식사 시간, 식이 요구사항 관련 영어 회화</p>
+        </header>
+
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복 OFF</button>
+            </div>
+            <div class="play-controls">
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 4</span>
+                </div>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                    <span id="playAllText">전체 재생</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Good morning. Is breakfast included with my room?</div>
+                <div class="korean">좋은 아침이에요. 객실에 조식이 포함되어 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Good morning! Yes, breakfast is included. Our buffet is on the second floor.</div>
+                <div class="korean">좋은 아침이에요! 네, 조식이 포함되어 있습니다. 뷔페는 2층에 있어요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">What time does the buffet open?</div>
+                <div class="korean">뷔페는 몇 시에 여나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">The buffet is open from seven AM to ten thirty AM.</div>
+                <div class="korean">뷔페는 오전 7시부터 오전 10시 30분까지 운영됩니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_1.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Excuse me, what time does breakfast end?</div>
+                <div class="korean">실례합니다, 조식은 몇 시에 끝나나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Breakfast service ends at ten thirty AM, but the kitchen starts closing at ten fifteen.</div>
+                <div class="korean">조식 서비스는 오전 10시 30분에 끝나지만, 주방은 10시 15분부터 닫기 시작합니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">I see. Can I get something to go?</div>
+                <div class="korean">알겠습니다. 포장해 갈 수 있을까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">I'm sorry, our buffet doesn't offer takeout. But we have grab-and-go items at the cafe downstairs.</div>
+                <div class="korean">죄송하지만 뷔페는 포장 서비스가 없습니다. 하지만 아래층 카페에서 간편 식사를 드실 수 있어요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_2.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">I have a food allergy. Do you have gluten-free options?</div>
+                <div class="korean">식품 알레르기가 있어요. 글루텐 프리 메뉴가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Absolutely! We have a dedicated gluten-free section at the buffet. Just ask any staff member for assistance.</div>
+                <div class="korean">물론이에요! 뷔페에 글루텐 프리 전용 구역이 있습니다. 직원에게 도움을 요청하시면 됩니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">That's great. Do you also have vegetarian dishes?</div>
+                <div class="korean">좋네요. 채식 메뉴도 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, we have several vegetarian and vegan options clearly labeled at the buffet.</div>
+                <div class="korean">네, 뷔페에 채식 및 비건 메뉴가 표시되어 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_3.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Can I order breakfast to my room?</div>
+                <div class="korean">객실로 조식을 주문할 수 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_4.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Of course! Room service breakfast is available from six AM to eleven AM.</div>
+                <div class="korean">물론이에요! 룸서비스 조식은 오전 6시부터 오전 11시까지 이용 가능합니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_4.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">What's on the breakfast menu?</div>
+                <div class="korean">조식 메뉴에는 뭐가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_4.mp3"></audio>
+                </div>
+            </div>
+
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">We have eggs, pancakes, fruit, yogurt, and more. Would you like me to send a menu to your room?</div>
+                <div class="korean">계란, 팬케이크, 과일, 요거트 등이 있습니다. 메뉴를 객실로 보내드릴까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_breakfast_4.mp3"></audio>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-nav">
+            <a href="hotel_checkoutproblem.html">← 이전: 체크아웃 문제</a>
+            <a href="hotel_fitness.html">다음: 피트니스 →</a>
+        </div>
+
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+
+    <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
+</body>
+</html>
