@@ -121,6 +121,19 @@ header {
     align-items: center;
 }
 
+/* Nav row: breadcrumb left, done button right */
+.nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.nav-row .done-btn {
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
 /* Control bar: sticks below the back-nav bar */
 .sticky-controls {
     position: sticky;

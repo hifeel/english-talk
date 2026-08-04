@@ -10,7 +10,10 @@
 <body class="scenario-page">
     <div class="container">
         <div class="sticky-top">
-            <div class="back-nav" id="backNav"></div>
+            <div class="nav-row">
+                <div class="back-nav" id="backNav"></div>
+                <button id="doneBtn" class="done-btn" onclick="etToggleDoneBtn()">☐ 완료</button>
+            </div>
         </div>
         <header>
             <h1 id="pageTitle"></h1>
@@ -33,7 +36,6 @@
                             <span id="playAllIcon">▶️</span>
                         </button>
                     </div>
-                    <button id="doneBtn" class="done-btn" onclick="etToggleDoneBtn()">☐ 완료</button>
                 </div>
             </div>
         </div>
