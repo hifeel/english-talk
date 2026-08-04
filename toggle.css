@@ -5,24 +5,28 @@
     align-items: center;
     padding: 20px 0;
     margin-top: 30px;
-    border-top: 1px solid #e0e0e0;
+    border-top: 2px solid #ddd;
 }
 
 .page-nav a {
-    color: #667eea;
+    color: #333;
     text-decoration: none;
-    font-size: 0.95em;
-    padding: 8px 16px;
-    border-radius: 8px;
-    transition: background 0.2s;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #f0f0f0;
+    transition: all 0.2s;
 }
 
 .page-nav a:hover {
-    background: #e8f4fd;
+    background: #667eea;
+    color: white;
 }
 
 .page-nav span {
     color: #999;
+    font-size: 0.9em;
 }
 
 /* Google search button */
@@ -31,55 +35,55 @@
     top: 5px;
     right: 5px;
     background: white;
-    border: 1px solid #ccc;
+    border: 2px solid #999;
     border-radius: 6px;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     transition: all 0.2s;
     z-index: 10;
     padding: 0;
 }
 
 .google-search-btn:hover {
-    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     transform: scale(1.1);
 }
 
 .google-search-btn img {
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
 }
 
 /* Refresh button */
 .refresh-btn {
     position: absolute;
     top: 5px;
-    right: 38px;
+    right: 40px;
     background: white;
-    border: 1px solid #ccc;
+    border: 2px solid #999;
     border-radius: 6px;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     transition: all 0.2s;
     z-index: 10;
     padding: 0;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .refresh-btn:hover {
-    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
     transform: scale(1.1);
-    background: #f0f0f0;
+    background: #e0e0e0;
 }
 
 /* Control bar */
@@ -107,6 +111,7 @@
     border-radius: 16px;
     cursor: pointer;
     font-size: 0.8em;
+    font-weight: bold;
     transition: all 0.2s;
     user-select: none;
 }
@@ -134,10 +139,11 @@
 }
 
 .play-all-progress {
-    font-size: 0.8em;
+    font-size: 0.85em;
+    font-weight: bold;
     color: white;
     background: rgba(255,255,255,0.2);
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 12px;
     margin-right: 6px;
 }
@@ -146,8 +152,9 @@
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
-    padding: 8px 20px;
-    font-size: 0.9em;
+    padding: 10px 24px;
+    font-size: 0.95em;
+    font-weight: bold;
     border-radius: 16px;
     cursor: pointer;
     box-shadow: 0 3px 12px rgba(102, 126, 234, 0.4);
