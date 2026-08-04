@@ -86,7 +86,7 @@
     background: #e0e0e0;
 }
 
-/* Control bar */
+/* Control bar - fixed at top */
 .control-bar {
     display: flex;
     justify-content: space-between;
@@ -94,6 +94,11 @@
     margin-bottom: 20px;
     flex-wrap: wrap;
     gap: 8px;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 10px 0;
+    z-index: 100;
 }
 
 .toggle-container {
