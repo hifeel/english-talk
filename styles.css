@@ -48,7 +48,57 @@ header p {
     opacity: 0.9;
 }
 
-/* Scenarios list */
+/* Main page topic cards */
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.topic-card {
+    background: white;
+    border-radius: 18px;
+    padding: 22px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.topic-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.topic-icon {
+    font-size: 2.2em;
+}
+
+.topic-title {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #333;
+}
+
+.topic-subtitle {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.topic-count {
+    font-size: 0.8em;
+    color: #999;
+    background: #f0f0f0;
+    padding: 5px 12px;
+    border-radius: 12px;
+    display: inline-block;
+    width: fit-content;
+}
+
+/* Scenario list page */
 .scenario-list {
     display: grid;
     gap: 12px;
@@ -215,7 +265,7 @@ footer {
     font-size: 0.9em;
 }
 
-/* Responsive - Mobile First */
+/* Responsive - Mobile */
 @media (max-width: 600px) {
     body {
         padding: 10px;
@@ -229,6 +279,55 @@ footer {
         font-size: 0.9em;
     }
     
+    /* Main page cards - 2 columns on mobile */
+    .topics-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .topic-card {
+        padding: 15px;
+        border-radius: 14px;
+    }
+    
+    .topic-icon {
+        font-size: 1.8em;
+    }
+    
+    .topic-title {
+        font-size: 1em;
+    }
+    
+    .topic-subtitle {
+        font-size: 0.75em;
+    }
+    
+    .topic-count {
+        font-size: 0.7em;
+        padding: 3px 8px;
+    }
+    
+    /* Scenario list */
+    .scenario-item {
+        padding: 14px;
+        gap: 10px;
+    }
+    
+    .scenario-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.4em;
+    }
+    
+    .scenario-name {
+        font-size: 0.95em;
+    }
+    
+    .scenario-desc {
+        font-size: 0.8em;
+    }
+    
+    /* Dialogue */
     .scenario {
         padding: 15px;
     }
@@ -247,21 +346,19 @@ footer {
         padding-right: 60px;
     }
     
-    .scenario-item {
-        padding: 15px;
-    }
-    
-    .scenario-icon {
-        width: 45px;
-        height: 45px;
-        font-size: 1.5em;
-    }
-    
-    .scenario-name {
-        font-size: 1em;
-    }
-    
     audio {
         height: 30px;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 380px) {
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .topic-card {
+        flex-direction: row;
+        align-items: center;
     }
 }
