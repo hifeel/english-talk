@@ -73,15 +73,12 @@ header {
     color: #667eea;
     text-decoration: none;
     font-size: 1em;
-    display: inline-block;
-    margin-bottom: 10px;
+    display: block;
     position: sticky;
     top: 0;
     background: white;
     padding: 10px 0;
     z-index: 100;
-    width: 100%;
-    text-align: left;
 }
 
 @media (prefers-color-scheme: dark) {
