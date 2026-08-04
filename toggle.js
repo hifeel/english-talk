@@ -123,44 +123,6 @@ function openGoogleSearch(sentence) {
     window.open('https://www.google.com/search?q=' + searchTerm, '_blank');
 }
 
-function regenerateAudio(dialogue) {
-    var englishEl = dialogue.querySelector('.english');
-    var audioEl = dialogue.querySelector('audio');
-    if (!englishEl || !audioEl) return;
-    
-    var sentence = englishEl.textContent.trim();
-    if (!confirm('이 음성을 다시 생성하시겠습니까?\n"' + sentence + '"')) return;
-    
-    var btn = dialogue.querySelector('.refresh-btn');
-    if (btn) btn.textContent = '⏳';
-    
-    // Choose voice based on speaker (Guest/Customer/Staff...)
-    var spkEl = dialogue.querySelector('.speaker');
-    var spk = spkEl ? spkEl.textContent.trim() : '';
-    var femaleVoices = ['Guest', 'Customer', 'Traveler', 'Receptionist'];
-    var voice = (femaleVoices.indexOf(spk) !== -1) ? 'en-US-JennyNeural' : 'en-US-GuyNeural';
-    
-    var apiUrl = 'https://englishtalk.duckdns.org/tts?text=' + encodeURIComponent(sentence) + '&voice=' + voice;
-    
-    fetch(apiUrl, { method: 'POST' })
-        .then(function(res) { return res.json(); })
-        .then(function(data) {
-            if (data.status === 'success' && data.audio_url) {
-                audioEl.src = 'https://englishtalk.duckdns.org' + data.audio_url;
-                audioEl.load();
-                if (btn) btn.textContent = '🔄';
-                alert('음성이 다시 생성되었습니다! ✓');
-            } else {
-                if (btn) btn.textContent = '🔄';
-                alert('음성 생성에 실패했습니다.');
-            }
-        })
-        .catch(function(err) {
-            if (btn) btn.textContent = '🔄';
-            alert('오류가 발생했습니다: ' + err.message);
-        });
-}
-
 function initEnglishTalk() {
     loadStates();
     
@@ -182,7 +144,6 @@ function initEnglishTalk() {
     for (var i = 0; i < dialogues.length; i++) {
         addClickToPlay(dialogues[i]);
         addGoogleButton(dialogues[i]);
-        addRefreshButton(dialogues[i]);
     }
     
     // When any sentence audio starts playing (user-initiated), stop play-all
@@ -199,7 +160,7 @@ function addClickToPlay(dialogue) {
     dialogue.style.cursor = 'pointer';
     
     dialogue.addEventListener('click', function(e) {
-        if (e.target.closest('button') || e.target.closest('input') || e.target.closest('.google-search-btn') || e.target.closest('.refresh-btn')) {
+        if (e.target.closest('button') || e.target.closest('input') || e.target.closest('.google-search-btn')) {
             return;
         }
         
@@ -232,19 +193,6 @@ function addGoogleButton(dialogue) {
     };
     
     dialogue.appendChild(searchBtn);
-}
-
-function addRefreshButton(dialogue) {
-    var refreshBtn = document.createElement('button');
-    refreshBtn.className = 'refresh-btn';
-    refreshBtn.innerHTML = '🔄';
-    refreshBtn.title = '음성 다시 생성';
-    refreshBtn.onclick = function(e) {
-        e.stopPropagation();
-        regenerateAudio(dialogue);
-    };
-    
-    dialogue.appendChild(refreshBtn);
 }
 
 if (document.readyState === 'loading') {
