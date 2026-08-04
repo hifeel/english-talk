@@ -70,13 +70,13 @@ header {
 }
 
 header h1 {
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: 700;
     margin-bottom: 6px;
 }
 
 header p {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #666666;
 }
 
@@ -109,15 +109,15 @@ header p {
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);
 }
 
-.topic-icon { font-size: 2.4em; }
-.topic-title { font-size: 1.2rem; font-weight: 700; color: #333333; }
-.topic-subtitle { font-size: 0.85rem; color: #777777; }
+.topic-icon { font-size: 2.8em; }
+.topic-title { font-size: 1.5rem; font-weight: 700; color: #333333; }
+.topic-subtitle { font-size: 1rem; color: #777777; }
 .topic-count {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     font-weight: 600;
     color: #667eea;
     background: #eef0ff;
-    padding: 4px 10px;
+    padding: 5px 12px;
     border-radius: 12px;
     display: inline-block;
     width: fit-content;
@@ -149,9 +149,9 @@ header p {
 }
 
 .scenario-icon {
-    font-size: 1.6em;
-    width: 48px;
-    height: 48px;
+    font-size: 2em;
+    width: 54px;
+    height: 54px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 12px;
     display: flex;
@@ -161,14 +161,14 @@ header p {
 }
 
 .scenario-info { flex: 1; min-width: 0; }
-.scenario-name { font-size: 1.05rem; font-weight: 700; color: #333333; margin-bottom: 3px; }
-.scenario-desc { font-size: 0.85rem; color: #777777; }
+.scenario-name { font-size: 1.3rem; font-weight: 700; color: #333333; margin-bottom: 3px; }
+.scenario-desc { font-size: 1rem; color: #777777; }
 .scenario-count {
-    font-size: 0.78rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: #667eea;
     background: #eef0ff;
-    padding: 4px 10px;
+    padding: 5px 12px;
     border-radius: 12px;
     white-space: nowrap;
 }
@@ -217,7 +217,7 @@ header p {
 }
 
 .korean {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #888888;
     padding-right: 72px;
 }
@@ -265,26 +265,26 @@ footer {
 /* ============ Responsive ============ */
 @media (max-width: 600px) {
     body { padding: 12px; }
-    header h1 { font-size: 1.4rem; }
-    header p { font-size: 0.85rem; }
+    header h1 { font-size: 1.6rem; }
+    header p { font-size: 0.95rem; }
     
     .topics-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
     .topic-card { padding: 14px; }
-    .topic-icon { font-size: 1.8em; }
-    .topic-title { font-size: 1rem; }
-    .topic-subtitle { font-size: 0.75rem; }
-    .topic-count { font-size: 0.7rem; padding: 3px 8px; }
+    .topic-icon { font-size: 2.2em; }
+    .topic-title { font-size: 1.2rem; }
+    .topic-subtitle { font-size: 0.9rem; }
+    .topic-count { font-size: 0.8rem; padding: 4px 10px; }
     
     .scenario-item { padding: 12px; gap: 10px; }
-    .scenario-icon { width: 40px; height: 40px; font-size: 1.4em; }
-    .scenario-name { font-size: 0.95rem; }
-    .scenario-desc { font-size: 0.8rem; }
-    .scenario-count { font-size: 0.7rem; padding: 3px 8px; }
+    .scenario-icon { width: 44px; height: 44px; font-size: 1.6em; }
+    .scenario-name { font-size: 1.1rem; }
+    .scenario-desc { font-size: 0.9rem; }
+    .scenario-count { font-size: 0.8rem; padding: 4px 10px; }
     
     .scenario { padding: 14px; }
     .dialogue { padding: 12px; }
     .english { font-size: 1rem; padding-right: 68px; }
-    .korean { font-size: 0.85rem; padding-right: 68px; }
+    .korean { font-size: 0.9rem; padding-right: 68px; }
     audio { height: 30px; }
     
     .page-nav { flex-direction: column; gap: 8px; }
