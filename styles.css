@@ -1,4 +1,4 @@
-/* Shared styles for English Talk pages */
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,10 +6,10 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
-    padding: 20px;
+    padding: 15px;
 }
 
 .container {
@@ -17,10 +17,11 @@ body {
     margin: 0 auto;
 }
 
+/* Header */
 header {
     text-align: center;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .back-link {
@@ -29,7 +30,7 @@ header {
     font-size: 1em;
     opacity: 0.9;
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .back-link:hover {
@@ -37,163 +38,230 @@ header {
 }
 
 header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2em;
+    margin-bottom: 8px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 header p {
-    font-size: 1.2em;
+    font-size: 1em;
     opacity: 0.9;
 }
 
-.scenario {
-    background: white;
-    border-radius: 20px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+/* Scenarios list */
+.scenario-list {
+    display: grid;
+    gap: 12px;
 }
 
-.scenario-title {
-    font-size: 1.4em;
-    color: #667eea;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #eee;
+.scenario-item {
+    background: white;
+    border-radius: 15px;
+    padding: 18px 20px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+}
+
+.scenario-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.scenario-icon {
+    font-size: 1.8em;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.scenario-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.scenario-name {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.scenario-desc {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.scenario-count {
+    font-size: 0.8em;
+    color: #999;
+    background: #f0f0f0;
+    padding: 4px 10px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.arrow {
+    font-size: 1.3em;
+    color: #667eea;
+}
+
+/* Scenario dialogue */
+.scenario {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .dialogue {
-    margin-bottom: 20px;
-    padding: 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 12px;
+    margin-bottom: 12px;
     background: #f8f9fa;
-    border-radius: 12px;
+    border-radius: 10px;
     border-left: 4px solid #667eea;
+}
+
+.dialogue:last-child {
+    margin-bottom: 0;
+}
+
+.dialogue:hover {
+    background-color: #e8f4fd;
+}
+
+.dialogue.playing {
+    background: #e8f5e9;
+    border-left-color: #4caf50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
 }
 
 .speaker {
     font-weight: bold;
     color: #667eea;
-    margin-bottom: 8px;
-    font-size: 0.9em;
-}
-
-.english {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 8px;
-    line-height: 1.4;
-}
-
-.korean {
-    font-size: 0.95em;
-    color: #666;
-    font-style: italic;
-}
-
-.audio-controls {
-    margin-top: 10px;
-}
-
-audio {
-    width: 100%;
-    height: 36px;
-    border-radius: 18px;
-}
-
-/* Play All Button */
-.play-all-container {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.play-all-btn {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    font-size: 1.2em;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.play-all-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
-}
-
-.play-all-btn:active {
-    transform: translateY(0);
-}
-
-.play-all-progress {
-    margin-top: 15px;
-    font-size: 1em;
-    color: white;
-    background: rgba(255,255,255,0.2);
-    padding: 8px 20px;
-    border-radius: 20px;
-    display: inline-block;
-}
-
-/* Playing highlight */
-.dialogue.playing {
-    background: #e8f5e9;
-    border-left-color: #4caf50;
-    box-shadow: 0 0 15px rgba(76, 175, 80, 0.3);
+    margin-bottom: 6px;
+    font-size: 0.85em;
 }
 
 .dialogue.playing .speaker {
     color: #4caf50;
 }
 
+.english {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 6px;
+    line-height: 1.4;
+    padding-right: 70px;
+}
+
+.korean {
+    font-size: 0.9em;
+    color: #666;
+    font-style: italic;
+    padding-right: 70px;
+}
+
+.audio-controls {
+    margin-top: 8px;
+}
+
+audio {
+    width: 100%;
+    height: 32px;
+    border-radius: 16px;
+}
+
+/* Tips */
+.tip {
+    background: #e8f4fd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 4px solid #2196F3;
+}
+
+.tip-title {
+    font-weight: bold;
+    color: #2196F3;
+    margin-bottom: 8px;
+}
+
+.tip-content {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Footer */
 footer {
     text-align: center;
     color: white;
-    margin-top: 30px;
-    padding: 20px;
+    margin-top: 25px;
+    padding: 15px;
     opacity: 0.8;
+    font-size: 0.9em;
 }
 
+/* Responsive - Mobile First */
 @media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
     header h1 {
-        font-size: 1.8em;
+        font-size: 1.6em;
+    }
+    
+    header p {
+        font-size: 0.9em;
     }
     
     .scenario {
         padding: 15px;
     }
     
+    .dialogue {
+        padding: 10px;
+    }
+    
     .english {
+        font-size: 0.95em;
+        padding-right: 60px;
+    }
+    
+    .korean {
+        font-size: 0.85em;
+        padding-right: 60px;
+    }
+    
+    .scenario-item {
+        padding: 15px;
+    }
+    
+    .scenario-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5em;
+    }
+    
+    .scenario-name {
         font-size: 1em;
     }
+    
+    audio {
+        height: 30px;
+    }
 }
-
-/* Page Navigation */
-.page-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    border-top: 1px solid #eee;
-    margin-top: 30px;
-}
-
-.page-nav a {
-    color: #667eea;
-    text-decoration: none;
-    font-size: 0.95em;
-}
-
-.page-nav a:hover {
-    text-decoration: underline;
-}
-
-.page-nav span {
-    /* empty placeholder for first/last pages */
-}
-
