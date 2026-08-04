@@ -155,31 +155,31 @@
        "speaker": "Guest",
        "en": "I have a reservation.",
        "ko": "예약했어요.",
-       "audio": "audio/checkin_1.mp3"
+       "audio": "audio/hotel_phrases_1.mp3"
       },
       {
        "speaker": "Guest",
        "en": "May I have the room key?",
        "ko": "방 키 주세요.",
-       "audio": "audio/checkin_3.mp3"
+       "audio": "audio/hotel_phrases_2.mp3"
       },
       {
        "speaker": "Guest",
        "en": "I'd like to store my luggage.",
        "ko": "캐리어 맡기고 싶어요.",
-       "audio": "audio/request_1.mp3"
+       "audio": "audio/hotel_phrases_3.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Can I get a late checkout?",
        "ko": "체크아웃 시간 연장 가능해요?",
-       "audio": "audio/checkout_1.mp3"
+       "audio": "audio/hotel_phrases_4.mp3"
       },
       {
        "speaker": "Guest",
        "en": "May I have a receipt?",
        "ko": "영수증 주세요.",
-       "audio": "audio/checkout_3.mp3"
+       "audio": "audio/hotel_phrases_5.mp3"
       }
      ],
      "icon": "💡"
@@ -451,91 +451,91 @@
        "speaker": "Staff",
        "en": "Good morning! Yes, breakfast is included. Our buffet is on the second floor.",
        "ko": "좋은 아침이에요! 네, 조식이 포함되어 있습니다. 뷔페는 2층에 있어요.",
-       "audio": "audio/hotel_breakfast_1.mp3"
+       "audio": "audio/hotel_breakfast_2.mp3"
       },
       {
        "speaker": "Guest",
        "en": "What time does the buffet open?",
        "ko": "뷔페는 몇 시에 여나요?",
-       "audio": "audio/hotel_breakfast_1.mp3"
+       "audio": "audio/hotel_breakfast_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "The buffet is open from seven AM to ten thirty AM.",
        "ko": "뷔페는 오전 7시부터 오전 10시 30분까지 운영됩니다.",
-       "audio": "audio/hotel_breakfast_1.mp3"
+       "audio": "audio/hotel_breakfast_4.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Excuse me, what time does breakfast end?",
        "ko": "실례합니다, 조식은 몇 시에 끝나나요?",
-       "audio": "audio/hotel_breakfast_2.mp3"
+       "audio": "audio/hotel_breakfast_5.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Breakfast service ends at ten thirty AM, but the kitchen starts closing at ten fifteen.",
        "ko": "조식 서비스는 오전 10시 30분에 끝나지만, 주방은 10시 15분부터 닫기 시작합니다.",
-       "audio": "audio/hotel_breakfast_2.mp3"
+       "audio": "audio/hotel_breakfast_6.mp3"
       },
       {
        "speaker": "Guest",
        "en": "I see. Can I get something to go?",
        "ko": "알겠습니다. 포장해 갈 수 있을까요?",
-       "audio": "audio/hotel_breakfast_2.mp3"
+       "audio": "audio/hotel_breakfast_7.mp3"
       },
       {
        "speaker": "Staff",
        "en": "I'm sorry, our buffet doesn't offer takeout. But we have grab-and-go items at the cafe downstairs.",
        "ko": "죄송하지만 뷔페는 포장 서비스가 없습니다. 하지만 아래층 카페에서 간편 식사를 드실 수 있어요.",
-       "audio": "audio/hotel_breakfast_2.mp3"
+       "audio": "audio/hotel_breakfast_8.mp3"
       },
       {
        "speaker": "Guest",
        "en": "I have a food allergy. Do you have gluten-free options?",
        "ko": "식품 알레르기가 있어요. 글루텐 프리 메뉴가 있나요?",
-       "audio": "audio/hotel_breakfast_3.mp3"
+       "audio": "audio/hotel_breakfast_9.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Absolutely! We have a dedicated gluten-free section at the buffet. Just ask any staff member for assistance.",
        "ko": "물론이에요! 뷔페에 글루텐 프리 전용 구역이 있습니다. 직원에게 도움을 요청하시면 됩니다.",
-       "audio": "audio/hotel_breakfast_3.mp3"
+       "audio": "audio/hotel_breakfast_10.mp3"
       },
       {
        "speaker": "Guest",
        "en": "That's great. Do you also have vegetarian dishes?",
        "ko": "좋네요. 채식 메뉴도 있나요?",
-       "audio": "audio/hotel_breakfast_3.mp3"
+       "audio": "audio/hotel_breakfast_11.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, we have several vegetarian and vegan options clearly labeled at the buffet.",
        "ko": "네, 뷔페에 채식 및 비건 메뉴가 표시되어 있습니다.",
-       "audio": "audio/hotel_breakfast_3.mp3"
+       "audio": "audio/hotel_breakfast_12.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Can I order breakfast to my room?",
        "ko": "객실로 조식을 주문할 수 있나요?",
-       "audio": "audio/hotel_breakfast_4.mp3"
+       "audio": "audio/hotel_breakfast_13.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Of course! Room service breakfast is available from six AM to eleven AM.",
        "ko": "물론이에요! 룸서비스 조식은 오전 6시부터 오전 11시까지 이용 가능합니다.",
-       "audio": "audio/hotel_breakfast_4.mp3"
+       "audio": "audio/hotel_breakfast_14.mp3"
       },
       {
        "speaker": "Guest",
        "en": "What's on the breakfast menu?",
        "ko": "조식 메뉴에는 뭐가 있나요?",
-       "audio": "audio/hotel_breakfast_4.mp3"
+       "audio": "audio/hotel_breakfast_15.mp3"
       },
       {
        "speaker": "Staff",
        "en": "We have eggs, pancakes, fruit, yogurt, and more. Would you like me to send a menu to your room?",
        "ko": "계란, 팬케이크, 과일, 요거트 등이 있습니다. 메뉴를 객실로 보내드릴까요?",
-       "audio": "audio/hotel_breakfast_4.mp3"
+       "audio": "audio/hotel_breakfast_16.mp3"
       }
      ],
      "icon": "🍳"
@@ -555,91 +555,91 @@
        "speaker": "Staff",
        "en": "Our fitness center is open from five AM to ten PM every day.",
        "ko": "피트니스 센터는 매일 오전 5시부터 오후 10시까지 운영됩니다.",
-       "audio": "audio/hotel_fitness_1.mp3"
+       "audio": "audio/hotel_fitness_2.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Do I need a key card to access it?",
        "ko": "출입하려면 키 카드가 필요한가요?",
-       "audio": "audio/hotel_fitness_1.mp3"
+       "audio": "audio/hotel_fitness_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, you can use your room key card. The gym is on the third floor.",
        "ko": "네, 객실 키 카드를 사용하시면 됩니다. 헬스장은 3층에 있어요.",
-       "audio": "audio/hotel_fitness_1.mp3"
+       "audio": "audio/hotel_fitness_4.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Is there a swimming pool in the hotel?",
        "ko": "호텔에 수영장이 있나요?",
-       "audio": "audio/hotel_fitness_2.mp3"
+       "audio": "audio/hotel_fitness_5.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, we have an indoor heated pool on the fourth floor. It's open from six AM to nine PM.",
        "ko": "네, 4층에 온수 실내 수영장이 있습니다. 오전 6시부터 오후 9시까지 운영됩니다.",
-       "audio": "audio/hotel_fitness_2.mp3"
+       "audio": "audio/hotel_fitness_6.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Are there towels available by the pool?",
        "ko": "수영장 옆에 수건이 비치되어 있나요?",
-       "audio": "audio/hotel_fitness_2.mp3"
+       "audio": "audio/hotel_fitness_7.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, complimentary towels are provided at the pool entrance.",
        "ko": "네, 수영장 입구에서 무료 수건을 제공합니다.",
-       "audio": "audio/hotel_fitness_2.mp3"
+       "audio": "audio/hotel_fitness_8.mp3"
       },
       {
        "speaker": "Guest",
        "en": "What equipment does the gym have?",
        "ko": "헬스장에는 어떤 기구가 있나요?",
-       "audio": "audio/hotel_fitness_3.mp3"
+       "audio": "audio/hotel_fitness_9.mp3"
       },
       {
        "speaker": "Staff",
        "en": "We have treadmills, ellipticals, free weights, and a yoga studio.",
        "ko": "트레드밀, 일립티컬, 프리 웨이트, 요가 스튜디오가 있습니다.",
-       "audio": "audio/hotel_fitness_3.mp3"
+       "audio": "audio/hotel_fitness_10.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Are there personal trainers available?",
        "ko": "개인 트레이너가 있나요?",
-       "audio": "audio/hotel_fitness_3.mp3"
+       "audio": "audio/hotel_fitness_11.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, personal training sessions can be booked at the front desk. The first session is complimentary.",
        "ko": "네, 프런트 데스크에서 개인 트레이닝 세션을 예약하실 수 있습니다. 첫 세션은 무료입니다.",
-       "audio": "audio/hotel_fitness_3.mp3"
+       "audio": "audio/hotel_fitness_12.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Do you offer any fitness classes?",
        "ko": "피트니스 수업이 있나요?",
-       "audio": "audio/hotel_fitness_4.mp3"
+       "audio": "audio/hotel_fitness_13.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, we have yoga at seven AM and spinning at six PM. Classes are complimentary for guests.",
        "ko": "네, 오전 7시에 요가, 오후 6시에 스피닝 수업이 있습니다. 투숙객에게는 무료입니다.",
-       "audio": "audio/hotel_fitness_4.mp3"
+       "audio": "audio/hotel_fitness_14.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Do I need to reserve a spot?",
        "ko": "자리를 예약해야 하나요?",
-       "audio": "audio/hotel_fitness_4.mp3"
+       "audio": "audio/hotel_fitness_15.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, please sign up at the front desk or call from your room by six PM the day before.",
        "ko": "네, 프런트 데스크에서 신청하시거나 전날 오후 6시까지 객실에서 전화로 신청해 주세요.",
-       "audio": "audio/hotel_fitness_4.mp3"
+       "audio": "audio/hotel_fitness_16.mp3"
       }
      ],
      "icon": "💪"
@@ -659,91 +659,91 @@
        "speaker": "Staff",
        "en": "Yes, our valet parking service is available twenty-four hours. The fee is thirty dollars per day.",
        "ko": "네, 발렛 파킹 서비스는 24시간 이용 가능합니다. 요금은 하루에 30달러입니다.",
-       "audio": "audio/hotel_parking_1.mp3"
+       "audio": "audio/hotel_parking_2.mp3"
       },
       {
        "speaker": "Guest",
        "en": "How does it work?",
        "ko": "어떻게 이용하나요?",
-       "audio": "audio/hotel_parking_1.mp3"
+       "audio": "audio/hotel_parking_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Just pull up to the main entrance. Our valet will take your car and give you a claim ticket.",
        "ko": "정문 앞으로 오시면 됩니다. 발렛 직원이 차를 가져가고 수령 티켓을 드립니다.",
-       "audio": "audio/hotel_parking_1.mp3"
+       "audio": "audio/hotel_parking_4.mp3"
       },
       {
        "speaker": "Guest",
        "en": "I'm driving. Is overnight parking available?",
        "ko": "차를 가져왔는데, 야간 주차가 가능한가요?",
-       "audio": "audio/hotel_parking_2.mp3"
+       "audio": "audio/hotel_parking_5.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, we have a parking garage. Overnight parking is twenty-five dollars per night.",
        "ko": "네, 주차장이 있습니다. 야간 주차는 밤에 25달러입니다.",
-       "audio": "audio/hotel_parking_2.mp3"
+       "audio": "audio/hotel_parking_6.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Is the garage secured?",
        "ko": "주차장이 보안이 되어 있나요?",
-       "audio": "audio/hotel_parking_2.mp3"
+       "audio": "audio/hotel_parking_7.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, the garage has twenty-four hour security and C C T V surveillance.",
        "ko": "네, 주차장은 24시간 보안과 CCTV 감시가 이루어지고 있습니다.",
-       "audio": "audio/hotel_parking_2.mp3"
+       "audio": "audio/hotel_parking_8.mp3"
       },
       {
        "speaker": "Guest",
        "en": "How much is parking at the hotel?",
        "ko": "호텔 주차 요금이 얼마인가요?",
-       "audio": "audio/hotel_parking_3.mp3"
+       "audio": "audio/hotel_parking_9.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Self-parking is twenty dollars per day, and valet is thirty dollars per day.",
        "ko": "셀프 파킹은 하루에 20달러, 발렛은 하루에 30달러입니다.",
-       "audio": "audio/hotel_parking_3.mp3"
+       "audio": "audio/hotel_parking_10.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Is there in-and-out privilege?",
        "ko": "출입이 자유로운가요?",
-       "audio": "audio/hotel_parking_3.mp3"
+       "audio": "audio/hotel_parking_11.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, both self-parking and valet include unlimited in-and-out access.",
        "ko": "네, 셀프 파킹과 발렛 모두 무제한 출입이 가능합니다.",
-       "audio": "audio/hotel_parking_3.mp3"
+       "audio": "audio/hotel_parking_12.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Do you have electric vehicle charging stations?",
        "ko": "전기차 충전소가 있나요?",
-       "audio": "audio/hotel_parking_4.mp3"
+       "audio": "audio/hotel_parking_13.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, we have four Tesla chargers and two universal chargers in the parking garage.",
        "ko": "네, 주차장에 테슬라 충전기 4대와 범용 충전기 2대가 있습니다.",
-       "audio": "audio/hotel_parking_4.mp3"
+       "audio": "audio/hotel_parking_14.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Is there an extra fee for charging?",
        "ko": "충전 요금이 별도로 있나요?",
-       "audio": "audio/hotel_parking_4.mp3"
+       "audio": "audio/hotel_parking_15.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Charging is complimentary for hotel guests during their stay.",
        "ko": "투숙객에게는 투숙 기간 동안 충전이 무료입니다.",
-       "audio": "audio/hotel_parking_4.mp3"
+       "audio": "audio/hotel_parking_16.mp3"
       }
      ],
      "icon": "🅿️"
@@ -763,91 +763,91 @@
        "speaker": "Staff",
        "en": "Absolutely! What type of cuisine are you in the mood for?",
        "ko": "물론이에요! 어떤 종류의 음식이 드시고 싶으세요?",
-       "audio": "audio/hotel_recommendation_1.mp3"
+       "audio": "audio/hotel_recommendation_2.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Something local and authentic.",
        "ko": "현지에서 진짜 맛있는 곳이요.",
-       "audio": "audio/hotel_recommendation_1.mp3"
+       "audio": "audio/hotel_recommendation_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "I'd recommend Blue Harbor, a seafood restaurant just two blocks away. Would you like me to make a reservation?",
        "ko": "블루 하버를 추천드립니다. 해산물 레스토랑인데 두 블록 정도 떨어져 있어요. 예약해 드릴까요?",
-       "audio": "audio/hotel_recommendation_1.mp3"
+       "audio": "audio/hotel_recommendation_4.mp3"
       },
       {
        "speaker": "Guest",
        "en": "What are the top attractions in this area?",
        "ko": "이 지역의 주요 관광 명소가 뭐가 있나요?",
-       "audio": "audio/hotel_recommendation_2.mp3"
+       "audio": "audio/hotel_recommendation_5.mp3"
       },
       {
        "speaker": "Staff",
        "en": "The historic district is a must-see. You can walk there in about ten minutes. The art museum is also nearby.",
        "ko": "역사 지구는 꼭 가보셔야 합니다. 걸어서 10분 정도면 도착합니다. 미술관도 가까이에 있어요.",
-       "audio": "audio/hotel_recommendation_2.mp3"
+       "audio": "audio/hotel_recommendation_6.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Is there a good walking tour?",
        "ko": "괜찮은 도보 투어가 있나요?",
-       "audio": "audio/hotel_recommendation_2.mp3"
+       "audio": "audio/hotel_recommendation_7.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, there's a free walking tour that starts at the city square every morning at nine AM.",
        "ko": "네, 매일 아침 9시에 시청 광장에서 출발하는 무료 도보 투어가 있습니다.",
-       "audio": "audio/hotel_recommendation_2.mp3"
+       "audio": "audio/hotel_recommendation_8.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Are there any day trips or tours you'd recommend?",
        "ko": "추천할 만한 당일 여행이나 투어가 있나요?",
-       "audio": "audio/hotel_recommendation_3.mp3"
+       "audio": "audio/hotel_recommendation_9.mp3"
       },
       {
        "speaker": "Staff",
        "en": "We have partnerships with several tour companies. The wine country tour and the coastal boat tour are very popular.",
        "ko": "여러 투어 회사와 제휴하고 있습니다. 와인 컨트리 투어와 해안 보트 투어가 인기가 많아요.",
-       "audio": "audio/hotel_recommendation_3.mp3"
+       "audio": "audio/hotel_recommendation_10.mp3"
       },
       {
        "speaker": "Guest",
        "en": "How do I book one?",
        "ko": "어떻게 예약하나요?",
-       "audio": "audio/hotel_recommendation_3.mp3"
+       "audio": "audio/hotel_recommendation_11.mp3"
       },
       {
        "speaker": "Staff",
        "en": "I can book it for you right here, or you can visit the tour desk in the lobby.",
        "ko": "여기서 바로 예약해 드리거나, 로비에 있는 투어 데스크를 방문하셔도 됩니다.",
-       "audio": "audio/hotel_recommendation_3.mp3"
+       "audio": "audio/hotel_recommendation_12.mp3"
       },
       {
        "speaker": "Guest",
        "en": "What's there to do around here at night?",
        "ko": "밤에 이 근처에서 할 수 있는 게 뭐가 있나요?",
-       "audio": "audio/hotel_recommendation_4.mp3"
+       "audio": "audio/hotel_recommendation_13.mp3"
       },
       {
        "speaker": "Staff",
        "en": "There are several great bars and live music venues within walking distance. The jazz club on Main Street is very popular.",
        "ko": "걸어서 갈 수 있는 거리에 멋진 바와 라이브 음악 공연장이 여러 곳 있습니다. 메인 스트리트에 있는 재즈 클럽이 인기가 많아요.",
-       "audio": "audio/hotel_recommendation_4.mp3"
+       "audio": "audio/hotel_recommendation_14.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Is there a show or performance tonight?",
        "ko": "오늘 밤 공연이나 쇼가 있나요?",
-       "audio": "audio/hotel_recommendation_4.mp3"
+       "audio": "audio/hotel_recommendation_15.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, there's a comedy show at the theater downtown. I can get you tickets if you're interested.",
        "ko": "네, 시내 극장에서 코미디 쇼가 있습니다. 관심 있으시면 티켓을 구해드릴 수 있어요.",
-       "audio": "audio/hotel_recommendation_4.mp3"
+       "audio": "audio/hotel_recommendation_16.mp3"
       }
      ],
      "icon": "🗺️"
