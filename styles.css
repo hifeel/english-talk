@@ -93,7 +93,6 @@ header {
     .scenario-page header { background: #111111; }
     .scenario-page header p { color: #999999; }
 }
-
 /* ============ Main page cards ============ */
 .topics-grid {
     display: grid;
