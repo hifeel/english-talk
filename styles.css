@@ -51,14 +51,14 @@ header {
     padding-top: 8px;
 }
 
+/* Back-link: sticky at top on ALL pages */
 .back-link {
-    display: block;
-    text-align: left;
+    display: inline-block;
     color: #667eea;
     text-decoration: none;
     font-size: 1rem;
     font-weight: 600;
-    padding: 10px 0;
+    padding: 10px 14px;
     position: sticky;
     top: 0;
     background: #ffffff;
@@ -69,30 +69,18 @@ header {
     text-decoration: underline;
 }
 
-/* Dialogue pages: header sticks below back-link */
-.scenario-page header {
-    position: sticky;
-    top: 36px;
-    background: #ffffff;
-    padding: 10px 0;
-    z-index: 99;
-    margin-bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.scenario-page header h1 {
-    display: none;
-}
-
-.scenario-page header p {
-    display: none;
-}
-
 @media (prefers-color-scheme: dark) {
-    .scenario-page header { background: #111111; }
-    .scenario-page header p { color: #999999; }
+    .back-link {
+        background: #111111;
+    }
+}
+
+/* Dialogue pages: hide title/desc already handled in HTML; keep control-bar sticky below back-link */
+.scenario-page .control-bar {
+    position: sticky;
+    top: 44px;
+    background: #ffffff;
+    z-index: 99;
 }
 
 /* ============ Main page cards ============ */
