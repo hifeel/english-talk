@@ -34,7 +34,7 @@ function etBuildCategoryPage() {
                 '<div class="scenario-name">' + etEsc(s.title) + '</div>' +
                 '<div class="scenario-desc">' + etEsc(s.subtitle) + '</div>' +
                 '</div>' +
-                '<div class="scenario-count">' + s.dialogues.length + '개 대화</div>' +
+                '<div class="scenario-count">' + s.dialogues.length + '문장</div>' +
                 '</a>';
         }
         document.getElementById('scenarioList').innerHTML = html;

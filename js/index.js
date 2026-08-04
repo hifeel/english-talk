@@ -27,7 +27,7 @@ function etBuildIndex() {
                 '<div class="topic-icon">' + meta.icon + '</div>' +
                 '<div class="topic-title">' + etEsc(shortTitle) + '</div>' +
                 '<div class="topic-subtitle">' + etEsc(meta.subtitle) + '</div>' +
-                '<div class="topic-count">' + totalDialogues + '개 대화문</div>' +
+                '<div class="topic-count">' + totalDialogues + '문장</div>' +
                 '</a>';
         }
         document.getElementById('topicsGrid').innerHTML = html;
