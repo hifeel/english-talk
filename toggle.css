@@ -1,4 +1,31 @@
-/* Google search button - visible, top-right */
+/* Page navigation */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.page-nav a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 0.95em;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.page-nav a:hover {
+    background: #e8f4fd;
+}
+
+.page-nav span {
+    color: #999;
+}
+
+/* Google search button */
 .google-search-btn {
     position: absolute;
     top: 5px;
@@ -162,5 +189,11 @@
     
     .toggle-container, .play-controls {
         justify-content: center;
+    }
+    
+    .page-nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
     }
 }
