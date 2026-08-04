@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Talk - 상황별 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+</head>
+<body class="scenario-page">
+    <div class="container">
+        <div class="sticky-top">
+            <div class="back-nav" id="backNav"></div>
+            <div class="control-bar">
+                <div class="toggle-container">
+                    <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어</button>
+                    <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어</button>
+                    <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자</button>
+                    <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복</button>
+                </div>
+                <div class="play-controls">
+                    <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                        <span id="progressText">0 / 0</span>
+                    </div>
+                    <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                        <span id="playAllIcon">▶️</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <header>
+            <h1 id="pageTitle"></h1>
+            <p id="pageSubtitle"></p>
+        </header>
+
+        <div class="scenario" id="scenarioContainer"></div>
+
+        <div class="page-nav" id="pageNav"></div>
+        <footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+
+    <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/scenario.js"></script>
+</body>
+</html>
