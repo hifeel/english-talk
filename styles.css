@@ -173,3 +173,27 @@ footer {
         font-size: 1em;
     }
 }
+
+/* Page Navigation */
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    margin-top: 30px;
+}
+
+.page-nav a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 0.95em;
+}
+
+.page-nav a:hover {
+    text-decoration: underline;
+}
+
+.page-nav span {
+    /* empty placeholder for first/last pages */
+}
+

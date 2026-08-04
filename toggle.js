@@ -77,25 +77,18 @@ function updateVisibility() {
     var scenario = document.querySelector('.scenario');
     if (!scenario) return;
     
-    var englishEls = scenario.querySelectorAll('.english');
-    for (var i = 0; i < englishEls.length; i++) {
-        englishEls[i].style.display = showEnglish ? '' : 'none';
-    }
+    var els = scenario.querySelectorAll('.english');
+    for (var i = 0; i < els.length; i++) els[i].style.display = showEnglish ? '' : 'none';
     
-    var koreanEls = scenario.querySelectorAll('.korean');
-    for (var i = 0; i < koreanEls.length; i++) {
-        koreanEls[i].style.display = showKorean ? '' : 'none';
-    }
+    els = scenario.querySelectorAll('.korean');
+    for (var i = 0; i < els.length; i++) els[i].style.display = showKorean ? '' : 'none';
     
-    var speakerEls = scenario.querySelectorAll('.speaker');
-    for (var i = 0; i < speakerEls.length; i++) {
-        speakerEls[i].style.display = showSpeaker ? '' : 'none';
-    }
+    els = scenario.querySelectorAll('.speaker');
+    for (var i = 0; i < els.length; i++) els[i].style.display = showSpeaker ? '' : 'none';
 }
 
 // Play audio with repeat support
 function playAudioWithRepeat(audio) {
-    // Stop all other audios
     var allAudios = document.querySelectorAll('audio');
     for (var i = 0; i < allAudios.length; i++) {
         if (allAudios[i] !== audio) {
@@ -106,10 +99,7 @@ function playAudioWithRepeat(audio) {
     }
     
     if (repeatMode) {
-        audio.onended = function() {
-            audio.currentTime = 0;
-            audio.play();
-        };
+        audio.onended = function() { audio.currentTime = 0; audio.play(); };
     } else {
         audio.onended = null;
     }
@@ -130,11 +120,49 @@ function openGoogleSearch(sentence) {
     window.open('https://www.google.com/search?q=' + searchTerm, '_blank');
 }
 
+// Regenerate audio
+function regenerateAudio(dialogue) {
+    var englishEl = dialogue.querySelector('.english');
+    var audioEl = dialogue.querySelector('audio');
+    if (!englishEl || !audioEl) return;
+    
+    var sentence = englishEl.textContent.trim();
+    if (!confirm('이 음성을 다시 생성하시겠습니까?\n"' + sentence + '"')) return;
+    
+    // Show loading state
+    var btn = dialogue.querySelector('.refresh-btn');
+    if (btn) btn.textContent = '⏳';
+    
+    var encodedText = encodeURIComponent(sentence);
+    var apiUrl = 'https://englishtalk.duckdns.org/tts?text=' + encodedText + '&voice=en-US-GuyNeural';
+    
+    fetch(apiUrl)
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+            if (data.status === 'success' && data.audio_url) {
+                var newAudioUrl = 'https://englishtalk.duckdns.org' + data.audio_url;
+                
+                // Update audio source
+                audioEl.src = newAudioUrl;
+                audioEl.load();
+                
+                if (btn) btn.textContent = '🔄';
+                alert('음성이 다시 생성되었습니다! ✓');
+            } else {
+                if (btn) btn.textContent = '🔄';
+                alert('음성 생성에 실패했습니다.');
+            }
+        })
+        .catch(function(err) {
+            if (btn) btn.textContent = '🔄';
+            alert('오류가 발생했습니다: ' + err.message);
+        });
+}
+
 // Initialize
 function initEnglishTalk() {
     loadStates();
     
-    // Apply states to buttons
     var btn = document.getElementById('toggleEnglishBtn');
     if (btn) { btn.textContent = showEnglish ? '영어 ON' : '영어 OFF'; btn.classList.toggle('active', showEnglish); }
     
@@ -149,15 +177,11 @@ function initEnglishTalk() {
     
     updateVisibility();
     
-    // Add click-to-play
     var dialogues = document.querySelectorAll('.dialogue');
     for (var i = 0; i < dialogues.length; i++) {
         addClickToPlay(dialogues[i]);
-    }
-    
-    // Add Google search buttons
-    for (var i = 0; i < dialogues.length; i++) {
         addGoogleButton(dialogues[i]);
+        addRefreshButton(dialogues[i]);
     }
 }
 
@@ -165,14 +189,11 @@ function addClickToPlay(dialogue) {
     dialogue.style.cursor = 'pointer';
     
     dialogue.addEventListener('click', function(e) {
-        if (e.target.closest('button') || e.target.closest('input') || e.target.closest('.google-search-btn')) {
+        if (e.target.closest('button') || e.target.closest('input') || e.target.closest('.google-search-btn') || e.target.closest('.refresh-btn')) {
             return;
         }
         
-        // Stop play all mode when clicking a sentence
-        if (typeof stopPlayAllForClick === 'function') {
-            stopPlayAllForClick();
-        }
+        if (typeof stopPlayAllForClick === 'function') stopPlayAllForClick();
         
         var audio = this.querySelector('audio');
         if (audio) {
@@ -185,15 +206,11 @@ function addClickToPlay(dialogue) {
     });
     
     dialogue.addEventListener('mouseenter', function() {
-        if (!this.classList.contains('playing')) {
-            this.style.backgroundColor = '#e8f4fd';
-        }
+        if (!this.classList.contains('playing')) this.style.backgroundColor = '#e8f4fd';
     });
     
     dialogue.addEventListener('mouseleave', function() {
-        if (!this.classList.contains('playing')) {
-            this.style.backgroundColor = '';
-        }
+        if (!this.classList.contains('playing')) this.style.backgroundColor = '';
     });
 }
 
@@ -213,6 +230,19 @@ function addGoogleButton(dialogue) {
     };
     
     dialogue.appendChild(searchBtn);
+}
+
+function addRefreshButton(dialogue) {
+    var refreshBtn = document.createElement('button');
+    refreshBtn.className = 'refresh-btn';
+    refreshBtn.innerHTML = '🔄';
+    refreshBtn.title = '음성 다시 생성';
+    refreshBtn.onclick = function(e) {
+        e.stopPropagation();
+        regenerateAudio(dialogue);
+    };
+    
+    dialogue.appendChild(refreshBtn);
 }
 
 // Run on page load
