@@ -10,7 +10,7 @@
     top: 0;
     background: #ffffff;
     z-index: 100;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -169,19 +169,26 @@
 /* ============ Responsive ============ */
 @media (max-width: 600px) {
     .control-bar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+        padding: 8px 0;
     }
     .toggle-container {
-        justify-content: center;
+        justify-content: flex-start;
+        gap: 4px;
+        flex: 1;
     }
     .toggle-btn, .repeat-btn {
-        padding: 8px 12px;
-        font-size: 0.8rem;
+        padding: 6px 10px;
+        font-size: 0.75rem;
+        border-radius: 16px;
     }
     .play-controls {
-        justify-content: center;
+        justify-content: flex-end;
+        gap: 4px;
+        flex-shrink: 0;
     }
-    .play-all-btn { font-size: 1.6rem; }
+    .play-all-btn { font-size: 1.4rem; }
+    .play-all-progress { display: none; }
 }
