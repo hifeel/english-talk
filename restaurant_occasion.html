@@ -22,26 +22,25 @@
         
         
         <!-- Control Bar -->
+        
+        <!-- Control Bar -->
         <div class="control-bar">
             <div class="toggle-container">
-                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어 ON</button>
-                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어 ON</button>
-                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자 ON</button>
-                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복 OFF</button>
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복</button>
             </div>
             <div class="play-controls">
-                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
-                    <span id="playAllIcon">▶️</span>
-                    <span id="playAllText">전체 재생</span>
-                </button>
                 <div id="playAllProgress" class="play-all-progress" style="display: none;">
                     <span id="progressText">0 / 0</span>
                 </div>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                </button>
             </div>
         </div>
-
-        <!-- Dialogue 1: Anniversary Dinner -->
-        <div class="scenario">
+<div class="scenario">
             <div class="dialogue">
                 <div class="speaker">Customer</div>
                 <div class="english">Hi, I made a reservation under the name Park for our anniversary dinner.</div>
