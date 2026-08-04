@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비즈니스 센터 (Business Center) - 호텔 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+
+
+</head>
+<body class="scenario-page">
+    <div class="container">
+                    <div class="sticky-top">
+        <div class="back-nav">
+            <a href="index.html" class="back-link">🏠 메인</a>
+            <a href="hotel.html" class="back-link">← 호텔 목록으로</a>
+        </div>
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복</button>
+            </div>
+            <div class="play-controls">
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 0</span>
+                </div>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                </button>
+            </div>
+        </div>
+    </div>
+        <header>
+            <h1>💼 비즈니스 센터 (Business Center)</h1>
+            <p>프린트, 회의실, 와이파이</p>
+        </header>
+        
+        
+        <!-- Control Bar -->
+        
+        <!-- Control Bar -->
+        
+        <!-- Control Bar -->
+        
+        <!-- Control Bar -->
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Is there a business center in the hotel?</div>
+                <div class="korean">호텔에 비즈니스 센터가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_business_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, it's located on the second floor and open 24 hours.</div>
+                <div class="korean">네, 2층에 있으며 24시간 운영합니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_business_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">I need to print some documents. How much does it cost?</div>
+                <div class="korean">서류를 좀 출력해야 하는데, 비용이 얼마인가요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_business_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Printing is free for guests. Just use your room key card.</div>
+                <div class="korean">게스트에게는 출력이 무료입니다. 객실 키 카드를 어떻게 쓰세요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_business_4.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Can I book a meeting room for tomorrow?</div>
+                <div class="korean">내일 회의실을 예약할 수 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_business_5.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Certainly. We have rooms that hold up to 10 people.</div>
+                <div class="korean">그럼요. 최대 10명까지 수용 가능한 회의실이 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_business_6.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Does the meeting room have a projector?</div>
+                <div class="korean">회의실에 프로젝터가 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_business_7.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Yes, every room has a projector and high-speed Wi-Fi.</div>
+                <div class="korean">네, 모든 회의실에 프로젝터와 고속 와이파이가 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_business_8.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-nav">
+        <a href="hotel_shuttle.html">← 이전: 셔틀</a>
+        <a href="hotel_latecheckout.html">다음: 늦은 체크아웃 →</a></div>
+<footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+
+        <script src="play-all.js"></script>
+    <script src="toggle.js"></script>

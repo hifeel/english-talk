@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>얼리 체크인 & 늦은 체크아웃 (Early Check-in & Late Checkout) - 호텔 영어 회화</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggle.css">
+
+
+</head>
+<body class="scenario-page">
+    <div class="container">
+                    <div class="sticky-top">
+        <div class="back-nav">
+            <a href="index.html" class="back-link">🏠 메인</a>
+            <a href="hotel.html" class="back-link">← 호텔 목록으로</a>
+        </div>
+        <div class="control-bar">
+            <div class="toggle-container">
+                <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어</button>
+                <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어</button>
+                <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자</button>
+                <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복</button>
+            </div>
+            <div class="play-controls">
+                <div id="playAllProgress" class="play-all-progress" style="display: none;">
+                    <span id="progressText">0 / 0</span>
+                </div>
+                <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
+                    <span id="playAllIcon">▶️</span>
+                </button>
+            </div>
+        </div>
+    </div>
+        <header>
+            <h1>⏰ 얼리 체크인 & 늦은 체크아웃 (Early Check-in & Late Checkout)</h1>
+            <p>조기 입실, 늦은 퇴실, 추가 요금</p>
+        </header>
+        
+        
+        <!-- Control Bar -->
+        
+        <!-- Control Bar -->
+        
+        <!-- Control Bar -->
+        
+        <!-- Control Bar -->
+        <div class="scenario">
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">I know check-in is at 3 PM, but could I check in early?</div>
+                <div class="korean">체크인이 오후 3시인 건 알지만, 일찍 체크인할 수 있을까요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_latecheckout_1.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Let me check if your room is ready. We may have one available now.</div>
+                <div class="korean">객실이 준비됐는지 확인해 보겠습니다. 지금 이용 가능한 방이 있을 수 있습니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_latecheckout_2.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">That would be great. My flight landed early.</div>
+                <div class="korean">정말 좋겠네요. 비행기가 일찍 도착했거든요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_latecheckout_3.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Good news! Your room is ready. You can go right up.</div>
+                <div class="korean">좋은 소식입니다! 객실이 준비됐습니다. 바로 올라가셔도 됩니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_latecheckout_4.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Can I have a late checkout on the day I leave?</div>
+                <div class="korean">떠나는 날 늦게 체크아웃할 수 있나요?</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_latecheckout_5.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">We offer late checkout until 2 PM for a half-day charge.</div>
+                <div class="korean">반나절 요금으로 오후 2시까지 늦은 체크아웃이 가능합니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_latecheckout_6.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Guest</div>
+                <div class="english">Okay, I'll take the late checkout at 2 PM.</div>
+                <div class="korean">좋아요, 오후 2시 늦은 체크아웃으로 할게요.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_latecheckout_7.mp3"></audio>
+                </div>
+            </div>
+            
+            <div class="dialogue">
+                <div class="speaker">Staff</div>
+                <div class="english">Perfect. I've noted it on your reservation. Checkout is now at 2 PM.</div>
+                <div class="korean">완벽합니다. 예약에 기록해 두었습니다. 체크아웃이 이제 오후 2시입니다.</div>
+                <div class="audio-controls">
+                    <audio controls src="audio/hotel_latecheckout_8.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-nav">
+        <a href="hotel_business.html">← 이전: 비즈니스 센터</a>
+        <span></span></div>
+<footer>
+            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
+            <p>제작: Hermes Agent</p>
+        </footer>
+    </div>
+    
+
+        <script src="play-all.js"></script>
+    <script src="toggle.js"></script>
