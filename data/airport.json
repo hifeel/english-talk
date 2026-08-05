@@ -34,6 +34,110 @@
    "icon": "🛂"
   },
   {
+   "key": "airport_excess",
+   "title": "수하물 초과 (Excess Baggage)",
+   "subtitle": "무게 초과, 추가 요금, 재포장",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Could you place your suitcase on the scale, please?",
+     "ko": "캐리어를 저울 위에 올려주시겠어요?",
+     "audio": "audio/airport_excess_1.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Here it is. How much is the allowance on this ticket?",
+     "ko": "여기요. 이 항공권은 몇 킬로까지 되나요?",
+     "audio": "audio/airport_excess_2.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Twenty-three kilos. Yours is twenty-seven, so it's four over.",
+     "ko": "23킬로입니다. 손님 짐은 27킬로라 4킬로 초과예요.",
+     "audio": "audio/airport_excess_3.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "I didn't realize. What are my options?",
+     "ko": "몰랐네요. 어떻게 하면 될까요?",
+     "audio": "audio/airport_excess_4.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "You can pay the excess fee, which is fifteen dollars per kilo.",
+     "ko": "초과 요금을 내시면 됩니다. 킬로당 15달러예요.",
+     "audio": "audio/airport_excess_5.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "That's sixty dollars. Is it cheaper to check a second bag?",
+     "ko": "그러면 60달러네요. 가방을 하나 더 부치는 게 더 쌀까요?",
+     "audio": "audio/airport_excess_6.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "A second bag is a flat one hundred, so paying the excess is better.",
+     "ko": "두 번째 가방은 정액 100달러라, 초과 요금을 내시는 게 낫습니다.",
+     "audio": "audio/airport_excess_7.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "I'll pay the excess then. Can I use a credit card?",
+     "ko": "그럼 초과 요금으로 할게요. 카드로 결제되나요?",
+     "audio": "audio/airport_excess_8.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Can I move some things into my carry-on instead?",
+     "ko": "일부를 기내용 가방으로 옮겨도 될까요?",
+     "audio": "audio/airport_excess_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. There's a table over there where you can repack.",
+     "ko": "물론입니다. 저쪽에 짐을 다시 쌀 수 있는 테이블이 있어요.",
+     "audio": "audio/airport_excess_10.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "How much can my carry-on weigh?",
+     "ko": "기내용 가방은 몇 킬로까지 되나요?",
+     "audio": "audio/airport_excess_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Ten kilos, and it has to fit in the sizer by the counter.",
+     "ko": "10킬로까지이고, 카운터 옆 사이즈 측정기에 들어가야 합니다.",
+     "audio": "audio/airport_excess_12.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "It's down to twenty-three now. Does that clear it?",
+     "ko": "이제 23킬로가 됐는데, 이러면 되나요?",
+     "audio": "audio/airport_excess_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Exactly on the limit, so there's no charge. Here's your tag.",
+     "ko": "딱 기준에 맞아서 추가 요금은 없습니다. 여기 수하물 태그요.",
+     "audio": "audio/airport_excess_14.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Great. Is this bag checked all the way to Seoul?",
+     "ko": "잘됐네요. 이 가방은 서울까지 바로 가나요?",
+     "audio": "audio/airport_excess_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It is. You'll pick it up at the carousel after you land.",
+     "ko": "네. 착륙하신 뒤 수하물 벨트에서 찾으시면 됩니다.",
+     "audio": "audio/airport_excess_16.mp3"
+    }
+   ],
+   "icon": "⚖️"
+  },
+  {
    "key": "airport_security",
    "title": "보안검색 (Security)",
    "subtitle": "보안 검색대 통과",
