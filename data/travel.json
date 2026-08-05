@@ -1374,6 +1374,110 @@
    "icon": "🎭"
   },
   {
+   "key": "travel_worship",
+   "title": "종교시설 방문 (Visiting a Temple)",
+   "subtitle": "복장 규정, 신발, 촬영, 예배 중 예의",
+   "dialogues": [
+    {
+     "speaker": "Tourist",
+     "en": "Is the temple open to visitors today?",
+     "ko": "오늘 사원에 방문객이 들어갈 수 있나요?",
+     "audio": "audio/travel_worship_1.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Yes, until five. It closes to visitors during midday prayers.",
+     "ko": "네, 5시까지요. 정오 기도 시간에는 방문객 입장이 안 됩니다.",
+     "audio": "audio/travel_worship_2.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Is there an entrance fee?",
+     "ko": "입장료가 있나요?",
+     "audio": "audio/travel_worship_3.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "No, but there's a donation box by the door if you'd like.",
+     "ko": "없습니다. 다만 원하시면 문 옆에 시주함이 있어요.",
+     "audio": "audio/travel_worship_4.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Is there a dress code I should know about?",
+     "ko": "복장 규정이 있나요?",
+     "audio": "audio/travel_worship_5.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Shoulders and knees covered. Shawls are lent at the entrance.",
+     "ko": "어깨와 무릎을 가려야 합니다. 입구에서 숄을 빌려줍니다.",
+     "audio": "audio/travel_worship_6.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I'm wearing shorts. Will the shawl be enough?",
+     "ko": "반바지를 입었는데 숄만으로 될까요?",
+     "audio": "audio/travel_worship_7.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "It will. Wrap it at the waist and you'll be fine.",
+     "ko": "됩니다. 허리에 두르시면 괜찮아요.",
+     "audio": "audio/travel_worship_8.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Should I take my shoes off before going in?",
+     "ko": "들어가기 전에 신발을 벗어야 하나요?",
+     "audio": "audio/travel_worship_9.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Yes, at the steps. There are shelves on the left for them.",
+     "ko": "네, 계단에서요. 왼쪽에 신발장이 있습니다.",
+     "audio": "audio/travel_worship_10.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Are socks all right, or should I go barefoot?",
+     "ko": "양말은 괜찮나요, 아니면 맨발이어야 하나요?",
+     "audio": "audio/travel_worship_11.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Socks are fine. The stone gets very hot in the afternoon anyway.",
+     "ko": "양말은 괜찮아요. 어차피 오후에는 돌바닥이 무척 뜨겁습니다.",
+     "audio": "audio/travel_worship_12.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Am I allowed to take photos inside?",
+     "ko": "안에서 사진을 찍어도 되나요?",
+     "audio": "audio/travel_worship_13.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "In the courtyard, yes. Not in the prayer hall, and never of people praying.",
+     "ko": "마당에서는 됩니다. 기도실 안은 안 되고, 기도하는 분들은 절대 찍지 마세요.",
+     "audio": "audio/travel_worship_14.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "A service is starting. Should I leave?",
+     "ko": "예배가 시작되네요. 나가야 할까요?",
+     "audio": "audio/travel_worship_15.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "You can stay if you sit quietly at the back. Just don't walk in front.",
+     "ko": "뒤쪽에 조용히 앉아 계시면 됩니다. 앞으로 지나가지만 마세요.",
+     "audio": "audio/travel_worship_16.mp3"
+    }
+   ],
+   "icon": "🛕"
+  },
+  {
    "key": "travel_themepark",
    "title": "테마파크 (Theme Park)",
    "subtitle": "입장권, 대기 시간, 탑승 제한, 보관함",
