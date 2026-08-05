@@ -42,6 +42,7 @@ styles.css    공통 스타일 / toggle.css  대화 화면 전용 스타일
 manifest.json PWA 설치 정보 / icons/  앱 아이콘
 sw.js         서비스워커 / js/pwa.js  서비스워커 등록
 js/offline.js 카테고리별 오디오 다운로드 (category.html 전용)
+js/media-session.js  잠금화면 재생 제어 (scenario.html 전용)
 ```
 
 나머지 최상위 `*.html` 96개는 **전부 리다이렉트 스텁**입니다. 내용 없이 `scenario.html?cat=…&name=…`(또는 카테고리는 `category.html?cat=…`)로 넘깁니다.
@@ -156,6 +157,12 @@ js/offline.js 카테고리별 오디오 다운로드 (category.html 전용)
 **페이지는 쿼리를 뗀 경로로 캐시합니다.** `scenario.html?cat=hotel&name=…`은 시나리오 117개가 전부 같은 `scenario.html`을 쓰므로, 쿼리째 저장하면 오프라인에서 매번 캐시 미스가 나고 사본만 쌓입니다.
 
 > **precache 목록을 바꾸면 `sw.js`의 `CACHE` 값을 올리세요.** activate 핸들러가 이름이 다른 캐시를 전부 지웁니다. 올리지 않으면 옛 캐시가 그대로 남습니다.
+
+**잠금화면 제어** — `js/media-session.js`가 Media Session API를 붙여, 화면을 끈 상태에서도 알림창·잠금화면·이어폰 버튼으로 재생/일시정지와 문장 이동이 됩니다. 표시되는 정보는 영어 문장(제목), 화자(아티스트), 시나리오 이름(앨범)입니다.
+
+오디오 이벤트는 버블링되지 않으므로 리스너를 **document에 캡처 단계로** 붙입니다. 그래야 `js/scenario.js`가 나중에 만드는 대화문까지 재초기화 훅 없이 잡힙니다.
+
+이전/다음은 전체 재생 중이면 `etPlayAllSkip()`으로 넘겨 재생 순서의 주인을 하나로 유지하고, 아니면 인접 문장을 직접 재생합니다.
 
 로컬에서 시험한 뒤에는 브라우저에 등록된 워커를 지우는 편이 좋습니다. `localhost`의 같은 포트로 다른 프로젝트를 띄우면 이 앱의 캐시가 응답할 수 있습니다 — DevTools > Application > Service workers > Unregister.
 

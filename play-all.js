@@ -1,8 +1,10 @@
 // Play All functionality for English Talk
 //
-// Cross-file contract (see also toggle.js):
-//   exposes  togglePlayAll()  - the 전체 재생 button in scenario.html
-//            etStopPlayAll()  - stop if running; safe to call anytime
+// Cross-file contract (see also toggle.js, js/media-session.js):
+//   exposes  togglePlayAll()   - the 전체 재생 button in scenario.html
+//            etStopPlayAll()   - stop if running; safe to call anytime
+//            etPlayAllActive() - is a run in progress?
+//            etPlayAllSkip(n)  - move n sentences within a run; false if not running
 //   needs    etRepeatEnabled() from toggle.js, optional - without it, no repeat
 // Everything else here is private to this file. Load order does not matter:
 // function declarations hoist and the cross-file calls happen at click time.
@@ -129,4 +131,27 @@ function etStopPlayAll() {
     if (isPlaying) {
         stopAll();
     }
+}
+
+function etPlayAllActive() {
+    return isPlaying;
+}
+
+// Jump `delta` sentences within a running play-all. Returns false if play-all
+// is not running or the jump would fall off either end, so the caller can
+// handle the move itself.
+function etPlayAllSkip(delta) {
+    if (!isPlaying) return false;
+    var target = currentAudioIndex + delta;
+    if (target < 0 || target >= audioElements.length) return false;
+
+    var cur = audioElements[currentAudioIndex];
+    cur.pause();
+    cur.onended = null;
+    cur.removeAttribute('data-playall');
+    unhighlightDialogue(currentAudioIndex);
+
+    currentAudioIndex = target;
+    playNext();
+    return true;
 }
