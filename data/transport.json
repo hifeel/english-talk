@@ -586,6 +586,110 @@
    "icon": "💥"
   },
   {
+   "key": "transport_police",
+   "title": "경찰 검문 (Traffic Stop)",
+   "subtitle": "속도 위반, 딱지 납부, 견인, 음주 검문",
+   "dialogues": [
+    {
+     "speaker": "Officer",
+     "en": "Good evening. License and registration, please.",
+     "ko": "안녕하세요. 면허증과 차량 등록증을 보여주세요.",
+     "audio": "audio/transport_police_1.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Here you are. It's a rental car, so the papers are in the glove box.",
+     "ko": "여기 있습니다. 렌터카라서 서류는 조수석 사물함에 있어요.",
+     "audio": "audio/transport_police_2.mp3"
+    },
+    {
+     "speaker": "Officer",
+     "en": "Do you know why I stopped you? You were doing fifty in a thirty zone.",
+     "ko": "왜 세웠는지 아시나요? 시속 30 구간에서 50으로 달리셨습니다.",
+     "audio": "audio/transport_police_3.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'm sorry, I didn't see the sign. I'm visiting from Korea.",
+     "ko": "죄송합니다, 표지판을 못 봤어요. 한국에서 온 여행객입니다.",
+     "audio": "audio/transport_police_4.mp3"
+    },
+    {
+     "speaker": "Officer",
+     "en": "I'm issuing you a citation. The fine is one hundred twenty dollars.",
+     "ko": "위반 딱지를 발부하겠습니다. 벌금은 120달러입니다.",
+     "audio": "audio/transport_police_5.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How do I pay it? I fly home on Sunday.",
+     "ko": "어떻게 납부하나요? 일요일에 귀국합니다.",
+     "audio": "audio/transport_police_6.mp3"
+    },
+    {
+     "speaker": "Officer",
+     "en": "Online, using the number printed at the top of the ticket.",
+     "ko": "딱지 상단에 있는 번호로 온라인 납부하시면 됩니다.",
+     "audio": "audio/transport_police_7.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Understood. Will the rental company be notified too?",
+     "ko": "알겠습니다. 렌터카 회사에도 통보되나요?",
+     "audio": "audio/transport_police_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "My car is gone. I think it was towed from this street.",
+     "ko": "차가 없어졌어요. 이 길에서 견인된 것 같습니다.",
+     "audio": "audio/transport_police_9.mp3"
+    },
+    {
+     "speaker": "Officer",
+     "en": "The signs here say no parking after six. It's at the city impound lot.",
+     "ko": "여기는 6시 이후 주차 금지 표지판이 있습니다. 시 견인 보관소에 있을 거예요.",
+     "audio": "audio/transport_police_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How do I get it back, and what will it cost?",
+     "ko": "어떻게 찾아오나요? 비용은 얼마인가요?",
+     "audio": "audio/transport_police_11.mp3"
+    },
+    {
+     "speaker": "Officer",
+     "en": "Bring your license and rental agreement. Two hundred plus the ticket.",
+     "ko": "면허증과 렌터카 계약서를 가져오세요. 200달러에 딱지 비용이 더해집니다.",
+     "audio": "audio/transport_police_12.mp3"
+    },
+    {
+     "speaker": "Officer",
+     "en": "This is a routine checkpoint. Have you had anything to drink tonight?",
+     "ko": "정기 검문입니다. 오늘 밤 술을 드셨나요?",
+     "audio": "audio/transport_police_13.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "No, nothing at all. Do you need me to take a breath test?",
+     "ko": "아니요, 전혀 안 마셨습니다. 음주 측정을 해야 하나요?",
+     "audio": "audio/transport_police_14.mp3"
+    },
+    {
+     "speaker": "Officer",
+     "en": "Yes, please breathe into this device. Thank you, you're clear.",
+     "ko": "네, 이 기기에 숨을 불어주세요. 감사합니다, 이상 없습니다.",
+     "audio": "audio/transport_police_15.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you, officer. Have a good evening.",
+     "ko": "감사합니다, 경관님. 좋은 저녁 보내세요.",
+     "audio": "audio/transport_police_16.mp3"
+    }
+   ],
+   "icon": "🚓"
+  },
+  {
    "key": "transport_problems",
    "title": "문제 해결 (Problems)",
    "subtitle": "택시 문제, 실수 대처",
