@@ -450,6 +450,110 @@
    "icon": "⛴️"
   },
   {
+   "key": "transport_bike",
+   "title": "자전거 & 킥보드 (Bike & Scooter)",
+   "subtitle": "앱 대여, 요금, 헬멧, 반납, 고장",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "How do I rent one of these bikes?",
+     "ko": "이 자전거는 어떻게 빌리나요?",
+     "audio": "audio/transport_bike_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Download the app, add a card, then scan the code on the handlebar.",
+     "ko": "앱을 받아 카드를 등록하고 핸들에 있는 코드를 스캔하세요.",
+     "audio": "audio/transport_bike_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Does it work with a foreign phone number?",
+     "ko": "해외 전화번호로도 되나요?",
+     "audio": "audio/transport_bike_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It does. You can sign in with an email address instead.",
+     "ko": "됩니다. 전화번호 대신 이메일로 가입하셔도 돼요.",
+     "audio": "audio/transport_bike_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "What does it cost for an hour?",
+     "ko": "한 시간에 얼마인가요?",
+     "audio": "audio/transport_bike_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "One dollar to unlock and fifteen cents a minute after that.",
+     "ko": "잠금 해제에 1달러, 이후 분당 15센트입니다.",
+     "audio": "audio/transport_bike_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is there a day pass if I'll be riding a lot?",
+     "ko": "많이 탈 건데 하루 이용권도 있나요?",
+     "audio": "audio/transport_bike_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Twelve dollars for the day, with rides up to two hours each.",
+     "ko": "하루 12달러이고, 한 번에 두 시간까지 탈 수 있습니다.",
+     "audio": "audio/transport_bike_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Do I have to wear a helmet here?",
+     "ko": "여기서는 헬멧을 꼭 써야 하나요?",
+     "audio": "audio/transport_bike_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "For scooters, yes. There are free helmets at the shop by the station.",
+     "ko": "킥보드는 필수입니다. 역 옆 매장에 무료 헬멧이 있어요.",
+     "audio": "audio/transport_bike_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I ride on the pavement?",
+     "ko": "인도에서 타도 되나요?",
+     "audio": "audio/transport_bike_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "No, bike lanes or the road only. The fine is eighty dollars.",
+     "ko": "안 됩니다. 자전거 도로나 차도만 가능해요. 벌금이 80달러입니다.",
+     "audio": "audio/transport_bike_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Where am I supposed to leave it when I'm done?",
+     "ko": "다 타고 나면 어디에 두어야 하나요?",
+     "audio": "audio/transport_bike_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Any docking station on the map. Ending outside one costs five dollars.",
+     "ko": "지도에 있는 아무 거치대나요. 거치대 밖에서 반납하면 5달러가 붙습니다.",
+     "audio": "audio/transport_bike_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "The brakes feel loose. Can I swap it for another one?",
+     "ko": "브레이크가 헐거운데 다른 걸로 바꿔도 되나요?",
+     "audio": "audio/transport_bike_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Report it in the app and end the ride. You won't be charged.",
+     "ko": "앱에서 신고하고 이용을 종료하세요. 요금은 청구되지 않습니다.",
+     "audio": "audio/transport_bike_16.mp3"
+    }
+   ],
+   "icon": "🚲"
+  },
+  {
    "key": "transport_rental",
    "title": "렌터카 (Rental Car)",
    "subtitle": "예약, 차량 인수, 반납",
