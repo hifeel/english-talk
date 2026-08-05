@@ -287,13 +287,11 @@ header {
     font-size: 1.15rem;
     color: #333333;
     margin-bottom: 6px;
-    padding-right: 72px;
 }
 
 .korean {
     font-size: 0.95rem;
     color: #888888;
-    padding-right: 72px;
 }
 
 .audio-controls { margin-top: 10px; }
@@ -357,8 +355,8 @@ footer {
     
     .scenario { padding: 14px; }
     .dialogue { padding: 12px; }
-    .english { font-size: 1.1rem; padding-right: 68px; }
-    .korean { font-size: 0.9rem; padding-right: 68px; }
+    .english { font-size: 1.1rem; }
+    .korean { font-size: 0.9rem; }
     audio { height: 30px; }
     
     .page-nav { flex-direction: row; gap: 8px; }

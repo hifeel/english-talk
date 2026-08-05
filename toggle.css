@@ -151,6 +151,13 @@
     display: block;
 }
 
+/* The button sits level with the speaker line, so the sentences below it need
+   no gutter. Only when 화자 is toggled off does the first English line move up
+   under the button - then reserve just enough to clear it. */
+.scenario.speaker-hidden .english {
+    padding-right: 28px;
+}
+
 @media (prefers-color-scheme: dark) {
     .google-search-btn {
         background: #2a2a2a;

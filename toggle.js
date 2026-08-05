@@ -86,7 +86,11 @@ function etRepeatEnabled() {
 function updateVisibility() {
     var scenario = document.querySelector('.scenario');
     if (!scenario) return;
-    
+
+    // Hiding the speaker line moves the first English line up under the Google
+    // button; the gutter that clears it is keyed off this class (toggle.css)
+    scenario.classList.toggle('speaker-hidden', !showSpeaker);
+
     var els = scenario.querySelectorAll('.english');
     for (var i = 0; i < els.length; i++) els[i].style.display = showEnglish ? '' : 'none';
     
