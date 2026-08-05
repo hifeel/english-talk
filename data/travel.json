@@ -474,6 +474,110 @@
    "icon": "🧺"
   },
   {
+   "key": "travel_post",
+   "title": "우체국 & 배송 (Post Office)",
+   "subtitle": "해외 발송, 요금 비교, 세관 신고서, 조회",
+   "dialogues": [
+    {
+     "speaker": "Tourist",
+     "en": "I'd like to send this box to South Korea.",
+     "ko": "이 상자를 한국으로 보내고 싶습니다.",
+     "audio": "audio/travel_post_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Let me weigh it. Four kilos, so it's forty-five dollars by air.",
+     "ko": "무게를 재보겠습니다. 4킬로라 항공편으로 45달러입니다.",
+     "audio": "audio/travel_post_2.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "How long does that take to arrive?",
+     "ko": "도착까지 얼마나 걸리나요?",
+     "audio": "audio/travel_post_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Seven to ten days. Surface mail is half the price but six weeks.",
+     "ko": "7~10일이요. 선편은 절반 가격이지만 6주 걸립니다.",
+     "audio": "audio/travel_post_4.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Do I need to fill out a customs form?",
+     "ko": "세관 신고서를 작성해야 하나요?",
+     "audio": "audio/travel_post_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, list what's inside and the value of each item.",
+     "ko": "네, 내용물과 각 물품의 가치를 적어주세요.",
+     "audio": "audio/travel_post_6.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "They're souvenirs and some clothes. What value should I put?",
+     "ko": "기념품과 옷인데요. 가치는 얼마로 적어야 하나요?",
+     "audio": "audio/travel_post_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "What you paid. Understating it can hold the parcel at customs.",
+     "ko": "실제 구매가로요. 낮춰 적으면 세관에 걸릴 수 있습니다.",
+     "audio": "audio/travel_post_8.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Can I buy a box here, or should I bring my own?",
+     "ko": "여기서 상자를 살 수 있나요, 아니면 직접 가져와야 하나요?",
+     "audio": "audio/travel_post_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We sell three sizes. The medium fits about five kilos.",
+     "ko": "세 가지 크기를 팝니다. 중간 크기가 5킬로 정도 들어가요.",
+     "audio": "audio/travel_post_10.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Is there anything I'm not allowed to send?",
+     "ko": "보내면 안 되는 물건이 있나요?",
+     "audio": "audio/travel_post_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "No liquids, batteries or food. Sealed cosmetics are usually fine.",
+     "ko": "액체, 배터리, 식품은 안 됩니다. 밀봉된 화장품은 대개 괜찮아요.",
+     "audio": "audio/travel_post_12.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Can I track it once it's sent?",
+     "ko": "보낸 뒤에 배송 조회가 되나요?",
+     "audio": "audio/travel_post_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, the receipt has a tracking number for both countries.",
+     "ko": "네, 영수증에 양국에서 조회 가능한 운송장 번호가 있습니다.",
+     "audio": "audio/travel_post_14.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "What happens if it doesn't arrive?",
+     "ko": "만약 도착하지 않으면 어떻게 되나요?",
+     "audio": "audio/travel_post_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Bring the receipt back. Insurance covers up to a hundred dollars.",
+     "ko": "영수증을 가지고 오세요. 보험으로 100달러까지 보상됩니다.",
+     "audio": "audio/travel_post_16.mp3"
+    }
+   ],
+   "icon": "📮"
+  },
+  {
    "key": "travel_tips_sim",
    "title": "유심 구입 (Getting a SIM)",
    "subtitle": "구입처, 데이터 요금제, 여권 등록",
