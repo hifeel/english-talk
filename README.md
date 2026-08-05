@@ -13,7 +13,7 @@
 
 ## 실행
 
-**로컬 서버가 필요합니다.** `index.html`을 파일로 직접 열면 동작하지 않습니다 — `fetch('data/dialogues.json')`이 `file://` 출처에서 CORS로 차단되어 화면이 비어 있게 됩니다.
+**로컬 서버가 필요합니다.** `index.html`을 파일로 직접 열면 동작하지 않습니다 — `data/*.json`을 읽는 `fetch`가 `file://` 출처에서 CORS로 차단되어 화면이 비어 있게 됩니다.
 
 ```sh
 python -m http.server 8777
@@ -24,10 +24,11 @@ python -m http.server 8777
 
 ## 구조
 
-화면은 3개뿐이고, 전부 `data/dialogues.json` 하나를 읽어 렌더링합니다.
+화면은 3개뿐이고, 전부 `data/`의 JSON을 읽어 렌더링합니다.
 
 ```
-data/dialogues.json     단일 진실 공급원 (모든 텍스트·오디오 경로)
+data/index.json         카테고리 메타데이터 (1.4KB, 대화문 없음)
+data/<카테고리>.json      해당 카테고리의 시나리오와 대화문 (29~61KB)
 
 index.html    + js/index.js      카테고리 카드 그리드
 category.html + js/category.js   ?cat=hotel            시나리오 목록
@@ -45,29 +46,41 @@ styles.css    공통 스타일 / toggle.css  대화 화면 전용 스타일
 
 ## 데이터 스키마
 
+데이터는 두 종류로 나뉘어 있습니다. **둘 사이에 중복되는 내용은 없습니다** — 그래서 빌드 단계도, 동기화할 것도 없습니다.
+
+`data/index.json` — 카테고리 메타데이터만. 모든 화면이 읽습니다.
+
 ```jsonc
 {
   "categories": [
     {
-      "key": "hotel",                          // URL의 ?cat= 값
+      "key": "hotel",                          // URL의 ?cat= 값, 파일명과 동일
       "icon": "🏨",
       "title": "호텔 (Hotel)",                  // 이모지 없이
       "subtitle": "호텔에서 필요한 영어 회화",     // category.html 부제
-      "summary": "체크인, 체크아웃, 요청, 문제 해결", // index.html 카드 설명
-      "scenarios": [
+      "summary": "체크인, 체크아웃, 요청, 문제 해결" // index.html 카드 설명
+    }
+  ]
+}
+```
+
+`data/hotel.json` — 그 카테고리의 내용만.
+
+```jsonc
+{
+  "key": "hotel",
+  "scenarios": [
+    {
+      "key": "hotel_checkin",                  // URL의 ?name= 값, 진도 저장 키
+      "icon": "🔑",
+      "title": "체크인 (Check-in)",
+      "subtitle": "예약 확인, 체크인 절차",
+      "dialogues": [
         {
-          "key": "hotel_checkin",              // URL의 ?name= 값, 진도 저장 키
-          "icon": "🔑",
-          "title": "체크인 (Check-in)",
-          "subtitle": "예약 확인, 체크인 절차",
-          "dialogues": [
-            {
-              "speaker": "Guest",
-              "en": "Hi, I have a reservation under Kim.",
-              "ko": "안녕하세요, 김으로 예약했습니다.",
-              "audio": "audio/checkin_1.mp3"   // 저장소 기준 상대 경로
-            }
-          ]
+          "speaker": "Guest",
+          "en": "Hi, I have a reservation under Kim.",
+          "ko": "안녕하세요, 김으로 예약했습니다.",
+          "audio": "audio/checkin_1.mp3"       // 저장소 기준 상대 경로
         }
       ]
     }
@@ -75,15 +88,32 @@ styles.css    공통 스타일 / toggle.css  대화 화면 전용 스타일
 }
 ```
 
-카테고리와 시나리오는 같은 형태(`key` / `icon` / `title` / `subtitle`)를 씁니다. 표시에 필요한 모든 텍스트가 이 파일 안에 있고, JS에 하드코딩된 카테고리 목록은 없습니다.
+카테고리와 시나리오는 같은 형태(`key` / `icon` / `title` / `subtitle`)를 씁니다. JS에 하드코딩된 카테고리 목록은 없습니다.
+
+**로딩 방식.** `js/data.js`가 세 가지 진입점을 제공합니다.
+
+| 함수 | 받아오는 것 | 쓰는 곳 |
+|---|---|---|
+| `etLoadIndex()` | `index.json`만 | 내부용 |
+| `etLoadCategory(key)` | 인덱스 + 그 카테고리 1개 | category.html, scenario.html |
+| `etLoadAllCategories()` | 인덱스 + 전체 7개 | index.html (문장 수·진도 집계에 전부 필요) |
+
+`etLoadCategory()`가 돌려주는 "로드된 카테고리"는 메타데이터에 `scenarios`가 붙은 형태입니다. 결과는 캐시되고, 같은 키로 동시에 호출해도 요청은 한 번만 나갑니다.
+
+대화문 페이지는 이제 전체가 아니라 필요한 카테고리 하나만 받습니다 (약 302KB → 30~61KB).
 
 ## 콘텐츠 추가하기
 
-1. `data/dialogues.json`의 해당 카테고리 `scenarios[]`에 항목을 추가합니다.
+1. `data/<카테고리>.json`의 `scenarios[]`에 항목을 추가합니다.
 2. 문장별 mp3를 만들어 `audio/`에 넣고, 각 대화의 `audio` 경로를 채웁니다.
-3. 끝입니다. 목록·진도·이전/다음 네비게이션은 JSON에서 자동으로 나옵니다.
+3. 끝입니다. 목록·진도·이전/다음 네비게이션은 자동으로 나옵니다.
 
-카테고리를 새로 추가할 때도 JSON만 고치면 됩니다. `icon`/`title`/`subtitle`/`summary` 네 필드를 모두 채우세요.
+카테고리를 새로 추가하려면 두 가지가 필요합니다.
+
+1. `data/index.json`에 항목 추가 — `key`/`icon`/`title`/`subtitle`/`summary` 다섯 필드 모두.
+2. `data/<key>.json` 생성 — `{"key": "...", "scenarios": [...]}`.
+
+파일명은 반드시 `key`와 같아야 합니다. 로더가 `data/<key>.json`으로 경로를 만듭니다.
 
 ## 오디오
 
@@ -116,7 +146,7 @@ styles.css    공통 스타일 / toggle.css  대화 화면 전용 스타일
 
 ## 알아둘 점
 
-- **스크립트 로드 순서에 의존합니다.** `scenario.html`은 `play-all.js` → `toggle.js` → `js/data.js` → `js/scenario.js` 순으로 불러야 합니다. `play-all.js`는 `toggle.js`의 `repeatMode`를, `toggle.js`는 `play-all.js`의 `isPlaying`/`stopAll`을 전역으로 참조합니다.
+- **`toggle.js`와 `play-all.js`는 서로를 필요로 하지만, 계약이 각 파일 맨 위에 적혀 있습니다.** `play-all.js`는 `etRepeatEnabled()`를, `toggle.js`는 `etStopPlayAll()`을 상대에게서 씁니다. 양쪽 다 `typeof` 가드가 있어 한쪽만 로드해도 죽지 않고, 함수 선언은 호이스팅되며 실제 호출은 클릭 시점에 일어나므로 **로드 순서는 상관없습니다.** 내부 상태(`repeatMode`, `isPlaying`, `showEnglish` 등)는 파일 밖에서 건드리지 마세요.
 - `js/scenario.js`는 대화문을 그린 뒤 `initEnglishTalk()`를 다시 호출합니다. 동적으로 만든 요소에 클릭 재생과 구글 버튼을 붙이기 위해서입니다.
 - 외부 요청이 없습니다. 구글 로고는 인라인 SVG이며, 오프라인에서도 그대로 동작합니다.
 - 렌더링은 문자열 연결 + `innerHTML` 방식이고, JSON에서 온 텍스트는 `etEsc()`로 이스케이프합니다. 마크업을 추가할 때 이 처리를 빠뜨리지 마세요.
