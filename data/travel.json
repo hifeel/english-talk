@@ -1060,6 +1060,110 @@
     }
    ],
    "icon": "🎭"
+  },
+  {
+   "key": "travel_themepark",
+   "title": "테마파크 (Theme Park)",
+   "subtitle": "입장권, 대기 시간, 탑승 제한, 보관함",
+   "dialogues": [
+    {
+     "speaker": "Tourist",
+     "en": "Two adults and one child, please. She's seven.",
+     "ko": "성인 두 명과 어린이 한 명 주세요. 아이는 일곱 살이에요.",
+     "audio": "audio/travel_themepark_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "That's ninety dollars. Would you like the express pass as well?",
+     "ko": "90달러입니다. 익스프레스 패스도 추가하시겠어요?",
+     "audio": "audio/travel_themepark_2.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "What does the express pass do?",
+     "ko": "익스프레스 패스는 뭘 해주나요?",
+     "audio": "audio/travel_themepark_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It lets you skip the main queue on ten rides. Thirty dollars each.",
+     "ko": "인기 놀이기구 10개에서 줄을 건너뛸 수 있습니다. 1인당 30달러예요.",
+     "audio": "audio/travel_themepark_4.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "How long is the wait for the roller coaster?",
+     "ko": "롤러코스터는 얼마나 기다려야 하나요?",
+     "audio": "audio/travel_themepark_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Ninety minutes right now. The app shows live times for every ride.",
+     "ko": "지금은 90분입니다. 앱에서 모든 기구의 실시간 대기 시간을 볼 수 있어요.",
+     "audio": "audio/travel_themepark_6.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Is there a shorter wait earlier or later in the day?",
+     "ko": "이른 시간이나 늦은 시간이 더 짧은가요?",
+     "audio": "audio/travel_themepark_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Right after opening, or during the parade at three. Most people watch it.",
+     "ko": "개장 직후나 3시 퍼레이드 시간이요. 그때는 다들 퍼레이드를 봅니다.",
+     "audio": "audio/travel_themepark_8.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Is my daughter tall enough for this ride?",
+     "ko": "제 딸이 이 놀이기구를 탈 수 있는 키인가요?",
+     "audio": "audio/travel_themepark_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "She needs to be one hundred twenty centimetres. Let's measure her here.",
+     "ko": "120센티미터 이상이어야 합니다. 여기서 재보겠습니다.",
+     "audio": "audio/travel_themepark_10.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "She's just under. Is there something similar she can ride?",
+     "ko": "조금 모자라네요. 비슷한 걸로 탈 수 있는 게 있나요?",
+     "audio": "audio/travel_themepark_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The family coaster next door has no height limit for her age.",
+     "ko": "옆에 있는 패밀리 코스터는 그 나이대면 키 제한이 없습니다.",
+     "audio": "audio/travel_themepark_12.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Where can I leave our bags while we're on the rides?",
+     "ko": "놀이기구 타는 동안 가방은 어디에 둘 수 있나요?",
+     "audio": "audio/travel_themepark_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Lockers are by each major ride. Two dollars for two hours.",
+     "ko": "주요 기구마다 보관함이 있습니다. 2시간에 2달러예요.",
+     "audio": "audio/travel_themepark_14.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Can we leave the park and come back in the evening?",
+     "ko": "나갔다가 저녁에 다시 들어올 수 있나요?",
+     "audio": "audio/travel_themepark_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, get your hand stamped at the exit and keep your ticket.",
+     "ko": "네, 출구에서 손등에 도장을 받으시고 입장권을 갖고 계세요.",
+     "audio": "audio/travel_themepark_16.mp3"
+    }
+   ],
+   "icon": "🎢"
   }
  ]
 }
