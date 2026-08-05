@@ -579,8 +579,8 @@
   },
   {
    "key": "hospital_pharmacy",
-   "title": "약국 (Pharmacy)",
-   "subtitle": "처방전, 약 복용법, 부작용",
+   "title": "처방전 접수 (Filling a Prescription)",
+   "subtitle": "처방전 제출, 신분 확인",
    "dialogues": [
     {
      "speaker": "Patient",
@@ -605,7 +605,15 @@
      "en": "That's fine. It'll be ready in about fifteen minutes.",
      "ko": "괜찮습니다. 15분쯤 후에 준비됩니다.",
      "audio": "audio/hospital_pharmacy_4.mp3"
-    },
+    }
+   ],
+   "icon": "💊"
+  },
+  {
+   "key": "hospital_pharmacy_dosage",
+   "title": "복용법 (How to Take It)",
+   "subtitle": "복용 횟수, 거른 경우",
+   "dialogues": [
     {
      "speaker": "Patient",
      "en": "How many times a day should I take this?",
@@ -629,7 +637,15 @@
      "en": "Take it when you remember, but skip it if it's almost time for the next.",
      "ko": "생각나실 때 드시되, 다음 복용 시간이 가까우면 건너뛰세요.",
      "audio": "audio/hospital_pharmacy_8.mp3"
-    },
+    }
+   ],
+   "icon": "⏰"
+  },
+  {
+   "key": "hospital_pharmacy_effects",
+   "title": "부작용 (Side Effects)",
+   "subtitle": "졸음, 음주 주의",
+   "dialogues": [
     {
      "speaker": "Patient",
      "en": "Are there any side effects?",
@@ -653,7 +669,15 @@
      "en": "I'd avoid it completely while you're on this course.",
      "ko": "복용 기간에는 아예 피하시는 게 좋습니다.",
      "audio": "audio/hospital_pharmacy_12.mp3"
-    },
+    }
+   ],
+   "icon": "⚠️"
+  },
+  {
+   "key": "hospital_pharmacy_mixing",
+   "title": "다른 약과 함께 (Other Medication)",
+   "subtitle": "병용 약물 확인",
+   "dialogues": [
     {
      "speaker": "Patient",
      "en": "Can I take this with other medication?",
@@ -677,7 +701,15 @@
      "en": "Those are fine together. Just leave two hours between them.",
      "ko": "같이 드셔도 괜찮습니다. 두 시간 정도 간격만 두세요.",
      "audio": "audio/hospital_pharmacy_16.mp3"
-    },
+    }
+   ],
+   "icon": "🔀"
+  },
+  {
+   "key": "hospital_pharmacy_claim",
+   "title": "보험 & 영수증 (Insurance & Receipt)",
+   "subtitle": "보험 처리, 항목별 영수증",
+   "dialogues": [
     {
      "speaker": "Patient",
      "en": "Is this covered by insurance?",
@@ -703,12 +735,12 @@
      "audio": "audio/hospital_pharmacy_20.mp3"
     }
    ],
-   "icon": "💊"
+   "icon": "🧾"
   },
   {
    "key": "hospital_insurance",
-   "title": "보험 (Insurance)",
-   "subtitle": "보험 적용, 청구, 코페이",
+   "title": "보장 확인 (Checking Coverage)",
+   "subtitle": "여행자 보험 적용 여부",
    "dialogues": [
     {
      "speaker": "Patient",
@@ -733,7 +765,15 @@
      "en": "Then you'll pay here and claim it back. Keep every document.",
      "ko": "그러면 여기서 결제하시고 나중에 청구하시면 됩니다. 서류를 모두 보관하세요.",
      "audio": "audio/hospital_insurance_4.mp3"
-    },
+    }
+   ],
+   "icon": "🛡️"
+  },
+  {
+   "key": "hospital_insurance_claim",
+   "title": "보험금 청구 (Filing a Claim)",
+   "subtitle": "필요 서류, 영문 소견서",
+   "dialogues": [
     {
      "speaker": "Patient",
      "en": "I need to file an insurance claim.",
@@ -757,7 +797,15 @@
      "en": "Yes, we issue them in English by default for international patients.",
      "ko": "네, 외국인 환자에게는 기본적으로 영어로 발급합니다.",
      "audio": "audio/hospital_insurance_8.mp3"
-    },
+    }
+   ],
+   "icon": "📄"
+  },
+  {
+   "key": "hospital_insurance_copay",
+   "title": "본인 부담금 (Co-pay)",
+   "subtitle": "부담 금액, 결제 시점",
+   "dialogues": [
     {
      "speaker": "Patient",
      "en": "What is my co-pay amount?",
@@ -781,7 +829,15 @@
      "en": "Now, at the front desk. The tests are billed separately later.",
      "ko": "지금 접수처에서 내시면 됩니다. 검사비는 나중에 따로 청구돼요.",
      "audio": "audio/hospital_insurance_12.mp3"
-    },
+    }
+   ],
+   "icon": "💳"
+  },
+  {
+   "key": "hospital_insurance_billing",
+   "title": "보험사 직접 청구 (Billing the Insurer)",
+   "subtitle": "제휴 여부, 직접 제출",
+   "dialogues": [
     {
      "speaker": "Patient",
      "en": "Can you send the bill to my insurance?",
@@ -805,7 +861,15 @@
      "en": "Then pay here and submit the paperwork yourself. It's usually quick.",
      "ko": "그러면 여기서 결제하시고 서류를 직접 제출하세요. 보통 빨리 처리됩니다.",
      "audio": "audio/hospital_insurance_16.mp3"
-    },
+    }
+   ],
+   "icon": "🏥"
+  },
+  {
+   "key": "hospital_insurance_referral",
+   "title": "진료 의뢰서 (Referral)",
+   "subtitle": "사전 의뢰서 요건",
+   "dialogues": [
     {
      "speaker": "Patient",
      "en": "I need a referral for insurance.",
@@ -831,7 +895,7 @@
      "audio": "audio/hospital_insurance_20.mp3"
     }
    ],
-   "icon": "🛡️"
+   "icon": "📝"
   }
  ]
 }

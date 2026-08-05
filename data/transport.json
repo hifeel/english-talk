@@ -691,8 +691,8 @@
   },
   {
    "key": "transport_sharing",
-   "title": "공유 택시 (Ride-sharing)",
-   "subtitle": "우버, 리프트 등 공유 택시 이용",
+   "title": "차량 확인 & 탑승 (Meeting the Driver)",
+   "subtitle": "호출 확인, 차량 번호",
    "dialogues": [
     {
      "speaker": "Customer",
@@ -717,7 +717,15 @@
      "en": "It's seven-four-two BXK. Let me help with your luggage.",
      "ko": "742 BXK입니다. 짐 옮기는 걸 도와드릴게요.",
      "audio": "audio/transport_sharing_4.mp3"
-    },
+    }
+   ],
+   "icon": "🚗"
+  },
+  {
+   "key": "transport_sharing_waiting",
+   "title": "대기 & 픽업 위치 (Waiting and Pickup)",
+   "subtitle": "도착 시간, 탑승 장소",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "How long will the driver take to arrive?",
@@ -741,7 +749,15 @@
      "en": "At the pickup zone by exit three, not at the main door.",
      "ko": "정문이 아니라 3번 출구 옆 탑승 구역에서요.",
      "audio": "audio/transport_sharing_8.mp3"
-    },
+    }
+   ],
+   "icon": "📍"
+  },
+  {
+   "key": "transport_sharing_split",
+   "title": "요금 나누기 (Splitting the Fare)",
+   "subtitle": "요금 분할, 초대 보내기",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "Can you split the fare with me?",
@@ -765,7 +781,15 @@
      "en": "They do. Send them the invite and they can accept their half.",
      "ko": "네, 필요합니다. 초대를 보내면 상대방이 절반을 수락할 수 있어요.",
      "audio": "audio/transport_sharing_12.mp3"
-    },
+    }
+   ],
+   "icon": "🤝"
+  },
+  {
+   "key": "transport_sharing_lost",
+   "title": "차내 분실물 (Left in the Car)",
+   "subtitle": "기사 연락, 고객센터 신고",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "I left something in the car.",
@@ -789,7 +813,15 @@
      "en": "Then report it to support. They'll reach the driver on your behalf.",
      "ko": "그러면 고객센터에 신고하세요. 대신 기사님께 연락해 줍니다.",
      "audio": "audio/transport_sharing_16.mp3"
-    },
+    }
+   ],
+   "icon": "🔎"
+  },
+  {
+   "key": "transport_sharing_surge",
+   "title": "할증 요금 (Surge Pricing)",
+   "subtitle": "할증 배율, 대기 판단",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "Is there surge pricing right now?",
@@ -815,12 +847,12 @@
      "audio": "audio/transport_sharing_20.mp3"
     }
    ],
-   "icon": "🚗"
+   "icon": "📈"
   },
   {
    "key": "transport_parking",
-   "title": "주차 (Parking)",
-   "subtitle": "주차장 이용, 요금, 문제 해결",
+   "title": "주차 장소 (Where to Park)",
+   "subtitle": "주차장 위치, 노상 주차",
    "dialogues": [
     {
      "speaker": "Customer",
@@ -845,7 +877,15 @@
      "en": "Only until six, and you need a ticket from the machine on the sidewalk.",
      "ko": "6시까지만 가능하고, 인도에 있는 기계에서 표를 뽑으셔야 합니다.",
      "audio": "audio/transport_parking_4.mp3"
-    },
+    }
+   ],
+   "icon": "🅿️"
+  },
+  {
+   "key": "transport_parking_rates",
+   "title": "주차 요금 (Parking Rates)",
+   "subtitle": "시간당 요금, 정산 방법",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "How much is parking per hour?",
@@ -869,7 +909,15 @@
      "en": "Pay at the machine before you return to your car. Keep the ticket.",
      "ko": "차로 돌아가시기 전에 정산기에서 결제하세요. 표는 갖고 계셔야 합니다.",
      "audio": "audio/transport_parking_8.mp3"
-    },
+    }
+   ],
+   "icon": "💰"
+  },
+  {
+   "key": "transport_parking_safety",
+   "title": "주차장 안전 (Is It Safe?)",
+   "subtitle": "보안 시설, 귀중품 보관",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "Is this parking lot safe?",
@@ -893,7 +941,15 @@
      "en": "I'd take valuables with you and leave nothing visible on the seats.",
      "ko": "귀중품은 가지고 가시고 좌석에 보이는 물건은 두지 마세요.",
      "audio": "audio/transport_parking_12.mp3"
-    },
+    }
+   ],
+   "icon": "🔒"
+  },
+  {
+   "key": "transport_parking_findcar",
+   "title": "차를 못 찾을 때 (Finding Your Car)",
+   "subtitle": "층 확인, 위치 찾기",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "I can't find my car.",
@@ -917,7 +973,15 @@
      "en": "That's level three. I'll walk you over and we can check the rows.",
      "ko": "3층이네요. 같이 가서 열을 확인해 보겠습니다.",
      "audio": "audio/transport_parking_16.mp3"
-    },
+    }
+   ],
+   "icon": "🚘"
+  },
+  {
+   "key": "transport_parking_validate",
+   "title": "주차 도장 (Validation)",
+   "subtitle": "도장 조건, 차액 정산",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "Do you validate parking?",
@@ -943,7 +1007,7 @@
      "audio": "audio/transport_parking_20.mp3"
     }
    ],
-   "icon": "🅿️"
+   "icon": "🎫"
   }
  ]
 }

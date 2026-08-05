@@ -520,7 +520,7 @@
   {
    "key": "airport_immigration",
    "title": "입국 심사 (Immigration)",
-   "subtitle": "여권 검사, 방문 목적, 체류 기간",
+   "subtitle": "여권 제시, 방문 목적, 왕복 티켓",
    "dialogues": [
     {
      "speaker": "Immigration Officer",
@@ -557,7 +557,15 @@
      "en": "Yes, I have a confirmed return flight on the fifteenth of next month.",
      "ko": "네, 다음 달 15일 확정된 귀국 항공편이 있습니다.",
      "audio": "audio/airport_immigration_6.mp3"
-    },
+    }
+   ],
+   "icon": "🛂"
+  },
+  {
+   "key": "airport_immigration_stay",
+   "title": "숙소 & 자금 (Stay & Funds)",
+   "subtitle": "숙소 확인, 자금 증명, 방문 이력",
+   "dialogues": [
     {
      "speaker": "Immigration Officer",
      "en": "Where will you be staying during your visit?",
@@ -593,7 +601,15 @@
      "en": "Yes, I came here three years ago for a business conference.",
      "ko": "네, 3년 전에 비즈니스 컨퍼런스를 위해 방문한 적이 있습니다.",
      "audio": "audio/airport_immigration_12.mp3"
-    },
+    }
+   ],
+   "icon": "🏨"
+  },
+  {
+   "key": "airport_immigration_declare",
+   "title": "신고 & 신상 (Declarations & Personal)",
+   "subtitle": "신고 물품, 직업, 체류 기간",
+   "dialogues": [
     {
      "speaker": "Immigration Officer",
      "en": "Do you have anything to declare? Any food, alcohol, or large amounts of cash?",
@@ -629,7 +645,15 @@
      "en": "Exactly fourteen days. I'll be departing on the twentieth of this month.",
      "ko": "정확히 14일입니다. 이달 20일에 출국할 예정입니다.",
      "audio": "audio/airport_immigration_18.mp3"
-    },
+    }
+   ],
+   "icon": "📋"
+  },
+  {
+   "key": "airport_immigration_clear",
+   "title": "서류 확인 & 통과 (Documents & Clearance)",
+   "subtitle": "숙소 서류, 입국 허가",
+   "dialogues": [
     {
      "speaker": "Immigration Officer",
      "en": "I see. Do you have your accommodation details?",
@@ -655,12 +679,12 @@
      "audio": "audio/airport_immigration_22.mp3"
     }
    ],
-   "icon": "🛂"
+   "icon": "✅"
   },
   {
    "key": "airport_customs",
-   "title": "면세 한도 (Customs)",
-   "subtitle": "신고 사항, 한도액, 금지 물품",
+   "title": "면세 한도 (Duty-free Limit)",
+   "subtitle": "신고 여부, 구매 금액, 면세 범위",
    "dialogues": [
     {
      "speaker": "Customs Officer",
@@ -691,7 +715,15 @@
      "en": "That's within the duty-free limit. You may proceed.",
      "ko": "면세 한도 이내입니다. 통과하셔도 됩니다.",
      "audio": "audio/airport_customs_5.mp3"
-    },
+    }
+   ],
+   "icon": "🛃"
+  },
+  {
+   "key": "airport_customs_form",
+   "title": "신고서 & 관세 (Declaration Form)",
+   "subtitle": "신고서 작성, 전자제품 관세",
+   "dialogues": [
     {
      "speaker": "Customs Officer",
      "en": "Please fill out this customs declaration form.",
@@ -721,7 +753,15 @@
      "en": "Yes, you'll need to pay duty on the amount over eight hundred dollars.",
      "ko": "네, 800달러를 초과하는 금액에 대해 관세를 납부하셔야 합니다.",
      "audio": "audio/airport_customs_10.mp3"
-    },
+    }
+   ],
+   "icon": "💻"
+  },
+  {
+   "key": "airport_customs_food",
+   "title": "식품 반입 (Food Items)",
+   "subtitle": "가공식품, 농산물 반입 규정",
+   "dialogues": [
     {
      "speaker": "Customs Officer",
      "en": "Do you have any food items, plants, or animal products?",
@@ -745,7 +785,15 @@
      "en": "I understand. I'll make sure there are no restricted items.",
      "ko": "알겠습니다. 제한 품목이 없는지 확인하겠습니다.",
      "audio": "audio/airport_customs_14.mp3"
-    },
+    }
+   ],
+   "icon": "🍎"
+  },
+  {
+   "key": "airport_customs_cash",
+   "title": "현금 & 주류·담배 (Cash, Alcohol & Tobacco)",
+   "subtitle": "현금 신고, 주류·담배 한도",
+   "dialogues": [
     {
      "speaker": "Customs Officer",
      "en": "Are you carrying more than ten thousand dollars in cash or monetary instruments?",
@@ -783,12 +831,12 @@
      "audio": "audio/airport_customs_20.mp3"
     }
    ],
-   "icon": "📦"
+   "icon": "💵"
   },
   {
    "key": "airport_upgrade",
-   "title": "비행기 업그레이드 (Flight Upgrade)",
-   "subtitle": "좌석 업그레이드 요청, 마일리지, 좌석 가능 여부",
+   "title": "업그레이드 문의 (Asking About an Upgrade)",
+   "subtitle": "좌석 승급 문의, 추가 요금",
    "dialogues": [
     {
      "speaker": "Passenger",
@@ -813,7 +861,15 @@
      "en": "I see business class availability. The upgrade fee would be four hundred fifty dollars.",
      "ko": "비즈니스 클래스 좌석이 확인됩니다. 업그레이드 비용은 450달러입니다.",
      "audio": "audio/airport_upgrade_4.mp3"
-    },
+    }
+   ],
+   "icon": "💺"
+  },
+  {
+   "key": "airport_upgrade_miles",
+   "title": "마일리지 사용 (Paying with Miles)",
+   "subtitle": "마일 차감, 잔여 확인",
+   "dialogues": [
     {
      "speaker": "Passenger",
      "en": "Can I use my frequent flyer miles for the upgrade instead of paying cash?",
@@ -837,7 +893,15 @@
      "en": "Absolutely. I'll process the upgrade for you now. You'll receive a new boarding pass.",
      "ko": "물론입니다. 지금 바로 업그레이드를 처리해 드리겠습니다. 새로운 탑승권을 받으실 것입니다.",
      "audio": "audio/airport_upgrade_8.mp3"
-    },
+    }
+   ],
+   "icon": "✈️"
+  },
+  {
+   "key": "airport_upgrade_member",
+   "title": "회원 혜택 & 대기 (Status & Waitlist)",
+   "subtitle": "골드 회원 혜택, 대기자 등록",
+   "dialogues": [
     {
      "speaker": "Passenger",
      "en": "I'm a Gold member. Are there any complimentary upgrades available?",
@@ -873,7 +937,15 @@
      "en": "We'll announce any upgrades at the gate before boarding.",
      "ko": "탑승 전 게이트에서 업그레이드 가능 여부를 안내해 드리겠습니다.",
      "audio": "audio/airport_upgrade_14.mp3"
-    },
+    }
+   ],
+   "icon": "🥇"
+  },
+  {
+   "key": "airport_upgrade_premium",
+   "title": "프리미엄 이코노미 (Premium Economy)",
+   "subtitle": "좌석 차이, 결제",
+   "dialogues": [
     {
      "speaker": "Passenger",
      "en": "I'd like to upgrade to premium economy. Is that possible?",
@@ -911,7 +983,7 @@
      "audio": "audio/airport_upgrade_20.mp3"
     }
    ],
-   "icon": "💺"
+   "icon": "🪑"
   }
  ]
 }
