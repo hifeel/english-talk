@@ -1,4 +1,11 @@
 // Simple toggle functionality
+//
+// Cross-file contract (see also play-all.js):
+//   exposes  etRepeatEnabled()  - is the 반복 toggle on? read by play-all.js
+//            initEnglishTalk()  - (re)bind the UI, called by js/scenario.js
+//                                 after it renders dialogues
+//   needs    etStopPlayAll() from play-all.js, optional
+// The display flags below are private to this file.
 var showEnglish = true;
 var showKorean = true;
 var showSpeaker = true;
@@ -71,6 +78,11 @@ function toggleRepeat() {
     saveStates();
 }
 
+// Read by play-all.js to decide whether to loop the whole scenario
+function etRepeatEnabled() {
+    return repeatMode;
+}
+
 function updateVisibility() {
     var scenario = document.querySelector('.scenario');
     if (!scenario) return;
@@ -105,11 +117,9 @@ function playAudioWithRepeat(audio) {
     audio.play();
 }
 
-// Stop play-all when a sentence audio starts playing
-function stopPlayAllIfActive() {
-    if (typeof isPlaying !== 'undefined' && isPlaying && typeof stopAll === 'function') {
-        stopAll();
-    }
+// Hand off to play-all.js if it is loaded; it decides whether anything is running
+function etStopPlayAllIfLoaded() {
+    if (typeof etStopPlayAll === 'function') etStopPlayAll();
 }
 
 function stopAudio(audio) {
@@ -151,7 +161,7 @@ function initEnglishTalk() {
     for (var j = 0; j < audios.length; j++) {
         audios[j].addEventListener('play', function() {
             if (this.getAttribute('data-playall')) return;
-            stopPlayAllIfActive();
+            etStopPlayAllIfLoaded();
         });
     }
 }
@@ -167,7 +177,7 @@ function addClickToPlay(dialogue) {
             return;
         }
         
-        if (typeof stopPlayAllForClick === 'function') stopPlayAllForClick();
+        etStopPlayAllIfLoaded();
         
         var audio = this.querySelector('audio');
         if (audio) {

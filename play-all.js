@@ -1,4 +1,11 @@
 // Play All functionality for English Talk
+//
+// Cross-file contract (see also toggle.js):
+//   exposes  togglePlayAll()  - the 전체 재생 button in scenario.html
+//            etStopPlayAll()  - stop if running; safe to call anytime
+//   needs    etRepeatEnabled() from toggle.js, optional - without it, no repeat
+// Everything else here is private to this file. Load order does not matter:
+// function declarations hoist and the cross-file calls happen at click time.
 var isPlaying = false;
 var currentAudioIndex = 0;
 var audioElements = [];
@@ -41,7 +48,8 @@ function stopAllIndividualAudio() {
 
 function playNext() {
     if (!isPlaying || currentAudioIndex >= audioElements.length) {
-        if (repeatMode && isPlaying) {
+        // toggle.js owns the repeat setting; if it isn't loaded, just don't repeat
+        if (isPlaying && typeof etRepeatEnabled === 'function' && etRepeatEnabled()) {
             currentAudioIndex = 0;
             playNext();
         } else {
@@ -116,8 +124,8 @@ function unhighlightDialogue(index) {
     }
 }
 
-// Stop play all when clicking a sentence
-function stopPlayAllForClick() {
+// Entry point for other scripts: stop play-all if it is running, else do nothing
+function etStopPlayAll() {
     if (isPlaying) {
         stopAll();
     }
