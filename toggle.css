@@ -202,3 +202,73 @@
     #playAllIcon { font-size: 0.85rem; }
     .play-all-progress { display: none; }
 }
+
+/* ============ Bookmark ============ */
+/* Sits to the left of the Google button, same size and shadow so the two read
+   as one pair of per-sentence actions. */
+.mark-btn {
+    position: absolute;
+    top: 6px;
+    right: 40px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+    z-index: 10;
+    padding: 0;
+    font-size: 15px;
+    line-height: 1;
+    color: #bbbbbb;
+}
+
+.mark-btn:hover {
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    color: #f5a623;
+}
+
+.mark-btn.marked {
+    color: #f5a623;
+    border-color: #f5d08a;
+}
+
+/* Room for both buttons, so a long first line does not run under them */
+.dialogue .speaker { padding-right: 74px; }
+
+/* Where a bookmarked sentence came from, on the review page */
+.mark-source {
+    font-size: 0.78rem;
+    margin-bottom: 6px;
+    padding-right: 74px;
+}
+
+.mark-source a {
+    color: #888888;
+    text-decoration: none;
+}
+
+.mark-source a:hover { text-decoration: underline; }
+
+.marks-empty {
+    text-align: center;
+    color: #888888;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+@media (prefers-color-scheme: dark) {
+    .mark-btn {
+        background: #2a2a2a;
+        border-color: #444444;
+        color: #777777;
+    }
+    .mark-btn.marked { color: #f5a623; border-color: #6b5a2a; }
+    .mark-source a { color: #999999; }
+    .marks-empty { color: #999999; }
+}

@@ -139,3 +139,119 @@ function etTotalProgress(cats) {
     var percent = total > 0 ? Math.round(count / total * 100) : 0;
     return { done: count, total: total, percent: percent };
 }
+// ============ Bookmarks (localStorage) ============
+//
+// Sentence-level, so a learner can collect the lines they keep failing on and
+// review them away from the scenario they came from.
+//
+// Each entry stores the English text alongside the scenario key and index.
+// Indexes are not stable - scenarios in this repo have been split and their
+// audio renumbered more than once - so on load an entry whose slot no longer
+// holds the same sentence is re-matched by text and repaired. Without that,
+// restructuring a scenario would silently point bookmarks at the wrong line.
+
+var ET_MARK_KEY = 'englishTalk_marks';
+
+function etGetMarks() {
+    try {
+        var saved = localStorage.getItem(ET_MARK_KEY);
+        var arr = saved ? JSON.parse(saved) : [];
+        return Object.prototype.toString.call(arr) === '[object Array]' ? arr : [];
+    } catch (e) { return []; }
+}
+
+function etSaveMarks(arr) {
+    try { localStorage.setItem(ET_MARK_KEY, JSON.stringify(arr)); } catch (e) {}
+}
+
+function etMarkIndex(scenarioKey, i) {
+    var marks = etGetMarks();
+    for (var n = 0; n < marks.length; n++) {
+        if (marks[n].scenario === scenarioKey && marks[n].index === i) return n;
+    }
+    return -1;
+}
+
+function etIsMarked(scenarioKey, i) {
+    return etMarkIndex(scenarioKey, i) !== -1;
+}
+
+function etMarkCount() {
+    return etGetMarks().length;
+}
+
+// Returns true if the sentence is now bookmarked
+function etToggleMark(scenarioKey, i, dialogue, catKey) {
+    var marks = etGetMarks();
+    var at = etMarkIndex(scenarioKey, i);
+    if (at !== -1) {
+        marks.splice(at, 1);
+        etSaveMarks(marks);
+        return false;
+    }
+    marks.push({
+        cat: catKey,
+        scenario: scenarioKey,
+        index: i,
+        en: dialogue.en,
+        ko: dialogue.ko,
+        speaker: dialogue.speaker,
+        audio: dialogue.audio,
+        at: Date.now()
+    });
+    etSaveMarks(marks);
+    return true;
+}
+
+// Resolve saved marks against the loaded categories, repairing moved sentences
+// and dropping ones whose text is gone. Returns the live dialogue objects.
+function etResolveMarks(cats) {
+    var marks = etGetMarks();
+    if (!marks.length) return [];
+
+    var byKey = {};      // scenario key -> {cat, scenario}
+    var byText = {};     // english text -> {cat, scenario, index}
+    for (var c = 0; c < cats.length; c++) {
+        var scen = cats[c].scenarios;
+        for (var s = 0; s < scen.length; s++) {
+            byKey[scen[s].key] = { cat: cats[c], scenario: scen[s] };
+            for (var d = 0; d < scen[s].dialogues.length; d++) {
+                var en = scen[s].dialogues[d].en;
+                if (!byText[en]) {
+                    byText[en] = { cat: cats[c], scenario: scen[s], index: d };
+                }
+            }
+        }
+    }
+
+    var out = [], kept = [], changed = false;
+    for (var m = 0; m < marks.length; m++) {
+        var mark = marks[m];
+        var hit = byKey[mark.scenario];
+        var dl = hit && hit.scenario.dialogues[mark.index];
+
+        if (!dl || dl.en !== mark.en) {          // moved or renumbered
+            var found = byText[mark.en];
+            if (!found) { changed = true; continue; }   // text gone - drop it
+            mark = {
+                cat: found.cat.key, scenario: found.scenario.key,
+                index: found.index, en: mark.en, ko: found.scenario.dialogues[found.index].ko,
+                speaker: found.scenario.dialogues[found.index].speaker,
+                audio: found.scenario.dialogues[found.index].audio, at: mark.at
+            };
+            hit = { cat: found.cat, scenario: found.scenario };
+            dl = found.scenario.dialogues[found.index];
+            changed = true;
+        }
+
+        kept.push(mark);
+        out.push({
+            mark: mark, dialogue: dl,
+            catKey: hit.cat.key, catTitle: hit.cat.title,
+            scenarioKey: hit.scenario.key, scenarioTitle: hit.scenario.title,
+            index: mark.index
+        });
+    }
+    if (changed) etSaveMarks(kept);
+    return out;
+}

@@ -717,3 +717,29 @@ footer {
         color: #81c784;
     }
 }
+
+/* Entry point to the bookmark review page, shown on the home screen only when
+   there are bookmarks to review */
+.marks-link {
+    display: block;
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 16px;
+    background: #fff8e8;
+    border: 1px solid #f5d08a;
+    border-radius: 12px;
+    color: #8a6300;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.marks-link:hover { background: #fdf0d0; }
+
+@media (prefers-color-scheme: dark) {
+    .marks-link {
+        background: #2a2418;
+        border-color: #6b5a2a;
+        color: #f5c66a;
+    }
+    .marks-link:hover { background: #352d1d; }
+}

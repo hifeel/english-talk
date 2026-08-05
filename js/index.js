@@ -32,6 +32,15 @@ function etBuildIndex() {
             '<div class="overall-text">📚 전체 공부 진행률: ' + overall.done + ' / ' + overall.total + ' 시나리오 (' + overall.percent + '%)</div>' +
             '<div class="progress-track"><div class="progress-fill" style="width:' + overall.percent + '%"></div></div>';
 
+        // Only offer the review page once there is something on it
+        var n = etMarkCount();
+        var link = document.getElementById('marksLink');
+        if (link) {
+            link.innerHTML = n
+                ? '<a href="marks.html" class="marks-link">⭐ 북마크한 문장 ' + n + '개</a>'
+                : '';
+        }
+
         document.getElementById('topicsGrid').innerHTML = html;
     });
 }

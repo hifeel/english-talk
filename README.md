@@ -33,6 +33,7 @@ data/<카테고리>.json      해당 카테고리의 시나리오와 대화문 (
 index.html    + js/index.js      카테고리 카드 그리드
 category.html + js/category.js   ?cat=hotel            시나리오 목록
 scenario.html + js/scenario.js   ?cat=&name=           대화문 본문
+marks.html    + js/marks.js      북마크한 문장 모아보기
 
 js/data.js    데이터 로더, 조회 헬퍼, 진도 관리 (모든 페이지 공용)
 toggle.js     영어/한국어/화자 표시 토글, 반복, 문장 클릭 재생, 구글 검색 버튼
@@ -213,6 +214,11 @@ python3 scripts/trim_silence.py --dry-run          # 확인만
 |---|---|
 | `englishTalk_done` | 완료 표시한 시나리오 `{ "hotel_checkin": true, ... }` |
 | `englishTalk_states` | 영어/한국어/화자 표시 여부, 반복 모드 |
+| `englishTalk_marks` | 북마크한 **문장** 배열 |
+
+**북마크는 문장 단위입니다.** 대화문마다 ☆ 버튼이 있고, 모은 문장은 `marks.html`에서 카테고리를 가로질러 한 번에 봅니다. 메인 화면의 진입 링크는 북마크가 하나라도 있을 때만 나옵니다.
+
+항목에는 시나리오 키와 순번뿐 아니라 **영어 문장 자체를 함께 저장합니다.** 이 저장소는 시나리오를 쪼개고 오디오 번호를 재정렬한 이력이 여러 번 있어서, 순번만 믿으면 북마크가 엉뚱한 문장을 가리키게 됩니다. `etResolveMarks()`가 읽을 때마다 저장된 위치의 문장이 일치하는지 확인하고, 어긋나면 **문장으로 다시 찾아 위치를 교정**합니다. 문장 자체가 사라졌으면 조용히 버립니다.
 
 뒤로가기(bfcache) 복귀 시 `pageshow` 이벤트로 다시 렌더링해 진도가 즉시 반영됩니다.
 

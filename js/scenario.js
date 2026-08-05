@@ -32,8 +32,13 @@ function etBuildScenarioPage() {
         var html = '';
         for (var i = 0; i < scenario.dialogues.length; i++) {
             var d = scenario.dialogues[i];
+            var marked = etIsMarked(scenario.key, i);
             html +=
                 '<div class="dialogue">' +
+                '<button class="mark-btn' + (marked ? ' marked' : '') + '"' +
+                ' data-i="' + i + '" title="북마크"' +
+                ' aria-pressed="' + (marked ? 'true' : 'false') + '">' +
+                (marked ? '★' : '☆') + '</button>' +
                 '<div class="speaker">' + etEsc(d.speaker) + '</div>' +
                 '<div class="english">' + etEsc(d.en) + '</div>' +
                 '<div class="korean">' + etEsc(d.ko) + '</div>' +
@@ -44,6 +49,19 @@ function etBuildScenarioPage() {
         }
         var container = document.getElementById('scenarioContainer');
         container.innerHTML = html;
+
+        // One delegated listener rather than one per sentence. stopPropagation
+        // keeps the tap off the .dialogue play handler in toggle.js.
+        container.addEventListener('click', function(e) {
+            var btn = e.target.closest('.mark-btn');
+            if (!btn) return;
+            e.stopPropagation();
+            var i = parseInt(btn.getAttribute('data-i'), 10);
+            var on = etToggleMark(scenario.key, i, scenario.dialogues[i], cat.key);
+            btn.classList.toggle('marked', on);
+            btn.textContent = on ? '★' : '☆';
+            btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
 
         // Page nav (prev/next within category)
         var idx = -1;
