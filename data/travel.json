@@ -578,6 +578,110 @@
    "icon": "📮"
   },
   {
+   "key": "travel_haircut",
+   "title": "미용실 (Haircut)",
+   "subtitle": "예약, 원하는 길이 설명, 가격, 팁",
+   "dialogues": [
+    {
+     "speaker": "Tourist",
+     "en": "Do you take walk-ins, or do I need an appointment?",
+     "ko": "예약 없이 가능한가요, 아니면 예약을 해야 하나요?",
+     "audio": "audio/travel_haircut_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We can fit you in now. It's about a twenty-minute wait.",
+     "ko": "지금 가능합니다. 20분 정도 기다리시면 돼요.",
+     "audio": "audio/travel_haircut_2.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "That's fine. How much is a cut without the wash?",
+     "ko": "괜찮아요. 감기 없이 커트만 하면 얼마인가요?",
+     "audio": "audio/travel_haircut_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Thirty dollars, or forty with a wash and blow dry.",
+     "ko": "30달러이고, 샴푸와 드라이까지 하면 40달러입니다.",
+     "audio": "audio/travel_haircut_4.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Just a trim, please. Take about two centimetres off.",
+     "ko": "다듬기만 해주세요. 2센티미터 정도 잘라주세요.",
+     "audio": "audio/travel_haircut_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Would you like the length kept all round, or shorter at the back?",
+     "ko": "전체적으로 길이를 유지할까요, 아니면 뒤쪽을 짧게 할까요?",
+     "audio": "audio/travel_haircut_6.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Keep the length, but thin it out a little. It's very thick.",
+     "ko": "길이는 두고 숱만 조금 쳐주세요. 머리숱이 많아서요.",
+     "audio": "audio/travel_haircut_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Understood. And how would you like the fringe?",
+     "ko": "알겠습니다. 앞머리는 어떻게 해드릴까요?",
+     "audio": "audio/travel_haircut_8.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Leave the fringe as it is, please.",
+     "ko": "앞머리는 그대로 두세요.",
+     "audio": "audio/travel_haircut_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. Do you part it on the left or the right?",
+     "ko": "네. 가르마는 왼쪽인가요, 오른쪽인가요?",
+     "audio": "audio/travel_haircut_10.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "On the left. Could you show me the back when you're done?",
+     "ko": "왼쪽이요. 다 되면 뒷모습을 보여주시겠어요?",
+     "audio": "audio/travel_haircut_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I will. Let me know if you want anything adjusted.",
+     "ko": "그럼요. 고치고 싶은 데가 있으면 말씀해 주세요.",
+     "audio": "audio/travel_haircut_12.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "That looks great, thank you. Could you take a touch more off the sides?",
+     "ko": "아주 좋네요, 감사합니다. 옆머리만 조금 더 쳐주실 수 있나요?",
+     "audio": "audio/travel_haircut_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Certainly. There you go. How's that?",
+     "ko": "물론입니다. 됐습니다. 어떠세요?",
+     "audio": "audio/travel_haircut_14.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Perfect. Do people usually tip here?",
+     "ko": "완벽해요. 여기서는 보통 팁을 주나요?",
+     "audio": "audio/travel_haircut_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Fifteen to twenty percent is normal, but it's up to you.",
+     "ko": "15~20퍼센트가 보통이지만 손님 마음이에요.",
+     "audio": "audio/travel_haircut_16.mp3"
+    }
+   ],
+   "icon": "💇"
+  },
+  {
    "key": "travel_tips_sim",
    "title": "유심 구입 (Getting a SIM)",
    "subtitle": "구입처, 데이터 요금제, 여권 등록",
