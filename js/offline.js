@@ -120,13 +120,13 @@ function etRenderOffline(cat) {
                 '<span class="offline-note">' + st.saved + ' / ' + st.total + '개</span></button>' +
                 '<button class="offline-del" id="offlineDel">삭제</button>';
             document.getElementById('offlineBtn').onclick = function() { etStartDownload(cat); };
-            document.getElementById('offlineDel').onclick = function() { etRemove(cat); };
+            document.getElementById('offlineDel').onclick = function() { etConfirmRemove(cat); };
         } else {
             box.innerHTML =
                 '<span class="offline-done">✔️ 오프라인 저장됨' +
                 '<span class="offline-note">' + etFormatMB(st.bytes) + '</span></span>' +
                 '<button class="offline-del" id="offlineDel">삭제</button>';
-            document.getElementById('offlineDel').onclick = function() { etRemove(cat); };
+            document.getElementById('offlineDel').onclick = function() { etConfirmRemove(cat); };
         }
     });
 }
@@ -158,6 +158,24 @@ function etStartDownload(cat) {
         } else {
             etRenderOffline(cat);
         }
+    });
+}
+
+// Deleting throws away a download that took minutes on a phone connection, so
+// ask first. The confirmation replaces the row rather than opening a dialog:
+// a native confirm() is heavier on mobile and easy to dismiss by accident.
+function etConfirmRemove(cat) {
+    var box = document.getElementById('offlineArea');
+    if (!box) return;
+
+    etAudioStatus(cat).then(function(st) {
+        box.innerHTML =
+            '<span class="offline-confirm">저장된 음성 ' + st.saved + '개(' +
+            etFormatMB(st.bytes) + ')를 삭제할까요?</span>' +
+            '<button class="offline-del danger" id="offlineDelYes">삭제</button>' +
+            '<button class="offline-cancel" id="offlineDelNo">취소</button>';
+        document.getElementById('offlineDelYes').onclick = function() { etRemove(cat); };
+        document.getElementById('offlineDelNo').onclick = function() { etRenderOffline(cat); };
     });
 }
 

@@ -467,6 +467,33 @@ footer {
 
 .offline-del:hover { color: #d32f2f; border-color: #f0c0c0; }
 
+.offline-del.danger {
+    background: #d32f2f;
+    border-color: #d32f2f;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.offline-del.danger:hover { background: #b71c1c; border-color: #b71c1c; color: #ffffff; }
+
+.offline-cancel {
+    padding: 9px 12px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    background: transparent;
+    color: #666666;
+    font-size: 0.82rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.offline-confirm {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #b71c1c;
+    margin-right: 2px;
+}
+
 .offline-progress { flex: 1; }
 
 .offline-progress-text {
@@ -494,6 +521,8 @@ footer {
 @media (prefers-color-scheme: dark) {
     .offline-done { background: #1b3a1f; color: #81c995; border-color: #2e5a33; }
     .offline-del { border-color: #444444; color: #999999; }
+    .offline-cancel { border-color: #444444; color: #aaaaaa; }
+    .offline-confirm { color: #f28b82; }
     .offline-progress-text { color: #8ab4f8; }
     .offline-track { background: #3a3a3a; }
 }
