@@ -413,12 +413,86 @@ footer {
 }
 
 /* ============ Offline audio download (category page) ============ */
+/* Three columns so the status stays centred whatever sits on the right */
 .offline-area {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
     gap: 8px;
     margin-bottom: 16px;
     min-height: 40px;
+}
+
+.offline-main {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.offline-more {
+    grid-column: 3;
+    justify-self: end;
+    position: relative;
+}
+
+/* progress and the delete confirmation take the whole row instead */
+.offline-full {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+}
+
+.offline-more-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    background: transparent;
+    color: #888888;
+    font-size: 1.1rem;
+    line-height: 1;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.offline-more-btn:hover { color: #444444; border-color: #bbbbbb; }
+
+.offline-menu {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    min-width: 124px;
+    padding: 4px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.14);
+    z-index: 30;
+}
+
+.offline-menu-item {
+    display: block;
+    width: 100%;
+    padding: 9px 12px;
+    text-align: left;
+    border: none;
+    border-radius: 7px;
+    background: transparent;
+    color: #d32f2f;
+    font-size: 0.86rem;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.offline-menu-item:hover { background: #fdecea; }
+
+.offline-confirm-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
 .offline-btn, .offline-done {
@@ -523,6 +597,11 @@ footer {
     .offline-del { border-color: #444444; color: #999999; }
     .offline-cancel { border-color: #444444; color: #aaaaaa; }
     .offline-confirm { color: #f28b82; }
+    .offline-more-btn { border-color: #444444; color: #999999; }
+    .offline-more-btn:hover { color: #dddddd; border-color: #666666; }
+    .offline-menu { background: #2a2a2a; border-color: #444444; box-shadow: 0 6px 20px rgba(0,0,0,0.5); }
+    .offline-menu-item { color: #f28b82; }
+    .offline-menu-item:hover { background: #3a2a2a; }
     .offline-progress-text { color: #8ab4f8; }
     .offline-track { background: #3a3a3a; }
 }

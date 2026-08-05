@@ -103,38 +103,79 @@ function etDeleteAudio(cat) {
 
 // ============ UI ============
 
+// The row is a three-column grid so the status sits dead centre regardless of
+// what is in the right-hand slot. Delete lives behind 더보기 there: it is rare
+// and destructive, and it should not sit next to the button you actually press.
 function etRenderOffline(cat) {
     var box = document.getElementById('offlineArea');
     if (!box) return;
     if (!etOfflineSupported()) { box.style.display = 'none'; return; }
 
     etAudioStatus(cat).then(function(st) {
+        var main, hasMenu = st.saved > 0;
+
         if (st.saved === 0) {
-            box.innerHTML =
-                '<button class="offline-btn" id="offlineBtn">⬇️ 오프라인 저장' +
-                '<span class="offline-note">' + st.total + '개 음성</span></button>';
-            document.getElementById('offlineBtn').onclick = function() { etStartDownload(cat); };
+            main = '<button class="offline-btn" id="offlineBtn">⬇️ 오프라인 저장' +
+                   '<span class="offline-note">' + st.total + '개 음성</span></button>';
         } else if (st.saved < st.total) {
-            box.innerHTML =
-                '<button class="offline-btn" id="offlineBtn">⬇️ 이어서 저장' +
-                '<span class="offline-note">' + st.saved + ' / ' + st.total + '개</span></button>' +
-                '<button class="offline-del" id="offlineDel">삭제</button>';
-            document.getElementById('offlineBtn').onclick = function() { etStartDownload(cat); };
-            document.getElementById('offlineDel').onclick = function() { etConfirmRemove(cat); };
+            main = '<button class="offline-btn" id="offlineBtn">⬇️ 이어서 저장' +
+                   '<span class="offline-note">' + st.saved + ' / ' + st.total + '개</span></button>';
         } else {
-            box.innerHTML =
-                '<span class="offline-done">✔️ 오프라인 저장됨' +
-                '<span class="offline-note">' + etFormatMB(st.bytes) + '</span></span>' +
-                '<button class="offline-del" id="offlineDel">삭제</button>';
-            document.getElementById('offlineDel').onclick = function() { etConfirmRemove(cat); };
+            main = '<span class="offline-done">✔️ 오프라인 저장됨' +
+                   '<span class="offline-note">' + etFormatMB(st.bytes) + '</span></span>';
+        }
+
+        box.innerHTML =
+            '<div class="offline-main">' + main + '</div>' +
+            (hasMenu
+                ? '<div class="offline-more">' +
+                  '<button class="offline-more-btn" id="offlineMoreBtn" aria-label="더보기"' +
+                  ' aria-haspopup="true" aria-expanded="false">⋯</button>' +
+                  '<div class="offline-menu" id="offlineMenu" hidden>' +
+                  '<button class="offline-menu-item" id="offlineDel">삭제</button>' +
+                  '</div></div>'
+                : '');
+
+        var btn = document.getElementById('offlineBtn');
+        if (btn) btn.onclick = function() { etStartDownload(cat); };
+        if (hasMenu) {
+            document.getElementById('offlineMoreBtn').onclick = etToggleMoreMenu;
+            document.getElementById('offlineDel').onclick = function() {
+                etCloseMoreMenu();
+                etConfirmRemove(cat);
+            };
         }
     });
 }
 
+function etCloseMoreMenu() {
+    var menu = document.getElementById('offlineMenu');
+    var btn = document.getElementById('offlineMoreBtn');
+    if (menu) menu.hidden = true;
+    if (btn) btn.setAttribute('aria-expanded', 'false');
+}
+
+function etToggleMoreMenu(e) {
+    e.stopPropagation();   // the document handler below would close it again
+    var menu = document.getElementById('offlineMenu');
+    var btn = document.getElementById('offlineMoreBtn');
+    if (!menu) return;
+    var open = menu.hidden;
+    menu.hidden = !open;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+document.addEventListener('click', function(e) {
+    if (!e.target.closest || !e.target.closest('.offline-more')) etCloseMoreMenu();
+});
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') etCloseMoreMenu();
+});
+
 function etStartDownload(cat) {
     var box = document.getElementById('offlineArea');
     box.innerHTML =
-        '<div class="offline-progress">' +
+        '<div class="offline-progress offline-full">' +
         '<div class="offline-progress-text" id="offlineText">준비 중…</div>' +
         '<div class="offline-track"><div class="offline-fill" id="offlineFill"></div></div>' +
         '</div>';
@@ -170,10 +211,12 @@ function etConfirmRemove(cat) {
 
     etAudioStatus(cat).then(function(st) {
         box.innerHTML =
+            '<div class="offline-confirm-row offline-full">' +
             '<span class="offline-confirm">저장된 음성 ' + st.saved + '개(' +
             etFormatMB(st.bytes) + ')를 삭제할까요?</span>' +
             '<button class="offline-del danger" id="offlineDelYes">삭제</button>' +
-            '<button class="offline-cancel" id="offlineDelNo">취소</button>';
+            '<button class="offline-cancel" id="offlineDelNo">취소</button>' +
+            '</div>';
         document.getElementById('offlineDelYes').onclick = function() { etRemove(cat); };
         document.getElementById('offlineDelNo').onclick = function() { etRenderOffline(cat); };
     });
