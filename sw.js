@@ -13,8 +13,12 @@
 // Bump CACHE when the precache list changes; the activate handler drops every
 // cache except the current one and AUDIO_CACHE, which must survive so a version
 // bump does not throw away the user's downloads.
-var CACHE = 'english-talk-v6';
-var AUDIO_CACHE = 'english-talk-audio-v1';
+//
+// Bump AUDIO_CACHE only when the audio files themselves change, since the URLs
+// stay the same and saved copies would otherwise never be replaced. v2 is the
+// silence-trimmed set; anyone holding v1 re-downloads on the next save.
+var CACHE = 'english-talk-v7';
+var AUDIO_CACHE = 'english-talk-audio-v2';
 
 // The shell plus every data file. 337KB in total, so precaching all of it costs
 // less than one dialogue's audio.

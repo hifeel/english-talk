@@ -10,7 +10,7 @@
 // category counts as saved when every one of its audio files is present, which
 // cannot drift the way a localStorage flag would.
 
-var ET_AUDIO_CACHE = 'english-talk-audio-v1';  // keep in sync with sw.js
+var ET_AUDIO_CACHE = 'english-talk-audio-v2';  // keep in sync with sw.js
 var ET_PARALLEL = 6;
 
 function etOfflineSupported() {
