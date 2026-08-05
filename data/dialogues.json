@@ -1187,6 +1187,214 @@
       }
      ],
      "icon": "⏰"
+    },
+    {
+     "key": "hotel_airbnb",
+     "title": "에어비앤비 & 호스텔 (Airbnb & Hostel)",
+     "subtitle": "셀프 체크인, 도어락, 호스트 연락",
+     "icon": "🏠",
+     "dialogues": [
+      {
+       "speaker": "Guest",
+       "en": "Hi, I've just arrived. How do I get into the apartment?",
+       "ko": "안녕하세요, 방금 도착했는데요. 아파트에 어떻게 들어가나요?",
+       "audio": "audio/hotel_airbnb_1.mp3"
+      },
+      {
+       "speaker": "Host",
+       "en": "There's a lockbox next to the door. The code is four-two-nine-one.",
+       "ko": "문 옆에 키박스가 있습니다. 비밀번호는 4291이에요.",
+       "audio": "audio/hotel_airbnb_2.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Got it. Is the key inside the box?",
+       "ko": "알겠습니다. 열쇠가 박스 안에 있나요?",
+       "audio": "audio/hotel_airbnb_3.mp3"
+      },
+      {
+       "speaker": "Host",
+       "en": "Yes, two keys. One for the building door, one for the apartment.",
+       "ko": "네, 열쇠 두 개요. 하나는 건물 출입문, 하나는 집 열쇠입니다.",
+       "audio": "audio/hotel_airbnb_4.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Where can I find the wifi information?",
+       "ko": "와이파이 정보는 어디서 볼 수 있나요?",
+       "audio": "audio/hotel_airbnb_5.mp3"
+      },
+      {
+       "speaker": "Host",
+       "en": "On the fridge, next to the house rules. The network is Sunny Flat.",
+       "ko": "냉장고에 이용 수칙 옆에 붙어 있어요. 네트워크 이름은 Sunny Flat입니다.",
+       "audio": "audio/hotel_airbnb_6.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Thanks. Is there air conditioning in the bedroom?",
+       "ko": "감사합니다. 침실에 에어컨이 있나요?",
+       "audio": "audio/hotel_airbnb_7.mp3"
+      },
+      {
+       "speaker": "Host",
+       "en": "Yes, the remote is on the nightstand. Please close the windows when it's on.",
+       "ko": "네, 리모컨은 협탁 위에 있습니다. 켜실 때는 창문을 닫아 주세요.",
+       "audio": "audio/hotel_airbnb_8.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "The hot water isn't working in the shower. Could you help?",
+       "ko": "샤워기에서 온수가 안 나오는데요. 도와주실 수 있나요?",
+       "audio": "audio/hotel_airbnb_9.mp3"
+      },
+      {
+       "speaker": "Host",
+       "en": "Sorry about that. Try the switch in the hallway closet. It's the boiler.",
+       "ko": "죄송합니다. 복도 수납장 안의 스위치를 확인해 보세요. 보일러 스위치예요.",
+       "audio": "audio/hotel_airbnb_10.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "I found it. It was off, and it's heating up now.",
+       "ko": "찾았어요. 꺼져 있었네요, 지금 데워지고 있습니다.",
+       "audio": "audio/hotel_airbnb_11.mp3"
+      },
+      {
+       "speaker": "Host",
+       "en": "Great. If it happens again, just message me and I'll come by.",
+       "ko": "다행이네요. 또 그러면 메시지 주세요, 제가 들르겠습니다.",
+       "audio": "audio/hotel_airbnb_12.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "I booked a bed in the six-person dorm. Are lockers provided?",
+       "ko": "6인실 도미토리를 예약했는데요. 사물함이 제공되나요?",
+       "audio": "audio/hotel_airbnb_13.mp3"
+      },
+      {
+       "speaker": "Host",
+       "en": "Yes, but bring your own padlock, or buy one at reception for five dollars.",
+       "ko": "네, 다만 자물쇠는 직접 가져오셔야 해요. 리셉션에서 5달러에 사실 수도 있습니다.",
+       "audio": "audio/hotel_airbnb_14.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "What time do I need to check out on Sunday?",
+       "ko": "일요일에 몇 시까지 체크아웃해야 하나요?",
+       "audio": "audio/hotel_airbnb_15.mp3"
+      },
+      {
+       "speaker": "Host",
+       "en": "Eleven in the morning. Just leave the keys in the lockbox.",
+       "ko": "오전 11시입니다. 열쇠는 키박스에 넣어 두시면 돼요.",
+       "audio": "audio/hotel_airbnb_16.mp3"
+      }
+     ]
+    },
+    {
+     "key": "hotel_luggage",
+     "title": "짐 보관 (Luggage Storage)",
+     "subtitle": "체크아웃 후 보관, 찾기, 보관함",
+     "icon": "🧳",
+     "dialogues": [
+      {
+       "speaker": "Guest",
+       "en": "I've checked out, but my flight isn't until tonight. Can I leave my bags?",
+       "ko": "체크아웃은 했는데 비행기가 오늘 밤이에요. 짐을 맡길 수 있을까요?",
+       "audio": "audio/hotel_luggage_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Of course. We can hold them until eight this evening at no charge.",
+       "ko": "물론입니다. 오늘 저녁 8시까지 무료로 보관해 드릴 수 있어요.",
+       "audio": "audio/hotel_luggage_2.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "That's perfect. I have two suitcases and a backpack.",
+       "ko": "잘됐네요. 캐리어 두 개와 배낭 하나입니다.",
+       "audio": "audio/hotel_luggage_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Here's your claim ticket. Please keep valuables and medication with you.",
+       "ko": "여기 보관증입니다. 귀중품과 약은 직접 소지해 주세요.",
+       "audio": "audio/hotel_luggage_4.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Hi, I'd like to pick up my luggage. Here's the ticket.",
+       "ko": "안녕하세요, 짐을 찾으려고요. 여기 보관증입니다.",
+       "audio": "audio/hotel_luggage_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Thank you. Two suitcases and a backpack, correct?",
+       "ko": "감사합니다. 캐리어 두 개와 배낭 하나 맞으시죠?",
+       "audio": "audio/hotel_luggage_6.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "That's right. Could someone help me bring them to the taxi?",
+       "ko": "맞습니다. 택시까지 옮기는 걸 도와주실 수 있나요?",
+       "audio": "audio/hotel_luggage_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Certainly. The bellhop will take them out for you right away.",
+       "ko": "그럼요. 벨보이가 바로 밖으로 옮겨드릴 겁니다.",
+       "audio": "audio/hotel_luggage_8.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "My room isn't ready yet. Can I store my bags until check-in?",
+       "ko": "방이 아직 준비가 안 됐는데요. 체크인 때까지 짐을 맡길 수 있나요?",
+       "audio": "audio/hotel_luggage_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Absolutely. We'll bring them to your room once it's ready.",
+       "ko": "물론입니다. 방이 준비되면 저희가 객실로 올려드릴게요.",
+       "audio": "audio/hotel_luggage_10.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Will you call me when the room is available?",
+       "ko": "방이 준비되면 연락 주시나요?",
+       "audio": "audio/hotel_luggage_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, we'll text the number on your reservation. It's usually around two.",
+       "ko": "네, 예약하신 번호로 문자 드립니다. 보통 2시쯤이에요.",
+       "audio": "audio/hotel_luggage_12.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Is there luggage storage near the train station?",
+       "ko": "기차역 근처에 짐 보관하는 곳이 있나요?",
+       "audio": "audio/hotel_luggage_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "There are coin lockers by the main entrance, and a storage office nearby.",
+       "ko": "정문 옆에 코인 로커가 있고, 근처에 보관소도 있습니다.",
+       "audio": "audio/hotel_luggage_14.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "How much do the lockers cost for a large suitcase?",
+       "ko": "큰 캐리어는 로커 요금이 얼마인가요?",
+       "audio": "audio/hotel_luggage_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "About eight dollars a day. The office is cheaper if you leave it longer.",
+       "ko": "하루에 8달러 정도입니다. 오래 맡기실 거면 보관소가 더 저렴해요.",
+       "audio": "audio/hotel_luggage_16.mp3"
+      }
+     ]
     }
    ]
   },
@@ -1202,32 +1410,80 @@
       {
        "speaker": "Customer",
        "en": "Hi, I'm just looking around.",
-       "ko": "안녕하세요, 그냥 둘러보고 있어요.",
-       "audio": "audio/shop_1.mp3"
+       "ko": "안녕하세요, 그냥 둘러보는 중이에요.",
+       "audio": "audio/shopping_store_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Can I help you find something?",
-       "ko": "물건 찾는 걸 도와드릴까요?",
-       "audio": "audio/shop_2.mp3"
+       "ko": "찾으시는 게 있으면 도와드릴까요?",
+       "audio": "audio/shopping_store_2.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Yes, I'm looking for a jacket.",
        "ko": "네, 재킷을 찾고 있어요.",
-       "audio": "audio/shop_3.mp3"
+       "audio": "audio/shopping_store_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "What size do you wear?",
-       "ko": "몇 사이즈 입으세요?",
-       "audio": "audio/shop_4.mp3"
+       "ko": "사이즈가 어떻게 되세요?",
+       "audio": "audio/shopping_store_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "I wear medium.",
-       "ko": "미디엄 사이즈 입어요.",
-       "audio": "audio/shop_5.mp3"
+       "ko": "미디엄 입어요.",
+       "audio": "audio/shopping_store_5.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Excuse me, which floor has the men's section?",
+       "ko": "실례합니다, 남성 코너는 몇 층인가요?",
+       "audio": "audio/shopping_store_6.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "The second floor. The escalator is past the shoe display.",
+       "ko": "2층입니다. 에스컬레이터는 신발 진열대 지나서 있어요.",
+       "audio": "audio/shopping_store_7.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Is the sale merchandise up there too?",
+       "ko": "세일 상품도 거기에 있나요?",
+       "audio": "audio/shopping_store_8.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, it's at the back, marked with red tags.",
+       "ko": "네, 안쪽에 있고 빨간 태그가 붙어 있습니다.",
+       "audio": "audio/shopping_store_9.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "What time do you close today?",
+       "ko": "오늘 몇 시에 문 닫나요?",
+       "audio": "audio/shopping_store_10.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Nine in the evening, but the fitting rooms close at eight thirty.",
+       "ko": "저녁 9시입니다. 다만 탈의실은 8시 30분에 닫아요.",
+       "audio": "audio/shopping_store_11.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Good to know. I'll come back after dinner then.",
+       "ko": "알겠습니다. 그럼 저녁 먹고 다시 올게요.",
+       "audio": "audio/shopping_store_12.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Sounds good. I can hold the jacket at the counter for you.",
+       "ko": "좋습니다. 재킷은 카운터에 맡아 둘게요.",
+       "audio": "audio/shopping_store_13.mp3"
       }
      ],
      "icon": "🏪"
@@ -1240,26 +1496,74 @@
       {
        "speaker": "Customer",
        "en": "Where is the fitting room?",
-       "ko": "탈의실이 어디에 있나요?",
-       "audio": "audio/shop_6.mp3"
+       "ko": "탈의실이 어디인가요?",
+       "audio": "audio/shopping_fitting_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "It's in the back, on the left.",
-       "ko": "뒤쪽 왼쪽에 있어요.",
-       "audio": "audio/shop_7.mp3"
+       "ko": "안쪽 왼편에 있습니다.",
+       "audio": "audio/shopping_fitting_2.mp3"
       },
       {
        "speaker": "Customer",
        "en": "This is too small. Do you have a larger size?",
-       "ko": "이건 너무 작아요. 더 큰 사이즈 있나요?",
-       "audio": "audio/shop_8.mp3"
+       "ko": "이건 너무 작네요. 더 큰 사이즈 있나요?",
+       "audio": "audio/shopping_fitting_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Let me check for you.",
-       "ko": "확인해보겠습니다.",
-       "audio": "audio/shop_9.mp3"
+       "ko": "확인해 드릴게요.",
+       "audio": "audio/shopping_fitting_4.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "How many items can I take in at once?",
+       "ko": "한 번에 몇 개까지 들고 들어갈 수 있나요?",
+       "audio": "audio/shopping_fitting_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Up to six. I'll give you a tag with the number.",
+       "ko": "여섯 개까지요. 개수가 적힌 태그를 드릴게요.",
+       "audio": "audio/shopping_fitting_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "The large fits, but the sleeves are a bit long.",
+       "ko": "라지는 맞는데 소매가 조금 기네요.",
+       "audio": "audio/shopping_fitting_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We offer free alterations. It takes about three days.",
+       "ko": "무료 수선을 해드립니다. 3일 정도 걸려요.",
+       "audio": "audio/shopping_fitting_8.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I'm flying home tomorrow, so that won't work.",
+       "ko": "내일 귀국해서 그건 어렵겠네요.",
+       "audio": "audio/shopping_fitting_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Then try the medium in this other cut. It runs longer.",
+       "ko": "그러면 다른 핏의 미디엄을 입어보세요. 기장이 더 깁니다.",
+       "audio": "audio/shopping_fitting_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "That one fits much better. I'll take it.",
+       "ko": "이게 훨씬 잘 맞네요. 이걸로 할게요.",
+       "audio": "audio/shopping_fitting_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Great. I'll take the others back to the floor for you.",
+       "ko": "좋습니다. 나머지는 제가 매장에 다시 갖다 놓을게요.",
+       "audio": "audio/shopping_fitting_12.mp3"
       }
      ],
      "icon": "👔"
@@ -1273,25 +1577,73 @@
        "speaker": "Customer",
        "en": "How much is this?",
        "ko": "이거 얼마인가요?",
-       "audio": "audio/shop_10.mp3"
+       "audio": "audio/shopping_price_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "It's 50 dollars.",
        "ko": "50달러입니다.",
-       "audio": "audio/shop_11.mp3"
+       "audio": "audio/shopping_price_2.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Is there a discount?",
-       "ko": "할인 있나요?",
-       "audio": "audio/shop_12.mp3"
+       "ko": "할인이 있나요?",
+       "audio": "audio/shopping_price_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, it's 20% off today.",
-       "ko": "네, 오늘 20% 할인입니다.",
-       "audio": "audio/shop_13.mp3"
+       "ko": "네, 오늘은 20% 할인입니다.",
+       "audio": "audio/shopping_price_4.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Is the price on the tag before or after the discount?",
+       "ko": "택에 붙은 가격이 할인 전인가요, 후인가요?",
+       "audio": "audio/shopping_price_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Before. The register takes the discount off automatically.",
+       "ko": "할인 전입니다. 계산대에서 자동으로 빠져요.",
+       "audio": "audio/shopping_price_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Does the price include tax?",
+       "ko": "가격에 세금이 포함된 건가요?",
+       "audio": "audio/shopping_price_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "No, sales tax is added at checkout. It's about eight percent.",
+       "ko": "아니요, 판매세는 계산할 때 붙습니다. 8% 정도예요.",
+       "audio": "audio/shopping_price_8.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Can I get a tax refund as a tourist?",
+       "ko": "관광객인데 세금 환급을 받을 수 있나요?",
+       "audio": "audio/shopping_price_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, on purchases over one hundred dollars. Keep the receipt.",
+       "ko": "네, 100달러 이상 구매 시 가능합니다. 영수증을 보관하세요.",
+       "audio": "audio/shopping_price_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Where do I claim it?",
+       "ko": "어디서 환급받나요?",
+       "audio": "audio/shopping_price_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "At the airport, before security. Bring the item and your passport.",
+       "ko": "공항 보안검색 전에요. 물건과 여권을 가져가세요.",
+       "audio": "audio/shopping_price_12.mp3"
       }
      ],
      "icon": "💰"
@@ -1304,32 +1656,80 @@
       {
        "speaker": "Customer",
        "en": "I'll take this one.",
-       "ko": "이거 살게요.",
-       "audio": "audio/shop_14.mp3"
+       "ko": "이걸로 할게요.",
+       "audio": "audio/shopping_payment_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Would you like a bag?",
-       "ko": "봉투 필요하신가요?",
-       "audio": "audio/shop_15.mp3"
+       "ko": "봉투 드릴까요?",
+       "audio": "audio/shopping_payment_2.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Yes, please. Can I pay by card?",
        "ko": "네, 주세요. 카드로 결제해도 되나요?",
-       "audio": "audio/shop_16.mp3"
+       "audio": "audio/shopping_payment_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Of course. Here's your receipt.",
-       "ko": "물론이죠. 영수증 여기 있습니다.",
-       "audio": "audio/shop_17.mp3"
+       "ko": "물론입니다. 여기 영수증입니다.",
+       "audio": "audio/shopping_payment_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Thank you. Have a nice day!",
        "ko": "감사합니다. 좋은 하루 보내세요!",
-       "audio": "audio/shop_18.mp3"
+       "audio": "audio/shopping_payment_5.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Do you accept foreign credit cards?",
+       "ko": "해외 신용카드도 받나요?",
+       "audio": "audio/shopping_payment_6.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We do. Would you like to pay in dollars or your home currency?",
+       "ko": "받습니다. 달러로 하시겠어요, 자국 통화로 하시겠어요?",
+       "audio": "audio/shopping_payment_7.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Dollars, please. The conversion rate is usually better.",
+       "ko": "달러로 할게요. 보통 환율이 더 낫더라고요.",
+       "audio": "audio/shopping_payment_8.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Good choice. Please insert your card and enter your PIN.",
+       "ko": "잘 선택하셨어요. 카드를 넣고 비밀번호를 입력해 주세요.",
+       "audio": "audio/shopping_payment_9.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "The machine declined it. Can I try a different card?",
+       "ko": "결제가 거절됐네요. 다른 카드로 해도 될까요?",
+       "audio": "audio/shopping_payment_10.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Certainly. Or you can pay cash if that's easier.",
+       "ko": "그럼요. 편하시면 현금으로 하셔도 됩니다.",
+       "audio": "audio/shopping_payment_11.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Let me try tapping my phone instead.",
+       "ko": "휴대폰으로 태그해 볼게요.",
+       "audio": "audio/shopping_payment_12.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "That worked. Your receipt will be emailed to you.",
+       "ko": "결제됐습니다. 영수증은 이메일로 보내드릴게요.",
+       "audio": "audio/shopping_payment_13.mp3"
       }
      ],
      "icon": "💳"
@@ -1342,32 +1742,98 @@
       {
        "speaker": "Customer",
        "en": "I'd like to return this item.",
-       "ko": "이 제품을 반품하고 싶습니다.",
-       "audio": "audio/shop_return_1.mp3"
+       "ko": "이 물건을 반품하고 싶습니다.",
+       "audio": "audio/shopping_returns_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Do you have the receipt?",
-       "ko": "영수증 있으신가요?",
-       "audio": "audio/shop_return_2.mp3"
+       "ko": "영수증 갖고 계신가요?",
+       "audio": "audio/shopping_returns_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Yes, I bought it two days ago and never wore it.",
+       "ko": "네, 이틀 전에 샀고 한 번도 안 입었어요.",
+       "audio": "audio/shopping_returns_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Then I can refund it to your card right away.",
+       "ko": "그러면 카드로 바로 환불해 드릴 수 있습니다.",
+       "audio": "audio/shopping_returns_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can I exchange this for a different size?",
        "ko": "다른 사이즈로 교환할 수 있나요?",
-       "audio": "audio/shop_return_3.mp3"
+       "audio": "audio/shopping_returns_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Of course. What size do you need?",
+       "ko": "물론입니다. 어떤 사이즈가 필요하세요?",
+       "audio": "audio/shopping_returns_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "A large. Is there a price difference?",
+       "ko": "라지요. 가격 차이가 있나요?",
+       "audio": "audio/shopping_returns_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "No, it's the same price. I'll swap it at the counter.",
+       "ko": "아니요, 같은 가격입니다. 카운터에서 바꿔드릴게요.",
+       "audio": "audio/shopping_returns_8.mp3"
       },
       {
        "speaker": "Customer",
        "en": "How long do I have to return it?",
-       "ko": "언제까지 반품할 수 있나요?",
-       "audio": "audio/shop_return_4.mp3"
+       "ko": "반품 기한이 얼마나 되나요?",
+       "audio": "audio/shopping_returns_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Thirty days with the tags on and the receipt.",
+       "ko": "택이 붙어 있고 영수증이 있으면 30일입니다.",
+       "audio": "audio/shopping_returns_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I'll be back in Korea by then. Can I return it there?",
+       "ko": "그때쯤이면 한국에 있을 텐데요. 거기서 반품 가능한가요?",
+       "audio": "audio/shopping_returns_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Only at our stores in this country, I'm afraid.",
+       "ko": "죄송하지만 이 나라에 있는 저희 매장에서만 가능합니다.",
+       "audio": "audio/shopping_returns_12.mp3"
       },
       {
        "speaker": "Customer",
        "en": "I'd like a refund please.",
-       "ko": "환불 받고 싶습니다.",
-       "audio": "audio/shop_return_5.mp3"
+       "ko": "환불을 받고 싶습니다.",
+       "audio": "audio/shopping_returns_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Was there a problem with the item?",
+       "ko": "제품에 문제가 있었나요?",
+       "audio": "audio/shopping_returns_14.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "The zipper broke the first time I used it.",
+       "ko": "처음 썼을 때 지퍼가 고장 났어요.",
+       "audio": "audio/shopping_returns_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'm sorry about that. You'll get a full refund in five days.",
+       "ko": "죄송합니다. 5일 안에 전액 환불됩니다.",
+       "audio": "audio/shopping_returns_16.mp3"
       }
      ],
      "icon": "🔄"
@@ -1381,25 +1847,97 @@
        "speaker": "Customer",
        "en": "Where is my order?",
        "ko": "제 주문은 어디에 있나요?",
-       "audio": "audio/shop_online_1.mp3"
+       "audio": "audio/shopping_online_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Could I have the order number from your confirmation email?",
+       "ko": "확인 메일에 있는 주문 번호를 알려주시겠어요?",
+       "audio": "audio/shopping_online_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "It's four-four-one-nine-two. I ordered it a week ago.",
+       "ko": "44192입니다. 일주일 전에 주문했어요.",
+       "audio": "audio/shopping_online_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It shipped Monday and is out for delivery today.",
+       "ko": "월요일에 발송됐고 오늘 배송 중입니다.",
+       "audio": "audio/shopping_online_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can I track my delivery?",
-       "ko": "배송 추적할 수 있나요?",
-       "audio": "audio/shop_online_2.mp3"
+       "ko": "배송 조회를 할 수 있나요?",
+       "audio": "audio/shopping_online_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, the tracking number is in your shipping email.",
+       "ko": "네, 운송장 번호가 발송 메일에 있습니다.",
+       "audio": "audio/shopping_online_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I didn't get that email. Could you resend it?",
+       "ko": "그 메일을 못 받았어요. 다시 보내주시겠어요?",
+       "audio": "audio/shopping_online_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I've sent it again. Check your spam folder if it doesn't arrive.",
+       "ko": "다시 보냈습니다. 안 오면 스팸함을 확인해 보세요.",
+       "audio": "audio/shopping_online_8.mp3"
       },
       {
        "speaker": "Customer",
        "en": "My package hasn't arrived yet.",
-       "ko": "제 패키지가 아직 도착하지 않았어요.",
-       "audio": "audio/shop_online_3.mp3"
+       "ko": "소포가 아직 도착하지 않았어요.",
+       "audio": "audio/shopping_online_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "The carrier marked it delivered yesterday at two in the afternoon.",
+       "ko": "택배사에서는 어제 오후 2시에 배송 완료로 표시했습니다.",
+       "audio": "audio/shopping_online_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Nothing was left at my hotel. Can you open an investigation?",
+       "ko": "호텔에는 아무것도 없었어요. 조사를 접수해 주실 수 있나요?",
+       "audio": "audio/shopping_online_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'll file a claim now. We'll refund or resend within five days.",
+       "ko": "지금 접수하겠습니다. 5일 안에 환불 또는 재발송해 드립니다.",
+       "audio": "audio/shopping_online_12.mp3"
       },
       {
        "speaker": "Customer",
        "en": "How do I return an online purchase?",
-       "ko": "온라인 구매는 어떻게 반품하나요?",
-       "audio": "audio/shop_online_4.mp3"
+       "ko": "온라인으로 산 물건은 어떻게 반품하나요?",
+       "audio": "audio/shopping_online_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Start the return in your account and print the prepaid label.",
+       "ko": "계정에서 반품을 신청하시고 선불 라벨을 출력하세요.",
+       "audio": "audio/shopping_online_14.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I'm travelling and don't have a printer. Any other option?",
+       "ko": "여행 중이라 프린터가 없는데요. 다른 방법이 있나요?",
+       "audio": "audio/shopping_online_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Show the QR code at the drop-off point and they'll print it there.",
+       "ko": "접수처에서 QR 코드를 보여주시면 거기서 출력해 줍니다.",
+       "audio": "audio/shopping_online_16.mp3"
       }
      ],
      "icon": "📦"
@@ -1412,26 +1950,74 @@
       {
        "speaker": "Customer",
        "en": "Can you gift wrap this for me?",
-       "ko": "이것 선물 포장해 주실 수 있나요?",
-       "audio": "audio/shop_gift_1.mp3"
+       "ko": "이거 선물 포장해 주실 수 있나요?",
+       "audio": "audio/shopping_giftwrapping_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Of course! What kind of wrapping would you like?",
-       "ko": "물론이죠! 어떤 포장으로 해드릴까요?",
-       "audio": "audio/shop_gift_2.mp3"
+       "ko": "물론이죠! 어떤 포장지로 해드릴까요?",
+       "audio": "audio/shopping_giftwrapping_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Something simple, maybe the plain navy paper.",
+       "ko": "심플한 걸로요, 무지 남색 종이면 좋겠어요.",
+       "audio": "audio/shopping_giftwrapping_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Nice choice. Would you like a ribbon with it?",
+       "ko": "좋은 선택이세요. 리본도 달아드릴까요?",
+       "audio": "audio/shopping_giftwrapping_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "I'd like a gift receipt please.",
-       "ko": "선물용 영수증 주세요.",
-       "audio": "audio/shop_gift_3.mp3"
+       "ko": "선물 영수증도 주세요.",
+       "audio": "audio/shopping_giftwrapping_5.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Sure, would you like to add a gift message?",
-       "ko": "네, 선물 메시지를 추가하시겠어요?",
-       "audio": "audio/shop_gift_4.mp3"
+       "ko": "네, 선물 메시지도 넣어드릴까요?",
+       "audio": "audio/shopping_giftwrapping_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Yes, just write happy birthday from Mina.",
+       "ko": "네, 미나가 생일 축하한다고만 써주세요.",
+       "audio": "audio/shopping_giftwrapping_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Done. The gift receipt won't show the price.",
+       "ko": "적었습니다. 선물 영수증에는 가격이 안 나옵니다.",
+       "audio": "audio/shopping_giftwrapping_8.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Is there a charge for the wrapping?",
+       "ko": "포장 비용이 따로 있나요?",
+       "audio": "audio/shopping_giftwrapping_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It's free for purchases over thirty dollars.",
+       "ko": "30달러 이상 구매하시면 무료입니다.",
+       "audio": "audio/shopping_giftwrapping_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Perfect. Will it fit in my carry-on?",
+       "ko": "잘됐네요. 기내용 가방에 들어갈까요?",
+       "audio": "audio/shopping_giftwrapping_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It should. I'll keep the box flat so it packs easily.",
+       "ko": "들어갈 겁니다. 납작하게 포장해서 넣기 쉽게 해드릴게요.",
+       "audio": "audio/shopping_giftwrapping_12.mp3"
       }
      ],
      "icon": "🎁"
@@ -1444,26 +2030,74 @@
       {
        "speaker": "Customer",
        "en": "Do you have this in blue?",
-       "ko": "이것 파란색 있나요?",
-       "audio": "audio/shop_size_1.mp3"
+       "ko": "이거 파란색으로 있나요?",
+       "audio": "audio/shopping_sizecolor_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Let me check for you.",
-       "ko": "확인해보겠습니다.",
-       "audio": "audio/shop_size_2.mp3"
+       "ko": "확인해 드릴게요.",
+       "audio": "audio/shopping_sizecolor_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I'd take navy or light blue, either is fine.",
+       "ko": "남색이나 하늘색 둘 다 괜찮아요.",
+       "audio": "audio/shopping_sizecolor_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We have navy in your size. I'll bring it out.",
+       "ko": "손님 사이즈로 남색이 있습니다. 가져다드릴게요.",
+       "audio": "audio/shopping_sizecolor_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "When will this be back in stock?",
-       "ko": "이것 언제 재고 들어오나요?",
-       "audio": "audio/shop_size_3.mp3"
+       "ko": "이건 언제 재입고되나요?",
+       "audio": "audio/shopping_sizecolor_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "The next shipment arrives Thursday morning.",
+       "ko": "다음 입고는 목요일 오전입니다.",
+       "audio": "audio/shopping_sizecolor_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Can you hold one for me if it comes in?",
+       "ko": "들어오면 하나 맡아 주실 수 있나요?",
+       "audio": "audio/shopping_sizecolor_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, leave your name and number and I'll call you.",
+       "ko": "네, 성함과 번호를 남겨주시면 연락드리겠습니다.",
+       "audio": "audio/shopping_sizecolor_8.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can I try a different color?",
-       "ko": "다른 색상으로 입어봐도 되나요?",
-       "audio": "audio/shop_size_4.mp3"
+       "ko": "다른 색도 입어봐도 될까요?",
+       "audio": "audio/shopping_sizecolor_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Sure. The grey and the olive are both in stock.",
+       "ko": "그럼요. 회색과 올리브색이 재고에 있습니다.",
+       "audio": "audio/shopping_sizecolor_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Does this run small? I'm usually a medium.",
+       "ko": "이거 작게 나오나요? 저는 보통 미디엄이에요.",
+       "audio": "audio/shopping_sizecolor_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It does run small, so I'd try the large as well.",
+       "ko": "작게 나오는 편이라 라지도 같이 입어보시는 게 좋습니다.",
+       "audio": "audio/shopping_sizecolor_12.mp3"
       }
      ],
      "icon": "🎨"
@@ -1476,32 +2110,86 @@
       {
        "speaker": "Customer",
        "en": "Do you offer home delivery?",
-       "ko": "홈 딜리버리 서비스가 있나요?",
-       "audio": "audio/shop_delivery_1.mp3"
+       "ko": "배달 서비스가 있나요?",
+       "audio": "audio/shopping_delivery_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, delivery is $5 for orders under $50.",
-       "ko": "네, 50달러 미만은 배송비 5달러입니다.",
-       "audio": "audio/shop_delivery_2.mp3"
+       "ko": "네, 50달러 미만 주문은 배송비가 5달러입니다.",
+       "audio": "audio/shopping_delivery_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Can you deliver to a hotel?",
+       "ko": "호텔로도 배송되나요?",
+       "audio": "audio/shopping_delivery_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We can. Just give us the hotel name and your room number.",
+       "ko": "가능합니다. 호텔 이름과 객실 번호만 알려주세요.",
+       "audio": "audio/shopping_delivery_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can I get this delivered today?",
-       "ko": "오늘 배송 가능한가요?",
-       "audio": "audio/shop_delivery_3.mp3"
+       "ko": "오늘 배송받을 수 있나요?",
+       "audio": "audio/shopping_delivery_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "If you order before two, it arrives by this evening.",
+       "ko": "2시 전에 주문하시면 오늘 저녁까지 도착합니다.",
+       "audio": "audio/shopping_delivery_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I'm checking out tomorrow at eleven. Will that work?",
+       "ko": "내일 11시에 체크아웃하는데, 괜찮을까요?",
+       "audio": "audio/shopping_delivery_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It should. The front desk can hold it if you're out.",
+       "ko": "괜찮을 겁니다. 안 계시면 프런트에서 보관해 줄 거예요.",
+       "audio": "audio/shopping_delivery_8.mp3"
       },
       {
        "speaker": "Customer",
        "en": "I'd like to pick up in store.",
        "ko": "매장에서 픽업하고 싶습니다.",
-       "audio": "audio/shop_delivery_4.mp3"
+       "audio": "audio/shopping_delivery_9.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Sure, it will be ready in 2 hours.",
-       "ko": "네, 2시간 후 준비됩니다.",
-       "audio": "audio/shop_delivery_5.mp3"
+       "ko": "네, 2시간 후에 준비됩니다.",
+       "audio": "audio/shopping_delivery_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "What do I need to bring to collect it?",
+       "ko": "찾으러 갈 때 뭘 가져가야 하나요?",
+       "audio": "audio/shopping_delivery_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "The confirmation email and a photo ID.",
+       "ko": "확인 메일과 신분증을 가져오세요.",
+       "audio": "audio/shopping_delivery_12.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Can someone else pick it up for me?",
+       "ko": "다른 사람이 대신 찾아가도 되나요?",
+       "audio": "audio/shopping_delivery_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, if they bring the email and their own ID.",
+       "ko": "네, 메일과 본인 신분증을 가져오면 됩니다.",
+       "audio": "audio/shopping_delivery_14.mp3"
       }
      ],
      "icon": "🚚"
@@ -1515,31 +2203,73 @@
        "speaker": "Customer",
        "en": "I have a coupon. Can I use it?",
        "ko": "쿠폰이 있는데 사용할 수 있나요?",
-       "audio": "audio/shop_coupon_1.mp3"
+       "audio": "audio/shopping_coupons_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, but it can't be combined with other discounts.",
-       "ko": "네, 하지만 다른 할인과 중복은 안 됩니다.",
-       "audio": "audio/shop_coupon_2.mp3"
+       "ko": "네, 다만 다른 할인과 중복 적용은 안 됩니다.",
+       "audio": "audio/shopping_coupons_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Does it work on sale items?",
+       "ko": "세일 상품에도 적용되나요?",
+       "audio": "audio/shopping_coupons_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Not on sale items, only on regular-priced ones.",
+       "ko": "세일 상품에는 안 되고 정가 상품에만 됩니다.",
+       "audio": "audio/shopping_coupons_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Do you have any promotions today?",
-       "ko": "오늘 프로모션이 있나요?",
-       "audio": "audio/shop_coupon_3.mp3"
+       "ko": "오늘 진행 중인 프로모션이 있나요?",
+       "audio": "audio/shopping_coupons_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Buy two, get one half off on all accessories.",
+       "ko": "액세서리 전 품목 두 개 사시면 하나는 반값입니다.",
+       "audio": "audio/shopping_coupons_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Does that include the scarves?",
+       "ko": "스카프도 포함인가요?",
+       "audio": "audio/shopping_coupons_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It does. They're on the table by the entrance.",
+       "ko": "포함됩니다. 입구 옆 테이블에 있어요.",
+       "audio": "audio/shopping_coupons_8.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can I combine this with other discounts?",
-       "ko": "이것 다른 할인과 같이 사용할 수 있나요?",
-       "audio": "audio/shop_coupon_4.mp3"
+       "ko": "이걸 다른 할인과 같이 쓸 수 있나요?",
+       "audio": "audio/shopping_coupons_9.mp3"
       },
       {
        "speaker": "Staff",
+       "en": "Only one discount per item, but you can split your purchase.",
+       "ko": "품목당 할인은 하나만 가능하지만 나눠서 결제하실 수는 있어요.",
+       "audio": "audio/shopping_coupons_10.mp3"
+      },
+      {
+       "speaker": "Customer",
        "en": "How do I sign up for the loyalty program?",
-       "ko": "로열티 프로그램에 어떻게 가입하나요?",
-       "audio": "audio/shop_coupon_5.mp3"
+       "ko": "멤버십은 어떻게 가입하나요?",
+       "audio": "audio/shopping_coupons_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Just give us an email address. You'll get ten percent off today.",
+       "ko": "이메일 주소만 알려주시면 됩니다. 오늘 10% 할인받으세요.",
+       "audio": "audio/shopping_coupons_12.mp3"
       }
      ],
      "icon": "🎫"
@@ -1552,26 +2282,74 @@
       {
        "speaker": "Customer",
        "en": "This item is damaged.",
-       "ko": "이 제품이 손상되어 있습니다.",
-       "audio": "audio/shop_complaint_1.mp3"
+       "ko": "이 제품이 파손됐어요.",
+       "audio": "audio/shopping_complaints_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "I'm sorry. Would you like a replacement?",
-       "ko": "죄송합니다. 교환하시겠어요?",
-       "audio": "audio/shop_complaint_2.mp3"
+       "ko": "죄송합니다. 교환해 드릴까요?",
+       "audio": "audio/shopping_complaints_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Yes, if you have another one in the same size.",
+       "ko": "네, 같은 사이즈로 하나 더 있으면요.",
+       "audio": "audio/shopping_complaints_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We do. I'll check this one carefully before wrapping it.",
+       "ko": "있습니다. 이번엔 포장 전에 꼼꼼히 확인하겠습니다.",
+       "audio": "audio/shopping_complaints_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "I was charged the wrong amount.",
-       "ko": "잘못된 금액이 청구되었습니다.",
-       "audio": "audio/shop_complaint_3.mp3"
+       "ko": "금액이 잘못 청구됐어요.",
+       "audio": "audio/shopping_complaints_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "May I see the receipt? Let me compare it with the tag.",
+       "ko": "영수증을 보여주시겠어요? 택과 비교해 보겠습니다.",
+       "audio": "audio/shopping_complaints_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "The tag says thirty, but I was charged forty-five.",
+       "ko": "택에는 30달러인데 45달러가 청구됐어요.",
+       "audio": "audio/shopping_complaints_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "You're right. I'll refund the difference to your card now.",
+       "ko": "맞습니다. 차액을 지금 카드로 환불해 드리겠습니다.",
+       "audio": "audio/shopping_complaints_8.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can I speak to the manager?",
-       "ko": "매니저와 통화할 수 있나요?",
-       "audio": "audio/shop_complaint_4.mp3"
+       "ko": "매니저와 이야기할 수 있을까요?",
+       "audio": "audio/shopping_complaints_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Of course. May I tell her what it's regarding?",
+       "ko": "물론입니다. 어떤 일인지 전달해 드릴까요?",
+       "audio": "audio/shopping_complaints_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I've been waiting twenty minutes for an exchange.",
+       "ko": "교환하려고 20분째 기다리고 있어요.",
+       "audio": "audio/shopping_complaints_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I understand. She'll be right with you, and I'm sorry for the wait.",
+       "ko": "이해합니다. 곧 오실 거예요. 기다리게 해서 죄송합니다.",
+       "audio": "audio/shopping_complaints_12.mp3"
       }
      ],
      "icon": "😤"
@@ -1584,26 +2362,74 @@
       {
        "speaker": "Customer",
        "en": "I'm looking for a moisturizer for dry skin.",
-       "ko": "건성용 보습제를 찾고 있어요.",
-       "audio": "audio/shop_cosmetics_1.mp3"
+       "ko": "건성 피부용 수분 크림을 찾고 있어요.",
+       "audio": "audio/shopping_cosmetics_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "We have several options. This one is very popular.",
-       "ko": "여러 가지가 있어요. 이 제품은 인기가 많아요.",
-       "audio": "audio/shop_cosmetics_2.mp3"
+       "ko": "여러 제품이 있습니다. 이게 아주 인기가 많아요.",
+       "audio": "audio/shopping_cosmetics_2.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can I try a sample first before buying?",
-       "ko": "구매하기 전에 샘플로 먼저 써볼 수 있을까요?",
-       "audio": "audio/shop_cosmetics_3.mp3"
+       "ko": "사기 전에 샘플을 먼저 써볼 수 있나요?",
+       "audio": "audio/shopping_cosmetics_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Of course! Here's a free sample for you.",
-       "ko": "물론이죠! 무료 샘플 드릴게요.",
-       "audio": "audio/shop_cosmetics_4.mp3"
+       "ko": "물론이죠! 여기 무료 샘플입니다.",
+       "audio": "audio/shopping_cosmetics_4.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Is this fragrance-free? My skin is sensitive.",
+       "ko": "이건 무향인가요? 피부가 예민해서요.",
+       "audio": "audio/shopping_cosmetics_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It is, and it's also tested for sensitive skin.",
+       "ko": "무향이고 민감성 피부 테스트도 마쳤습니다.",
+       "audio": "audio/shopping_cosmetics_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "What shade of foundation would suit me?",
+       "ko": "저한테는 어떤 파운데이션 호수가 맞을까요?",
+       "audio": "audio/shopping_cosmetics_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Let me test two on your jawline and check them in daylight.",
+       "ko": "턱선에 두 가지를 발라보고 자연광에서 확인해 볼게요.",
+       "audio": "audio/shopping_cosmetics_8.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Can I take these in my carry-on bag?",
+       "ko": "이걸 기내용 가방에 넣어도 되나요?",
+       "audio": "audio/shopping_cosmetics_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Liquids need to be under one hundred milliliters. This one is fine.",
+       "ko": "액체는 100밀리리터 미만이어야 합니다. 이건 괜찮아요.",
+       "audio": "audio/shopping_cosmetics_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I'll take the moisturizer and the smaller serum.",
+       "ko": "수분 크림과 작은 세럼으로 할게요.",
+       "audio": "audio/shopping_cosmetics_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Great. I'll add a few more samples for your trip.",
+       "ko": "좋습니다. 여행용으로 샘플 몇 개 더 넣어드릴게요.",
+       "audio": "audio/shopping_cosmetics_12.mp3"
       }
      ],
      "icon": "💄"
@@ -1616,26 +2442,74 @@
       {
        "speaker": "Customer",
        "en": "I need a phone case for the iPhone 16.",
-       "ko": "아이폰 16용 폰 케이스가 필요해요.",
-       "audio": "audio/shop_electronics_1.mp3"
+       "ko": "아이폰 16용 케이스가 필요해요.",
+       "audio": "audio/shopping_electronics_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "We have leather and silicone cases. Which do you prefer?",
-       "ko": "가죽과 실리콘 케이스가 있어요. 어떤 걸 선호하세요?",
-       "audio": "audio/shop_electronics_2.mp3"
+       "ko": "가죽과 실리콘 케이스가 있습니다. 어떤 걸 선호하세요?",
+       "audio": "audio/shopping_electronics_2.mp3"
       },
       {
        "speaker": "Customer",
        "en": "How long is the warranty on this product?",
-       "ko": "이 제품 보증 기간이 얼마나 되나요?",
-       "audio": "audio/shop_electronics_3.mp3"
+       "ko": "이 제품 보증 기간은 얼마나 되나요?",
+       "audio": "audio/shopping_electronics_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "It comes with a one-year manufacturer warranty.",
-       "ko": "제조사 보증 1년이 포함되어 있어요.",
-       "audio": "audio/shop_electronics_4.mp3"
+       "ko": "제조사 보증 1년이 포함됩니다.",
+       "audio": "audio/shopping_electronics_4.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Does the warranty work outside this country?",
+       "ko": "보증이 해외에서도 적용되나요?",
+       "audio": "audio/shopping_electronics_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "For this brand, yes. Keep the receipt and the box.",
+       "ko": "이 브랜드는 됩니다. 영수증과 상자를 보관하세요.",
+       "audio": "audio/shopping_electronics_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Do you sell travel adapters for Korean plugs?",
+       "ko": "한국 플러그용 여행 어댑터도 파나요?",
+       "audio": "audio/shopping_electronics_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We do, in aisle two. The universal one covers most countries.",
+       "ko": "2번 통로에 있습니다. 만능 어댑터가 대부분의 나라에 맞아요.",
+       "audio": "audio/shopping_electronics_8.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Will this charger work with two hundred twenty volts?",
+       "ko": "이 충전기가 220볼트에서도 되나요?",
+       "audio": "audio/shopping_electronics_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, it's rated for one hundred to two hundred forty volts.",
+       "ko": "네, 100볼트에서 240볼트까지 지원합니다.",
+       "audio": "audio/shopping_electronics_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Then I'll take the charger and the silicone case.",
+       "ko": "그럼 충전기와 실리콘 케이스로 할게요.",
+       "audio": "audio/shopping_electronics_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'll test the charger at the counter before you go.",
+       "ko": "가시기 전에 카운터에서 충전기를 테스트해 드릴게요.",
+       "audio": "audio/shopping_electronics_12.mp3"
       }
      ],
      "icon": "📱"
@@ -1648,26 +2522,74 @@
       {
        "speaker": "Customer",
        "en": "What are this season's trending colors?",
-       "ko": "이번 시즌 유행하는 컬러가 뭔가요?",
-       "audio": "audio/shop_fashion_1.mp3"
+       "ko": "이번 시즌 유행 색상이 뭔가요?",
+       "audio": "audio/shopping_fashion_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Earth tones and pastels are very popular right now.",
-       "ko": "어스 톤과 파스텔이 지금 인기 많아요.",
-       "audio": "audio/shop_fashion_2.mp3"
+       "ko": "지금은 어스톤과 파스텔이 아주 인기입니다.",
+       "audio": "audio/shopping_fashion_2.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can you help me match this top with pants?",
-       "ko": "이 상의에 바지를 코디해 줄 수 있나요?",
-       "audio": "audio/shop_fashion_3.mp3"
+       "ko": "이 상의에 어울리는 바지를 골라주실 수 있나요?",
+       "audio": "audio/shopping_fashion_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Sure! These beige trousers would look great.",
-       "ko": "물론이죠! 이 베이지 바지가 잘 어울려요.",
-       "audio": "audio/shop_fashion_4.mp3"
+       "ko": "그럼요! 이 베이지 바지가 잘 어울릴 거예요.",
+       "audio": "audio/shopping_fashion_4.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Is this fabric warm enough for autumn?",
+       "ko": "이 원단이 가을에 입기 충분히 따뜻할까요?",
+       "audio": "audio/shopping_fashion_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It's a wool blend, so it works well into November.",
+       "ko": "울 혼방이라 11월까지는 괜찮습니다.",
+       "audio": "audio/shopping_fashion_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Does it need dry cleaning?",
+       "ko": "드라이클리닝을 해야 하나요?",
+       "audio": "audio/shopping_fashion_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Hand wash cold is fine. The care label is inside the collar.",
+       "ko": "찬물 손세탁이면 됩니다. 세탁 라벨은 깃 안쪽에 있어요.",
+       "audio": "audio/shopping_fashion_8.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Do you have anything similar in a lighter weight?",
+       "ko": "비슷한 디자인으로 더 얇은 건 없나요?",
+       "audio": "audio/shopping_fashion_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "This linen version is on the rack behind you.",
+       "ko": "린넨 버전이 뒤쪽 행거에 있습니다.",
+       "audio": "audio/shopping_fashion_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I like that one better. I'll try both on.",
+       "ko": "그게 더 마음에 드네요. 둘 다 입어볼게요.",
+       "audio": "audio/shopping_fashion_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'll start a fitting room for you on the left.",
+       "ko": "왼쪽에 탈의실을 준비해 드릴게요.",
+       "audio": "audio/shopping_fashion_12.mp3"
       }
      ],
      "icon": "👗"
@@ -1681,25 +2603,73 @@
        "speaker": "Customer",
        "en": "Do you have organic vegetables here?",
        "ko": "여기 유기농 채소가 있나요?",
-       "audio": "audio/shop_grocery_1.mp3"
+       "audio": "audio/shopping_grocery_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes, the organic section is in aisle three.",
-       "ko": "네, 유기농 코너는 3번 통로에 있어요.",
-       "audio": "audio/shop_grocery_2.mp3"
+       "ko": "네, 유기농 코너는 3번 통로에 있습니다.",
+       "audio": "audio/shopping_grocery_2.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can I pay by card at this register?",
        "ko": "이 계산대에서 카드로 결제할 수 있나요?",
-       "audio": "audio/shop_grocery_3.mp3"
+       "audio": "audio/shopping_grocery_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Yes. Would you like a bag?",
-       "ko": "네. 봉투 필요하신가요?",
-       "audio": "audio/shop_grocery_4.mp3"
+       "ko": "네. 봉투 필요하세요?",
+       "audio": "audio/shopping_grocery_4.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "How much is a bag?",
+       "ko": "봉투는 얼마인가요?",
+       "audio": "audio/shopping_grocery_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Ten cents for paper, or you can buy a reusable one for a dollar.",
+       "ko": "종이봉투는 10센트이고, 1달러에 장바구니를 사실 수도 있습니다.",
+       "audio": "audio/shopping_grocery_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Where can I find bottled water and snacks?",
+       "ko": "생수와 간식은 어디에 있나요?",
+       "audio": "audio/shopping_grocery_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Water is in aisle one, snacks are along the back wall.",
+       "ko": "물은 1번 통로, 간식은 안쪽 벽을 따라 있습니다.",
+       "audio": "audio/shopping_grocery_8.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Is this fruit sold by weight or by piece?",
+       "ko": "이 과일은 무게로 파나요, 개수로 파나요?",
+       "audio": "audio/shopping_grocery_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "By weight. Use the scale there and stick the label on the bag.",
+       "ko": "무게로 팝니다. 저기 저울을 쓰시고 라벨을 봉지에 붙이세요.",
+       "audio": "audio/shopping_grocery_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Got it. Is the self-checkout faster at this hour?",
+       "ko": "알겠습니다. 이 시간엔 셀프 계산대가 더 빠른가요?",
+       "audio": "audio/shopping_grocery_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Usually yes, and it takes cards and phone payments.",
+       "ko": "보통은 그렇습니다. 카드와 모바일 결제 둘 다 됩니다.",
+       "audio": "audio/shopping_grocery_12.mp3"
       }
      ],
      "icon": "🛒"
@@ -1799,6 +2769,214 @@
       }
      ],
      "icon": "✈️"
+    },
+    {
+     "key": "airport_inflight",
+     "title": "기내 (In-flight)",
+     "subtitle": "좌석, 기내식, 요청, 입국 서류",
+     "icon": "💺",
+     "dialogues": [
+      {
+       "speaker": "Passenger",
+       "en": "Excuse me, I think this is my seat. Twenty-three C?",
+       "ko": "실례합니다, 여기가 제 자리인 것 같은데요. 23C 맞나요?",
+       "audio": "audio/airport_inflight_1.mp3"
+      },
+      {
+       "speaker": "Flight Attendant",
+       "en": "Let me check your boarding pass. Yes, that's the aisle seat right here.",
+       "ko": "탑승권을 확인해 드릴게요. 네, 바로 여기 통로 쪽 좌석입니다.",
+       "audio": "audio/airport_inflight_2.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "There's no room left in the overhead bin. Where can I put my bag?",
+       "ko": "머리 위 짐칸에 자리가 없네요. 가방을 어디에 두면 될까요?",
+       "audio": "audio/airport_inflight_3.mp3"
+      },
+      {
+       "speaker": "Flight Attendant",
+       "en": "I'll find space a few rows back. You can pick it up after we land.",
+       "ko": "몇 줄 뒤에 자리를 찾아드릴게요. 착륙 후에 찾아가시면 됩니다.",
+       "audio": "audio/airport_inflight_4.mp3"
+      },
+      {
+       "speaker": "Flight Attendant",
+       "en": "Would you like chicken or pasta for your meal?",
+       "ko": "식사는 치킨과 파스타 중 어느 것으로 하시겠어요?",
+       "audio": "audio/airport_inflight_5.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "The pasta, please. And could I get a glass of water?",
+       "ko": "파스타로 주세요. 그리고 물 한 잔 주시겠어요?",
+       "audio": "audio/airport_inflight_6.mp3"
+      },
+      {
+       "speaker": "Flight Attendant",
+       "en": "Certainly. Still or sparkling?",
+       "ko": "그럼요. 일반 생수와 탄산수 중 어느 것으로 드릴까요?",
+       "audio": "audio/airport_inflight_7.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "Still, please. I'd also like coffee after the meal, if that's possible.",
+       "ko": "생수로 주세요. 가능하면 식사 후에 커피도 부탁드립니다.",
+       "audio": "audio/airport_inflight_8.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "Excuse me, could I get a blanket and a pillow?",
+       "ko": "실례합니다, 담요와 베개를 받을 수 있을까요?",
+       "audio": "audio/airport_inflight_9.mp3"
+      },
+      {
+       "speaker": "Flight Attendant",
+       "en": "Of course. I'll bring them right away. Are you feeling cold?",
+       "ko": "물론입니다. 바로 가져다드릴게요. 추우신가요?",
+       "audio": "audio/airport_inflight_10.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "A little. Also, my seat won't recline. Is something wrong with it?",
+       "ko": "조금요. 그리고 좌석이 뒤로 안 젖혀지는데, 고장인가요?",
+       "audio": "audio/airport_inflight_11.mp3"
+      },
+      {
+       "speaker": "Flight Attendant",
+       "en": "Let me take a look. If it's broken, I can move you to another seat.",
+       "ko": "한번 살펴볼게요. 고장이라면 다른 좌석으로 옮겨드릴 수 있습니다.",
+       "audio": "audio/airport_inflight_12.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "Do I need to fill out an arrival card before we land?",
+       "ko": "착륙 전에 입국 신고서를 작성해야 하나요?",
+       "audio": "audio/airport_inflight_13.mp3"
+      },
+      {
+       "speaker": "Flight Attendant",
+       "en": "Yes, everyone entering the country does. Here's the form and a pen.",
+       "ko": "네, 입국하시는 모든 분이 작성하셔야 합니다. 여기 양식과 펜입니다.",
+       "audio": "audio/airport_inflight_14.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "Should I write my hotel address in this box?",
+       "ko": "이 칸에는 호텔 주소를 쓰면 되나요?",
+       "audio": "audio/airport_inflight_15.mp3"
+      },
+      {
+       "speaker": "Flight Attendant",
+       "en": "Yes, the address where you'll be staying. We land in about forty minutes.",
+       "ko": "네, 머무르실 곳의 주소요. 약 40분 후에 착륙합니다.",
+       "audio": "audio/airport_inflight_16.mp3"
+      }
+     ]
+    },
+    {
+     "key": "airport_layover",
+     "title": "환승 (Layover)",
+     "subtitle": "연결편, 수하물 연결, 대기 시간",
+     "icon": "🔄",
+     "dialogues": [
+      {
+       "speaker": "Passenger",
+       "en": "Excuse me, I have a connecting flight to Rome. Where do I go?",
+       "ko": "실례합니다, 로마행 연결편을 타야 하는데 어디로 가야 하나요?",
+       "audio": "audio/airport_layover_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Follow the signs for international transfers. It's up one level.",
+       "ko": "국제선 환승 표지판을 따라가세요. 한 층 위입니다.",
+       "audio": "audio/airport_layover_2.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "Do I need to go through immigration here?",
+       "ko": "여기서 입국 심사를 받아야 하나요?",
+       "audio": "audio/airport_layover_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "No, not for a transfer. You'll stay in the international area.",
+       "ko": "아니요, 환승은 안 받으셔도 됩니다. 국제선 구역에 계시면 돼요.",
+       "audio": "audio/airport_layover_4.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "Do I need to pick up my luggage and check it in again?",
+       "ko": "짐을 찾아서 다시 부쳐야 하나요?",
+       "audio": "audio/airport_layover_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "No, your bags are checked through to Rome. You'll get them there.",
+       "ko": "아니요, 짐은 로마까지 연결되어 있습니다. 거기서 찾으시면 됩니다.",
+       "audio": "audio/airport_layover_6.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "How can I be sure they made it onto the next flight?",
+       "ko": "짐이 다음 비행기에 잘 실렸는지 어떻게 확인하죠?",
+       "audio": "audio/airport_layover_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "The tag says Rome, so it's automatic. You can confirm at the transfer desk.",
+       "ko": "수하물 태그에 로마라고 적혀 있으면 자동으로 갑니다. 환승 데스크에서 확인하실 수 있어요.",
+       "audio": "audio/airport_layover_8.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "My layover is only fifty minutes. Will I make it?",
+       "ko": "환승 시간이 50분밖에 없는데, 탈 수 있을까요?",
+       "audio": "audio/airport_layover_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It's tight but possible. Go straight to security, then gate B twelve.",
+       "ko": "빠듯하지만 가능합니다. 바로 보안검색으로 가신 다음 B12 게이트로 가세요.",
+       "audio": "audio/airport_layover_10.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "What if I miss it? The board says my first flight was delayed.",
+       "ko": "만약 놓치면 어떻게 하나요? 전광판에 첫 비행기가 지연됐다고 나오네요.",
+       "audio": "audio/airport_layover_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "If you miss it, go to the service desk. They'll rebook you for free.",
+       "ko": "놓치시면 서비스 데스크로 가세요. 무료로 재예약해 드립니다.",
+       "audio": "audio/airport_layover_12.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "I have a seven-hour layover. Can I leave the airport and look around?",
+       "ko": "환승 대기가 7시간인데, 공항 밖에 나가서 둘러봐도 되나요?",
+       "audio": "audio/airport_layover_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, if you have a valid visa. Otherwise you'll have to stay inside.",
+       "ko": "유효한 비자가 있으시면 됩니다. 없으시면 공항 안에 계셔야 해요.",
+       "audio": "audio/airport_layover_14.mp3"
+      },
+      {
+       "speaker": "Passenger",
+       "en": "Is there somewhere I can rest or take a shower?",
+       "ko": "쉬거나 샤워할 수 있는 곳이 있을까요?",
+       "audio": "audio/airport_layover_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "There's a transit hotel on level three, and the lounge has showers.",
+       "ko": "3층에 환승 호텔이 있고, 라운지에 샤워 시설이 있습니다.",
+       "audio": "audio/airport_layover_16.mp3"
+      }
+     ]
     },
     {
      "key": "airport_dutyfree",
@@ -3395,6 +4573,110 @@
       }
      ],
      "icon": "🛵"
+    },
+    {
+     "key": "restaurant_cafe",
+     "title": "카페 (Coffee Shop)",
+     "subtitle": "음료 주문, 테이크아웃, 와이파이",
+     "icon": "☕",
+     "dialogues": [
+      {
+       "speaker": "Customer",
+       "en": "Hi, can I get a medium latte, please?",
+       "ko": "안녕하세요, 미디엄 라떼 한 잔 주세요.",
+       "audio": "audio/restaurant_cafe_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Sure. For here or to go?",
+       "ko": "네. 매장에서 드시나요, 가져가시나요?",
+       "audio": "audio/restaurant_cafe_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "To go, please. Could you make it with oat milk?",
+       "ko": "가져갈게요. 귀리 우유로 만들어 주실 수 있나요?",
+       "audio": "audio/restaurant_cafe_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Of course. That's an extra fifty cents. Anything else?",
+       "ko": "그럼요. 50센트 추가됩니다. 더 필요하신 건 없으세요?",
+       "audio": "audio/restaurant_cafe_4.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Could I get an iced americano with less ice?",
+       "ko": "아이스 아메리카노에 얼음을 적게 넣어 주실 수 있나요?",
+       "audio": "audio/restaurant_cafe_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "No problem. Would you like it sweetened?",
+       "ko": "가능합니다. 단맛을 추가해 드릴까요?",
+       "audio": "audio/restaurant_cafe_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Just one pump of vanilla, please. And not too strong.",
+       "ko": "바닐라 시럽 한 번만 넣어 주세요. 그리고 너무 진하지 않게요.",
+       "audio": "audio/restaurant_cafe_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Got it. One shot instead of two. Can I get a name for the order?",
+       "ko": "알겠습니다. 샷은 두 번 대신 한 번만요. 주문자 성함을 알려주시겠어요?",
+       "audio": "audio/restaurant_cafe_8.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Is it okay if I work here for a couple of hours?",
+       "ko": "여기서 두어 시간 일해도 괜찮을까요?",
+       "audio": "audio/restaurant_cafe_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Absolutely. There are outlets along the wall by the window.",
+       "ko": "물론입니다. 창가 쪽 벽을 따라 콘센트가 있어요.",
+       "audio": "audio/restaurant_cafe_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Great. What's the wifi password?",
+       "ko": "좋네요. 와이파이 비밀번호가 뭔가요?",
+       "audio": "audio/restaurant_cafe_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It's on the receipt, at the bottom. All lowercase.",
+       "ko": "영수증 하단에 적혀 있습니다. 전부 소문자예요.",
+       "audio": "audio/restaurant_cafe_12.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Sorry, I think this is a regular coffee. I ordered a cappuccino.",
+       "ko": "죄송한데 이건 일반 커피 같아요. 저는 카푸치노를 주문했는데요.",
+       "audio": "audio/restaurant_cafe_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'm so sorry about that. I'll make you a fresh one right now.",
+       "ko": "정말 죄송합니다. 지금 바로 새로 만들어 드릴게요.",
+       "audio": "audio/restaurant_cafe_14.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Thank you. Do you offer free refills on drip coffee?",
+       "ko": "감사합니다. 드립 커피는 무료 리필이 되나요?",
+       "audio": "audio/restaurant_cafe_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We do, but only for here. Just bring your cup back to the counter.",
+       "ko": "됩니다, 다만 매장 이용 시에만요. 컵을 카운터로 가져오시면 됩니다.",
+       "audio": "audio/restaurant_cafe_16.mp3"
+      }
+     ]
     }
    ]
   },
@@ -3779,6 +5061,110 @@
      "icon": "🚗"
     },
     {
+     "key": "transport_gas",
+     "title": "주유소 (Gas Station)",
+     "subtitle": "셀프 주유, 연료 종류, 결제, 세차",
+     "icon": "⛽",
+     "dialogues": [
+      {
+       "speaker": "Customer",
+       "en": "Excuse me, how does the self-service pump work here?",
+       "ko": "실례합니다, 여기 셀프 주유기는 어떻게 사용하나요?",
+       "audio": "audio/transport_gas_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Pay first, either at the pump with a card or inside with cash.",
+       "ko": "먼저 결제하세요. 주유기에서 카드로 하시거나 안에서 현금으로 하시면 됩니다.",
+       "audio": "audio/transport_gas_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I'll pay by card. Do I need to enter a zip code?",
+       "ko": "카드로 결제할게요. 우편번호를 입력해야 하나요?",
+       "audio": "audio/transport_gas_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, and foreign cards often fail there. It's easier to pay inside.",
+       "ko": "네, 해외 카드는 그 단계에서 안 되는 경우가 많아요. 안에서 결제하시는 게 편합니다.",
+       "audio": "audio/transport_gas_4.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "This is a rental car. Which fuel should I use?",
+       "ko": "렌터카인데요. 어떤 연료를 넣어야 하나요?",
+       "audio": "audio/transport_gas_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Check the sticker inside the fuel door. Most rentals take regular.",
+       "ko": "주유구 안쪽 스티커를 확인해 보세요. 렌터카는 대부분 일반유입니다.",
+       "audio": "audio/transport_gas_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "It says unleaded. Is that the same as regular?",
+       "ko": "무연이라고 쓰여 있는데, 일반유와 같은 건가요?",
+       "audio": "audio/transport_gas_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, the eighty-seven octane one. Just don't use the diesel pump.",
+       "ko": "네, 옥탄가 87짜리요. 경유 주유기만 쓰지 마세요.",
+       "audio": "audio/transport_gas_8.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Can you fill it up, please?",
+       "ko": "가득 채워 주시겠어요?",
+       "audio": "audio/transport_gas_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Sure. Regular or premium?",
+       "ko": "네. 일반유로 할까요, 고급유로 할까요?",
+       "audio": "audio/transport_gas_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Regular is fine. I need to return it with a full tank.",
+       "ko": "일반유면 됩니다. 가득 채워서 반납해야 하거든요.",
+       "audio": "audio/transport_gas_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Understood. I'll top it off and give you the receipt.",
+       "ko": "알겠습니다. 가득 채우고 영수증 드릴게요.",
+       "audio": "audio/transport_gas_12.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Do you have a car wash here?",
+       "ko": "여기 세차장도 있나요?",
+       "audio": "audio/transport_gas_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We do. It's ten dollars, or five if you buy twenty dollars of gas.",
+       "ko": "있습니다. 10달러인데, 기름을 20달러어치 넣으시면 5달러예요.",
+       "audio": "audio/transport_gas_14.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I'll take it. Is there a restroom I can use?",
+       "ko": "그럼 할게요. 사용할 수 있는 화장실이 있나요?",
+       "audio": "audio/transport_gas_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Around the side of the building. Here's the key.",
+       "ko": "건물 옆쪽으로 돌아가시면 됩니다. 여기 열쇠요.",
+       "audio": "audio/transport_gas_16.mp3"
+      }
+     ]
+    },
+    {
      "key": "transport_problems",
      "title": "문제 해결 (Problems)",
      "subtitle": "택시 문제, 실수 대처",
@@ -3786,26 +5172,98 @@
       {
        "speaker": "Customer",
        "en": "I think I got in the wrong taxi.",
-       "ko": "잘못된 택시에 탄 것 같아요.",
-       "audio": "audio/transport_problem_1.mp3"
+       "ko": "택시를 잘못 탄 것 같아요.",
+       "audio": "audio/transport_problems_1.mp3"
+      },
+      {
+       "speaker": "Driver",
+       "en": "Which company did you book? This is City Cab.",
+       "ko": "어느 회사로 예약하셨나요? 여기는 시티캡입니다.",
+       "audio": "audio/transport_problems_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I booked a different one. I'm sorry, could you stop here?",
+       "ko": "다른 회사로 예약했어요. 죄송한데 여기서 세워주시겠어요?",
+       "audio": "audio/transport_problems_3.mp3"
+      },
+      {
+       "speaker": "Driver",
+       "en": "No problem. There's no charge since we just started.",
+       "ko": "괜찮습니다. 막 출발했으니 요금은 없어요.",
+       "audio": "audio/transport_problems_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can you check the meter? It seems too high.",
-       "ko": "미터기를 확인해주실 수 있나요? 너무 비싼 것 같아요.",
-       "audio": "audio/transport_problem_2.mp3"
+       "ko": "미터기를 확인해 주시겠어요? 요금이 너무 많이 나온 것 같은데요.",
+       "audio": "audio/transport_problems_5.mp3"
+      },
+      {
+       "speaker": "Driver",
+       "en": "Let me pull over and look. There may be a night surcharge.",
+       "ko": "차를 세우고 확인해 볼게요. 심야 할증이 붙었을 수도 있습니다.",
+       "audio": "audio/transport_problems_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "It's only seven in the evening. That shouldn't apply yet.",
+       "ko": "지금 저녁 7시밖에 안 됐는데요. 아직 적용될 시간이 아니잖아요.",
+       "audio": "audio/transport_problems_7.mp3"
+      },
+      {
+       "speaker": "Driver",
+       "en": "You're right, my mistake. I'll reset it to the standard rate.",
+       "ko": "맞습니다, 제 실수예요. 일반 요금으로 다시 계산하겠습니다.",
+       "audio": "audio/transport_problems_8.mp3"
       },
       {
        "speaker": "Customer",
        "en": "I left my phone in the taxi.",
-       "ko": "택시에 핸드폰을 두고 내렸어요.",
-       "audio": "audio/transport_problem_3.mp3"
+       "ko": "택시에 휴대폰을 두고 내렸어요.",
+       "audio": "audio/transport_problems_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Do you have the receipt? It has the driver's number on it.",
+       "ko": "영수증 갖고 계신가요? 기사님 번호가 적혀 있습니다.",
+       "audio": "audio/transport_problems_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I paid by card, so I don't have a paper receipt.",
+       "ko": "카드로 결제해서 종이 영수증은 없어요.",
+       "audio": "audio/transport_problems_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Then call our lost and found line with the time and pickup spot.",
+       "ko": "그러면 분실물 센터로 전화하셔서 시간과 탑승 장소를 알려주세요.",
+       "audio": "audio/transport_problems_12.mp3"
       },
       {
        "speaker": "Customer",
        "en": "This isn't where I asked to go.",
-       "ko": "제가 말한 곳이 아닌 것 같아요.",
-       "audio": "audio/transport_problem_4.mp3"
+       "ko": "제가 말한 곳이 아닌데요.",
+       "audio": "audio/transport_problems_13.mp3"
+      },
+      {
+       "speaker": "Driver",
+       "en": "I'm sorry. I heard Park Street, not Park Avenue.",
+       "ko": "죄송합니다. 파크 애비뉴가 아니라 파크 스트리트로 들었어요.",
+       "audio": "audio/transport_problems_14.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Can you take me to the right address? How much extra will it be?",
+       "ko": "맞는 주소로 데려다주실 수 있나요? 추가 요금은 얼마인가요?",
+       "audio": "audio/transport_problems_15.mp3"
+      },
+      {
+       "speaker": "Driver",
+       "en": "It's my error, so there's no extra charge. It's ten minutes away.",
+       "ko": "제 잘못이니 추가 요금은 없습니다. 10분 거리예요.",
+       "audio": "audio/transport_problems_16.mp3"
       }
      ],
      "icon": "🚨"
@@ -3818,26 +5276,98 @@
       {
        "speaker": "Customer",
        "en": "How do I get to the city center from here?",
-       "ko": "여기서 시내 중심까지 어떻게 가나요?",
-       "audio": "audio/transport_direction_1.mp3"
+       "ko": "여기서 시내 중심가까지 어떻게 가나요?",
+       "audio": "audio/transport_directions_1.mp3"
+      },
+      {
+       "speaker": "Local",
+       "en": "The fastest way is the metro. The station is behind that building.",
+       "ko": "지하철이 가장 빠릅니다. 역은 저 건물 뒤에 있어요.",
+       "audio": "audio/transport_directions_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "How long does it take?",
+       "ko": "얼마나 걸리나요?",
+       "audio": "audio/transport_directions_3.mp3"
+      },
+      {
+       "speaker": "Local",
+       "en": "About fifteen minutes. Get off at Central Station, the fourth stop.",
+       "ko": "15분쯤 걸려요. 네 번째 정거장인 센트럴역에서 내리세요.",
+       "audio": "audio/transport_directions_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Which line goes to Times Square?",
-       "ko": "타임스퀘어로 가는 노선이 뭔가요?",
-       "audio": "audio/transport_direction_2.mp3"
+       "ko": "타임스퀘어로 가는 노선이 어느 것인가요?",
+       "audio": "audio/transport_directions_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Take the red line or the blue line. Both stop there.",
+       "ko": "빨간색 노선이나 파란색 노선을 타세요. 둘 다 정차합니다.",
+       "audio": "audio/transport_directions_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Which one is faster at this hour?",
+       "ko": "이 시간대에는 어느 쪽이 더 빠른가요?",
+       "audio": "audio/transport_directions_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "The red line. The blue one is slower during rush hour.",
+       "ko": "빨간색 노선이요. 파란색은 출퇴근 시간에 더 느립니다.",
+       "audio": "audio/transport_directions_8.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Is this the right bus for downtown?",
-       "ko": "이 버스가 시내로 가는 건가요?",
-       "audio": "audio/transport_direction_3.mp3"
+       "ko": "이 버스가 시내로 가는 게 맞나요?",
+       "audio": "audio/transport_directions_9.mp3"
+      },
+      {
+       "speaker": "Driver",
+       "en": "No, this one goes north. You want the number nine across the street.",
+       "ko": "아니요, 이건 북쪽으로 갑니다. 길 건너에서 9번을 타셔야 해요.",
+       "audio": "audio/transport_directions_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Is the stop right in front of that cafe?",
+       "ko": "저 카페 바로 앞이 정류장인가요?",
+       "audio": "audio/transport_directions_11.mp3"
+      },
+      {
+       "speaker": "Driver",
+       "en": "Yes, just cross at the light. It comes every ten minutes.",
+       "ko": "네, 신호등에서 건너시면 됩니다. 10분마다 옵니다.",
+       "audio": "audio/transport_directions_12.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can you show me on the map?",
-       "ko": "지도에서 보여주실 수 있나요?",
-       "audio": "audio/transport_direction_4.mp3"
+       "ko": "지도에서 보여주시겠어요?",
+       "audio": "audio/transport_directions_13.mp3"
+      },
+      {
+       "speaker": "Local",
+       "en": "Sure. We're here, and you want to go to this corner.",
+       "ko": "그럼요. 우리가 여기 있고, 가시려는 곳은 이 모퉁이예요.",
+       "audio": "audio/transport_directions_14.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "So I walk two blocks and turn left at the bank?",
+       "ko": "그럼 두 블록 걸어가서 은행에서 왼쪽으로 돌면 되나요?",
+       "audio": "audio/transport_directions_15.mp3"
+      },
+      {
+       "speaker": "Local",
+       "en": "Exactly. It's a five-minute walk. You can't miss the big red sign.",
+       "ko": "정확합니다. 걸어서 5분이에요. 큰 빨간 간판이 보일 거예요.",
+       "audio": "audio/transport_directions_16.mp3"
       }
      ],
      "icon": "🗺️"
@@ -3850,32 +5380,122 @@
       {
        "speaker": "Customer",
        "en": "I need a ride to the airport.",
-       "ko": "공항까지 차가 필요합니다.",
-       "audio": "audio/transport_share_1.mp3"
+       "ko": "공항까지 가는 차편이 필요해요.",
+       "audio": "audio/transport_sharing_1.mp3"
+      },
+      {
+       "speaker": "Driver",
+       "en": "Sure. Are you the one who requested through the app?",
+       "ko": "네. 앱으로 호출하신 분 맞으신가요?",
+       "audio": "audio/transport_sharing_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Yes, my name is Kim. Can you confirm the plate number?",
+       "ko": "네, 김이라고 합니다. 차량 번호를 확인해 주시겠어요?",
+       "audio": "audio/transport_sharing_3.mp3"
+      },
+      {
+       "speaker": "Driver",
+       "en": "It's seven-four-two BXK. Let me help with your luggage.",
+       "ko": "742 BXK입니다. 짐 옮기는 걸 도와드릴게요.",
+       "audio": "audio/transport_sharing_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "How long will the driver take to arrive?",
-       "ko": "기사님이 도착까지 얼마나 걸리나요?",
-       "audio": "audio/transport_share_2.mp3"
+       "ko": "기사님이 오시는 데 얼마나 걸리나요?",
+       "audio": "audio/transport_sharing_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "The app says four minutes. You can watch the car on the map.",
+       "ko": "앱에는 4분이라고 나오네요. 지도에서 차량을 확인하실 수 있습니다.",
+       "audio": "audio/transport_sharing_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Where exactly should I wait?",
+       "ko": "정확히 어디서 기다려야 하나요?",
+       "audio": "audio/transport_sharing_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "At the pickup zone by exit three, not at the main door.",
+       "ko": "정문이 아니라 3번 출구 옆 탑승 구역에서요.",
+       "audio": "audio/transport_sharing_8.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Can you split the fare with me?",
-       "ko": "요금을 나눌 수 있나요?",
-       "audio": "audio/transport_share_3.mp3"
+       "ko": "요금을 나눠서 낼 수 있을까요?",
+       "audio": "audio/transport_sharing_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, use the split fare option in the app before the trip ends.",
+       "ko": "네, 주행이 끝나기 전에 앱에서 요금 분할 기능을 쓰시면 됩니다.",
+       "audio": "audio/transport_sharing_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Does the other person need the same app?",
+       "ko": "상대방도 같은 앱이 있어야 하나요?",
+       "audio": "audio/transport_sharing_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "They do. Send them the invite and they can accept their half.",
+       "ko": "네, 필요합니다. 초대를 보내면 상대방이 절반을 수락할 수 있어요.",
+       "audio": "audio/transport_sharing_12.mp3"
       },
       {
        "speaker": "Customer",
        "en": "I left something in the car.",
-       "ko": "차에 뭔가 두고 내렸어요.",
-       "audio": "audio/transport_share_4.mp3"
+       "ko": "차에 물건을 두고 내렸어요.",
+       "audio": "audio/transport_sharing_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Open the trip in the app and tap contact driver about a lost item.",
+       "ko": "앱에서 해당 주행을 열고 분실물 관련 기사 연락을 누르세요.",
+       "audio": "audio/transport_sharing_14.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "What if the driver doesn't answer?",
+       "ko": "기사님이 안 받으면 어떻게 하나요?",
+       "audio": "audio/transport_sharing_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Then report it to support. They'll reach the driver on your behalf.",
+       "ko": "그러면 고객센터에 신고하세요. 대신 기사님께 연락해 줍니다.",
+       "audio": "audio/transport_sharing_16.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Is there surge pricing right now?",
-       "ko": "지금 승차비 할증이 있나요?",
-       "audio": "audio/transport_share_5.mp3"
+       "ko": "지금 할증 요금이 붙나요?",
+       "audio": "audio/transport_sharing_17.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, it's one point eight times the normal fare because of the rain.",
+       "ko": "네, 비 때문에 평소 요금의 1.8배입니다.",
+       "audio": "audio/transport_sharing_18.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Is it worth waiting for it to drop?",
+       "ko": "요금이 내려갈 때까지 기다릴 만한가요?",
+       "audio": "audio/transport_sharing_19.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It usually settles within twenty minutes. A regular taxi may be cheaper now.",
+       "ko": "보통 20분 안에 안정됩니다. 지금은 일반 택시가 더 쌀 수도 있어요.",
+       "audio": "audio/transport_sharing_20.mp3"
       }
      ],
      "icon": "🚗"
@@ -3888,32 +5508,122 @@
       {
        "speaker": "Customer",
        "en": "Where can I park here?",
-       "ko": "여기서 어디에 주차할 수 있나요?",
+       "ko": "여기서는 어디에 주차할 수 있나요?",
        "audio": "audio/transport_parking_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "There's a garage under the building. The entrance is around the corner.",
+       "ko": "건물 지하에 주차장이 있습니다. 입구는 모퉁이를 돌면 있어요.",
+       "audio": "audio/transport_parking_2.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Is street parking allowed on this block?",
+       "ko": "이 블록에 노상 주차가 가능한가요?",
+       "audio": "audio/transport_parking_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Only until six, and you need a ticket from the machine on the sidewalk.",
+       "ko": "6시까지만 가능하고, 인도에 있는 기계에서 표를 뽑으셔야 합니다.",
+       "audio": "audio/transport_parking_4.mp3"
       },
       {
        "speaker": "Customer",
        "en": "How much is parking per hour?",
-       "ko": "시간당 주차 요금이 얼마인가요?",
-       "audio": "audio/transport_parking_2.mp3"
+       "ko": "주차 요금이 시간당 얼마인가요?",
+       "audio": "audio/transport_parking_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Four dollars an hour, with a daily maximum of twenty-five.",
+       "ko": "시간당 4달러이고, 하루 최대 25달러입니다.",
+       "audio": "audio/transport_parking_6.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Do I pay when I leave or in advance?",
+       "ko": "나갈 때 내나요, 아니면 미리 내나요?",
+       "audio": "audio/transport_parking_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Pay at the machine before you return to your car. Keep the ticket.",
+       "ko": "차로 돌아가시기 전에 정산기에서 결제하세요. 표는 갖고 계셔야 합니다.",
+       "audio": "audio/transport_parking_8.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Is this parking lot safe?",
        "ko": "이 주차장은 안전한가요?",
-       "audio": "audio/transport_parking_3.mp3"
+       "audio": "audio/transport_parking_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, there are cameras on every level and a guard at night.",
+       "ko": "네, 층마다 카메라가 있고 야간에는 경비원이 있습니다.",
+       "audio": "audio/transport_parking_10.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "Should I leave anything in the car?",
+       "ko": "차에 물건을 두고 가도 될까요?",
+       "audio": "audio/transport_parking_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'd take valuables with you and leave nothing visible on the seats.",
+       "ko": "귀중품은 가지고 가시고 좌석에 보이는 물건은 두지 마세요.",
+       "audio": "audio/transport_parking_12.mp3"
       },
       {
        "speaker": "Customer",
        "en": "I can't find my car.",
-       "ko": "제 차를 찾을 수 없어요.",
-       "audio": "audio/transport_parking_4.mp3"
+       "ko": "제 차를 못 찾겠어요.",
+       "audio": "audio/transport_parking_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "What level did you park on? Each one has a different color.",
+       "ko": "몇 층에 주차하셨나요? 층마다 색이 다릅니다.",
+       "audio": "audio/transport_parking_14.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I think it was the blue level, near an elevator.",
+       "ko": "파란색 층이었던 것 같아요, 엘리베이터 근처였고요.",
+       "audio": "audio/transport_parking_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "That's level three. I'll walk you over and we can check the rows.",
+       "ko": "3층이네요. 같이 가서 열을 확인해 보겠습니다.",
+       "audio": "audio/transport_parking_16.mp3"
       },
       {
        "speaker": "Customer",
        "en": "Do you validate parking?",
-       "ko": "주차 확인 도장 찍어주시나요?",
-       "audio": "audio/transport_parking_5.mp3"
+       "ko": "주차 도장을 찍어주시나요?",
+       "audio": "audio/transport_parking_17.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We do, with any purchase over twenty dollars. It covers two hours.",
+       "ko": "20달러 이상 구매하시면 해드립니다. 2시간이 적용돼요.",
+       "audio": "audio/transport_parking_18.mp3"
+      },
+      {
+       "speaker": "Customer",
+       "en": "I was here for three hours. What about the rest?",
+       "ko": "3시간 있었는데요. 나머지는 어떻게 되나요?",
+       "audio": "audio/transport_parking_19.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "You'd pay the difference at the machine. Show it this stamped ticket.",
+       "ko": "차액은 정산기에서 내시면 됩니다. 도장 찍힌 이 표를 넣으세요.",
+       "audio": "audio/transport_parking_20.mp3"
       }
      ],
      "icon": "🅿️"
@@ -3933,25 +5643,97 @@
        "speaker": "Patient",
        "en": "I'd like to make an appointment.",
        "ko": "진료 예약을 하고 싶습니다.",
-       "audio": "audio/hospital_1.mp3"
+       "audio": "audio/hospital_reception_1.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Do you have insurance?",
-       "ko": "보험 있으신가요?",
-       "audio": "audio/hospital_2.mp3"
+       "ko": "보험이 있으신가요?",
+       "audio": "audio/hospital_reception_2.mp3"
       },
       {
        "speaker": "Patient",
        "en": "Yes, here's my insurance card.",
-       "ko": "네, 여기 보험 카드 있습니다.",
-       "audio": "audio/hospital_3.mp3"
+       "ko": "네, 여기 보험 카드입니다.",
+       "audio": "audio/hospital_reception_3.mp3"
       },
       {
        "speaker": "Staff",
        "en": "Please fill out this form.",
-       "ko": "이 양식을 작성해주세요.",
-       "audio": "audio/hospital_4.mp3"
+       "ko": "이 양식을 작성해 주세요.",
+       "audio": "audio/hospital_reception_4.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "I'm a visitor here. Is that a problem?",
+       "ko": "저는 여행객인데요. 문제가 되나요?",
+       "audio": "audio/hospital_reception_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Not at all. I'll need your passport and a contact number.",
+       "ko": "전혀 아닙니다. 여권과 연락처가 필요합니다.",
+       "audio": "audio/hospital_reception_6.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "My number is a Korean one. Is that okay?",
+       "ko": "번호가 한국 번호인데 괜찮을까요?",
+       "audio": "audio/hospital_reception_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Give us your hotel number as well, just in case.",
+       "ko": "혹시 모르니 호텔 번호도 함께 알려주세요.",
+       "audio": "audio/hospital_reception_8.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "How long is the wait to see a doctor?",
+       "ko": "의사를 보려면 얼마나 기다려야 하나요?",
+       "audio": "audio/hospital_reception_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "About forty minutes. I'll call your name from this desk.",
+       "ko": "40분 정도입니다. 이 데스크에서 성함을 부를게요.",
+       "audio": "audio/hospital_reception_10.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Is there an English-speaking doctor available?",
+       "ko": "영어가 가능한 의사가 있나요?",
+       "audio": "audio/hospital_reception_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, Dr. Harris is on duty this afternoon.",
+       "ko": "네, 오늘 오후에는 해리스 선생님이 근무하십니다.",
+       "audio": "audio/hospital_reception_12.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Do I pay now or after the consultation?",
+       "ko": "지금 결제하나요, 진료 후에 하나요?",
+       "audio": "audio/hospital_reception_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "After. The cashier is next to the pharmacy on your way out.",
+       "ko": "진료 후에요. 나가시는 길 약국 옆에 수납창구가 있습니다.",
+       "audio": "audio/hospital_reception_14.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Can I get the receipt in English for my insurance?",
+       "ko": "보험 청구용으로 영어 영수증을 받을 수 있나요?",
+       "audio": "audio/hospital_reception_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, just tell the cashier when you pay.",
+       "ko": "네, 결제하실 때 수납창구에 말씀하시면 됩니다.",
+       "audio": "audio/hospital_reception_16.mp3"
       }
      ],
      "icon": "📋"
@@ -3964,26 +5746,98 @@
       {
        "speaker": "Doctor",
        "en": "What seems to be the problem?",
-       "ko": "어떻게 아프신가요?",
-       "audio": "audio/hospital_5.mp3"
+       "ko": "어디가 불편하신가요?",
+       "audio": "audio/hospital_symptoms_1.mp3"
       },
       {
        "speaker": "Patient",
        "en": "I have a headache and fever.",
-       "ko": "머리가 아프고 열이 나요.",
-       "audio": "audio/hospital_6.mp3"
+       "ko": "두통이 있고 열이 나요.",
+       "audio": "audio/hospital_symptoms_2.mp3"
       },
       {
        "speaker": "Doctor",
        "en": "How long have you had these symptoms?",
-       "ko": "이 증상이 얼마나 지속되었나요?",
-       "audio": "audio/hospital_7.mp3"
+       "ko": "이 증상이 얼마나 되셨나요?",
+       "audio": "audio/hospital_symptoms_3.mp3"
       },
       {
        "speaker": "Patient",
        "en": "Since yesterday morning.",
        "ko": "어제 아침부터요.",
-       "audio": "audio/hospital_8.mp3"
+       "audio": "audio/hospital_symptoms_4.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "Any nausea, or pain when you look at bright light?",
+       "ko": "메스꺼움이나 밝은 빛을 볼 때 통증이 있나요?",
+       "audio": "audio/hospital_symptoms_5.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "A little nausea, but no problem with light.",
+       "ko": "메스꺼움은 조금 있는데 빛은 괜찮습니다.",
+       "audio": "audio/hospital_symptoms_6.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "Have you been drinking enough water while travelling?",
+       "ko": "여행 중에 물은 충분히 드셨나요?",
+       "audio": "audio/hospital_symptoms_7.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Probably not. I've been walking outside all day.",
+       "ko": "아마 아닐 거예요. 하루 종일 밖에서 걸었거든요.",
+       "audio": "audio/hospital_symptoms_8.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "Do you have any allergies or take regular medication?",
+       "ko": "알레르기가 있거나 정기적으로 드시는 약이 있나요?",
+       "audio": "audio/hospital_symptoms_9.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "I'm allergic to penicillin. Nothing else.",
+       "ko": "페니실린 알레르기가 있습니다. 그 외에는 없어요.",
+       "audio": "audio/hospital_symptoms_10.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "Good to know. Have you eaten anything unusual recently?",
+       "ko": "알겠습니다. 최근에 평소와 다른 음식을 드셨나요?",
+       "audio": "audio/hospital_symptoms_11.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Street food two days ago, but my stomach has been fine.",
+       "ko": "이틀 전에 길거리 음식을 먹었는데 배는 괜찮았어요.",
+       "audio": "audio/hospital_symptoms_12.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "I think it's dehydration with a mild infection.",
+       "ko": "탈수에 가벼운 감염이 겹친 것으로 보입니다.",
+       "audio": "audio/hospital_symptoms_13.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Is it safe for me to fly on Saturday?",
+       "ko": "토요일에 비행기를 타도 괜찮을까요?",
+       "audio": "audio/hospital_symptoms_14.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "It should be, if the fever is gone for a full day.",
+       "ko": "열이 하루 완전히 없으면 괜찮을 겁니다.",
+       "audio": "audio/hospital_symptoms_15.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Understood. I'll rest and drink more water.",
+       "ko": "알겠습니다. 쉬면서 물을 더 마실게요.",
+       "audio": "audio/hospital_symptoms_16.mp3"
       }
      ],
      "icon": "🤒"
@@ -3997,19 +5851,73 @@
        "speaker": "Doctor",
        "en": "Let me check your temperature.",
        "ko": "체온을 재보겠습니다.",
-       "audio": "audio/hospital_9.mp3"
+       "audio": "audio/hospital_examination_1.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Of course. I've been feeling hot since last night.",
+       "ko": "네. 어젯밤부터 열이 나는 것 같았어요.",
+       "audio": "audio/hospital_examination_2.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "It's thirty-eight point five. That's a fever.",
+       "ko": "38.5도네요. 열이 있습니다.",
+       "audio": "audio/hospital_examination_3.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Should I be worried? I'm travelling and fly home on Friday.",
+       "ko": "걱정해야 할까요? 여행 중인데 금요일에 귀국합니다.",
+       "audio": "audio/hospital_examination_4.mp3"
       },
       {
        "speaker": "Doctor",
        "en": "Open your mouth and say ah.",
-       "ko": "입을 벌리고 '아' 하세요.",
-       "audio": "audio/hospital_10.mp3"
+       "ko": "입을 벌리고 아 해보세요.",
+       "audio": "audio/hospital_examination_5.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Ah. Does my throat look bad?",
+       "ko": "아. 목이 많이 안 좋아 보이나요?",
+       "audio": "audio/hospital_examination_6.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "It's quite red and swollen. I'd like to do a quick strep test.",
+       "ko": "많이 붉고 부어 있네요. 간단한 연쇄구균 검사를 해보겠습니다.",
+       "audio": "audio/hospital_examination_7.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "How long do the results take?",
+       "ko": "결과가 나오는 데 얼마나 걸리나요?",
+       "audio": "audio/hospital_examination_8.mp3"
       },
       {
        "speaker": "Doctor",
        "en": "Does this hurt?",
-       "ko": "여기 아프신가요?",
-       "audio": "audio/hospital_11.mp3"
+       "ko": "여기 누르면 아프신가요?",
+       "audio": "audio/hospital_examination_9.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Yes, right there. It's worse when I take a deep breath.",
+       "ko": "네, 바로 거기요. 숨을 깊게 들이쉬면 더 아파요.",
+       "audio": "audio/hospital_examination_10.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "I'll order a chest X-ray to be safe. The room is down the hall.",
+       "ko": "만약을 위해 흉부 엑스레이를 찍겠습니다. 복도 끝에 있는 방이에요.",
+       "audio": "audio/hospital_examination_11.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Will my travel insurance cover the X-ray?",
+       "ko": "여행자 보험으로 엑스레이가 처리되나요?",
+       "audio": "audio/hospital_examination_12.mp3"
       }
      ],
      "icon": "🩺"
@@ -4022,20 +5930,74 @@
       {
        "speaker": "Doctor",
        "en": "You have a cold. Take this medicine.",
-       "ko": "감기네요. 이 약을 드세요.",
-       "audio": "audio/hospital_12.mp3"
+       "ko": "감기입니다. 이 약을 드세요.",
+       "audio": "audio/hospital_prescription_1.mp3"
       },
       {
        "speaker": "Patient",
        "en": "How often should I take it?",
-       "ko": "하루에 몇 번 먹어야 하나요?",
-       "audio": "audio/hospital_13.mp3"
+       "ko": "얼마나 자주 먹어야 하나요?",
+       "audio": "audio/hospital_prescription_2.mp3"
       },
       {
        "speaker": "Doctor",
        "en": "Three times a day after meals.",
-       "ko": "식후 하루 세 번 드세요.",
-       "audio": "audio/hospital_14.mp3"
+       "ko": "하루 세 번 식후에 드세요.",
+       "audio": "audio/hospital_prescription_3.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "For how many days should I keep taking it?",
+       "ko": "며칠 동안 계속 먹어야 하나요?",
+       "audio": "audio/hospital_prescription_4.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "Five days, even if you feel better before that.",
+       "ko": "5일입니다. 그전에 나아져도 계속 드세요.",
+       "audio": "audio/hospital_prescription_5.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Can I buy this over the counter, or do I need the prescription?",
+       "ko": "처방전 없이 살 수 있나요, 아니면 필요한가요?",
+       "audio": "audio/hospital_prescription_6.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "You'll need the prescription. Take it to any pharmacy.",
+       "ko": "처방전이 필요합니다. 아무 약국에나 가져가세요.",
+       "audio": "audio/hospital_prescription_7.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Is there a generic version? It would be cheaper.",
+       "ko": "복제약도 있나요? 그게 더 저렴할 것 같아서요.",
+       "audio": "audio/hospital_prescription_8.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "There is, and it works the same. Ask the pharmacist.",
+       "ko": "있고 효과는 같습니다. 약사에게 문의하세요.",
+       "audio": "audio/hospital_prescription_9.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Can I take painkillers along with this?",
+       "ko": "이 약과 함께 진통제를 먹어도 되나요?",
+       "audio": "audio/hospital_prescription_10.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "Paracetamol is fine, but avoid ibuprofen for now.",
+       "ko": "파라세타몰은 괜찮지만 지금은 이부프로펜은 피하세요.",
+       "audio": "audio/hospital_prescription_11.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Thank you. I'll come back if it doesn't improve.",
+       "ko": "감사합니다. 나아지지 않으면 다시 오겠습니다.",
+       "audio": "audio/hospital_prescription_12.mp3"
       }
      ],
      "icon": "💊"
@@ -4048,26 +6010,98 @@
       {
        "speaker": "Patient",
        "en": "I need to see a doctor immediately.",
-       "ko": "즉시 진료를 받아야 합니다.",
+       "ko": "당장 의사를 만나야 합니다.",
        "audio": "audio/hospital_emergency_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Tell me what's wrong so I can decide how quickly we see you.",
+       "ko": "어떤 증상인지 말씀해 주시면 진료 순서를 정하겠습니다.",
+       "audio": "audio/hospital_emergency_2.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "I fell and my ankle is swollen. I can't put weight on it.",
+       "ko": "넘어져서 발목이 부었어요. 디딜 수가 없습니다.",
+       "audio": "audio/hospital_emergency_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Take a seat in the wheelchair. A nurse will see you in a few minutes.",
+       "ko": "휠체어에 앉으세요. 몇 분 안에 간호사가 봐드릴 겁니다.",
+       "audio": "audio/hospital_emergency_4.mp3"
       },
       {
        "speaker": "Patient",
        "en": "It's an emergency. My chest hurts.",
-       "ko": "응급상황입니다. 가슴이 아파요.",
-       "audio": "audio/hospital_emergency_2.mp3"
+       "ko": "응급 상황입니다. 가슴이 아파요.",
+       "audio": "audio/hospital_emergency_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "When did the pain start, and does it spread to your arm?",
+       "ko": "통증이 언제 시작됐나요? 팔로 퍼지기도 하나요?",
+       "audio": "audio/hospital_emergency_6.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "About twenty minutes ago, and my left arm feels numb.",
+       "ko": "20분쯤 전이고, 왼팔이 저립니다.",
+       "audio": "audio/hospital_emergency_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We're taking you in right now. Try to stay calm and sit down.",
+       "ko": "지금 바로 모시겠습니다. 진정하시고 앉아 계세요.",
+       "audio": "audio/hospital_emergency_8.mp3"
       },
       {
        "speaker": "Patient",
        "en": "Please call an ambulance.",
        "ko": "구급차를 불러주세요.",
-       "audio": "audio/hospital_emergency_3.mp3"
+       "audio": "audio/hospital_emergency_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'm calling now. What's the address and what happened?",
+       "ko": "지금 전화하고 있습니다. 주소와 상황을 말씀해 주세요.",
+       "audio": "audio/hospital_emergency_10.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "We're at the hotel on Fifth Street. My friend collapsed.",
+       "ko": "5번가 호텔에 있어요. 친구가 쓰러졌습니다.",
+       "audio": "audio/hospital_emergency_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Stay on the line. Is he breathing, and is he responding to you?",
+       "ko": "전화 끊지 마세요. 숨은 쉬고 있나요? 말에 반응하나요?",
+       "audio": "audio/hospital_emergency_12.mp3"
       },
       {
        "speaker": "Patient",
        "en": "I'm having trouble breathing.",
-       "ko": "호흡이 힘듭니다.",
-       "audio": "audio/hospital_emergency_4.mp3"
+       "ko": "숨쉬기가 힘들어요.",
+       "audio": "audio/hospital_emergency_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Sit upright and try to breathe slowly. Do you have asthma?",
+       "ko": "똑바로 앉으셔서 천천히 숨을 쉬세요. 천식이 있으신가요?",
+       "audio": "audio/hospital_emergency_14.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Yes, but I left my inhaler at the hotel.",
+       "ko": "네, 그런데 흡입기를 호텔에 두고 왔어요.",
+       "audio": "audio/hospital_emergency_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We have one here. The doctor is coming with it right now.",
+       "ko": "여기 있습니다. 의사가 지금 가지고 오고 있어요.",
+       "audio": "audio/hospital_emergency_16.mp3"
       }
      ],
      "icon": "🚨"
@@ -4080,26 +6114,98 @@
       {
        "speaker": "Patient",
        "en": "I'm here for a follow-up appointment.",
-       "ko": "후속 진료차 왔습니다.",
+       "ko": "재진료 예약으로 왔습니다.",
        "audio": "audio/hospital_followup_1.mp3"
       },
       {
-       "speaker": "Patient",
-       "en": "The medicine isn't helping much.",
-       "ko": "약이 효과가 크지 않습니다.",
+       "speaker": "Staff",
+       "en": "May I have your name and the date of your last visit?",
+       "ko": "성함과 지난 방문 날짜를 알려주시겠어요?",
        "audio": "audio/hospital_followup_2.mp3"
       },
       {
        "speaker": "Patient",
-       "en": "Can I get a referral to a specialist?",
-       "ko": "전문의 소개를 받을 수 있나요?",
+       "en": "Lee, and I was here last Tuesday for a chest infection.",
+       "ko": "이라고 하고, 지난 화요일에 흉부 감염으로 왔었습니다.",
        "audio": "audio/hospital_followup_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I see your chart. The doctor will call you in shortly.",
+       "ko": "차트 확인했습니다. 곧 의사가 부를 겁니다.",
+       "audio": "audio/hospital_followup_4.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "The medicine isn't helping much.",
+       "ko": "약이 별로 듣지 않아요.",
+       "audio": "audio/hospital_followup_5.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "How many days have you taken it, and are you finishing each dose?",
+       "ko": "며칠째 드시고 계신가요? 정해진 용량을 다 드시고 있나요?",
+       "audio": "audio/hospital_followup_6.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Five days, and I haven't missed any. The cough is still bad.",
+       "ko": "5일째이고 거른 적은 없습니다. 기침이 여전히 심해요.",
+       "audio": "audio/hospital_followup_7.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "Then we'll switch to a different antibiotic and recheck in three days.",
+       "ko": "그러면 다른 항생제로 바꾸고 3일 뒤에 다시 보겠습니다.",
+       "audio": "audio/hospital_followup_8.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Can I get a referral to a specialist?",
+       "ko": "전문의 진료 의뢰서를 받을 수 있을까요?",
+       "audio": "audio/hospital_followup_9.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "I can refer you to a pulmonologist. Do you have a preference?",
+       "ko": "호흡기내과로 의뢰해 드릴 수 있습니다. 원하시는 곳이 있나요?",
+       "audio": "audio/hospital_followup_10.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Somewhere close to the city center would be easier for me.",
+       "ko": "시내 중심가에서 가까운 곳이면 좋겠습니다.",
+       "audio": "audio/hospital_followup_11.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "There's a clinic ten minutes away. I'll send the referral today.",
+       "ko": "10분 거리에 병원이 있습니다. 오늘 의뢰서를 보내드릴게요.",
+       "audio": "audio/hospital_followup_12.mp3"
       },
       {
        "speaker": "Patient",
        "en": "When should I come back for the results?",
-       "ko": "결과 확인하러 언제 오면 되나요?",
-       "audio": "audio/hospital_followup_4.mp3"
+       "ko": "결과를 보러 언제 다시 와야 하나요?",
+       "audio": "audio/hospital_followup_13.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "The blood work takes two days. Come Thursday afternoon.",
+       "ko": "혈액 검사는 이틀 걸립니다. 목요일 오후에 오세요.",
+       "audio": "audio/hospital_followup_14.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "I fly home on Thursday morning. Can you email them instead?",
+       "ko": "목요일 아침에 귀국하는데요. 이메일로 보내주실 수 있나요?",
+       "audio": "audio/hospital_followup_15.mp3"
+      },
+      {
+       "speaker": "Doctor",
+       "en": "Yes, leave your address at reception and we'll send a copy.",
+       "ko": "네, 접수처에 주소를 남겨주시면 사본을 보내드리겠습니다.",
+       "audio": "audio/hospital_followup_16.mp3"
       }
      ],
      "icon": "📋"
@@ -4112,32 +6218,122 @@
       {
        "speaker": "Patient",
        "en": "I have a prescription to fill.",
-       "ko": "처방전을 가지고 왔습니다.",
+       "ko": "처방전 조제를 부탁드립니다.",
        "audio": "audio/hospital_pharmacy_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "May I see it, along with a photo ID?",
+       "ko": "처방전과 신분증을 보여주시겠어요?",
+       "audio": "audio/hospital_pharmacy_2.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Here you go. I only have my passport with me.",
+       "ko": "여기 있습니다. 신분증은 여권밖에 없어요.",
+       "audio": "audio/hospital_pharmacy_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "That's fine. It'll be ready in about fifteen minutes.",
+       "ko": "괜찮습니다. 15분쯤 후에 준비됩니다.",
+       "audio": "audio/hospital_pharmacy_4.mp3"
       },
       {
        "speaker": "Patient",
        "en": "How many times a day should I take this?",
        "ko": "이 약은 하루에 몇 번 먹어야 하나요?",
-       "audio": "audio/hospital_pharmacy_2.mp3"
+       "audio": "audio/hospital_pharmacy_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Twice a day, morning and evening, with food.",
+       "ko": "하루 두 번, 아침과 저녁에 음식과 함께 드세요.",
+       "audio": "audio/hospital_pharmacy_6.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "What if I forget a dose?",
+       "ko": "한 번 거르면 어떻게 하나요?",
+       "audio": "audio/hospital_pharmacy_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Take it when you remember, but skip it if it's almost time for the next.",
+       "ko": "생각나실 때 드시되, 다음 복용 시간이 가까우면 건너뛰세요.",
+       "audio": "audio/hospital_pharmacy_8.mp3"
       },
       {
        "speaker": "Patient",
        "en": "Are there any side effects?",
        "ko": "부작용이 있나요?",
-       "audio": "audio/hospital_pharmacy_3.mp3"
+       "audio": "audio/hospital_pharmacy_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It can make you drowsy, so don't drive right after taking it.",
+       "ko": "졸릴 수 있으니 복용 직후에는 운전하지 마세요.",
+       "audio": "audio/hospital_pharmacy_10.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Is it safe to drink alcohol with it?",
+       "ko": "이 약을 먹으면서 술을 마셔도 되나요?",
+       "audio": "audio/hospital_pharmacy_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'd avoid it completely while you're on this course.",
+       "ko": "복용 기간에는 아예 피하시는 게 좋습니다.",
+       "audio": "audio/hospital_pharmacy_12.mp3"
       },
       {
        "speaker": "Patient",
        "en": "Can I take this with other medication?",
        "ko": "다른 약과 같이 먹어도 되나요?",
-       "audio": "audio/hospital_pharmacy_4.mp3"
+       "audio": "audio/hospital_pharmacy_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "What else are you taking? Bring the boxes if you have them.",
+       "ko": "지금 어떤 약을 드시고 계신가요? 약통이 있으면 가져와 주세요.",
+       "audio": "audio/hospital_pharmacy_14.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Just a daily allergy tablet and some vitamins.",
+       "ko": "매일 먹는 알레르기 약과 비타민 정도입니다.",
+       "audio": "audio/hospital_pharmacy_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Those are fine together. Just leave two hours between them.",
+       "ko": "같이 드셔도 괜찮습니다. 두 시간 정도 간격만 두세요.",
+       "audio": "audio/hospital_pharmacy_16.mp3"
       },
       {
        "speaker": "Patient",
        "en": "Is this covered by insurance?",
-       "ko": "이 약은 보험 적용되나요?",
-       "audio": "audio/hospital_pharmacy_5.mp3"
+       "ko": "이건 보험 처리가 되나요?",
+       "audio": "audio/hospital_pharmacy_17.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Not with travel insurance at the counter. You'll pay and claim later.",
+       "ko": "여행자 보험은 여기서 바로 처리되지 않습니다. 결제하시고 나중에 청구하세요.",
+       "audio": "audio/hospital_pharmacy_18.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Could I get an itemized receipt for the claim?",
+       "ko": "청구용으로 항목별 영수증을 받을 수 있을까요?",
+       "audio": "audio/hospital_pharmacy_19.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Of course. I'll print one with the medication names and prices.",
+       "ko": "물론입니다. 약품명과 가격이 나온 영수증을 출력해 드릴게요.",
+       "audio": "audio/hospital_pharmacy_20.mp3"
       }
      ],
      "icon": "💊"
@@ -4150,32 +6346,122 @@
       {
        "speaker": "Patient",
        "en": "Does my insurance cover this procedure?",
-       "ko": "제 보험이 이 시술을 보장하나요?",
+       "ko": "제 보험으로 이 시술이 처리되나요?",
        "audio": "audio/hospital_insurance_1.mp3"
       },
       {
-       "speaker": "Patient",
-       "en": "I need to file an insurance claim.",
-       "ko": "보험 청구를 해야 합니다.",
+       "speaker": "Staff",
+       "en": "Let me check your policy. Is this travel insurance or a local plan?",
+       "ko": "보험 내용을 확인해 볼게요. 여행자 보험인가요, 현지 보험인가요?",
        "audio": "audio/hospital_insurance_2.mp3"
       },
       {
        "speaker": "Patient",
-       "en": "What is my co-pay amount?",
-       "ko": "제 코페이 금액이 얼마인가요?",
+       "en": "Travel insurance, bought in Korea before the trip.",
+       "ko": "여행 전에 한국에서 가입한 여행자 보험입니다.",
        "audio": "audio/hospital_insurance_3.mp3"
       },
       {
-       "speaker": "Patient",
-       "en": "Can you send the bill to my insurance?",
-       "ko": "보험으로 청구서를 보내주실 수 있나요?",
+       "speaker": "Staff",
+       "en": "Then you'll pay here and claim it back. Keep every document.",
+       "ko": "그러면 여기서 결제하시고 나중에 청구하시면 됩니다. 서류를 모두 보관하세요.",
        "audio": "audio/hospital_insurance_4.mp3"
       },
       {
        "speaker": "Patient",
-       "en": "I need a referral for insurance.",
-       "ko": "보험용 소개장이 필요합니다.",
+       "en": "I need to file an insurance claim.",
+       "ko": "보험금을 청구하려고 합니다.",
        "audio": "audio/hospital_insurance_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "You'll need the receipt, the diagnosis, and the doctor's report.",
+       "ko": "영수증, 진단서, 의사 소견서가 필요합니다.",
+       "audio": "audio/hospital_insurance_6.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Can you write the report in English?",
+       "ko": "소견서를 영어로 작성해 주실 수 있나요?",
+       "audio": "audio/hospital_insurance_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, we issue them in English by default for international patients.",
+       "ko": "네, 외국인 환자에게는 기본적으로 영어로 발급합니다.",
+       "audio": "audio/hospital_insurance_8.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "What is my co-pay amount?",
+       "ko": "본인 부담금이 얼마인가요?",
+       "audio": "audio/hospital_insurance_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Thirty dollars for the visit, plus the cost of any tests.",
+       "ko": "진료비 30달러에 검사 비용이 추가됩니다.",
+       "audio": "audio/hospital_insurance_10.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Do I pay that now or when the results come back?",
+       "ko": "지금 내야 하나요, 아니면 결과가 나온 후에 내나요?",
+       "audio": "audio/hospital_insurance_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Now, at the front desk. The tests are billed separately later.",
+       "ko": "지금 접수처에서 내시면 됩니다. 검사비는 나중에 따로 청구돼요.",
+       "audio": "audio/hospital_insurance_12.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Can you send the bill to my insurance?",
+       "ko": "청구서를 제 보험사로 보내주실 수 있나요?",
+       "audio": "audio/hospital_insurance_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We can if they're a partner. What's the company name?",
+       "ko": "제휴사라면 가능합니다. 보험사 이름이 어떻게 되나요?",
+       "audio": "audio/hospital_insurance_14.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "It's a Korean insurer. I don't think you work with them directly.",
+       "ko": "한국 보험사입니다. 직접 제휴는 안 되어 있을 것 같아요.",
+       "audio": "audio/hospital_insurance_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Then pay here and submit the paperwork yourself. It's usually quick.",
+       "ko": "그러면 여기서 결제하시고 서류를 직접 제출하세요. 보통 빨리 처리됩니다.",
+       "audio": "audio/hospital_insurance_16.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "I need a referral for insurance.",
+       "ko": "보험 처리를 위해 진료 의뢰서가 필요합니다.",
+       "audio": "audio/hospital_insurance_17.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "The doctor can write one. Does your policy require it in advance?",
+       "ko": "의사가 작성해 드릴 수 있습니다. 보험에서 사전 의뢰서를 요구하나요?",
+       "audio": "audio/hospital_insurance_18.mp3"
+      },
+      {
+       "speaker": "Patient",
+       "en": "Yes, otherwise they only reimburse half the cost.",
+       "ko": "네, 없으면 비용의 절반만 환급해 줍니다.",
+       "audio": "audio/hospital_insurance_19.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'll flag it so the doctor writes it during your visit today.",
+       "ko": "오늘 진료 중에 작성하도록 표시해 두겠습니다.",
+       "audio": "audio/hospital_insurance_20.mp3"
       }
      ],
      "icon": "🛡️"
@@ -4677,6 +6963,110 @@
       }
      ],
      "icon": "🚨"
+    },
+    {
+     "key": "travel_lostfound",
+     "title": "분실물 (Lost & Found)",
+     "subtitle": "물건 분실, 신고 접수, 습득물 찾기",
+     "icon": "🔎",
+     "dialogues": [
+      {
+       "speaker": "Tourist",
+       "en": "I think I left my bag on the train. Who should I talk to?",
+       "ko": "기차에 가방을 두고 내린 것 같아요. 누구에게 말해야 하나요?",
+       "audio": "audio/travel_lostfound_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "The lost and found office is on the ground floor, next to the ticket hall.",
+       "ko": "분실물 센터는 1층 매표소 옆에 있습니다.",
+       "audio": "audio/travel_lostfound_2.mp3"
+      },
+      {
+       "speaker": "Tourist",
+       "en": "Do you know if anything has been turned in from the ten o'clock train?",
+       "ko": "10시 기차에서 들어온 물건이 있는지 아시나요?",
+       "audio": "audio/travel_lostfound_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "They log everything there. Bring your ticket so they can check the car.",
+       "ko": "거기서 전부 기록합니다. 표를 가져가시면 몇 호차인지 확인해 줄 거예요.",
+       "audio": "audio/travel_lostfound_4.mp3"
+      },
+      {
+       "speaker": "Tourist",
+       "en": "I'd like to report a lost camera. I had it this morning.",
+       "ko": "카메라 분실 신고를 하려고요. 오늘 아침까지는 갖고 있었어요.",
+       "audio": "audio/travel_lostfound_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I can take a report. Can you describe it and where you last had it?",
+       "ko": "신고 접수해 드릴게요. 생김새와 마지막으로 갖고 계셨던 장소를 말씀해 주시겠어요?",
+       "audio": "audio/travel_lostfound_6.mp3"
+      },
+      {
+       "speaker": "Tourist",
+       "en": "It's a black mirrorless camera with a brown strap. I had it at the museum.",
+       "ko": "갈색 스트랩이 달린 검정 미러리스 카메라예요. 박물관에서 갖고 있었습니다.",
+       "audio": "audio/travel_lostfound_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'll write that down. If someone turns it in, we'll call this number.",
+       "ko": "적어 두겠습니다. 누군가 가져다주면 이 번호로 연락드릴게요.",
+       "audio": "audio/travel_lostfound_8.mp3"
+      },
+      {
+       "speaker": "Tourist",
+       "en": "I was here for lunch and left my jacket. Has anyone found it?",
+       "ko": "점심 먹으러 왔다가 재킷을 두고 갔어요. 혹시 찾으신 분 있나요?",
+       "audio": "audio/travel_lostfound_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Let me check the back. What color is it?",
+       "ko": "안쪽을 확인해 볼게요. 무슨 색인가요?",
+       "audio": "audio/travel_lostfound_10.mp3"
+      },
+      {
+       "speaker": "Tourist",
+       "en": "Navy blue, with a hood. My phone might still be in the pocket.",
+       "ko": "남색이고 모자가 달려 있어요. 주머니에 휴대폰이 들어 있을 수도 있습니다.",
+       "audio": "audio/travel_lostfound_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I found a navy jacket, and there's a phone inside. Is this yours?",
+       "ko": "남색 재킷을 찾았는데 안에 휴대폰이 있네요. 이게 맞으신가요?",
+       "audio": "audio/travel_lostfound_12.mp3"
+      },
+      {
+       "speaker": "Tourist",
+       "en": "I checked out yesterday and left my charger in the room.",
+       "ko": "어제 체크아웃했는데 객실에 충전기를 두고 왔어요.",
+       "audio": "audio/travel_lostfound_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Housekeeping does keep found items. Let me look up your room number.",
+       "ko": "하우스키핑에서 습득물을 보관하고 있습니다. 객실 번호를 조회해 볼게요.",
+       "audio": "audio/travel_lostfound_14.mp3"
+      },
+      {
+       "speaker": "Tourist",
+       "en": "It was room four-o-eight. I've already flown home, unfortunately.",
+       "ko": "408호였어요. 아쉽게도 저는 이미 귀국했습니다.",
+       "audio": "audio/travel_lostfound_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "We can mail it to you. You'd just need to cover the shipping cost.",
+       "ko": "우편으로 보내드릴 수 있습니다. 배송비만 부담하시면 됩니다.",
+       "audio": "audio/travel_lostfound_16.mp3"
+      }
+     ]
     },
     {
      "key": "travel_sightseeing",
