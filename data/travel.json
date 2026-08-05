@@ -1164,6 +1164,110 @@
     }
    ],
    "icon": "🎢"
+  },
+  {
+   "key": "travel_outdoor",
+   "title": "야외 액티비티 (Outdoor Activities)",
+   "subtitle": "해변 대여, 하이킹 코스, 스키 장비, 안전",
+   "dialogues": [
+    {
+     "speaker": "Tourist",
+     "en": "How much is it to rent two sun loungers and a parasol?",
+     "ko": "선베드 두 개와 파라솔을 빌리면 얼마인가요?",
+     "audio": "audio/travel_outdoor_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Twenty dollars for the day, and that includes the umbrella.",
+     "ko": "하루에 20달러이고 파라솔 포함입니다.",
+     "audio": "audio/travel_outdoor_2.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Is it safe to swim here today?",
+     "ko": "오늘 여기서 수영해도 안전한가요?",
+     "audio": "audio/travel_outdoor_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The yellow flag is up, so swim between the flags and stay close in.",
+     "ko": "노란 깃발이 올라가 있으니 깃발 사이에서, 너무 멀리 나가지 마세요.",
+     "audio": "audio/travel_outdoor_4.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Which trail would you recommend for a half-day hike?",
+     "ko": "반나절 하이킹으로는 어느 코스를 추천하시나요?",
+     "audio": "audio/travel_outdoor_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The lake loop. It's eight kilometres and takes about three hours.",
+     "ko": "호수 순환로요. 8킬로미터에 세 시간쯤 걸립니다.",
+     "audio": "audio/travel_outdoor_6.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Do I need proper boots, or will trainers do?",
+     "ko": "등산화가 꼭 필요한가요, 운동화로도 되나요?",
+     "audio": "audio/travel_outdoor_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Trainers are fine in dry weather, but it gets slippery after rain.",
+     "ko": "날이 맑으면 운동화도 괜찮지만 비 온 뒤에는 미끄럽습니다.",
+     "audio": "audio/travel_outdoor_8.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I'd like to rent skis and boots for two days.",
+     "ko": "스키와 부츠를 이틀 빌리고 싶습니다.",
+     "audio": "audio/travel_outdoor_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "What's your height and shoe size? A helmet is included.",
+     "ko": "키와 신발 사이즈가 어떻게 되시나요? 헬멧은 포함입니다.",
+     "audio": "audio/travel_outdoor_10.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I'm a beginner. Should I get a lesson as well?",
+     "ko": "초보인데 강습도 받는 게 좋을까요?",
+     "audio": "audio/travel_outdoor_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "A two-hour group lesson is forty dollars and starts at ten.",
+     "ko": "2시간 그룹 강습이 40달러이고 10시에 시작합니다.",
+     "audio": "audio/travel_outdoor_12.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Where do I buy a lift pass, and how long is it valid?",
+     "ko": "리프트권은 어디서 사고 얼마나 유효한가요?",
+     "audio": "audio/travel_outdoor_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "At the window by the gondola. A day pass runs until four thirty.",
+     "ko": "곤돌라 옆 창구에서요. 1일권은 4시 30분까지입니다.",
+     "audio": "audio/travel_outdoor_14.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "What happens if the weather closes the slopes?",
+     "ko": "날씨 때문에 슬로프가 닫히면 어떻게 되나요?",
+     "audio": "audio/travel_outdoor_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We refund the unused days if the mountain shuts. Keep the receipt.",
+     "ko": "산이 폐쇄되면 사용하지 않은 날은 환불해 드립니다. 영수증을 보관하세요.",
+     "audio": "audio/travel_outdoor_16.mp3"
+    }
+   ],
+   "icon": "🏄"
   }
  ]
 }
