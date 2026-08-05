@@ -412,6 +412,92 @@ footer {
     margin-bottom: 8px;
 }
 
+/* ============ Offline audio download (category page) ============ */
+.offline-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    min-height: 40px;
+}
+
+.offline-btn, .offline-done {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 14px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: inherit;
+}
+
+.offline-btn {
+    background: #667eea;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.offline-btn:hover { background: #5568d3; }
+
+.offline-done {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+.offline-note {
+    font-weight: 500;
+    opacity: 0.8;
+    font-size: 0.82rem;
+}
+
+.offline-del {
+    padding: 9px 12px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    background: transparent;
+    color: #888888;
+    font-size: 0.82rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.offline-del:hover { color: #d32f2f; border-color: #f0c0c0; }
+
+.offline-progress { flex: 1; }
+
+.offline-progress-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #4455aa;
+    margin-bottom: 6px;
+}
+
+.offline-track {
+    height: 8px;
+    background: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.offline-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 6px;
+    transition: width 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .offline-done { background: #1b3a1f; color: #81c995; border-color: #2e5a33; }
+    .offline-del { border-color: #444444; color: #999999; }
+    .offline-progress-text { color: #8ab4f8; }
+    .offline-track { background: #3a3a3a; }
+}
+
 .scenario-item.done {
     background: #e8f5e9;
     box-shadow: 0 3px 12px rgba(76,175,80,0.15);

@@ -1,16 +1,20 @@
-// English Talk service worker - offline support for the app shell and dialogue
-// data. Audio is deliberately left alone: it is 30MB across 1,108 files, so it
-// belongs behind a per-category download the user asks for, not an install-time
-// precache. Until that exists, mp3 requests go straight to the network.
+// English Talk service worker - offline support for the app shell, the dialogue
+// data, and any audio the user has chosen to save.
 //
-// Strategy is stale-while-revalidate for everything cached: a page opens from
-// the cache instantly and offline, while a fresh copy is fetched in the
-// background for next time. Combined with skipWaiting/clients.claim, a deploy
-// lands on the visit after it is published.
+// Strategy is stale-while-revalidate for the shell: a page opens from the cache
+// instantly and offline, while a fresh copy is fetched in the background for
+// next time. Combined with skipWaiting/clients.claim, a deploy lands on the
+// visit after it is published.
 //
-// Bump CACHE when the precache list changes; the activate handler drops
-// everything that does not match.
-var CACHE = 'english-talk-v2';
+// Audio is never precached - 1,108 files at 30MB. js/offline.js fills
+// AUDIO_CACHE one category at a time when the user asks; anything not saved
+// falls through to the network.
+//
+// Bump CACHE when the precache list changes; the activate handler drops every
+// cache except the current one and AUDIO_CACHE, which must survive so a version
+// bump does not throw away the user's downloads.
+var CACHE = 'english-talk-v3';
+var AUDIO_CACHE = 'english-talk-audio-v1';
 
 // The shell plus every data file. 337KB in total, so precaching all of it costs
 // less than one dialogue's audio.
@@ -28,6 +32,7 @@ var PRECACHE = [
     'js/category.js',
     'js/scenario.js',
     'js/pwa.js',
+    'js/offline.js',
     'manifest.json',
     'icons/icon-192.png',
     'icons/icon-512.png',
@@ -59,7 +64,8 @@ self.addEventListener('activate', function(e) {
     e.waitUntil(
         caches.keys().then(function(keys) {
             return Promise.all(keys.map(function(k) {
-                return k === CACHE ? null : caches.delete(k);
+                if (k === CACHE || k === AUDIO_CACHE) return null;
+                return caches.delete(k);
             }));
         }).then(function() { return self.clients.claim(); })
     );
@@ -69,6 +75,63 @@ function isAudio(url) {
     return url.pathname.indexOf('/audio/') !== -1 || /\.mp3$/.test(url.pathname);
 }
 
+// Media elements ask for byte ranges when you drag the scrubber. The Cache API
+// only ever stores whole 200 responses, and handing one back for a Range
+// request leaves the browser unable to seek - the same failure you get from a
+// server with no Accept-Ranges. So slice the cached body and build the 206
+// ourselves. Files here are 10-50KB, so this is cheap.
+function rangeResponse(cached, rangeHeader) {
+    return cached.arrayBuffer().then(function(buf) {
+        var total = buf.byteLength;
+        var m = /^bytes=(\d*)-(\d*)$/.exec(rangeHeader.trim());
+        if (!m) {
+            return new Response(null, {status: 416, headers: {
+                'Content-Range': 'bytes */' + total
+            }});
+        }
+
+        var start, end;
+        if (m[1] === '') {                       // "bytes=-500" -> last 500 bytes
+            var suffix = parseInt(m[2], 10);
+            if (!suffix) return new Response(null, {status: 416});
+            start = Math.max(0, total - suffix);
+            end = total - 1;
+        } else {
+            start = parseInt(m[1], 10);
+            end = m[2] === '' ? total - 1 : parseInt(m[2], 10);
+        }
+        if (isNaN(start) || start >= total || start > end) {
+            return new Response(null, {status: 416, headers: {
+                'Content-Range': 'bytes */' + total
+            }});
+        }
+        if (end >= total) end = total - 1;
+
+        return new Response(buf.slice(start, end + 1), {
+            status: 206,
+            statusText: 'Partial Content',
+            headers: {
+                'Content-Type': cached.headers.get('Content-Type') || 'audio/mpeg',
+                'Content-Length': String(end - start + 1),
+                'Content-Range': 'bytes ' + start + '-' + end + '/' + total,
+                'Accept-Ranges': 'bytes'
+            }
+        });
+    });
+}
+
+// Saved audio comes from the cache; anything else goes to the network untouched
+function handleAudio(req, url) {
+    return caches.open(AUDIO_CACHE).then(function(cache) {
+        // match on the URL alone - the request may carry a Range header
+        return cache.match(url.href).then(function(cached) {
+            if (!cached) return fetch(req);
+            var range = req.headers.get('range');
+            return range ? rangeResponse(cached, range) : cached;
+        });
+    });
+}
+
 self.addEventListener('fetch', function(e) {
     var req = e.request;
     if (req.method !== 'GET') return;
@@ -76,9 +139,10 @@ self.addEventListener('fetch', function(e) {
     var url = new URL(req.url);
     if (url.origin !== self.location.origin) return;
 
-    // Audio needs Range requests to be seekable; a cache lookup would answer a
-    // Range request with a 200 for the whole file and break seeking.
-    if (isAudio(url)) return;
+    if (isAudio(url)) {
+        e.respondWith(handleAudio(req, url));
+        return;
+    }
 
     // Page loads carry ?cat=&name=, but scenario.html is the same file for all
     // 117 scenarios - the content comes from the JSON. Key pages on the path

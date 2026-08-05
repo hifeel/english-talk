@@ -19,6 +19,8 @@ function etBuildCategoryPage() {
             '<div class="progress-text">공부 완료 ' + prog.done + ' / ' + prog.total + ' 시나리오 (' + prog.percent + '%)</div>' +
             '<div class="progress-track"><div class="progress-fill" style="width:' + prog.percent + '%"></div></div>';
 
+        if (typeof etRenderOffline === 'function') etRenderOffline(cat);
+
         var html = '';
         for (var i = 0; i < cat.scenarios.length; i++) {
             var s = cat.scenarios[i];
