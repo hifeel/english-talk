@@ -223,8 +223,8 @@
   },
   {
    "key": "restaurant_special",
-   "title": "불만 & 특별한 날 (Complaints & Special Occasions)",
-   "subtitle": "불만 제기, 생일, 기념일 등 특별한 상황 회화",
+   "title": "식은 음식 (Cold Food)",
+   "subtitle": "음식이 식어서 나왔을 때",
    "dialogues": [
     {
      "speaker": "Staff",
@@ -249,7 +249,15 @@
      "en": "Thank you. I was looking forward to this all week.",
      "ko": "감사합니다. 일주일 내내 이 식사를 기다렸거든요.",
      "audio": "audio/restaurant_special_4.mp3"
-    },
+    }
+   ],
+   "icon": "🥶"
+  },
+  {
+   "key": "restaurant_special_birthday",
+   "title": "생일 축하 받기 (Birthday at the Table)",
+   "subtitle": "생일 손님 응대, 축하 디저트",
+   "dialogues": [
     {
      "speaker": "Staff",
      "en": "Happy birthday! I see we have a birthday guest at the table tonight.",
@@ -273,7 +281,15 @@
      "en": "That would be amazing. Thank you so much!",
      "ko": "정말 좋겠어요. 너무 감사합니다!",
      "audio": "audio/restaurant_special_8.mp3"
-    },
+    }
+   ],
+   "icon": "🎉"
+  },
+  {
+   "key": "restaurant_special_anniversary",
+   "title": "기념일 축하 받기 (Anniversary at the Table)",
+   "subtitle": "기념일 인사, 코스 추천",
+   "dialogues": [
     {
      "speaker": "Staff",
      "en": "I see you're celebrating an anniversary tonight. How many years?",
@@ -297,7 +313,15 @@
      "en": "That sounds perfect. Let's go with that for both of us.",
      "ko": "완벽하네요. 우리 둘 다 그걸로 할게요.",
      "audio": "audio/restaurant_special_12.mp3"
-    },
+    }
+   ],
+   "icon": "🥂"
+  },
+  {
+   "key": "restaurant_special_wrongdish",
+   "title": "주문 착오 (Wrong Dish)",
+   "subtitle": "다른 요리가 나왔을 때",
+   "dialogues": [
     {
      "speaker": "Staff",
      "en": "Is everything alright with your order?",
@@ -323,7 +347,7 @@
      "audio": "audio/restaurant_special_16.mp3"
     }
    ],
-   "icon": "🎂"
+   "icon": "🔄"
   },
   {
    "key": "restaurant_reservation",
