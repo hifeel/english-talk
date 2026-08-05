@@ -956,6 +956,110 @@
     }
    ],
    "icon": "📸"
+  },
+  {
+   "key": "travel_museum",
+   "title": "박물관 & 공연 (Museums & Shows)",
+   "subtitle": "오디오가이드, 관람 규칙, 공연 예매, 좌석",
+   "dialogues": [
+    {
+     "speaker": "Tourist",
+     "en": "One adult ticket, please. Is the audio guide included?",
+     "ko": "성인 한 장 주세요. 오디오가이드가 포함인가요?",
+     "audio": "audio/travel_museum_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The ticket is eighteen dollars; the audio guide is five more.",
+     "ko": "입장권은 18달러이고, 오디오가이드는 5달러 추가입니다.",
+     "audio": "audio/travel_museum_2.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I'll take it. Is it available in Korean?",
+     "ko": "그걸로 할게요. 한국어도 있나요?",
+     "audio": "audio/travel_museum_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, Korean, Japanese and Chinese. Leave an ID as a deposit.",
+     "ko": "네, 한국어와 일본어, 중국어가 있습니다. 신분증을 보증으로 맡겨주세요.",
+     "audio": "audio/travel_museum_4.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Can I take my backpack into the galleries?",
+     "ko": "배낭을 메고 전시실에 들어가도 되나요?",
+     "audio": "audio/travel_museum_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Bags that size go in the cloakroom. It's free, just past the entrance.",
+     "ko": "그 정도 크기는 보관소에 맡기셔야 합니다. 입구 지나서 있고 무료예요.",
+     "audio": "audio/travel_museum_6.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Am I allowed to take photos inside?",
+     "ko": "안에서 사진을 찍어도 되나요?",
+     "audio": "audio/travel_museum_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, without flash. The special exhibition on floor three is no photos.",
+     "ko": "네, 플래시만 끄시면 됩니다. 3층 특별전은 촬영 금지입니다.",
+     "audio": "audio/travel_museum_8.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Do you have tickets for tonight's performance?",
+     "ko": "오늘 밤 공연 표가 있나요?",
+     "audio": "audio/travel_museum_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Only the balcony is left. Orchestra and mezzanine are sold out.",
+     "ko": "발코니석만 남았습니다. 1층과 2층은 매진이에요.",
+     "audio": "audio/travel_museum_10.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "How's the view from the balcony?",
+     "ko": "발코니석에서는 잘 보이나요?",
+     "audio": "audio/travel_museum_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "A little far, but the sound is excellent. Sixty dollars a seat.",
+     "ko": "조금 멀지만 음향은 훌륭합니다. 한 자리에 60달러입니다.",
+     "audio": "audio/travel_museum_12.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "What time should we be in our seats?",
+     "ko": "몇 시까지 자리에 앉아 있어야 하나요?",
+     "audio": "audio/travel_museum_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Doors open at seven, and latecomers wait until the first break.",
+     "ko": "7시에 입장 시작이고, 늦으시면 첫 휴식 시간까지 기다리셔야 합니다.",
+     "audio": "audio/travel_museum_14.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "How long is the show, and is there an intermission?",
+     "ko": "공연은 얼마나 하나요? 중간 휴식이 있나요?",
+     "audio": "audio/travel_museum_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Two hours, with one twenty-minute intermission after the first act.",
+     "ko": "두 시간이고, 1막이 끝나면 20분 휴식이 있습니다.",
+     "audio": "audio/travel_museum_16.mp3"
+    }
+   ],
+   "icon": "🎭"
   }
  ]
 }
