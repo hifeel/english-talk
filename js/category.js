@@ -10,19 +10,8 @@ function etBuildCategoryPage() {
             return;
         }
 
-        document.getElementById('pageTitle').textContent = cat.title;
-        // subtitle from first scenario category description is not stored globally;
-        // derive from index subtitle map if present
-        var subMap = {
-            hotel: '호텔에서 필요한 영어 회화',
-            shopping: '쇼핑할 때 필요한 영어 회화',
-            airport: '공항에서 필요한 영어 회화',
-            restaurant: '레스토랑에서 필요한 영어 회화',
-            transport: '교통 이용 시 필요한 영어 회화',
-            hospital: '병원에서 필요한 영어 회화',
-            travel: '여행할 때 필요한 영어 회화'
-        };
-        document.getElementById('pageSubtitle').textContent = subMap[catKey] || '';
+        document.getElementById('pageTitle').textContent = cat.icon + ' ' + cat.title;
+        document.getElementById('pageSubtitle').textContent = cat.subtitle || '';
 
         // Progress bar
         var prog = etCategoryProgress(catKey);

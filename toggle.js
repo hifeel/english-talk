@@ -160,7 +160,10 @@ function addClickToPlay(dialogue) {
     dialogue.style.cursor = 'pointer';
     
     dialogue.addEventListener('click', function(e) {
-        if (e.target.closest('button') || e.target.closest('input') || e.target.closest('.google-search-btn')) {
+        // Let the native audio controls handle their own clicks; without this the
+        // click bubbles up here too and seeking/pausing fights with our handler
+        if (e.target.closest('button') || e.target.closest('input') ||
+            e.target.closest('.google-search-btn') || e.target.closest('audio')) {
             return;
         }
         

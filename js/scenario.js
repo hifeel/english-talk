@@ -18,11 +18,10 @@ function etBuildScenarioPage() {
 
         // Back nav: 메인 > 카테고리 (e.g. 쇼핑)
         var backNav = document.getElementById('backNav');
-        var catShort = etEsc(cat.title.replace(/^[^\s]+\s/, ''));
         backNav.innerHTML =
             '<a href="index.html" class="back-link">🏠 메인</a>' +
             '<span class="nav-sep">></span>' +
-            '<a href="category.html?cat=' + cat.key + '" class="back-link">' + catShort + '</a>';
+            '<a href="category.html?cat=' + cat.key + '" class="back-link">' + etEsc(cat.title) + '</a>';
         // Title
         document.getElementById('pageTitle').textContent = scenario.icon + ' ' + scenario.title;
         document.getElementById('pageSubtitle').textContent = scenario.subtitle;
