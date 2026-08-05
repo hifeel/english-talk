@@ -3,8 +3,8 @@
  "scenarios": [
   {
    "key": "travel_booking",
-   "title": "호텔 예약 (Hotel Booking)",
-   "subtitle": "호텔 예약을 위한 영어 회화",
+   "title": "신규 예약 (New Reservation)",
+   "subtitle": "객실 종류 선택, 요금, 취소 규정",
    "dialogues": [
     {
      "speaker": "Guest",
@@ -41,7 +41,15 @@
      "en": "You can modify or cancel up to twenty-four hours before check-in with no charge.",
      "ko": "체크인 24시간 전까지는 무료로 변경이나 취소가 가능합니다.",
      "audio": "audio/travel_booking_1_6.mp3"
-    },
+    }
+   ],
+   "icon": "🛎️"
+  },
+  {
+   "key": "travel_booking_availability",
+   "title": "빈방 문의 (Checking Availability)",
+   "subtitle": "당일 예약, 조식 포함, 주차",
+   "dialogues": [
     {
      "speaker": "Guest",
      "en": "Do you have any rooms available for this weekend?",
@@ -77,7 +85,15 @@
      "en": "We have underground parking for twenty dollars per day. I'll reserve a spot for you.",
      "ko": "지하 주차장이 있으며 1일당 20달러입니다. 자리 하나 예약해두겠습니다.",
      "audio": "audio/travel_booking_2_6.mp3"
-    },
+    }
+   ],
+   "icon": "🔍"
+  },
+  {
+   "key": "travel_booking_change",
+   "title": "예약 변경 (Changing a Booking)",
+   "subtitle": "날짜 변경, 예약 번호, 요금 확인",
+   "dialogues": [
     {
      "speaker": "Guest",
      "en": "Hi, I made a reservation last week, but I need to change the dates.",
@@ -113,7 +129,15 @@
      "en": "Yes, the rate remains at one hundred eighty dollars per night. You'll receive a confirmation email shortly.",
      "ko": "네, 1박당 180달러로 유지됩니다. 곧 확인 이메일을 받으실 겁니다.",
      "audio": "audio/travel_booking_3_6.mp3"
-    },
+    }
+   ],
+   "icon": "📅"
+  },
+  {
+   "key": "travel_booking_cancel",
+   "title": "예약 취소 (Cancelling a Booking)",
+   "subtitle": "취소 수수료, 환불, 재예약",
+   "dialogues": [
     {
      "speaker": "Guest",
      "en": "I need to cancel my reservation. Something came up.",
@@ -149,7 +173,15 @@
      "en": "Of course! Feel free to book again anytime. We'll be happy to have you.",
      "ko": "물론이죠! 언제든 다시 예약해주세요. 기꺼이 모시겠습니다.",
      "audio": "audio/travel_booking_4_6.mp3"
-    },
+    }
+   ],
+   "icon": "❌"
+  },
+  {
+   "key": "travel_booking_rates",
+   "title": "요금 문의 (Rates & Promotions)",
+   "subtitle": "객실 요금, 할인, 취소 정책",
+   "dialogues": [
     {
      "speaker": "Guest",
      "en": "Could you tell me about your room rates and any current promotions?",
@@ -187,12 +219,12 @@
      "audio": "audio/travel_booking_5_6.mp3"
     }
    ],
-   "icon": "🏨"
+   "icon": "💰"
   },
   {
    "key": "travel_tips",
-   "title": "여행 팁 (Travel Tips)",
-   "subtitle": "여행에 유용한 표현과 팁",
+   "title": "환전 (Exchanging Money)",
+   "subtitle": "환전소 위치, 환율 비교, 현금",
    "dialogues": [
     {
      "speaker": "You",
@@ -229,7 +261,15 @@
      "en": "I'd suggest around thirty to fifty dollars in cash. Most places accept credit cards now.",
      "ko": "현금으로 30~50달러 정도 가지고 다니는 게 좋습니다. 요즘 대부분의 가게에서 신용카드를 받습니다.",
      "audio": "audio/travel_tips_1_6.mp3"
-    },
+    }
+   ],
+   "icon": "💱"
+  },
+  {
+   "key": "travel_tips_sim",
+   "title": "유심 구입 (Getting a SIM)",
+   "subtitle": "구입처, 데이터 요금제, 여권 등록",
+   "dialogues": [
     {
      "speaker": "Tourist",
      "en": "I just arrived and need to get a local SIM card. Where can I find one?",
@@ -265,7 +305,15 @@
      "en": "Yes, you'll need your passport for registration. It's required by law.",
      "ko": "네, 등록을 위해 여권이 필요합니다. 법률상 요구됩니다.",
      "audio": "audio/travel_tips_2_6.mp3"
-    },
+    }
+   ],
+   "icon": "📱"
+  },
+  {
+   "key": "travel_tips_tipping",
+   "title": "팁 문화 (Tipping Customs)",
+   "subtitle": "식당, 택시, 호텔 팁 기준",
+   "dialogues": [
     {
      "speaker": "Tourist",
      "en": "How does tipping work in this country?",
@@ -301,7 +349,15 @@
      "en": "It's not expected at counter service. But if there's a tip jar, feel free to drop in some change.",
      "ko": "카운터 서비스에서는 기대하지 않습니다. 하지만 팁 저금통이 있으면 동전을 넣어도 됩니다.",
      "audio": "audio/travel_tips_3_6.mp3"
-    },
+    }
+   ],
+   "icon": "💵"
+  },
+  {
+   "key": "travel_tips_etiquette",
+   "title": "현지 예절 (Local Etiquette)",
+   "subtitle": "기본 인사말, 금기, 흥정",
+   "dialogues": [
     {
      "speaker": "Tourist",
      "en": "I want to avoid looking like a tourist. What should I know about local customs?",
@@ -339,12 +395,12 @@
      "audio": "audio/travel_tips_4_6.mp3"
     }
    ],
-   "icon": "💡"
+   "icon": "🙏"
   },
   {
    "key": "travel_emergency",
-   "title": "비상 상황 (Emergency Abroad)",
-   "subtitle": "해외 비상 상황 대처 영어 회화",
+   "title": "여권 분실 (Lost Passport)",
+   "subtitle": "경찰 신고, 대사관 연락, 필요 서류",
    "dialogues": [
     {
      "speaker": "Tourist",
@@ -381,7 +437,15 @@
      "en": "Bring any ID you have left, your hotel information, and travel itinerary. They'll need those for the report.",
      "ko": "남은 신분증, 호텔 정보, 여행 일정을 가져가세요. 보고서에 필요합니다.",
      "audio": "audio/travel_emergency_1_6.mp3"
-    },
+    }
+   ],
+   "icon": "🛂"
+  },
+  {
+   "key": "travel_emergency_medical",
+   "title": "응급 의료 (Medical Emergency)",
+   "subtitle": "응급 신고, 증상 설명, 보험 연락",
+   "dialogues": [
     {
      "speaker": "Tourist",
      "en": "I need medical help. My friend is having chest pains and difficulty breathing.",
@@ -417,7 +481,15 @@
      "en": "Yes, call your insurance company as well. They can help coordinate with the hospital.",
      "ko": "네, 보험 회사에도 전화하세요. 병원과의 협조를 도와줄 수 있습니다.",
      "audio": "audio/travel_emergency_2_6.mp3"
-    },
+    }
+   ],
+   "icon": "🚑"
+  },
+  {
+   "key": "travel_emergency_baggage",
+   "title": "수하물 분실 (Delayed Baggage)",
+   "subtitle": "수하물 태그, 도착 시간, 긴급 용품",
+   "dialogues": [
     {
      "speaker": "Passenger",
      "en": "Excuse me, my luggage didn't come out on the baggage carousel. I've been waiting for thirty minutes.",
@@ -453,7 +525,15 @@
      "en": "We can provide an emergency kit with toiletries and a change of clothes. You can also claim up to fifty dollars for immediate necessities.",
      "ko": "세면도구와 갈아입을 옷이 포함된 비상 키트를 제공해드릴 수 있습니다. 즉시 필요한 물품에 대해 최대 50달러를 청구하실 수도 있습니다.",
      "audio": "audio/travel_emergency_3_6.mp3"
-    },
+    }
+   ],
+   "icon": "🧳"
+  },
+  {
+   "key": "travel_emergency_theft",
+   "title": "소매치기 (Stolen Wallet)",
+   "subtitle": "도난 신고, 카드 정지, 긴급 현금",
+   "dialogues": [
     {
      "speaker": "Tourist",
      "en": "Someone just stole my wallet on the subway. I need help.",
@@ -599,8 +679,8 @@
   },
   {
    "key": "travel_sightseeing",
-   "title": "관광지 (Tourist Spots)",
-   "subtitle": "관광지 방문을 위한 영어 회화",
+   "title": "유적 안내 (Guided Tour)",
+   "subtitle": "역사 설명, 소요 시간, 입장료",
    "dialogues": [
     {
      "speaker": "Visitor",
@@ -637,7 +717,15 @@
      "en": "The main hall is free, but the tower climb and museum require tickets. I recommend booking online to avoid the queue.",
      "ko": "본당은 무료지만 타워 등반과 박물관은 티켓이 필요합니다. 줄을 서지 않으려면 온라인 예약을 추천합니다.",
      "audio": "audio/travel_sightseeing_1_6.mp3"
-    },
+    }
+   ],
+   "icon": "🏛️"
+  },
+  {
+   "key": "travel_sightseeing_directions",
+   "title": "시내 가는 길 (Getting Downtown)",
+   "subtitle": "버스 노선, 배차 간격, 빠른 방법",
+   "dialogues": [
     {
      "speaker": "Tourist",
      "en": "Excuse me, I'm trying to get to the city center. Can you help?",
@@ -673,7 +761,15 @@
      "en": "Take a taxi. It'll be about ten minutes. Or the metro if you prefer. The station entrance is just around that corner.",
      "ko": "택시를 타세요. 약 10분 걸립니다. 지하철이 더 좋으시면 지하철역 입구가 저 모퉁이에 있습니다.",
      "audio": "audio/travel_sightseeing_2_6.mp3"
-    },
+    }
+   ],
+   "icon": "🚌"
+  },
+  {
+   "key": "travel_sightseeing_tickets",
+   "title": "전망대 티켓 (Buying Tickets)",
+   "subtitle": "입장료, 콤보 티켓, 촬영 규정",
+   "dialogues": [
     {
      "speaker": "Tourist",
      "en": "Hi, two tickets for the observation deck, please.",
@@ -709,7 +805,15 @@
      "en": "Absolutely! Tripods aren't allowed, but handheld photos and selfies are fine. Enjoy the view!",
      "ko": "물론이죠! 삼각대는 안 되지만 휴대폰 사진과 셀카는 괜찮습니다. 전망을 즐기세요!",
      "audio": "audio/travel_sightseeing_3_6.mp3"
-    },
+    }
+   ],
+   "icon": "🎟️"
+  },
+  {
+   "key": "travel_sightseeing_photo",
+   "title": "사진 부탁하기 (Asking for a Photo)",
+   "subtitle": "촬영 부탁, 배경 요청, 맛집 묻기",
+   "dialogues": [
     {
      "speaker": "Tourist",
      "en": "Would you mind taking a photo of us? We're visiting from Korea.",
@@ -747,7 +851,7 @@
      "audio": "audio/travel_sightseeing_4_6.mp3"
     }
    ],
-   "icon": "🗺️"
+   "icon": "📸"
   }
  ]
 }

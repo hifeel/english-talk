@@ -467,8 +467,8 @@
   },
   {
    "key": "restaurant_wine",
-   "title": "와인 (Wine)",
-   "subtitle": "와인 선택, 페어링, 코르키지 비용",
+   "title": "와인 추천 (Wine Recommendation)",
+   "subtitle": "스테이크에 맞는 레드 와인",
    "dialogues": [
     {
      "speaker": "Staff",
@@ -499,7 +499,15 @@
      "en": "Excellent choice. Would you like me to pour a taste first?",
      "ko": "훌륭한 선택이에요. 먼저 시음해 보시겠어요?",
      "audio": "audio/restaurant_wine_5.mp3"
-    },
+    }
+   ],
+   "icon": "🍷"
+  },
+  {
+   "key": "restaurant_wine_pairing",
+   "title": "코스 페어링 (Wine Pairing)",
+   "subtitle": "테이스팅 메뉴, 코스별 와인, 가격",
+   "dialogues": [
     {
      "speaker": "Staff",
      "en": "I see you've ordered the tasting menu. Can I suggest some wine pairings?",
@@ -529,7 +537,15 @@
      "en": "The full wine pairing is forty-five dollars per person.",
      "ko": "풀 와인 페어링은 1인당 45달러입니다.",
      "audio": "audio/restaurant_wine_10.mp3"
-    },
+    }
+   ],
+   "icon": "🍽️"
+  },
+  {
+   "key": "restaurant_wine_corkage",
+   "title": "콜키지 (Bringing Your Own)",
+   "subtitle": "와인 반입, 콜키지 비용, 개봉 요청",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "Excuse me, we brought our own bottle of wine. Is that okay?",
@@ -559,7 +575,15 @@
      "en": "Thank you. Should we let it breathe before pouring?",
      "ko": "감사합니다. 따르기 전에 숨을 쉬게 해줘야 하나요?",
      "audio": "audio/restaurant_wine_15.mp3"
-    },
+    }
+   ],
+   "icon": "🍾"
+  },
+  {
+   "key": "restaurant_wine_list",
+   "title": "와인 리스트 (Wine List)",
+   "subtitle": "취향 설명, 잔술 주문, 추천 받기",
+   "dialogues": [
     {
      "speaker": "Staff",
      "en": "Are you ready to order drinks, or would you like to see our wine list?",
@@ -591,12 +615,12 @@
      "audio": "audio/restaurant_wine_20.mp3"
     }
    ],
-   "icon": "🍷"
+   "icon": "📜"
   },
   {
    "key": "restaurant_kids",
    "title": "어린이 메뉴 (Kids Menu)",
-   "subtitle": "키즈 메뉴, 하이체어, 알레르기",
+   "subtitle": "소량 메뉴, 구성, 음료 선택",
    "dialogues": [
     {
      "speaker": "Staff",
@@ -627,7 +651,15 @@
      "en": "It comes with apple slices and a small drink. She can choose milk, juice, or water.",
      "ko": "사과 조각과 작은 음료가 함께 나옵니다. 우유, 주스, 물 중에서 선택할 수 있어요.",
      "audio": "audio/restaurant_kids_5.mp3"
-    },
+    }
+   ],
+   "icon": "🧒"
+  },
+  {
+   "key": "restaurant_kids_highchair",
+   "title": "유아 의자 (High Chair)",
+   "subtitle": "하이체어, 부스터 시트, 위생",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "Hi, we have a baby with us. Do you have a high chair available?",
@@ -657,7 +689,15 @@
      "en": "Perfect. We also need a booster seat for our older child.",
      "ko": "좋네요. 큰 아이를 위한 부스터 시트도 필요합니다.",
      "audio": "audio/restaurant_kids_10.mp3"
-    },
+    }
+   ],
+   "icon": "🪑"
+  },
+  {
+   "key": "restaurant_kids_allergy",
+   "title": "어린이 알레르기 (Kids Allergies)",
+   "subtitle": "유제품·계란 알레르기, 대체 메뉴",
+   "dialogues": [
     {
      "speaker": "Staff",
      "en": "Does your child have any food allergies we should know about?",
@@ -687,7 +727,15 @@
      "en": "You're welcome to do that, but our chef is very experienced with allergen-free meals.",
      "ko": "그렇게 하셔도 되지만, 저희 셰프는 알레르겐 프리 요리에 매우 경험이 많으시답니다.",
      "audio": "audio/restaurant_kids_15.mp3"
-    },
+    }
+   ],
+   "icon": "⚠️"
+  },
+  {
+   "key": "restaurant_kids_during",
+   "title": "식사 중 요청 (During the Meal)",
+   "subtitle": "개인 접시, 색칠 도구",
+   "dialogues": [
     {
      "speaker": "Staff",
      "en": "Your little one seems to be enjoying the food! Can I get her anything else?",
@@ -719,12 +767,12 @@
      "audio": "audio/restaurant_kids_20.mp3"
     }
    ],
-   "icon": "👶"
+   "icon": "🖍️"
   },
   {
    "key": "restaurant_occasion",
-   "title": "특별한 날 (Special Occasion)",
-   "subtitle": "기념일 디너, 프러포즈, 단체 예약",
+   "title": "기념일 (Anniversary)",
+   "subtitle": "예약 확인, 기념일 패키지",
    "dialogues": [
     {
      "speaker": "Customer",
@@ -755,7 +803,15 @@
      "en": "Yes, that's exactly what we want. We're celebrating fifteen years together!",
      "ko": "네, 그게 딱 좋습니다. 15주년을 축하하고 있어요!",
      "audio": "audio/restaurant_occasion_5.mp3"
-    },
+    }
+   ],
+   "icon": "💐"
+  },
+  {
+   "key": "restaurant_occasion_proposal",
+   "title": "프러포즈 (Proposal)",
+   "subtitle": "반지 전달, 디저트 연출, 분위기",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "I need to speak with you privately. I'm planning to propose to my girlfriend during dinner tonight.",
@@ -785,7 +841,15 @@
      "en": "That's perfect. She's going to be so surprised!",
      "ko": "완벽합니다. 깜짝 놀랄 거예요!",
      "audio": "audio/restaurant_occasion_10.mp3"
-    },
+    }
+   ],
+   "icon": "💍"
+  },
+  {
+   "key": "restaurant_occasion_group",
+   "title": "단체 예약 (Corporate Dinner)",
+   "subtitle": "인원, 프라이빗 룸, 단체 메뉴",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "Hello, I'd like to make a reservation for twelve people for a corporate dinner.",
@@ -815,7 +879,15 @@
      "en": "That works for us. Could we see a group menu in advance?",
      "ko": "저희에게는 괜찮습니다. 단체 메뉴를 미리 볼 수 있을까요?",
      "audio": "audio/restaurant_occasion_15.mp3"
-    },
+    }
+   ],
+   "icon": "👔"
+  },
+  {
+   "key": "restaurant_occasion_birthday",
+   "title": "생일 (Birthday Party)",
+   "subtitle": "케이크, 장식, 사진 촬영",
+   "dialogues": [
     {
      "speaker": "Staff",
      "en": "I understand you're celebrating a birthday tonight! How many guests will be joining the birthday person?",
@@ -847,12 +919,12 @@
      "audio": "audio/restaurant_occasion_20.mp3"
     }
    ],
-   "icon": "🥂"
+   "icon": "🎂"
   },
   {
    "key": "restaurant_delivery",
-   "title": "배달 (Delivery)",
-   "subtitle": "배달 주문, 배달 시간, 최소 주문",
+   "title": "배달 주문 (Placing an Order)",
+   "subtitle": "메뉴 주문, 금액 확인",
    "dialogues": [
     {
      "speaker": "Staff",
@@ -883,7 +955,15 @@
      "en": "Great choices! That comes to thirty-two dollars and fifty cents. Can I get your delivery address?",
      "ko": "훌륭한 선택이에요! 32달러 50센트입니다. 배달 주소를 알려주시겠어요?",
      "audio": "audio/restaurant_delivery_5.mp3"
-    },
+    }
+   ],
+   "icon": "📞"
+  },
+  {
+   "key": "restaurant_delivery_time",
+   "title": "배달 시간 (Delivery Time)",
+   "subtitle": "소요 시간, 급행 요금",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "How long will the delivery take? I'm really hungry.",
@@ -913,7 +993,15 @@
      "en": "I'll take the express option. That's worth it.",
      "ko": "빠른 배송으로 할게요. 그만한 가치가 있네요.",
      "audio": "audio/restaurant_delivery_10.mp3"
-    },
+    }
+   ],
+   "icon": "⏱️"
+  },
+  {
+   "key": "restaurant_delivery_minimum",
+   "title": "최소 주문 금액 (Minimum Order)",
+   "subtitle": "최소 금액, 메뉴 추가",
+   "dialogues": [
     {
      "speaker": "Staff",
      "en": "I'm sorry, but our minimum order for delivery is twenty-five dollars. Your order is currently at eighteen dollars.",
@@ -943,7 +1031,15 @@
      "en": "That brings your total to thirty-one dollars. Perfect, that's above our minimum!",
      "ko": "총 31달러입니다. 완벽합니다, 최소 금액 이상이네요!",
      "audio": "audio/restaurant_delivery_15.mp3"
-    },
+    }
+   ],
+   "icon": "🧾"
+  },
+  {
+   "key": "restaurant_delivery_late",
+   "title": "배달 지연 (Order Not Arrived)",
+   "subtitle": "주문 조회, 미배달 신고",
+   "dialogues": [
     {
      "speaker": "Customer",
      "en": "Hi, I placed an order an hour ago and it still hasn't arrived. Can you check on it?",
@@ -975,7 +1071,7 @@
      "audio": "audio/restaurant_delivery_20.mp3"
     }
    ],
-   "icon": "🛵"
+   "icon": "😟"
   },
   {
    "key": "restaurant_cafe",
