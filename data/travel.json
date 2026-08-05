@@ -1478,6 +1478,110 @@
    "icon": "🛕"
   },
   {
+   "key": "travel_access",
+   "title": "접근성 & 유아차 (Accessibility)",
+   "subtitle": "휠체어, 유아차, 엘리베이터, 좌석 요청",
+   "dialogues": [
+    {
+     "speaker": "Tourist",
+     "en": "Is the entrance wheelchair accessible?",
+     "ko": "입구가 휠체어로 들어갈 수 있나요?",
+     "audio": "audio/travel_access_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The main door has steps, but there's a ramp around the side.",
+     "ko": "정문에는 계단이 있지만 옆쪽에 경사로가 있습니다.",
+     "audio": "audio/travel_access_2.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Is there a lift to the upper floors?",
+     "ko": "위층으로 가는 엘리베이터가 있나요?",
+     "audio": "audio/travel_access_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, past the gift shop. Ask staff if it needs a key.",
+     "ko": "네, 기념품점 지나서요. 열쇠가 필요하면 직원에게 말씀하세요.",
+     "audio": "audio/travel_access_4.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Can I take a stroller on the subway here?",
+     "ko": "여기 지하철에 유아차를 가지고 탈 수 있나요?",
+     "audio": "audio/travel_access_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, but only some stations have lifts. Check the map for the symbol.",
+     "ko": "네, 다만 엘리베이터가 있는 역만 가능합니다. 노선도에서 표시를 확인하세요.",
+     "audio": "audio/travel_access_6.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Which car should I get on with it?",
+     "ko": "유아차를 가지고 몇 번째 칸을 타야 하나요?",
+     "audio": "audio/travel_access_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The first or last one. They have the open space and wider doors.",
+     "ko": "맨 앞이나 맨 뒤요. 공간이 넓고 문도 넓습니다.",
+     "audio": "audio/travel_access_8.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "My mother uses a walker. Is the tour route manageable?",
+     "ko": "어머니가 보행기를 쓰시는데 투어 코스를 다닐 수 있을까요?",
+     "audio": "audio/travel_access_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Most of it is flat, but the last section has a steep cobbled hill.",
+     "ko": "대부분 평지인데 마지막 구간에 가파른 돌길 언덕이 있습니다.",
+     "audio": "audio/travel_access_10.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Is there a shorter route that skips the hill?",
+     "ko": "그 언덕을 피하는 짧은 코스가 있나요?",
+     "audio": "audio/travel_access_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "There is, and a shuttle meets that group at the top.",
+     "ko": "있습니다. 그 코스는 셔틀이 언덕 위에서 합류합니다.",
+     "audio": "audio/travel_access_12.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "We booked online. Can we request an accessible room?",
+     "ko": "온라인으로 예약했는데 장애인 객실로 요청할 수 있나요?",
+     "audio": "audio/travel_access_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'll note it now. It has a roll-in shower and grab rails.",
+     "ko": "지금 기록해 두겠습니다. 턱 없는 샤워실과 손잡이가 있는 객실입니다.",
+     "audio": "audio/travel_access_14.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Could we also have a seat near the aisle at dinner?",
+     "ko": "저녁 식사 때 통로 쪽 자리도 부탁드릴 수 있을까요?",
+     "audio": "audio/travel_access_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. I'll mark the reservation so the restaurant knows.",
+     "ko": "물론입니다. 레스토랑에서 알 수 있게 예약에 표시해 두겠습니다.",
+     "audio": "audio/travel_access_16.mp3"
+    }
+   ],
+   "icon": "♿"
+  },
+  {
    "key": "travel_themepark",
    "title": "테마파크 (Theme Park)",
    "subtitle": "입장권, 대기 시간, 탑승 제한, 보관함",
