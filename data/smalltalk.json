@@ -1,0 +1,525 @@
+{
+ "key": "smalltalk",
+ "scenarios": [
+  {
+   "key": "smalltalk_intro",
+   "title": "말 트기 (Breaking the Ice)",
+   "subtitle": "첫인사, 이름 교환, 자연스러운 마무리",
+   "dialogues": [
+    {
+     "speaker": "Local",
+     "en": "Beautiful day, isn't it?",
+     "ko": "날씨 참 좋네요.",
+     "audio": "audio/smalltalk_intro_1.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "It really is. I've been lucky with the weather all week.",
+     "ko": "정말 그러네요. 이번 주 내내 날씨 운이 좋았어요.",
+     "audio": "audio/smalltalk_intro_2.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Are you here on holiday?",
+     "ko": "여행 오신 건가요?",
+     "audio": "audio/smalltalk_intro_3.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Yes, my first time in this city. I arrived on Monday.",
+     "ko": "네, 이 도시는 처음이에요. 월요일에 도착했습니다.",
+     "audio": "audio/smalltalk_intro_4.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "I'm Daniel, by the way.",
+     "ko": "그런데 저는 다니엘이라고 해요.",
+     "audio": "audio/smalltalk_intro_5.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Nice to meet you, Daniel. I'm Mina.",
+     "ko": "만나서 반가워요, 다니엘. 저는 미나예요.",
+     "audio": "audio/smalltalk_intro_6.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Mina. Did I say that right?",
+     "ko": "미나. 제가 제대로 발음했나요?",
+     "audio": "audio/smalltalk_intro_7.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "That's perfect. Most people find it easy to say.",
+     "ko": "완벽해요. 대부분 어렵지 않게 발음하시더라고요.",
+     "audio": "audio/smalltalk_intro_8.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "What brings you all this way?",
+     "ko": "어떻게 이 먼 곳까지 오셨어요?",
+     "audio": "audio/smalltalk_intro_9.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I saved up for a proper holiday. I work in Seoul as a designer.",
+     "ko": "제대로 된 휴가를 위해 돈을 모았어요. 서울에서 디자이너로 일합니다.",
+     "audio": "audio/smalltalk_intro_10.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "That sounds like a good job. Do you get much time off?",
+     "ko": "좋은 직업이네요. 휴가는 많이 있으신가요?",
+     "audio": "audio/smalltalk_intro_11.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Not often, so I'm making the most of these two weeks.",
+     "ko": "자주는 아니라서 이 2주를 알차게 보내려고요.",
+     "audio": "audio/smalltalk_intro_12.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Well, I should let you get on with your day.",
+     "ko": "그럼 이만 가보셔야죠.",
+     "audio": "audio/smalltalk_intro_13.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "It was nice talking to you. Any tips before I go?",
+     "ko": "이야기 나눠서 좋았어요. 가기 전에 팁 하나만 주실래요?",
+     "audio": "audio/smalltalk_intro_14.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Skip the tourist street and eat where the queue is local.",
+     "ko": "관광객 거리는 건너뛰고 현지인이 줄 서는 곳에서 드세요.",
+     "audio": "audio/smalltalk_intro_15.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I'll do that. Thanks, Daniel. Enjoy your afternoon.",
+     "ko": "그럴게요. 고마워요, 다니엘. 좋은 오후 보내세요.",
+     "audio": "audio/smalltalk_intro_16.mp3"
+    }
+   ],
+   "icon": "👋"
+  },
+  {
+   "key": "smalltalk_origin",
+   "title": "어디서 오셨어요 (Where Are You From)",
+   "subtitle": "출신 소개, 한국 이야기, 문화 차이",
+   "dialogues": [
+    {
+     "speaker": "Local",
+     "en": "Where are you from, if you don't mind me asking?",
+     "ko": "실례가 안 된다면, 어디서 오셨어요?",
+     "audio": "audio/smalltalk_origin_1.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Not at all. I'm from South Korea, from Seoul.",
+     "ko": "괜찮아요. 한국에서 왔어요, 서울이요.",
+     "audio": "audio/smalltalk_origin_2.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "I've always wanted to go. Is it as busy as they say?",
+     "ko": "늘 가보고 싶었어요. 사람들 말처럼 그렇게 복잡한가요?",
+     "audio": "audio/smalltalk_origin_3.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Busier, honestly. But the subway makes it easy to get around.",
+     "ko": "솔직히 더해요. 그래도 지하철이 잘 돼 있어서 다니기는 편합니다.",
+     "audio": "audio/smalltalk_origin_4.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "What should I see if I ever visit?",
+     "ko": "혹시 가게 되면 뭘 봐야 할까요?",
+     "audio": "audio/smalltalk_origin_5.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Seoul for a few days, then Busan for the sea and the food.",
+     "ko": "서울에서 며칠 있다가 부산에서 바다와 음식을 즐기세요.",
+     "audio": "audio/smalltalk_origin_6.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Is English widely spoken there?",
+     "ko": "거기서 영어가 많이 통하나요?",
+     "audio": "audio/smalltalk_origin_7.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "In the cities, enough to get by. The signs are in English too.",
+     "ko": "도시에서는 다니는 데 충분해요. 표지판에도 영어가 있고요.",
+     "audio": "audio/smalltalk_origin_8.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Your English is really good. How long have you studied?",
+     "ko": "영어를 정말 잘하시네요. 얼마나 공부하셨어요?",
+     "audio": "audio/smalltalk_origin_9.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Thank you. Since school, but I only started speaking recently.",
+     "ko": "감사합니다. 학교 때부터요, 근데 말하기는 최근에 시작했어요.",
+     "audio": "audio/smalltalk_origin_10.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "You'd never know. Say something in Korean for me.",
+     "ko": "전혀 그렇게 안 보여요. 한국어로 한마디 해주세요.",
+     "audio": "audio/smalltalk_origin_11.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Mannaseo bangapseumnida. It means nice to meet you.",
+     "ko": "만나서 반갑습니다. '만나서 반가워요'라는 뜻이에요.",
+     "audio": "audio/smalltalk_origin_12.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "What's surprised you most about being here?",
+     "ko": "여기 와서 가장 놀란 게 뭐예요?",
+     "audio": "audio/smalltalk_origin_13.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "How early everything closes. At home the shops stay open late.",
+     "ko": "가게가 너무 일찍 닫는다는 거요. 한국은 늦게까지 열거든요.",
+     "audio": "audio/smalltalk_origin_14.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "That's true. We eat dinner earlier than most places too.",
+     "ko": "맞아요. 저녁도 다른 나라보다 일찍 먹는 편이에요.",
+     "audio": "audio/smalltalk_origin_15.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I've noticed. I keep arriving at restaurants after the rush.",
+     "ko": "느꼈어요. 식당에 갈 때마다 붐비는 시간이 지나 있더라고요.",
+     "audio": "audio/smalltalk_origin_16.mp3"
+    }
+   ],
+   "icon": "🌏"
+  },
+  {
+   "key": "smalltalk_weather",
+   "title": "날씨 & 일상 (Weather & Everyday Chat)",
+   "subtitle": "날씨 이야기, 계절, 동네 소식",
+   "dialogues": [
+    {
+     "speaker": "Tourist",
+     "en": "Is it always this warm in October?",
+     "ko": "10월에 항상 이렇게 따뜻한가요?",
+     "audio": "audio/smalltalk_weather_1.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Not usually. We've had an unusually mild autumn this year.",
+     "ko": "보통은 아니에요. 올해는 유난히 포근한 가을이네요.",
+     "audio": "audio/smalltalk_weather_2.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I packed a coat I haven't touched once.",
+     "ko": "코트를 챙겨 왔는데 한 번도 안 꺼냈어요.",
+     "audio": "audio/smalltalk_weather_3.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Keep it handy. It turns cold quickly once the wind changes.",
+     "ko": "가까이 두세요. 바람이 바뀌면 금방 추워집니다.",
+     "audio": "audio/smalltalk_weather_4.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "The forecast says rain all weekend. Is that reliable here?",
+     "ko": "주말 내내 비 예보던데, 여기 예보가 잘 맞나요?",
+     "audio": "audio/smalltalk_weather_5.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Rarely. It passes in an hour most days, then the sun comes out.",
+     "ko": "잘 안 맞아요. 대개 한 시간이면 지나가고 해가 납니다.",
+     "audio": "audio/smalltalk_weather_6.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Should I still carry an umbrella?",
+     "ko": "그래도 우산을 들고 다니는 게 나을까요?",
+     "audio": "audio/smalltalk_weather_7.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "A small one, yes. Or buy a cheap one at any corner shop.",
+     "ko": "작은 걸로 하나요. 아니면 아무 편의점에서 싼 걸 사셔도 되고요.",
+     "audio": "audio/smalltalk_weather_8.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "You should come back in spring when everything is in bloom.",
+     "ko": "꽃 피는 봄에 다시 오셔야 해요.",
+     "audio": "audio/smalltalk_weather_9.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "That's what everyone says. Is it very crowded then?",
+     "ko": "다들 그러시더라고요. 그때는 많이 붐비나요?",
+     "audio": "audio/smalltalk_weather_10.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Busier, but worth it. April is the best month by far.",
+     "ko": "더 붐비지만 그만한 값은 해요. 4월이 단연 최고입니다.",
+     "audio": "audio/smalltalk_weather_11.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I'll remember that for next time.",
+     "ko": "다음에 올 때 기억할게요.",
+     "audio": "audio/smalltalk_weather_12.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Have you tried the market on the corner yet?",
+     "ko": "모퉁이에 있는 시장은 가보셨어요?",
+     "audio": "audio/smalltalk_weather_13.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Not yet. Is it open on Sundays?",
+     "ko": "아직이요. 일요일에도 여나요?",
+     "audio": "audio/smalltalk_weather_14.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Until two. Go early, the bread is gone by ten.",
+     "ko": "2시까지요. 일찍 가세요, 빵은 10시면 다 팔립니다.",
+     "audio": "audio/smalltalk_weather_15.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Good to know. I'll head over tomorrow morning.",
+     "ko": "알려주셔서 감사해요. 내일 아침에 가볼게요.",
+     "audio": "audio/smalltalk_weather_16.mp3"
+    }
+   ],
+   "icon": "🌤️"
+  },
+  {
+   "key": "smalltalk_stories",
+   "title": "여행 이야기 (Swapping Travel Stories)",
+   "subtitle": "다녀온 곳, 추천, 실수담",
+   "dialogues": [
+    {
+     "speaker": "Backpacker",
+     "en": "Have you been travelling long?",
+     "ko": "여행한 지 오래되셨어요?",
+     "audio": "audio/smalltalk_stories_1.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Three weeks so far. This is my fourth city.",
+     "ko": "지금까지 3주요. 여기가 네 번째 도시예요.",
+     "audio": "audio/smalltalk_stories_2.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "Which one has been your favourite?",
+     "ko": "어디가 제일 좋았어요?",
+     "audio": "audio/smalltalk_stories_3.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "The small coastal town before this. Nobody was in a hurry there.",
+     "ko": "여기 오기 전 작은 바닷가 마을이요. 아무도 서두르지 않더라고요.",
+     "audio": "audio/smalltalk_stories_4.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "I'm heading that way next. Anything I shouldn't miss?",
+     "ko": "저도 다음에 그쪽으로 가요. 놓치면 안 되는 게 있나요?",
+     "audio": "audio/smalltalk_stories_5.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Take the early boat to the island. It's empty before ten.",
+     "ko": "섬으로 가는 첫배를 타세요. 10시 전에는 사람이 없어요.",
+     "audio": "audio/smalltalk_stories_6.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "How long does the crossing take?",
+     "ko": "배로 얼마나 걸려요?",
+     "audio": "audio/smalltalk_stories_7.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Forty minutes, and the ride itself is worth it.",
+     "ko": "40분이요. 배 타는 것 자체가 좋아요.",
+     "audio": "audio/smalltalk_stories_8.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "I got on the wrong train yesterday and ended up an hour away.",
+     "ko": "어제 기차를 잘못 타서 한 시간 떨어진 데까지 갔어요.",
+     "audio": "audio/smalltalk_stories_9.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I did the same thing on my second day. Did you make it back?",
+     "ko": "저도 둘째 날에 똑같이 그랬어요. 돌아오셨어요?",
+     "audio": "audio/smalltalk_stories_10.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "Eventually. A conductor walked me to the right platform.",
+     "ko": "결국은요. 승무원이 맞는 승강장까지 데려다줬어요.",
+     "audio": "audio/smalltalk_stories_11.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "People have been kind like that everywhere I've been.",
+     "ko": "제가 가본 곳마다 사람들이 그렇게 친절하더라고요.",
+     "audio": "audio/smalltalk_stories_12.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "How much longer are you here for?",
+     "ko": "여기 얼마나 더 계세요?",
+     "audio": "audio/smalltalk_stories_13.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Two more days, then I fly home on Saturday.",
+     "ko": "이틀 더 있다가 토요일에 귀국해요.",
+     "audio": "audio/smalltalk_stories_14.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "That went fast. Are you planning another trip already?",
+     "ko": "빨리 지나갔네요. 벌써 다음 여행 계획 세우세요?",
+     "audio": "audio/smalltalk_stories_15.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Always. I think next year I'll try somewhere colder.",
+     "ko": "늘 그렇죠. 내년엔 좀 더 추운 곳으로 가볼까 해요.",
+     "audio": "audio/smalltalk_stories_16.mp3"
+    }
+   ],
+   "icon": "🎒"
+  },
+  {
+   "key": "smalltalk_contact",
+   "title": "연락처 & 작별 (Keeping in Touch)",
+   "subtitle": "함께하기 제안, 연락처 교환, 인사",
+   "dialogues": [
+    {
+     "speaker": "Backpacker",
+     "en": "A few of us are getting dinner tonight. Do you want to come?",
+     "ko": "오늘 저녁에 몇 명이서 밥 먹으러 가는데, 같이 가실래요?",
+     "audio": "audio/smalltalk_contact_1.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I'd love to. What time and where?",
+     "ko": "좋아요. 몇 시에 어디서요?",
+     "audio": "audio/smalltalk_contact_2.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "Seven, at the place by the bridge. It's a ten-minute walk.",
+     "ko": "7시에 다리 옆 가게에서요. 걸어서 10분이에요.",
+     "audio": "audio/smalltalk_contact_3.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Perfect. I'll meet you in the lobby just before seven.",
+     "ko": "좋아요. 7시 조금 전에 로비에서 봬요.",
+     "audio": "audio/smalltalk_contact_4.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "Let me get your number so I can send the location.",
+     "ko": "위치를 보내드리게 번호 좀 알려주세요.",
+     "audio": "audio/smalltalk_contact_5.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I'm on a travel SIM, so message me on Instagram instead.",
+     "ko": "여행용 유심이라서요, 인스타그램으로 메시지 주세요.",
+     "audio": "audio/smalltalk_contact_6.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "What's your handle?",
+     "ko": "계정이 어떻게 되세요?",
+     "audio": "audio/smalltalk_contact_7.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "It's mina underscore travels, all lowercase.",
+     "ko": "mina 밑줄 travels예요, 전부 소문자요.",
+     "audio": "audio/smalltalk_contact_8.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "I'll send you the photos from today once I'm on wifi.",
+     "ko": "와이파이 되면 오늘 찍은 사진 보내드릴게요.",
+     "audio": "audio/smalltalk_contact_9.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Thank you. Could you send the one by the harbour?",
+     "ko": "감사해요. 항구에서 찍은 사진도 보내주실래요?",
+     "audio": "audio/smalltalk_contact_10.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "All of them. Tag me if you post any.",
+     "ko": "전부 보낼게요. 올리시면 저 태그해 주세요.",
+     "audio": "audio/smalltalk_contact_11.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I will. You got a better shot of the sunset than I did.",
+     "ko": "그럴게요. 노을 사진은 저보다 잘 찍으셨더라고요.",
+     "audio": "audio/smalltalk_contact_12.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "It was really good to meet you. Safe travels.",
+     "ko": "만나서 정말 반가웠어요. 안전한 여행 되세요.",
+     "audio": "audio/smalltalk_contact_13.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "You too. Let me know if you ever come to Korea.",
+     "ko": "그쪽도요. 한국 오시면 꼭 알려주세요.",
+     "audio": "audio/smalltalk_contact_14.mp3"
+    },
+    {
+     "speaker": "Backpacker",
+     "en": "I might take you up on that next spring.",
+     "ko": "내년 봄에 진짜 연락드릴지도 몰라요.",
+     "audio": "audio/smalltalk_contact_15.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "I'd be happy to show you around. Take care.",
+     "ko": "기꺼이 안내해 드릴게요. 건강하세요.",
+     "audio": "audio/smalltalk_contact_16.mp3"
+    }
+   ],
+   "icon": "🤝"
+  }
+ ]
+}

@@ -6,7 +6,7 @@
 // next time. Combined with skipWaiting/clients.claim, a deploy lands on the
 // visit after it is published.
 //
-// Audio is never precached - 1,108 files at 30MB. js/offline.js fills
+// Audio is never precached - 1,332 files at 26MB. js/offline.js fills
 // AUDIO_CACHE one category at a time when the user asks; anything not saved
 // falls through to the network.
 //
@@ -17,7 +17,7 @@
 // Bump AUDIO_CACHE only when the audio files themselves change, since the URLs
 // stay the same and saved copies would otherwise never be replaced. v2 is the
 // silence-trimmed set; anyone holding v1 re-downloads on the next save.
-var CACHE = 'english-talk-v7';
+var CACHE = 'english-talk-v8';
 var AUDIO_CACHE = 'english-talk-audio-v2';
 
 // The shell plus every data file. 337KB in total, so precaching all of it costs
@@ -49,7 +49,8 @@ var PRECACHE = [
     'data/restaurant.json',
     'data/transport.json',
     'data/hospital.json',
-    'data/travel.json'
+    'data/travel.json',
+    'data/smalltalk.json'
 ];
 
 self.addEventListener('install', function(e) {
@@ -150,7 +151,7 @@ self.addEventListener('fetch', function(e) {
     }
 
     // Page loads carry ?cat=&name=, but scenario.html is the same file for all
-    // 117 scenarios - the content comes from the JSON. Key pages on the path
+    // 156 scenarios - the content comes from the JSON. Key pages on the path
     // alone, or every scenario would miss the precache and store a duplicate.
     var cacheKey = req.mode === 'navigate'
         ? new Request(url.origin + url.pathname)
