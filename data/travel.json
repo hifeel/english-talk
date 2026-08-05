@@ -370,6 +370,110 @@
    "icon": "🏧"
   },
   {
+   "key": "travel_laundry",
+   "title": "코인 세탁방 (Laundromat)",
+   "subtitle": "기계 사용법, 세제, 건조, 대행 서비스",
+   "dialogues": [
+    {
+     "speaker": "Tourist",
+     "en": "How do I use these machines? It's my first time here.",
+     "ko": "이 기계는 어떻게 쓰나요? 여기 처음이에요.",
+     "audio": "audio/travel_laundry_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Load the drum, then pay at the panel on the wall with a card.",
+     "ko": "세탁조에 넣으시고 벽에 있는 결제기에서 카드로 계산하세요.",
+     "audio": "audio/travel_laundry_2.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Do I need coins, or does it only take cards?",
+     "ko": "동전이 필요한가요, 아니면 카드만 되나요?",
+     "audio": "audio/travel_laundry_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Cards or the app. The coin machines were taken out last year.",
+     "ko": "카드나 앱이요. 동전 기계는 작년에 없앴습니다.",
+     "audio": "audio/travel_laundry_4.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Is detergent included, or do I buy it separately?",
+     "ko": "세제가 포함인가요, 따로 사야 하나요?",
+     "audio": "audio/travel_laundry_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Separately. There's a vending machine by the door, two dollars a pod.",
+     "ko": "따로입니다. 문 옆 자판기에서 팔아요, 한 개에 2달러입니다.",
+     "audio": "audio/travel_laundry_6.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Which cycle should I use for normal clothes?",
+     "ko": "일반 옷은 어떤 코스로 돌려야 하나요?",
+     "audio": "audio/travel_laundry_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Warm, thirty minutes. Use cold if anything might run.",
+     "ko": "따뜻한 물로 30분이요. 물빠짐이 걱정되면 찬물로 하세요.",
+     "audio": "audio/travel_laundry_8.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "How long does the dryer take?",
+     "ko": "건조기는 얼마나 걸리나요?",
+     "audio": "audio/travel_laundry_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Forty minutes, and heavy things like jeans may need a second round.",
+     "ko": "40분인데 청바지 같은 두꺼운 건 한 번 더 돌려야 할 수도 있어요.",
+     "audio": "audio/travel_laundry_10.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Can I leave and come back, or should I wait here?",
+     "ko": "나갔다 와도 되나요, 아니면 여기서 기다려야 하나요?",
+     "audio": "audio/travel_laundry_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The app messages you when it finishes. Most people go for coffee.",
+     "ko": "끝나면 앱이 알려줍니다. 다들 커피 마시러 가세요.",
+     "audio": "audio/travel_laundry_12.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "The machine stopped halfway and my clothes are still wet.",
+     "ko": "기계가 중간에 멈췄는데 옷이 아직 젖어 있어요.",
+     "audio": "audio/travel_laundry_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Number seven does that. I'll move your load and refund the cycle.",
+     "ko": "7번이 가끔 그럽니다. 옷을 옮겨드리고 요금은 환불해 드릴게요.",
+     "audio": "audio/travel_laundry_14.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Do you offer a drop-off service if I'm short on time?",
+     "ko": "시간이 없으면 맡기고 가는 서비스도 있나요?",
+     "audio": "audio/travel_laundry_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We do. Two dollars a pound, washed and folded by five o'clock.",
+     "ko": "있습니다. 파운드당 2달러이고 5시까지 세탁해서 개어 드립니다.",
+     "audio": "audio/travel_laundry_16.mp3"
+    }
+   ],
+   "icon": "🧺"
+  },
+  {
    "key": "travel_tips_sim",
    "title": "유심 구입 (Getting a SIM)",
    "subtitle": "구입처, 데이터 요금제, 여권 등록",
