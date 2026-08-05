@@ -269,6 +269,22 @@ header {
 
 .dialogue:last-child { margin-bottom: 0; }
 .dialogue:hover { background: #eef0ff; }
+
+/* On touch screens a tap is meant to play the line, not grab a word, so text
+   is unselectable until a long press adds .selecting (see toggle.js). Mouse
+   users keep normal drag-to-select. */
+@media (pointer: coarse) {
+    .dialogue {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+    }
+    .dialogue.selecting {
+        -webkit-user-select: text;
+        user-select: text;
+        -webkit-touch-callout: default;
+    }
+}
 .dialogue.playing {
     background: #e8f5e9;
     border-left-color: #4caf50;

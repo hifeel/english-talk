@@ -157,7 +157,19 @@ function initEnglishTalk() {
     var dialogues = document.querySelectorAll('.dialogue');
     for (var i = 0; i < dialogues.length; i++) {
         addClickToPlay(dialogues[i]);
+        addLongPressSelect(dialogues[i]);
         addGoogleButton(dialogues[i]);
+    }
+
+    // Once the selection is dropped, go back to tap-to-play on that line
+    if (!etSelectionWatcherAdded) {
+        etSelectionWatcherAdded = true;
+        document.addEventListener('selectionchange', function() {
+            var sel = window.getSelection();
+            if (sel && !sel.isCollapsed) return;
+            var open = document.querySelectorAll('.dialogue.selecting');
+            for (var k = 0; k < open.length; k++) open[k].classList.remove('selecting');
+        });
     }
     
     // When any sentence audio starts playing (user-initiated), stop play-all
@@ -170,9 +182,87 @@ function initEnglishTalk() {
     }
 }
 
+// Long press on a touch screen selects the word under the finger instead of
+// playing the line, so a word can be looked up. CSS keeps .dialogue
+// unselectable until this adds .selecting - see the pointer: coarse block in
+// styles.css. Set while the press is being handled so the click that follows
+// knows to skip playback.
+var etLongPressed = false;
+var etSelectionWatcherAdded = false;
+var ET_LONG_PRESS_MS = 450;
+var ET_LONG_PRESS_SLOP = 10;  // px of drift still counted as holding still
+
+function etSelectWordAt(x, y) {
+    var range = null;
+    if (document.caretRangeFromPoint) {
+        range = document.caretRangeFromPoint(x, y);
+    } else if (document.caretPositionFromPoint) {
+        var pos = document.caretPositionFromPoint(x, y);
+        if (pos) {
+            range = document.createRange();
+            range.setStart(pos.offsetNode, pos.offset);
+            range.collapse(true);
+        }
+    }
+    if (!range) return false;
+    var sel = window.getSelection();
+    if (!sel) return false;
+    sel.removeAllRanges();
+    sel.addRange(range);
+    // modify() is the only way to reach word boundaries without reimplementing
+    // them; where it is missing the caret selection is left as-is.
+    if (sel.modify) {
+        sel.modify('move', 'backward', 'word');
+        sel.modify('extend', 'forward', 'word');
+    }
+    return true;
+}
+
+function addLongPressSelect(dialogue) {
+    var timer = null, startX = 0, startY = 0;
+
+    function cancel() {
+        if (timer) { clearTimeout(timer); timer = null; }
+    }
+
+    dialogue.addEventListener('touchstart', function(e) {
+        if (e.touches.length !== 1) { cancel(); return; }
+        if (e.target.closest('button') || e.target.closest('audio')) return;
+        var t = e.touches[0];
+        startX = t.clientX;
+        startY = t.clientY;
+        etLongPressed = false;
+        dialogue.classList.remove('selecting');
+        cancel();
+        timer = setTimeout(function() {
+            timer = null;
+            etLongPressed = true;
+            // The class has to land before the selection, or the range is made
+            // on an element the browser still treats as unselectable.
+            dialogue.classList.add('selecting');
+            etSelectWordAt(startX, startY);
+        }, ET_LONG_PRESS_MS);
+    }, { passive: true });
+
+    dialogue.addEventListener('touchmove', function(e) {
+        var t = e.touches[0];
+        if (!t) return;
+        if (Math.abs(t.clientX - startX) > ET_LONG_PRESS_SLOP ||
+            Math.abs(t.clientY - startY) > ET_LONG_PRESS_SLOP) {
+            cancel();
+        }
+    }, { passive: true });
+
+    dialogue.addEventListener('touchend', cancel, { passive: true });
+    dialogue.addEventListener('touchcancel', function() {
+        cancel();
+        dialogue.classList.remove('selecting');
+    }, { passive: true });
+}
+
 function addClickToPlay(dialogue) {
     dialogue.style.cursor = 'pointer';
-    
+
     dialogue.addEventListener('click', function(e) {
         // Let the native audio controls handle their own clicks; without this the
         // click bubbles up here too and seeking/pausing fights with our handler
@@ -180,7 +270,13 @@ function addClickToPlay(dialogue) {
             e.target.closest('.google-search-btn') || e.target.closest('audio')) {
             return;
         }
-        
+
+        // A long press was a word lookup, not a request to play the line
+        if (etLongPressed) {
+            etLongPressed = false;
+            return;
+        }
+
         etStopPlayAllIfLoaded();
         
         var audio = this.querySelector('audio');
