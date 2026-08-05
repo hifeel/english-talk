@@ -1,0 +1,837 @@
+{
+ "key": "hospital",
+ "scenarios": [
+  {
+   "key": "hospital_reception",
+   "title": "접수 (Reception)",
+   "subtitle": "예약, 보험 정보",
+   "dialogues": [
+    {
+     "speaker": "Patient",
+     "en": "I'd like to make an appointment.",
+     "ko": "진료 예약을 하고 싶습니다.",
+     "audio": "audio/hospital_reception_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Do you have insurance?",
+     "ko": "보험이 있으신가요?",
+     "audio": "audio/hospital_reception_2.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Yes, here's my insurance card.",
+     "ko": "네, 여기 보험 카드입니다.",
+     "audio": "audio/hospital_reception_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Please fill out this form.",
+     "ko": "이 양식을 작성해 주세요.",
+     "audio": "audio/hospital_reception_4.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "I'm a visitor here. Is that a problem?",
+     "ko": "저는 여행객인데요. 문제가 되나요?",
+     "audio": "audio/hospital_reception_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Not at all. I'll need your passport and a contact number.",
+     "ko": "전혀 아닙니다. 여권과 연락처가 필요합니다.",
+     "audio": "audio/hospital_reception_6.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "My number is a Korean one. Is that okay?",
+     "ko": "번호가 한국 번호인데 괜찮을까요?",
+     "audio": "audio/hospital_reception_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Give us your hotel number as well, just in case.",
+     "ko": "혹시 모르니 호텔 번호도 함께 알려주세요.",
+     "audio": "audio/hospital_reception_8.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "How long is the wait to see a doctor?",
+     "ko": "의사를 보려면 얼마나 기다려야 하나요?",
+     "audio": "audio/hospital_reception_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "About forty minutes. I'll call your name from this desk.",
+     "ko": "40분 정도입니다. 이 데스크에서 성함을 부를게요.",
+     "audio": "audio/hospital_reception_10.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Is there an English-speaking doctor available?",
+     "ko": "영어가 가능한 의사가 있나요?",
+     "audio": "audio/hospital_reception_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, Dr. Harris is on duty this afternoon.",
+     "ko": "네, 오늘 오후에는 해리스 선생님이 근무하십니다.",
+     "audio": "audio/hospital_reception_12.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Do I pay now or after the consultation?",
+     "ko": "지금 결제하나요, 진료 후에 하나요?",
+     "audio": "audio/hospital_reception_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "After. The cashier is next to the pharmacy on your way out.",
+     "ko": "진료 후에요. 나가시는 길 약국 옆에 수납창구가 있습니다.",
+     "audio": "audio/hospital_reception_14.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Can I get the receipt in English for my insurance?",
+     "ko": "보험 청구용으로 영어 영수증을 받을 수 있나요?",
+     "audio": "audio/hospital_reception_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, just tell the cashier when you pay.",
+     "ko": "네, 결제하실 때 수납창구에 말씀하시면 됩니다.",
+     "audio": "audio/hospital_reception_16.mp3"
+    }
+   ],
+   "icon": "📋"
+  },
+  {
+   "key": "hospital_symptoms",
+   "title": "증상 설명 (Symptoms)",
+   "subtitle": "아픈 곳 이야기하기",
+   "dialogues": [
+    {
+     "speaker": "Doctor",
+     "en": "What seems to be the problem?",
+     "ko": "어디가 불편하신가요?",
+     "audio": "audio/hospital_symptoms_1.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "I have a headache and fever.",
+     "ko": "두통이 있고 열이 나요.",
+     "audio": "audio/hospital_symptoms_2.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "How long have you had these symptoms?",
+     "ko": "이 증상이 얼마나 되셨나요?",
+     "audio": "audio/hospital_symptoms_3.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Since yesterday morning.",
+     "ko": "어제 아침부터요.",
+     "audio": "audio/hospital_symptoms_4.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "Any nausea, or pain when you look at bright light?",
+     "ko": "메스꺼움이나 밝은 빛을 볼 때 통증이 있나요?",
+     "audio": "audio/hospital_symptoms_5.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "A little nausea, but no problem with light.",
+     "ko": "메스꺼움은 조금 있는데 빛은 괜찮습니다.",
+     "audio": "audio/hospital_symptoms_6.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "Have you been drinking enough water while travelling?",
+     "ko": "여행 중에 물은 충분히 드셨나요?",
+     "audio": "audio/hospital_symptoms_7.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Probably not. I've been walking outside all day.",
+     "ko": "아마 아닐 거예요. 하루 종일 밖에서 걸었거든요.",
+     "audio": "audio/hospital_symptoms_8.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "Do you have any allergies or take regular medication?",
+     "ko": "알레르기가 있거나 정기적으로 드시는 약이 있나요?",
+     "audio": "audio/hospital_symptoms_9.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "I'm allergic to penicillin. Nothing else.",
+     "ko": "페니실린 알레르기가 있습니다. 그 외에는 없어요.",
+     "audio": "audio/hospital_symptoms_10.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "Good to know. Have you eaten anything unusual recently?",
+     "ko": "알겠습니다. 최근에 평소와 다른 음식을 드셨나요?",
+     "audio": "audio/hospital_symptoms_11.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Street food two days ago, but my stomach has been fine.",
+     "ko": "이틀 전에 길거리 음식을 먹었는데 배는 괜찮았어요.",
+     "audio": "audio/hospital_symptoms_12.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "I think it's dehydration with a mild infection.",
+     "ko": "탈수에 가벼운 감염이 겹친 것으로 보입니다.",
+     "audio": "audio/hospital_symptoms_13.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Is it safe for me to fly on Saturday?",
+     "ko": "토요일에 비행기를 타도 괜찮을까요?",
+     "audio": "audio/hospital_symptoms_14.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "It should be, if the fever is gone for a full day.",
+     "ko": "열이 하루 완전히 없으면 괜찮을 겁니다.",
+     "audio": "audio/hospital_symptoms_15.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Understood. I'll rest and drink more water.",
+     "ko": "알겠습니다. 쉬면서 물을 더 마실게요.",
+     "audio": "audio/hospital_symptoms_16.mp3"
+    }
+   ],
+   "icon": "🤒"
+  },
+  {
+   "key": "hospital_examination",
+   "title": "진찰 (Examination)",
+   "subtitle": "검사, 의사 설명",
+   "dialogues": [
+    {
+     "speaker": "Doctor",
+     "en": "Let me check your temperature.",
+     "ko": "체온을 재보겠습니다.",
+     "audio": "audio/hospital_examination_1.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Of course. I've been feeling hot since last night.",
+     "ko": "네. 어젯밤부터 열이 나는 것 같았어요.",
+     "audio": "audio/hospital_examination_2.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "It's thirty-eight point five. That's a fever.",
+     "ko": "38.5도네요. 열이 있습니다.",
+     "audio": "audio/hospital_examination_3.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Should I be worried? I'm travelling and fly home on Friday.",
+     "ko": "걱정해야 할까요? 여행 중인데 금요일에 귀국합니다.",
+     "audio": "audio/hospital_examination_4.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "Open your mouth and say ah.",
+     "ko": "입을 벌리고 아 해보세요.",
+     "audio": "audio/hospital_examination_5.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Ah. Does my throat look bad?",
+     "ko": "아. 목이 많이 안 좋아 보이나요?",
+     "audio": "audio/hospital_examination_6.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "It's quite red and swollen. I'd like to do a quick strep test.",
+     "ko": "많이 붉고 부어 있네요. 간단한 연쇄구균 검사를 해보겠습니다.",
+     "audio": "audio/hospital_examination_7.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "How long do the results take?",
+     "ko": "결과가 나오는 데 얼마나 걸리나요?",
+     "audio": "audio/hospital_examination_8.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "Does this hurt?",
+     "ko": "여기 누르면 아프신가요?",
+     "audio": "audio/hospital_examination_9.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Yes, right there. It's worse when I take a deep breath.",
+     "ko": "네, 바로 거기요. 숨을 깊게 들이쉬면 더 아파요.",
+     "audio": "audio/hospital_examination_10.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "I'll order a chest X-ray to be safe. The room is down the hall.",
+     "ko": "만약을 위해 흉부 엑스레이를 찍겠습니다. 복도 끝에 있는 방이에요.",
+     "audio": "audio/hospital_examination_11.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Will my travel insurance cover the X-ray?",
+     "ko": "여행자 보험으로 엑스레이가 처리되나요?",
+     "audio": "audio/hospital_examination_12.mp3"
+    }
+   ],
+   "icon": "🩺"
+  },
+  {
+   "key": "hospital_prescription",
+   "title": "처방전 (Prescription)",
+   "subtitle": "약 복용법, 설명",
+   "dialogues": [
+    {
+     "speaker": "Doctor",
+     "en": "You have a cold. Take this medicine.",
+     "ko": "감기입니다. 이 약을 드세요.",
+     "audio": "audio/hospital_prescription_1.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "How often should I take it?",
+     "ko": "얼마나 자주 먹어야 하나요?",
+     "audio": "audio/hospital_prescription_2.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "Three times a day after meals.",
+     "ko": "하루 세 번 식후에 드세요.",
+     "audio": "audio/hospital_prescription_3.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "For how many days should I keep taking it?",
+     "ko": "며칠 동안 계속 먹어야 하나요?",
+     "audio": "audio/hospital_prescription_4.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "Five days, even if you feel better before that.",
+     "ko": "5일입니다. 그전에 나아져도 계속 드세요.",
+     "audio": "audio/hospital_prescription_5.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Can I buy this over the counter, or do I need the prescription?",
+     "ko": "처방전 없이 살 수 있나요, 아니면 필요한가요?",
+     "audio": "audio/hospital_prescription_6.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "You'll need the prescription. Take it to any pharmacy.",
+     "ko": "처방전이 필요합니다. 아무 약국에나 가져가세요.",
+     "audio": "audio/hospital_prescription_7.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Is there a generic version? It would be cheaper.",
+     "ko": "복제약도 있나요? 그게 더 저렴할 것 같아서요.",
+     "audio": "audio/hospital_prescription_8.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "There is, and it works the same. Ask the pharmacist.",
+     "ko": "있고 효과는 같습니다. 약사에게 문의하세요.",
+     "audio": "audio/hospital_prescription_9.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Can I take painkillers along with this?",
+     "ko": "이 약과 함께 진통제를 먹어도 되나요?",
+     "audio": "audio/hospital_prescription_10.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "Paracetamol is fine, but avoid ibuprofen for now.",
+     "ko": "파라세타몰은 괜찮지만 지금은 이부프로펜은 피하세요.",
+     "audio": "audio/hospital_prescription_11.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Thank you. I'll come back if it doesn't improve.",
+     "ko": "감사합니다. 나아지지 않으면 다시 오겠습니다.",
+     "audio": "audio/hospital_prescription_12.mp3"
+    }
+   ],
+   "icon": "💊"
+  },
+  {
+   "key": "hospital_emergency",
+   "title": "응급 상황 (Emergency)",
+   "subtitle": "긴급 상황 대처",
+   "dialogues": [
+    {
+     "speaker": "Patient",
+     "en": "I need to see a doctor immediately.",
+     "ko": "당장 의사를 만나야 합니다.",
+     "audio": "audio/hospital_emergency_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Tell me what's wrong so I can decide how quickly we see you.",
+     "ko": "어떤 증상인지 말씀해 주시면 진료 순서를 정하겠습니다.",
+     "audio": "audio/hospital_emergency_2.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "I fell and my ankle is swollen. I can't put weight on it.",
+     "ko": "넘어져서 발목이 부었어요. 디딜 수가 없습니다.",
+     "audio": "audio/hospital_emergency_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Take a seat in the wheelchair. A nurse will see you in a few minutes.",
+     "ko": "휠체어에 앉으세요. 몇 분 안에 간호사가 봐드릴 겁니다.",
+     "audio": "audio/hospital_emergency_4.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "It's an emergency. My chest hurts.",
+     "ko": "응급 상황입니다. 가슴이 아파요.",
+     "audio": "audio/hospital_emergency_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "When did the pain start, and does it spread to your arm?",
+     "ko": "통증이 언제 시작됐나요? 팔로 퍼지기도 하나요?",
+     "audio": "audio/hospital_emergency_6.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "About twenty minutes ago, and my left arm feels numb.",
+     "ko": "20분쯤 전이고, 왼팔이 저립니다.",
+     "audio": "audio/hospital_emergency_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We're taking you in right now. Try to stay calm and sit down.",
+     "ko": "지금 바로 모시겠습니다. 진정하시고 앉아 계세요.",
+     "audio": "audio/hospital_emergency_8.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Please call an ambulance.",
+     "ko": "구급차를 불러주세요.",
+     "audio": "audio/hospital_emergency_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'm calling now. What's the address and what happened?",
+     "ko": "지금 전화하고 있습니다. 주소와 상황을 말씀해 주세요.",
+     "audio": "audio/hospital_emergency_10.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "We're at the hotel on Fifth Street. My friend collapsed.",
+     "ko": "5번가 호텔에 있어요. 친구가 쓰러졌습니다.",
+     "audio": "audio/hospital_emergency_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Stay on the line. Is he breathing, and is he responding to you?",
+     "ko": "전화 끊지 마세요. 숨은 쉬고 있나요? 말에 반응하나요?",
+     "audio": "audio/hospital_emergency_12.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "I'm having trouble breathing.",
+     "ko": "숨쉬기가 힘들어요.",
+     "audio": "audio/hospital_emergency_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Sit upright and try to breathe slowly. Do you have asthma?",
+     "ko": "똑바로 앉으셔서 천천히 숨을 쉬세요. 천식이 있으신가요?",
+     "audio": "audio/hospital_emergency_14.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Yes, but I left my inhaler at the hotel.",
+     "ko": "네, 그런데 흡입기를 호텔에 두고 왔어요.",
+     "audio": "audio/hospital_emergency_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We have one here. The doctor is coming with it right now.",
+     "ko": "여기 있습니다. 의사가 지금 가지고 오고 있어요.",
+     "audio": "audio/hospital_emergency_16.mp3"
+    }
+   ],
+   "icon": "🚨"
+  },
+  {
+   "key": "hospital_followup",
+   "title": "후속 진료 (Follow-up)",
+   "subtitle": "재진료, 결과 확인",
+   "dialogues": [
+    {
+     "speaker": "Patient",
+     "en": "I'm here for a follow-up appointment.",
+     "ko": "재진료 예약으로 왔습니다.",
+     "audio": "audio/hospital_followup_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "May I have your name and the date of your last visit?",
+     "ko": "성함과 지난 방문 날짜를 알려주시겠어요?",
+     "audio": "audio/hospital_followup_2.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Lee, and I was here last Tuesday for a chest infection.",
+     "ko": "이라고 하고, 지난 화요일에 흉부 감염으로 왔었습니다.",
+     "audio": "audio/hospital_followup_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I see your chart. The doctor will call you in shortly.",
+     "ko": "차트 확인했습니다. 곧 의사가 부를 겁니다.",
+     "audio": "audio/hospital_followup_4.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "The medicine isn't helping much.",
+     "ko": "약이 별로 듣지 않아요.",
+     "audio": "audio/hospital_followup_5.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "How many days have you taken it, and are you finishing each dose?",
+     "ko": "며칠째 드시고 계신가요? 정해진 용량을 다 드시고 있나요?",
+     "audio": "audio/hospital_followup_6.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Five days, and I haven't missed any. The cough is still bad.",
+     "ko": "5일째이고 거른 적은 없습니다. 기침이 여전히 심해요.",
+     "audio": "audio/hospital_followup_7.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "Then we'll switch to a different antibiotic and recheck in three days.",
+     "ko": "그러면 다른 항생제로 바꾸고 3일 뒤에 다시 보겠습니다.",
+     "audio": "audio/hospital_followup_8.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Can I get a referral to a specialist?",
+     "ko": "전문의 진료 의뢰서를 받을 수 있을까요?",
+     "audio": "audio/hospital_followup_9.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "I can refer you to a pulmonologist. Do you have a preference?",
+     "ko": "호흡기내과로 의뢰해 드릴 수 있습니다. 원하시는 곳이 있나요?",
+     "audio": "audio/hospital_followup_10.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Somewhere close to the city center would be easier for me.",
+     "ko": "시내 중심가에서 가까운 곳이면 좋겠습니다.",
+     "audio": "audio/hospital_followup_11.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "There's a clinic ten minutes away. I'll send the referral today.",
+     "ko": "10분 거리에 병원이 있습니다. 오늘 의뢰서를 보내드릴게요.",
+     "audio": "audio/hospital_followup_12.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "When should I come back for the results?",
+     "ko": "결과를 보러 언제 다시 와야 하나요?",
+     "audio": "audio/hospital_followup_13.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "The blood work takes two days. Come Thursday afternoon.",
+     "ko": "혈액 검사는 이틀 걸립니다. 목요일 오후에 오세요.",
+     "audio": "audio/hospital_followup_14.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "I fly home on Thursday morning. Can you email them instead?",
+     "ko": "목요일 아침에 귀국하는데요. 이메일로 보내주실 수 있나요?",
+     "audio": "audio/hospital_followup_15.mp3"
+    },
+    {
+     "speaker": "Doctor",
+     "en": "Yes, leave your address at reception and we'll send a copy.",
+     "ko": "네, 접수처에 주소를 남겨주시면 사본을 보내드리겠습니다.",
+     "audio": "audio/hospital_followup_16.mp3"
+    }
+   ],
+   "icon": "📋"
+  },
+  {
+   "key": "hospital_pharmacy",
+   "title": "약국 (Pharmacy)",
+   "subtitle": "처방전, 약 복용법, 부작용",
+   "dialogues": [
+    {
+     "speaker": "Patient",
+     "en": "I have a prescription to fill.",
+     "ko": "처방전 조제를 부탁드립니다.",
+     "audio": "audio/hospital_pharmacy_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "May I see it, along with a photo ID?",
+     "ko": "처방전과 신분증을 보여주시겠어요?",
+     "audio": "audio/hospital_pharmacy_2.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Here you go. I only have my passport with me.",
+     "ko": "여기 있습니다. 신분증은 여권밖에 없어요.",
+     "audio": "audio/hospital_pharmacy_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "That's fine. It'll be ready in about fifteen minutes.",
+     "ko": "괜찮습니다. 15분쯤 후에 준비됩니다.",
+     "audio": "audio/hospital_pharmacy_4.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "How many times a day should I take this?",
+     "ko": "이 약은 하루에 몇 번 먹어야 하나요?",
+     "audio": "audio/hospital_pharmacy_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Twice a day, morning and evening, with food.",
+     "ko": "하루 두 번, 아침과 저녁에 음식과 함께 드세요.",
+     "audio": "audio/hospital_pharmacy_6.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "What if I forget a dose?",
+     "ko": "한 번 거르면 어떻게 하나요?",
+     "audio": "audio/hospital_pharmacy_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Take it when you remember, but skip it if it's almost time for the next.",
+     "ko": "생각나실 때 드시되, 다음 복용 시간이 가까우면 건너뛰세요.",
+     "audio": "audio/hospital_pharmacy_8.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Are there any side effects?",
+     "ko": "부작용이 있나요?",
+     "audio": "audio/hospital_pharmacy_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It can make you drowsy, so don't drive right after taking it.",
+     "ko": "졸릴 수 있으니 복용 직후에는 운전하지 마세요.",
+     "audio": "audio/hospital_pharmacy_10.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Is it safe to drink alcohol with it?",
+     "ko": "이 약을 먹으면서 술을 마셔도 되나요?",
+     "audio": "audio/hospital_pharmacy_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'd avoid it completely while you're on this course.",
+     "ko": "복용 기간에는 아예 피하시는 게 좋습니다.",
+     "audio": "audio/hospital_pharmacy_12.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Can I take this with other medication?",
+     "ko": "다른 약과 같이 먹어도 되나요?",
+     "audio": "audio/hospital_pharmacy_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "What else are you taking? Bring the boxes if you have them.",
+     "ko": "지금 어떤 약을 드시고 계신가요? 약통이 있으면 가져와 주세요.",
+     "audio": "audio/hospital_pharmacy_14.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Just a daily allergy tablet and some vitamins.",
+     "ko": "매일 먹는 알레르기 약과 비타민 정도입니다.",
+     "audio": "audio/hospital_pharmacy_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Those are fine together. Just leave two hours between them.",
+     "ko": "같이 드셔도 괜찮습니다. 두 시간 정도 간격만 두세요.",
+     "audio": "audio/hospital_pharmacy_16.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Is this covered by insurance?",
+     "ko": "이건 보험 처리가 되나요?",
+     "audio": "audio/hospital_pharmacy_17.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Not with travel insurance at the counter. You'll pay and claim later.",
+     "ko": "여행자 보험은 여기서 바로 처리되지 않습니다. 결제하시고 나중에 청구하세요.",
+     "audio": "audio/hospital_pharmacy_18.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Could I get an itemized receipt for the claim?",
+     "ko": "청구용으로 항목별 영수증을 받을 수 있을까요?",
+     "audio": "audio/hospital_pharmacy_19.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. I'll print one with the medication names and prices.",
+     "ko": "물론입니다. 약품명과 가격이 나온 영수증을 출력해 드릴게요.",
+     "audio": "audio/hospital_pharmacy_20.mp3"
+    }
+   ],
+   "icon": "💊"
+  },
+  {
+   "key": "hospital_insurance",
+   "title": "보험 (Insurance)",
+   "subtitle": "보험 적용, 청구, 코페이",
+   "dialogues": [
+    {
+     "speaker": "Patient",
+     "en": "Does my insurance cover this procedure?",
+     "ko": "제 보험으로 이 시술이 처리되나요?",
+     "audio": "audio/hospital_insurance_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Let me check your policy. Is this travel insurance or a local plan?",
+     "ko": "보험 내용을 확인해 볼게요. 여행자 보험인가요, 현지 보험인가요?",
+     "audio": "audio/hospital_insurance_2.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Travel insurance, bought in Korea before the trip.",
+     "ko": "여행 전에 한국에서 가입한 여행자 보험입니다.",
+     "audio": "audio/hospital_insurance_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Then you'll pay here and claim it back. Keep every document.",
+     "ko": "그러면 여기서 결제하시고 나중에 청구하시면 됩니다. 서류를 모두 보관하세요.",
+     "audio": "audio/hospital_insurance_4.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "I need to file an insurance claim.",
+     "ko": "보험금을 청구하려고 합니다.",
+     "audio": "audio/hospital_insurance_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "You'll need the receipt, the diagnosis, and the doctor's report.",
+     "ko": "영수증, 진단서, 의사 소견서가 필요합니다.",
+     "audio": "audio/hospital_insurance_6.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Can you write the report in English?",
+     "ko": "소견서를 영어로 작성해 주실 수 있나요?",
+     "audio": "audio/hospital_insurance_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, we issue them in English by default for international patients.",
+     "ko": "네, 외국인 환자에게는 기본적으로 영어로 발급합니다.",
+     "audio": "audio/hospital_insurance_8.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "What is my co-pay amount?",
+     "ko": "본인 부담금이 얼마인가요?",
+     "audio": "audio/hospital_insurance_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Thirty dollars for the visit, plus the cost of any tests.",
+     "ko": "진료비 30달러에 검사 비용이 추가됩니다.",
+     "audio": "audio/hospital_insurance_10.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Do I pay that now or when the results come back?",
+     "ko": "지금 내야 하나요, 아니면 결과가 나온 후에 내나요?",
+     "audio": "audio/hospital_insurance_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Now, at the front desk. The tests are billed separately later.",
+     "ko": "지금 접수처에서 내시면 됩니다. 검사비는 나중에 따로 청구돼요.",
+     "audio": "audio/hospital_insurance_12.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Can you send the bill to my insurance?",
+     "ko": "청구서를 제 보험사로 보내주실 수 있나요?",
+     "audio": "audio/hospital_insurance_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We can if they're a partner. What's the company name?",
+     "ko": "제휴사라면 가능합니다. 보험사 이름이 어떻게 되나요?",
+     "audio": "audio/hospital_insurance_14.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "It's a Korean insurer. I don't think you work with them directly.",
+     "ko": "한국 보험사입니다. 직접 제휴는 안 되어 있을 것 같아요.",
+     "audio": "audio/hospital_insurance_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Then pay here and submit the paperwork yourself. It's usually quick.",
+     "ko": "그러면 여기서 결제하시고 서류를 직접 제출하세요. 보통 빨리 처리됩니다.",
+     "audio": "audio/hospital_insurance_16.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "I need a referral for insurance.",
+     "ko": "보험 처리를 위해 진료 의뢰서가 필요합니다.",
+     "audio": "audio/hospital_insurance_17.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The doctor can write one. Does your policy require it in advance?",
+     "ko": "의사가 작성해 드릴 수 있습니다. 보험에서 사전 의뢰서를 요구하나요?",
+     "audio": "audio/hospital_insurance_18.mp3"
+    },
+    {
+     "speaker": "Patient",
+     "en": "Yes, otherwise they only reimburse half the cost.",
+     "ko": "네, 없으면 비용의 절반만 환급해 줍니다.",
+     "audio": "audio/hospital_insurance_19.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'll flag it so the doctor writes it during your visit today.",
+     "ko": "오늘 진료 중에 작성하도록 표시해 두겠습니다.",
+     "audio": "audio/hospital_insurance_20.mp3"
+    }
+   ],
+   "icon": "🛡️"
+  }
+ ]
+}

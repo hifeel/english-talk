@@ -1,0 +1,949 @@
+{
+ "key": "transport",
+ "scenarios": [
+  {
+   "key": "transport_taxi",
+   "title": "택시 (Taxi)",
+   "subtitle": "택시 호출, 목적지 안내, 요금 확인",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Could you take me to the airport, please?",
+     "ko": "공항까지 가주세요.",
+     "audio": "audio/transport_1.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "Sure. Do you want to go via the highway or the city road?",
+     "ko": "물론이죠. 고속도로로 갈까요, 아니면 시내도로로 갈까요?",
+     "audio": "audio/transport_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "The highway, please. How much will it cost?",
+     "ko": "고속도로로 가주세요. 비용이 얼마나 나올까요?",
+     "audio": "audio/transport_3.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "It should be around thirty dollars. We'll be there in about twenty minutes.",
+     "ko": "약 30달러 정도 나올 겁니다. 약 20분 안에 도착할 거예요.",
+     "audio": "audio/transport_4.mp3"
+    }
+   ],
+   "icon": "🚕"
+  },
+  {
+   "key": "transport_subway",
+   "title": "지하철 (Subway)",
+   "subtitle": "노선 안내, 환승, 매표",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Excuse me, how do I get to Central Park?",
+     "ko": "실례합니다, 센트럴파크에 어떻게 가나요?",
+     "audio": "audio/transport_subway_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Take the green line going north. It's about five stops from here.",
+     "ko": "북쪽으로 가는 초록색 라인을 타세요. 여기서 약 5정거장입니다.",
+     "audio": "audio/transport_subway_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you. Do I need to transfer anywhere?",
+     "ko": "감사합니다. 어딘가에서 환승해야 하나요?",
+     "audio": "audio/transport_subway_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "No, it's a direct ride. Just stay on until Central Park North.",
+     "ko": "아니요, 직통입니다. 센트럴파크 노스까지 그냥 타고 가시면 돼요.",
+     "audio": "audio/transport_subway_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Where can I buy a subway card?",
+     "ko": "지하철 카드는 어디서 살 수 있나요?",
+     "audio": "audio/transport_subway_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "At the machine over there, or at the ticket booth behind you.",
+     "ko": "저쪽 기계에서요, 아니면 뒤에 있는 매표소에서도 됩니다.",
+     "audio": "audio/transport_subway_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How much should I put on it for three days?",
+     "ko": "3일 쓰려면 얼마를 충전해야 할까요?",
+     "audio": "audio/transport_subway_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Twenty dollars is plenty. Or get the unlimited three-day pass.",
+     "ko": "20달러면 충분합니다. 아니면 3일 무제한 패스를 사셔도 돼요.",
+     "audio": "audio/transport_subway_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "My card isn't working at the gate. What should I do?",
+     "ko": "개찰구에서 카드가 안 되는데요. 어떻게 해야 하나요?",
+     "audio": "audio/transport_subway_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Let me take a look. It looks like the balance is too low.",
+     "ko": "한번 볼게요. 잔액이 부족한 것 같네요.",
+     "audio": "audio/transport_subway_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I add money here, or do I have to go back to the machine?",
+     "ko": "여기서 충전할 수 있나요, 아니면 기계로 다시 가야 하나요?",
+     "audio": "audio/transport_subway_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "You can top it up right here. How much would you like to add?",
+     "ko": "여기서 바로 충전 가능합니다. 얼마나 충전해 드릴까요?",
+     "audio": "audio/transport_subway_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is this the right platform for the train going downtown?",
+     "ko": "시내 방향 열차가 이 승강장에서 오나요?",
+     "audio": "audio/transport_subway_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "No, that's the other side. Take the stairs and cross over.",
+     "ko": "아니요, 반대편입니다. 계단으로 건너가세요.",
+     "audio": "audio/transport_subway_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Got it. What time does the last train leave?",
+     "ko": "알겠습니다. 막차는 몇 시에 있나요?",
+     "audio": "audio/transport_subway_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Around twelve thirty. Check the board for the exact time.",
+     "ko": "12시 30분쯤입니다. 정확한 시간은 전광판을 확인하세요.",
+     "audio": "audio/transport_subway_16.mp3"
+    }
+   ],
+   "icon": "🚇"
+  },
+  {
+   "key": "transport_bus",
+   "title": "버스 (Bus)",
+   "subtitle": "버스 탑승, 정류장 안내, 요금 지불",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Does this bus go to the downtown area?",
+     "ko": "이 버스가 시내로 가나요?",
+     "audio": "audio/transport_bus_1.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "Yes, it does. The fare is two dollars. You can pay with coins or a card.",
+     "ko": "네, 갑니다. 요금은 2달러입니다. 동전이나 카드로 지불할 수 있어요.",
+     "audio": "audio/transport_bus_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can you let me know when we get to Main Street?",
+     "ko": "메인 스트리트에 도착하면 알려주시겠어요?",
+     "audio": "audio/transport_bus_3.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "Of course. It's about eight stops. I'll call it out for you.",
+     "ko": "그럼요. 여덟 정거장쯤 됩니다. 제가 알려드릴게요.",
+     "audio": "audio/transport_bus_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Excuse me, where's the bus stop for the number twelve?",
+     "ko": "실례합니다, 12번 버스 정류장이 어디인가요?",
+     "audio": "audio/transport_bus_5.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "It's just around the corner, in front of the pharmacy.",
+     "ko": "모퉁이 돌면 바로 약국 앞에 있어요.",
+     "audio": "audio/transport_bus_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How often does it come?",
+     "ko": "얼마나 자주 오나요?",
+     "audio": "audio/transport_bus_7.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Every twenty minutes on weekdays, less often on weekends.",
+     "ko": "평일엔 20분마다요, 주말엔 좀 더 뜸합니다.",
+     "audio": "audio/transport_bus_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Do I need exact change for the fare?",
+     "ko": "요금을 낼 때 잔돈을 딱 맞춰야 하나요?",
+     "audio": "audio/transport_bus_9.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "Yes, the machine doesn't give change. Or you can just tap a card.",
+     "ko": "네, 기계에서 거스름돈이 안 나옵니다. 아니면 카드를 대셔도 돼요.",
+     "audio": "audio/transport_bus_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Does this ticket still work if I transfer to another bus?",
+     "ko": "다른 버스로 갈아타도 이 표가 유효한가요?",
+     "audio": "audio/transport_bus_11.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "It does. Transfers are free within two hours. Keep your receipt.",
+     "ko": "유효합니다. 2시간 안에는 환승이 무료예요. 영수증을 갖고 계세요.",
+     "audio": "audio/transport_bus_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I think I missed my stop. Where are we now?",
+     "ko": "정류장을 지나친 것 같아요. 여기가 어디인가요?",
+     "audio": "audio/transport_bus_13.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "We just passed Fifth Avenue. Get off at the next stop and walk back.",
+     "ko": "방금 5번가를 지났습니다. 다음 정류장에서 내려서 되돌아가세요.",
+     "audio": "audio/transport_bus_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is it far? Should I take a bus going the other way?",
+     "ko": "먼가요? 반대 방향 버스를 타야 할까요?",
+     "audio": "audio/transport_bus_15.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "It's only two blocks. Walking will be faster than waiting.",
+     "ko": "두 블록밖에 안 됩니다. 기다리는 것보다 걷는 게 빨라요.",
+     "audio": "audio/transport_bus_16.mp3"
+    }
+   ],
+   "icon": "🚌"
+  },
+  {
+   "key": "transport_train",
+   "title": "기차 (Train)",
+   "subtitle": "발권, 좌석 예약, 승강장, 검표",
+   "icon": "🚆",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "I'd like a ticket to Boston, please.",
+     "ko": "보스턴행 표 한 장 주세요.",
+     "audio": "audio/transport_train_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "One way or round trip?",
+     "ko": "편도인가요, 왕복인가요?",
+     "audio": "audio/transport_train_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Round trip, returning on Sunday evening.",
+     "ko": "왕복이요, 일요일 저녁에 돌아옵니다.",
+     "audio": "audio/transport_train_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "That'll be eighty-five dollars. The next train leaves at ten fifteen.",
+     "ko": "85달러입니다. 다음 열차는 10시 15분에 출발합니다.",
+     "audio": "audio/transport_train_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is my seat reserved, or can I sit anywhere?",
+     "ko": "좌석이 지정되어 있나요, 아니면 아무 데나 앉아도 되나요?",
+     "audio": "audio/transport_train_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It's reserved. You're in car six, seat twelve A.",
+     "ko": "지정석입니다. 6호차 12A 좌석이세요.",
+     "audio": "audio/transport_train_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is that a window seat?",
+     "ko": "창가 자리인가요?",
+     "audio": "audio/transport_train_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, it is. Car six is in the middle, right next to the cafe car.",
+     "ko": "네, 맞습니다. 6호차는 가운데에 있고 카페 칸 바로 옆이에요.",
+     "audio": "audio/transport_train_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Which platform does the Boston train leave from?",
+     "ko": "보스턴행 열차는 몇 번 승강장에서 출발하나요?",
+     "audio": "audio/transport_train_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Platform nine. Go down the escalator and turn right.",
+     "ko": "9번 승강장입니다. 에스컬레이터로 내려가서 오른쪽으로 가세요.",
+     "audio": "audio/transport_train_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How early should I get there?",
+     "ko": "얼마나 미리 가 있어야 하나요?",
+     "audio": "audio/transport_train_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Ten minutes is enough. The doors close two minutes before departure.",
+     "ko": "10분이면 충분합니다. 출발 2분 전에 문이 닫혀요.",
+     "audio": "audio/transport_train_12.mp3"
+    },
+    {
+     "speaker": "Conductor",
+     "en": "Tickets, please. May I see your ticket?",
+     "ko": "표 검사하겠습니다. 표 좀 보여주시겠어요?",
+     "audio": "audio/transport_train_13.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Here you are. How long until we reach Boston?",
+     "ko": "여기 있습니다. 보스턴까지 얼마나 걸리나요?",
+     "audio": "audio/transport_train_14.mp3"
+    },
+    {
+     "speaker": "Conductor",
+     "en": "About two hours. It's the fourth stop, and I'll announce it.",
+     "ko": "약 두 시간입니다. 네 번째 정차역이고, 제가 안내 방송을 할게요.",
+     "audio": "audio/transport_train_15.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you. I'll grab something from the cafe car in the meantime.",
+     "ko": "감사합니다. 그동안 카페 칸에서 뭘 좀 사 올게요.",
+     "audio": "audio/transport_train_16.mp3"
+    }
+   ]
+  },
+  {
+   "key": "transport_rental",
+   "title": "렌터카 (Rental Car)",
+   "subtitle": "예약, 차량 인수, 반납",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Hi, I have a reservation for a compact car under the name Lee.",
+     "ko": "안녕하세요, 이 이름으로 소형차 예약을 했습니다.",
+     "audio": "audio/transport_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Welcome. May I see your driver's license and the credit card used for the reservation?",
+     "ko": "환영합니다. 운전면허증과 예약에 사용한 신용카드를 볼 수 있을까요?",
+     "audio": "audio/transport_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Here you go. Does the car have GPS?",
+     "ko": "여기 있습니다. 차에 GPS가 있나요?",
+     "audio": "audio/transport_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, it does. The tank is full, so please return it with a full tank as well.",
+     "ko": "네, 있습니다. 연료탱크가 가득 차 있으니 반납 시에도 가득 채워서 반납해 주세요.",
+     "audio": "audio/transport_14.mp3"
+    }
+   ],
+   "icon": "🚗"
+  },
+  {
+   "key": "transport_gas",
+   "title": "주유소 (Gas Station)",
+   "subtitle": "셀프 주유, 연료 종류, 결제, 세차",
+   "icon": "⛽",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Excuse me, how does the self-service pump work here?",
+     "ko": "실례합니다, 여기 셀프 주유기는 어떻게 사용하나요?",
+     "audio": "audio/transport_gas_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Pay first, either at the pump with a card or inside with cash.",
+     "ko": "먼저 결제하세요. 주유기에서 카드로 하시거나 안에서 현금으로 하시면 됩니다.",
+     "audio": "audio/transport_gas_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'll pay by card. Do I need to enter a zip code?",
+     "ko": "카드로 결제할게요. 우편번호를 입력해야 하나요?",
+     "audio": "audio/transport_gas_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, and foreign cards often fail there. It's easier to pay inside.",
+     "ko": "네, 해외 카드는 그 단계에서 안 되는 경우가 많아요. 안에서 결제하시는 게 편합니다.",
+     "audio": "audio/transport_gas_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "This is a rental car. Which fuel should I use?",
+     "ko": "렌터카인데요. 어떤 연료를 넣어야 하나요?",
+     "audio": "audio/transport_gas_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Check the sticker inside the fuel door. Most rentals take regular.",
+     "ko": "주유구 안쪽 스티커를 확인해 보세요. 렌터카는 대부분 일반유입니다.",
+     "audio": "audio/transport_gas_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "It says unleaded. Is that the same as regular?",
+     "ko": "무연이라고 쓰여 있는데, 일반유와 같은 건가요?",
+     "audio": "audio/transport_gas_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, the eighty-seven octane one. Just don't use the diesel pump.",
+     "ko": "네, 옥탄가 87짜리요. 경유 주유기만 쓰지 마세요.",
+     "audio": "audio/transport_gas_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can you fill it up, please?",
+     "ko": "가득 채워 주시겠어요?",
+     "audio": "audio/transport_gas_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Sure. Regular or premium?",
+     "ko": "네. 일반유로 할까요, 고급유로 할까요?",
+     "audio": "audio/transport_gas_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Regular is fine. I need to return it with a full tank.",
+     "ko": "일반유면 됩니다. 가득 채워서 반납해야 하거든요.",
+     "audio": "audio/transport_gas_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Understood. I'll top it off and give you the receipt.",
+     "ko": "알겠습니다. 가득 채우고 영수증 드릴게요.",
+     "audio": "audio/transport_gas_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Do you have a car wash here?",
+     "ko": "여기 세차장도 있나요?",
+     "audio": "audio/transport_gas_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We do. It's ten dollars, or five if you buy twenty dollars of gas.",
+     "ko": "있습니다. 10달러인데, 기름을 20달러어치 넣으시면 5달러예요.",
+     "audio": "audio/transport_gas_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'll take it. Is there a restroom I can use?",
+     "ko": "그럼 할게요. 사용할 수 있는 화장실이 있나요?",
+     "audio": "audio/transport_gas_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Around the side of the building. Here's the key.",
+     "ko": "건물 옆쪽으로 돌아가시면 됩니다. 여기 열쇠요.",
+     "audio": "audio/transport_gas_16.mp3"
+    }
+   ]
+  },
+  {
+   "key": "transport_problems",
+   "title": "문제 해결 (Problems)",
+   "subtitle": "택시 문제, 실수 대처",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "I think I got in the wrong taxi.",
+     "ko": "택시를 잘못 탄 것 같아요.",
+     "audio": "audio/transport_problems_1.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "Which company did you book? This is City Cab.",
+     "ko": "어느 회사로 예약하셨나요? 여기는 시티캡입니다.",
+     "audio": "audio/transport_problems_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I booked a different one. I'm sorry, could you stop here?",
+     "ko": "다른 회사로 예약했어요. 죄송한데 여기서 세워주시겠어요?",
+     "audio": "audio/transport_problems_3.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "No problem. There's no charge since we just started.",
+     "ko": "괜찮습니다. 막 출발했으니 요금은 없어요.",
+     "audio": "audio/transport_problems_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can you check the meter? It seems too high.",
+     "ko": "미터기를 확인해 주시겠어요? 요금이 너무 많이 나온 것 같은데요.",
+     "audio": "audio/transport_problems_5.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "Let me pull over and look. There may be a night surcharge.",
+     "ko": "차를 세우고 확인해 볼게요. 심야 할증이 붙었을 수도 있습니다.",
+     "audio": "audio/transport_problems_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "It's only seven in the evening. That shouldn't apply yet.",
+     "ko": "지금 저녁 7시밖에 안 됐는데요. 아직 적용될 시간이 아니잖아요.",
+     "audio": "audio/transport_problems_7.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "You're right, my mistake. I'll reset it to the standard rate.",
+     "ko": "맞습니다, 제 실수예요. 일반 요금으로 다시 계산하겠습니다.",
+     "audio": "audio/transport_problems_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I left my phone in the taxi.",
+     "ko": "택시에 휴대폰을 두고 내렸어요.",
+     "audio": "audio/transport_problems_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Do you have the receipt? It has the driver's number on it.",
+     "ko": "영수증 갖고 계신가요? 기사님 번호가 적혀 있습니다.",
+     "audio": "audio/transport_problems_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I paid by card, so I don't have a paper receipt.",
+     "ko": "카드로 결제해서 종이 영수증은 없어요.",
+     "audio": "audio/transport_problems_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Then call our lost and found line with the time and pickup spot.",
+     "ko": "그러면 분실물 센터로 전화하셔서 시간과 탑승 장소를 알려주세요.",
+     "audio": "audio/transport_problems_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "This isn't where I asked to go.",
+     "ko": "제가 말한 곳이 아닌데요.",
+     "audio": "audio/transport_problems_13.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "I'm sorry. I heard Park Street, not Park Avenue.",
+     "ko": "죄송합니다. 파크 애비뉴가 아니라 파크 스트리트로 들었어요.",
+     "audio": "audio/transport_problems_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can you take me to the right address? How much extra will it be?",
+     "ko": "맞는 주소로 데려다주실 수 있나요? 추가 요금은 얼마인가요?",
+     "audio": "audio/transport_problems_15.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "It's my error, so there's no extra charge. It's ten minutes away.",
+     "ko": "제 잘못이니 추가 요금은 없습니다. 10분 거리예요.",
+     "audio": "audio/transport_problems_16.mp3"
+    }
+   ],
+   "icon": "🚨"
+  },
+  {
+   "key": "transport_directions",
+   "title": "경로 질문 (Directions)",
+   "subtitle": "길 찾기, 노선 확인",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "How do I get to the city center from here?",
+     "ko": "여기서 시내 중심가까지 어떻게 가나요?",
+     "audio": "audio/transport_directions_1.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "The fastest way is the metro. The station is behind that building.",
+     "ko": "지하철이 가장 빠릅니다. 역은 저 건물 뒤에 있어요.",
+     "audio": "audio/transport_directions_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How long does it take?",
+     "ko": "얼마나 걸리나요?",
+     "audio": "audio/transport_directions_3.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "About fifteen minutes. Get off at Central Station, the fourth stop.",
+     "ko": "15분쯤 걸려요. 네 번째 정거장인 센트럴역에서 내리세요.",
+     "audio": "audio/transport_directions_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Which line goes to Times Square?",
+     "ko": "타임스퀘어로 가는 노선이 어느 것인가요?",
+     "audio": "audio/transport_directions_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Take the red line or the blue line. Both stop there.",
+     "ko": "빨간색 노선이나 파란색 노선을 타세요. 둘 다 정차합니다.",
+     "audio": "audio/transport_directions_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Which one is faster at this hour?",
+     "ko": "이 시간대에는 어느 쪽이 더 빠른가요?",
+     "audio": "audio/transport_directions_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The red line. The blue one is slower during rush hour.",
+     "ko": "빨간색 노선이요. 파란색은 출퇴근 시간에 더 느립니다.",
+     "audio": "audio/transport_directions_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is this the right bus for downtown?",
+     "ko": "이 버스가 시내로 가는 게 맞나요?",
+     "audio": "audio/transport_directions_9.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "No, this one goes north. You want the number nine across the street.",
+     "ko": "아니요, 이건 북쪽으로 갑니다. 길 건너에서 9번을 타셔야 해요.",
+     "audio": "audio/transport_directions_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is the stop right in front of that cafe?",
+     "ko": "저 카페 바로 앞이 정류장인가요?",
+     "audio": "audio/transport_directions_11.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "Yes, just cross at the light. It comes every ten minutes.",
+     "ko": "네, 신호등에서 건너시면 됩니다. 10분마다 옵니다.",
+     "audio": "audio/transport_directions_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can you show me on the map?",
+     "ko": "지도에서 보여주시겠어요?",
+     "audio": "audio/transport_directions_13.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Sure. We're here, and you want to go to this corner.",
+     "ko": "그럼요. 우리가 여기 있고, 가시려는 곳은 이 모퉁이예요.",
+     "audio": "audio/transport_directions_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "So I walk two blocks and turn left at the bank?",
+     "ko": "그럼 두 블록 걸어가서 은행에서 왼쪽으로 돌면 되나요?",
+     "audio": "audio/transport_directions_15.mp3"
+    },
+    {
+     "speaker": "Local",
+     "en": "Exactly. It's a five-minute walk. You can't miss the big red sign.",
+     "ko": "정확합니다. 걸어서 5분이에요. 큰 빨간 간판이 보일 거예요.",
+     "audio": "audio/transport_directions_16.mp3"
+    }
+   ],
+   "icon": "🗺️"
+  },
+  {
+   "key": "transport_sharing",
+   "title": "공유 택시 (Ride-sharing)",
+   "subtitle": "우버, 리프트 등 공유 택시 이용",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "I need a ride to the airport.",
+     "ko": "공항까지 가는 차편이 필요해요.",
+     "audio": "audio/transport_sharing_1.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "Sure. Are you the one who requested through the app?",
+     "ko": "네. 앱으로 호출하신 분 맞으신가요?",
+     "audio": "audio/transport_sharing_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, my name is Kim. Can you confirm the plate number?",
+     "ko": "네, 김이라고 합니다. 차량 번호를 확인해 주시겠어요?",
+     "audio": "audio/transport_sharing_3.mp3"
+    },
+    {
+     "speaker": "Driver",
+     "en": "It's seven-four-two BXK. Let me help with your luggage.",
+     "ko": "742 BXK입니다. 짐 옮기는 걸 도와드릴게요.",
+     "audio": "audio/transport_sharing_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How long will the driver take to arrive?",
+     "ko": "기사님이 오시는 데 얼마나 걸리나요?",
+     "audio": "audio/transport_sharing_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The app says four minutes. You can watch the car on the map.",
+     "ko": "앱에는 4분이라고 나오네요. 지도에서 차량을 확인하실 수 있습니다.",
+     "audio": "audio/transport_sharing_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Where exactly should I wait?",
+     "ko": "정확히 어디서 기다려야 하나요?",
+     "audio": "audio/transport_sharing_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "At the pickup zone by exit three, not at the main door.",
+     "ko": "정문이 아니라 3번 출구 옆 탑승 구역에서요.",
+     "audio": "audio/transport_sharing_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can you split the fare with me?",
+     "ko": "요금을 나눠서 낼 수 있을까요?",
+     "audio": "audio/transport_sharing_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, use the split fare option in the app before the trip ends.",
+     "ko": "네, 주행이 끝나기 전에 앱에서 요금 분할 기능을 쓰시면 됩니다.",
+     "audio": "audio/transport_sharing_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Does the other person need the same app?",
+     "ko": "상대방도 같은 앱이 있어야 하나요?",
+     "audio": "audio/transport_sharing_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "They do. Send them the invite and they can accept their half.",
+     "ko": "네, 필요합니다. 초대를 보내면 상대방이 절반을 수락할 수 있어요.",
+     "audio": "audio/transport_sharing_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I left something in the car.",
+     "ko": "차에 물건을 두고 내렸어요.",
+     "audio": "audio/transport_sharing_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Open the trip in the app and tap contact driver about a lost item.",
+     "ko": "앱에서 해당 주행을 열고 분실물 관련 기사 연락을 누르세요.",
+     "audio": "audio/transport_sharing_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "What if the driver doesn't answer?",
+     "ko": "기사님이 안 받으면 어떻게 하나요?",
+     "audio": "audio/transport_sharing_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Then report it to support. They'll reach the driver on your behalf.",
+     "ko": "그러면 고객센터에 신고하세요. 대신 기사님께 연락해 줍니다.",
+     "audio": "audio/transport_sharing_16.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is there surge pricing right now?",
+     "ko": "지금 할증 요금이 붙나요?",
+     "audio": "audio/transport_sharing_17.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, it's one point eight times the normal fare because of the rain.",
+     "ko": "네, 비 때문에 평소 요금의 1.8배입니다.",
+     "audio": "audio/transport_sharing_18.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is it worth waiting for it to drop?",
+     "ko": "요금이 내려갈 때까지 기다릴 만한가요?",
+     "audio": "audio/transport_sharing_19.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It usually settles within twenty minutes. A regular taxi may be cheaper now.",
+     "ko": "보통 20분 안에 안정됩니다. 지금은 일반 택시가 더 쌀 수도 있어요.",
+     "audio": "audio/transport_sharing_20.mp3"
+    }
+   ],
+   "icon": "🚗"
+  },
+  {
+   "key": "transport_parking",
+   "title": "주차 (Parking)",
+   "subtitle": "주차장 이용, 요금, 문제 해결",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Where can I park here?",
+     "ko": "여기서는 어디에 주차할 수 있나요?",
+     "audio": "audio/transport_parking_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "There's a garage under the building. The entrance is around the corner.",
+     "ko": "건물 지하에 주차장이 있습니다. 입구는 모퉁이를 돌면 있어요.",
+     "audio": "audio/transport_parking_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is street parking allowed on this block?",
+     "ko": "이 블록에 노상 주차가 가능한가요?",
+     "audio": "audio/transport_parking_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Only until six, and you need a ticket from the machine on the sidewalk.",
+     "ko": "6시까지만 가능하고, 인도에 있는 기계에서 표를 뽑으셔야 합니다.",
+     "audio": "audio/transport_parking_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How much is parking per hour?",
+     "ko": "주차 요금이 시간당 얼마인가요?",
+     "audio": "audio/transport_parking_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Four dollars an hour, with a daily maximum of twenty-five.",
+     "ko": "시간당 4달러이고, 하루 최대 25달러입니다.",
+     "audio": "audio/transport_parking_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Do I pay when I leave or in advance?",
+     "ko": "나갈 때 내나요, 아니면 미리 내나요?",
+     "audio": "audio/transport_parking_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Pay at the machine before you return to your car. Keep the ticket.",
+     "ko": "차로 돌아가시기 전에 정산기에서 결제하세요. 표는 갖고 계셔야 합니다.",
+     "audio": "audio/transport_parking_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is this parking lot safe?",
+     "ko": "이 주차장은 안전한가요?",
+     "audio": "audio/transport_parking_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, there are cameras on every level and a guard at night.",
+     "ko": "네, 층마다 카메라가 있고 야간에는 경비원이 있습니다.",
+     "audio": "audio/transport_parking_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Should I leave anything in the car?",
+     "ko": "차에 물건을 두고 가도 될까요?",
+     "audio": "audio/transport_parking_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'd take valuables with you and leave nothing visible on the seats.",
+     "ko": "귀중품은 가지고 가시고 좌석에 보이는 물건은 두지 마세요.",
+     "audio": "audio/transport_parking_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I can't find my car.",
+     "ko": "제 차를 못 찾겠어요.",
+     "audio": "audio/transport_parking_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "What level did you park on? Each one has a different color.",
+     "ko": "몇 층에 주차하셨나요? 층마다 색이 다릅니다.",
+     "audio": "audio/transport_parking_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I think it was the blue level, near an elevator.",
+     "ko": "파란색 층이었던 것 같아요, 엘리베이터 근처였고요.",
+     "audio": "audio/transport_parking_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "That's level three. I'll walk you over and we can check the rows.",
+     "ko": "3층이네요. 같이 가서 열을 확인해 보겠습니다.",
+     "audio": "audio/transport_parking_16.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Do you validate parking?",
+     "ko": "주차 도장을 찍어주시나요?",
+     "audio": "audio/transport_parking_17.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We do, with any purchase over twenty dollars. It covers two hours.",
+     "ko": "20달러 이상 구매하시면 해드립니다. 2시간이 적용돼요.",
+     "audio": "audio/transport_parking_18.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I was here for three hours. What about the rest?",
+     "ko": "3시간 있었는데요. 나머지는 어떻게 되나요?",
+     "audio": "audio/transport_parking_19.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "You'd pay the difference at the machine. Show it this stamped ticket.",
+     "ko": "차액은 정산기에서 내시면 됩니다. 도장 찍힌 이 표를 넣으세요.",
+     "audio": "audio/transport_parking_20.mp3"
+    }
+   ],
+   "icon": "🅿️"
+  }
+ ]
+}

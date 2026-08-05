@@ -1,0 +1,917 @@
+{
+ "key": "airport",
+ "scenarios": [
+  {
+   "key": "airport_checkin",
+   "title": "체크인 (Check-in)",
+   "subtitle": "탑승권 발급, 수하물 처리",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Good morning! How may I help you?",
+     "ko": "좋은 아침이에요! 어떻게 도와드릴까요?",
+     "audio": "audio/airport_1.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Hi, I'd like to check in for my flight to New York.",
+     "ko": "안녕하세요, 뉴욕행 비행기 탑승 수속을 하고 싶습니다.",
+     "audio": "audio/airport_2.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "May I see your passport and booking confirmation?",
+     "ko": "여권과 예약 확인서를 볼 수 있을까요?",
+     "audio": "audio/airport_3.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Here's my passport. My booking reference is A B one two three four.",
+     "ko": "여기 제 여권입니다. 예약 번호는 A B one two three four입니다.",
+     "audio": "audio/airport_4.mp3"
+    }
+   ],
+   "icon": "🛂"
+  },
+  {
+   "key": "airport_security",
+   "title": "보안검색 (Security)",
+   "subtitle": "보안 검색대 통과",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Please remove your laptop and liquids from your bag.",
+     "ko": "가방에서 노트북과 액체류를 꺼내주세요.",
+     "audio": "audio/airport_5.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Sure, everything is out now. Do I need to take off my shoes?",
+     "ko": "네, 다 꺼냈습니다. 신발도 벗어야 하나요?",
+     "audio": "audio/airport_6.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, please remove your shoes and place them in the bin.",
+     "ko": "네, 신발을 벗어서 바구니에 넣어주세요.",
+     "audio": "audio/airport_7.mp3"
+    }
+   ],
+   "icon": "🔍"
+  },
+  {
+   "key": "airport_boarding",
+   "title": "탑승 (Boarding)",
+   "subtitle": "탑승 게이트, 좌석 배정",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Now boarding flight K X one two three to London. Please have your boarding pass ready.",
+     "ko": "이제 런던행 K X one two three 항공편 탑승을 시작합니다. 탑승권을 준비해 주세요.",
+     "audio": "audio/airport_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Here's my boarding pass. What's my gate number?",
+     "ko": "여기 탑승권입니다. 게이트 번호가 어떻게 되나요?",
+     "audio": "audio/airport_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Gate number twenty four. Your flight is on time and will depart at three fifteen P M.",
+     "ko": "게이트 24번입니다. 항공편은 정시에 오후 3시 15분에 출발합니다.",
+     "audio": "audio/airport_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you. Where can I find gate twenty four?",
+     "ko": "감사합니다. 게이트 24번은 어디에 있나요?",
+     "audio": "audio/airport_11.mp3"
+    }
+   ],
+   "icon": "✈️"
+  },
+  {
+   "key": "airport_inflight",
+   "title": "기내 (In-flight)",
+   "subtitle": "좌석, 기내식, 요청, 입국 서류",
+   "icon": "💺",
+   "dialogues": [
+    {
+     "speaker": "Passenger",
+     "en": "Excuse me, I think this is my seat. Twenty-three C?",
+     "ko": "실례합니다, 여기가 제 자리인 것 같은데요. 23C 맞나요?",
+     "audio": "audio/airport_inflight_1.mp3"
+    },
+    {
+     "speaker": "Flight Attendant",
+     "en": "Let me check your boarding pass. Yes, that's the aisle seat right here.",
+     "ko": "탑승권을 확인해 드릴게요. 네, 바로 여기 통로 쪽 좌석입니다.",
+     "audio": "audio/airport_inflight_2.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "There's no room left in the overhead bin. Where can I put my bag?",
+     "ko": "머리 위 짐칸에 자리가 없네요. 가방을 어디에 두면 될까요?",
+     "audio": "audio/airport_inflight_3.mp3"
+    },
+    {
+     "speaker": "Flight Attendant",
+     "en": "I'll find space a few rows back. You can pick it up after we land.",
+     "ko": "몇 줄 뒤에 자리를 찾아드릴게요. 착륙 후에 찾아가시면 됩니다.",
+     "audio": "audio/airport_inflight_4.mp3"
+    },
+    {
+     "speaker": "Flight Attendant",
+     "en": "Would you like chicken or pasta for your meal?",
+     "ko": "식사는 치킨과 파스타 중 어느 것으로 하시겠어요?",
+     "audio": "audio/airport_inflight_5.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "The pasta, please. And could I get a glass of water?",
+     "ko": "파스타로 주세요. 그리고 물 한 잔 주시겠어요?",
+     "audio": "audio/airport_inflight_6.mp3"
+    },
+    {
+     "speaker": "Flight Attendant",
+     "en": "Certainly. Still or sparkling?",
+     "ko": "그럼요. 일반 생수와 탄산수 중 어느 것으로 드릴까요?",
+     "audio": "audio/airport_inflight_7.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Still, please. I'd also like coffee after the meal, if that's possible.",
+     "ko": "생수로 주세요. 가능하면 식사 후에 커피도 부탁드립니다.",
+     "audio": "audio/airport_inflight_8.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Excuse me, could I get a blanket and a pillow?",
+     "ko": "실례합니다, 담요와 베개를 받을 수 있을까요?",
+     "audio": "audio/airport_inflight_9.mp3"
+    },
+    {
+     "speaker": "Flight Attendant",
+     "en": "Of course. I'll bring them right away. Are you feeling cold?",
+     "ko": "물론입니다. 바로 가져다드릴게요. 추우신가요?",
+     "audio": "audio/airport_inflight_10.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "A little. Also, my seat won't recline. Is something wrong with it?",
+     "ko": "조금요. 그리고 좌석이 뒤로 안 젖혀지는데, 고장인가요?",
+     "audio": "audio/airport_inflight_11.mp3"
+    },
+    {
+     "speaker": "Flight Attendant",
+     "en": "Let me take a look. If it's broken, I can move you to another seat.",
+     "ko": "한번 살펴볼게요. 고장이라면 다른 좌석으로 옮겨드릴 수 있습니다.",
+     "audio": "audio/airport_inflight_12.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Do I need to fill out an arrival card before we land?",
+     "ko": "착륙 전에 입국 신고서를 작성해야 하나요?",
+     "audio": "audio/airport_inflight_13.mp3"
+    },
+    {
+     "speaker": "Flight Attendant",
+     "en": "Yes, everyone entering the country does. Here's the form and a pen.",
+     "ko": "네, 입국하시는 모든 분이 작성하셔야 합니다. 여기 양식과 펜입니다.",
+     "audio": "audio/airport_inflight_14.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Should I write my hotel address in this box?",
+     "ko": "이 칸에는 호텔 주소를 쓰면 되나요?",
+     "audio": "audio/airport_inflight_15.mp3"
+    },
+    {
+     "speaker": "Flight Attendant",
+     "en": "Yes, the address where you'll be staying. We land in about forty minutes.",
+     "ko": "네, 머무르실 곳의 주소요. 약 40분 후에 착륙합니다.",
+     "audio": "audio/airport_inflight_16.mp3"
+    }
+   ]
+  },
+  {
+   "key": "airport_layover",
+   "title": "환승 (Layover)",
+   "subtitle": "연결편, 수하물 연결, 대기 시간",
+   "icon": "🔄",
+   "dialogues": [
+    {
+     "speaker": "Passenger",
+     "en": "Excuse me, I have a connecting flight to Rome. Where do I go?",
+     "ko": "실례합니다, 로마행 연결편을 타야 하는데 어디로 가야 하나요?",
+     "audio": "audio/airport_layover_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Follow the signs for international transfers. It's up one level.",
+     "ko": "국제선 환승 표지판을 따라가세요. 한 층 위입니다.",
+     "audio": "audio/airport_layover_2.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Do I need to go through immigration here?",
+     "ko": "여기서 입국 심사를 받아야 하나요?",
+     "audio": "audio/airport_layover_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "No, not for a transfer. You'll stay in the international area.",
+     "ko": "아니요, 환승은 안 받으셔도 됩니다. 국제선 구역에 계시면 돼요.",
+     "audio": "audio/airport_layover_4.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Do I need to pick up my luggage and check it in again?",
+     "ko": "짐을 찾아서 다시 부쳐야 하나요?",
+     "audio": "audio/airport_layover_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "No, your bags are checked through to Rome. You'll get them there.",
+     "ko": "아니요, 짐은 로마까지 연결되어 있습니다. 거기서 찾으시면 됩니다.",
+     "audio": "audio/airport_layover_6.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "How can I be sure they made it onto the next flight?",
+     "ko": "짐이 다음 비행기에 잘 실렸는지 어떻게 확인하죠?",
+     "audio": "audio/airport_layover_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The tag says Rome, so it's automatic. You can confirm at the transfer desk.",
+     "ko": "수하물 태그에 로마라고 적혀 있으면 자동으로 갑니다. 환승 데스크에서 확인하실 수 있어요.",
+     "audio": "audio/airport_layover_8.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "My layover is only fifty minutes. Will I make it?",
+     "ko": "환승 시간이 50분밖에 없는데, 탈 수 있을까요?",
+     "audio": "audio/airport_layover_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It's tight but possible. Go straight to security, then gate B twelve.",
+     "ko": "빠듯하지만 가능합니다. 바로 보안검색으로 가신 다음 B12 게이트로 가세요.",
+     "audio": "audio/airport_layover_10.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "What if I miss it? The board says my first flight was delayed.",
+     "ko": "만약 놓치면 어떻게 하나요? 전광판에 첫 비행기가 지연됐다고 나오네요.",
+     "audio": "audio/airport_layover_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "If you miss it, go to the service desk. They'll rebook you for free.",
+     "ko": "놓치시면 서비스 데스크로 가세요. 무료로 재예약해 드립니다.",
+     "audio": "audio/airport_layover_12.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "I have a seven-hour layover. Can I leave the airport and look around?",
+     "ko": "환승 대기가 7시간인데, 공항 밖에 나가서 둘러봐도 되나요?",
+     "audio": "audio/airport_layover_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, if you have a valid visa. Otherwise you'll have to stay inside.",
+     "ko": "유효한 비자가 있으시면 됩니다. 없으시면 공항 안에 계셔야 해요.",
+     "audio": "audio/airport_layover_14.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Is there somewhere I can rest or take a shower?",
+     "ko": "쉬거나 샤워할 수 있는 곳이 있을까요?",
+     "audio": "audio/airport_layover_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "There's a transit hotel on level three, and the lounge has showers.",
+     "ko": "3층에 환승 호텔이 있고, 라운지에 샤워 시설이 있습니다.",
+     "audio": "audio/airport_layover_16.mp3"
+    }
+   ]
+  },
+  {
+   "key": "airport_dutyfree",
+   "title": "면세점 (Duty Free)",
+   "subtitle": "면세점 쇼핑, 선물 구매",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Welcome to the duty free shop! Can I help you find anything?",
+     "ko": "면세점에 오신 것을 환영합니다! 찾으시는 것이 있으신가요?",
+     "audio": "audio/airport_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, I'm looking for perfume. Do you have Chanel?",
+     "ko": "네, 향수를 찾고 있습니다. 샤넬 있나요?",
+     "audio": "audio/airport_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course! We have several Chanel fragrances. This one is very popular.",
+     "ko": "물론이죠! 여러 종류의 샤넬 향수가 있습니다. 이건 아주 인기가 많답니다.",
+     "audio": "audio/airport_14.mp3"
+    }
+   ],
+   "icon": "🛍️"
+  },
+  {
+   "key": "airport_changes",
+   "title": "항공편 변경 (Flight Changes)",
+   "subtitle": "비행기 지연, 취소, 예약 변경",
+   "dialogues": [
+    {
+     "speaker": "Passenger",
+     "en": "Excuse me, I just saw on the board that my flight is delayed. Can you tell me what's going on?",
+     "ko": "실례합니다, 방금 게시판에서 제 비행기가 지연되었다고 봤는데, 무슨 상황인지 알 수 있을까요?",
+     "audio": "audio/airport_change_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, I'm sorry to inform you that flight KA205 to Tokyo has been delayed by approximately two hours due to weather conditions.",
+     "ko": "네, 죄송합니다만 기상 악화로 인해 도쿄행 KA205편이 약 2시간 지연되었습니다.",
+     "audio": "audio/airport_change_2.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Two hours? I have a connecting flight in Tokyo. Will I miss it?",
+     "ko": "2시간이나요? 도쿄에서 연결편이 있는데 놓칠까요?",
+     "audio": "audio/airport_change_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Let me check. If you do miss it, we can rebook you on the next available flight at no extra charge.",
+     "ko": "확인해 보겠습니다. 만약 놓치시면 추가 요금 없이 다음 가능한 항공편으로 예약 변경해 드리겠습니다.",
+     "audio": "audio/airport_change_4.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Thank you. Could you also check if there's an earlier flight I could switch to?",
+     "ko": "감사합니다. 혹시 바꿀 수 있는 더 이른 비행기도 확인해주실 수 있나요?",
+     "audio": "audio/airport_change_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "There's a flight at 2 PM that still has seats available. Would you like me to change your booking?",
+     "ko": "오후 2시 비행기에 아직 좌석이 몇 개 있습니다. 예약을 변경해 드릴까요?",
+     "audio": "audio/airport_change_6.mp3"
+    }
+   ],
+   "icon": "🔄"
+  },
+  {
+   "key": "airport_luggage",
+   "title": "수하물 문제 (Lost Luggage)",
+   "subtitle": "잃어버린 가방, 보상 청구",
+   "dialogues": [
+    {
+     "speaker": "Passenger",
+     "en": "Hi, I've been waiting at baggage claim for thirty minutes, but my suitcase hasn't come out.",
+     "ko": "안녕하세요, 수하물 찾는 곳에서 30분째 기다렸는데 제 트렁크가 나오지 않고 있습니다.",
+     "audio": "audio/airport_luggage_1.mp3"
+    },
+    {
+     "speaker": "Agent",
+     "en": "I'm sorry to hear that. Can you show me your baggage claim tag and boarding pass?",
+     "ko": "그렇군요, 죄송합니다. 수하물 부치는 태그와 탑승권을 보여주시겠어요?",
+     "audio": "audio/airport_luggage_2.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Here they are. It's a large black suitcase with a red ribbon on the handle.",
+     "ko": "여기 있습니다. 손잡이에 빨간 리본이 달린 큰 검은색 트렁크입니다.",
+     "audio": "audio/airport_luggage_3.mp3"
+    },
+    {
+     "speaker": "Agent",
+     "en": "Got it. Let me check our system. It seems your bag was loaded on a different flight. We can have it delivered to your hotel by tomorrow morning.",
+     "ko": "알겠습니다. 시스템을 확인해 보니 다른 비행기에 실린 것 같습니다. 내일 아침까지 호텔로 배달해 드릴 수 있습니다.",
+     "audio": "audio/airport_luggage_4.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "That's concerning. What if I need my things tonight? Can you cover the cost of some essentials?",
+     "ko": "걱정되네요. 오늘 밤에 필요한 물건이 있는데요. 필수품 비용을 지원해주실 수 있나요?",
+     "audio": "audio/airport_luggage_5.mp3"
+    },
+    {
+     "speaker": "Agent",
+     "en": "Absolutely. We'll reimburse up to one hundred dollars for essential purchases. Just keep your receipts.",
+     "ko": "물론입니다. 필수품 구매 비용을 최대 100달러까지 환불해 드립니다. 영수증을 보관해 주세요.",
+     "audio": "audio/airport_luggage_6.mp3"
+    }
+   ],
+   "icon": "🧳"
+  },
+  {
+   "key": "airport_lounge",
+   "title": "라운지 (Lounge)",
+   "subtitle": "라운지 이용, 편의시설, 음식",
+   "dialogues": [
+    {
+     "speaker": "Passenger",
+     "en": "Excuse me, I have a business class ticket. Is there a lounge I can use?",
+     "ko": "실례합니다, 비즈니스 클래스 표를 가지고 있는데, 이용할 수 있는 라운지가 있나요?",
+     "audio": "audio/airport_lounge_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, absolutely. The business class lounge is on the second floor, just past security.",
+     "ko": "네, 물론입니다. 비즈니스 클래스 라운지는 2층, 보안 검색대를 지나면 바로 있습니다.",
+     "audio": "audio/airport_lounge_2.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Thank you. What time does it open?",
+     "ko": "감사합니다. 몇 시에 문을 여나요?",
+     "audio": "audio/airport_lounge_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It's open twenty-four hours. You can enjoy complimentary food, drinks, and Wi-Fi inside.",
+     "ko": "24시간 운영됩니다. 무료 음식, 음료, 와이파이를 이용하실 수 있습니다.",
+     "audio": "audio/airport_lounge_4.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Hi, I'd like to access the lounge. I have a Priority Pass card.",
+     "ko": "안녕하세요, 라운지에 입장하고 싶습니다. 프라이어리티 패스 카드가 있습니다.",
+     "audio": "audio/airport_lounge_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Let me scan that for you. Great, you're all set. Welcome to the lounge.",
+     "ko": "스캔해 드리겠습니다. 좋습니다, 모두 확인되었습니다. 라운지에 오신 것을 환영합니다.",
+     "audio": "audio/airport_lounge_6.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Can I bring a guest with me?",
+     "ko": "함께 온 손님도 데리고 들어갈 수 있나요?",
+     "audio": "audio/airport_lounge_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, your card allows one guest. Just have them show a valid ID at the entrance.",
+     "ko": "네, 귀하의 카드로 한 명의 게스트를 동반할 수 있습니다. 입구에서 유효한 신분증만 보여주시면 됩니다.",
+     "audio": "audio/airport_lounge_8.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "This lounge is really nice. Is there a shower facility here?",
+     "ko": "이 라운지 정말 좋네요. 샤워 시설이 있나요?",
+     "audio": "audio/airport_lounge_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, we have private shower rooms. Towels and toiletries are provided.",
+     "ko": "네, 프라이빗 샤워 룸이 있습니다. 수건과 세면도구가 제공됩니다.",
+     "audio": "audio/airport_lounge_10.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "How do I reserve one?",
+     "ko": "예약은 어떻게 하나요?",
+     "audio": "audio/airport_lounge_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Just come to the reception desk. We can check availability and book a time slot for you.",
+     "ko": "리셉션 데스크로 오세요. 이용 가능 여부를 확인하고 시간대를 예약해 드리겠습니다.",
+     "audio": "audio/airport_lounge_12.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "What kind of food is available in the lounge?",
+     "ko": "라운지에서 어떤 음식을 먹을 수 있나요?",
+     "audio": "audio/airport_lounge_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We have a buffet with salads, sandwiches, hot dishes, and a selection of desserts.",
+     "ko": "샐러드, 샌드위치, 따뜻한 요리, 그리고 다양한 디저트가 있는 뷔페가 있습니다.",
+     "audio": "audio/airport_lounge_14.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Are there any alcoholic drinks included?",
+     "ko": "술도 포함되어 있나요?",
+     "audio": "audio/airport_lounge_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, beer, wine, and cocktails are complimentary. Just ask the bartender.",
+     "ko": "네, 맥주, 와인, 칵테일이 무료로 제공됩니다. 바텐더에게 요청하시면 됩니다.",
+     "audio": "audio/airport_lounge_16.mp3"
+    }
+   ],
+   "icon": "🛋️"
+  },
+  {
+   "key": "airport_immigration",
+   "title": "입국 심사 (Immigration)",
+   "subtitle": "여권 검사, 방문 목적, 체류 기간",
+   "dialogues": [
+    {
+     "speaker": "Immigration Officer",
+     "en": "Good afternoon. May I see your passport, please?",
+     "ko": "안녕하십니까. 여권을 보여주시겠습니까?",
+     "audio": "audio/airport_immigration_1.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "Here it is. I'm traveling on a tourist visa.",
+     "ko": "여기 있습니다. 관광 비자로 여행 중입니다.",
+     "audio": "audio/airport_immigration_2.mp3"
+    },
+    {
+     "speaker": "Immigration Officer",
+     "en": "What is the purpose of your visit to the United States?",
+     "ko": "미국 방문 목적이 무엇입니까?",
+     "audio": "audio/airport_immigration_3.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "I'm here for a two-week vacation. I plan to visit New York and Los Angeles.",
+     "ko": "2주간의 휴가차 왔습니다. 뉴욕과 로스앤젤레스를 방문할 계획입니다.",
+     "audio": "audio/airport_immigration_4.mp3"
+    },
+    {
+     "speaker": "Immigration Officer",
+     "en": "Do you have a return ticket?",
+     "ko": "귀국 항공권이 있습니까?",
+     "audio": "audio/airport_immigration_5.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "Yes, I have a confirmed return flight on the fifteenth of next month.",
+     "ko": "네, 다음 달 15일 확정된 귀국 항공편이 있습니다.",
+     "audio": "audio/airport_immigration_6.mp3"
+    },
+    {
+     "speaker": "Immigration Officer",
+     "en": "Where will you be staying during your visit?",
+     "ko": "방문 기간 중 어디에 머무실 겁니까?",
+     "audio": "audio/airport_immigration_7.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "I have a hotel reservation in Manhattan for the first week, then I'm staying with a friend in Los Angeles.",
+     "ko": "첫 주는 맨해튼 호텔 예약이 있고, 그 다음은 로스앤젤레스에 있는 친구 집에 머물 예정입니다.",
+     "audio": "audio/airport_immigration_8.mp3"
+    },
+    {
+     "speaker": "Immigration Officer",
+     "en": "Do you have enough funds for your stay?",
+     "ko": "체류 기간 동안 충분한 자금이 있습니까?",
+     "audio": "audio/airport_immigration_9.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "Yes, I have a credit card and sufficient cash for the entire trip.",
+     "ko": "네, 신용카드와 전체 여행에 필요한 현금이 충분합니다.",
+     "audio": "audio/airport_immigration_10.mp3"
+    },
+    {
+     "speaker": "Immigration Officer",
+     "en": "Have you visited this country before?",
+     "ko": "이전에 이 나라를 방문한 적이 있습니까?",
+     "audio": "audio/airport_immigration_11.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "Yes, I came here three years ago for a business conference.",
+     "ko": "네, 3년 전에 비즈니스 컨퍼런스를 위해 방문한 적이 있습니다.",
+     "audio": "audio/airport_immigration_12.mp3"
+    },
+    {
+     "speaker": "Immigration Officer",
+     "en": "Do you have anything to declare? Any food, alcohol, or large amounts of cash?",
+     "ko": "신고할 것이 있습니까? 음식이나 주류, 또는 큰 금액의 현금이 있습니까?",
+     "audio": "audio/airport_immigration_13.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "No, I only have personal items and a small amount of duty-free purchases.",
+     "ko": "아니요, 개인 소지품과 소량의 면세 구매품만 가지고 있습니다.",
+     "audio": "audio/airport_immigration_14.mp3"
+    },
+    {
+     "speaker": "Immigration Officer",
+     "en": "What do you do for a living back home?",
+     "ko": "원래 나라에서 어떤 직업을 갖고 계십니까?",
+     "audio": "audio/airport_immigration_15.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "I'm a software engineer at a technology company in Seoul.",
+     "ko": "서울의 한 기술 회사에서 소프트웨어 엔지니어로 일하고 있습니다.",
+     "audio": "audio/airport_immigration_16.mp3"
+    },
+    {
+     "speaker": "Immigration Officer",
+     "en": "How long do you plan to stay in the United States?",
+     "ko": "미국에 얼마나 체류하실 계획입니까?",
+     "audio": "audio/airport_immigration_17.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "Exactly fourteen days. I'll be departing on the twentieth of this month.",
+     "ko": "정확히 14일입니다. 이달 20일에 출국할 예정입니다.",
+     "audio": "audio/airport_immigration_18.mp3"
+    },
+    {
+     "speaker": "Immigration Officer",
+     "en": "I see. Do you have your accommodation details?",
+     "ko": "알겠습니다. 숙소 관련 서류가 있습니까?",
+     "audio": "audio/airport_immigration_19.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "Yes, here's my hotel confirmation email and my friend's invitation letter.",
+     "ko": "네, 호텔 예약 확인 이메일과 친구의 초대장이 있습니다.",
+     "audio": "audio/airport_immigration_20.mp3"
+    },
+    {
+     "speaker": "Immigration Officer",
+     "en": "Everything looks good. Welcome to the United States. Enjoy your stay.",
+     "ko": "모두 확인되었습니다. 미국에 오신 것을 환영합니다. 좋은 시간 보내세요.",
+     "audio": "audio/airport_immigration_21.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "Thank you very much! Have a great day.",
+     "ko": "대단히 감사합니다! 좋은 하루 보내세요.",
+     "audio": "audio/airport_immigration_22.mp3"
+    }
+   ],
+   "icon": "🛂"
+  },
+  {
+   "key": "airport_customs",
+   "title": "면세 한도 (Customs)",
+   "subtitle": "신고 사항, 한도액, 금지 물품",
+   "dialogues": [
+    {
+     "speaker": "Customs Officer",
+     "en": "Good morning. Do you have anything to declare?",
+     "ko": "안녕하십니까. 신고하실 것이 있습니까?",
+     "audio": "audio/airport_customs_1.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "I have some gifts and a bottle of wine I purchased at the duty-free shop.",
+     "ko": "선물 몇 개와 면세점에서 구매한 와인 한 병이 있습니다.",
+     "audio": "audio/airport_customs_2.mp3"
+    },
+    {
+     "speaker": "Customs Officer",
+     "en": "What is the total value of your purchases?",
+     "ko": "구매하신 물품의 총 가치가 얼마입니까?",
+     "audio": "audio/airport_customs_3.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "Around three hundred dollars in total.",
+     "ko": "총 약 300달러 정도입니다.",
+     "audio": "audio/airport_customs_4.mp3"
+    },
+    {
+     "speaker": "Customs Officer",
+     "en": "That's within the duty-free limit. You may proceed.",
+     "ko": "면세 한도 이내입니다. 통과하셔도 됩니다.",
+     "audio": "audio/airport_customs_5.mp3"
+    },
+    {
+     "speaker": "Customs Officer",
+     "en": "Please fill out this customs declaration form.",
+     "ko": "이 면세 신고서를 작성해 주세요.",
+     "audio": "audio/airport_customs_6.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "Sure. I need to declare some electronics I bought abroad, right?",
+     "ko": "네. 해외에서 구매한 전자기기는 신고해야 하나요?",
+     "audio": "audio/airport_customs_7.mp3"
+    },
+    {
+     "speaker": "Customs Officer",
+     "en": "Yes, if the total value exceeds eight hundred dollars, you must declare it.",
+     "ko": "네, 총 가치가 800달러를 초과하면 반드시 신고해야 합니다.",
+     "audio": "audio/airport_customs_8.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "I bought a laptop for about twelve hundred dollars. Should I declare it?",
+     "ko": "1200달러 정도의 노트북을 구매했습니다. 신고해야 하나요?",
+     "audio": "audio/airport_customs_9.mp3"
+    },
+    {
+     "speaker": "Customs Officer",
+     "en": "Yes, you'll need to pay duty on the amount over eight hundred dollars.",
+     "ko": "네, 800달러를 초과하는 금액에 대해 관세를 납부하셔야 합니다.",
+     "audio": "audio/airport_customs_10.mp3"
+    },
+    {
+     "speaker": "Customs Officer",
+     "en": "Do you have any food items, plants, or animal products?",
+     "ko": "음식물, 식물, 또는 동물성 제품이 있습니까?",
+     "audio": "audio/airport_customs_11.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "I have some packaged snacks and dried fruits. Are those allowed?",
+     "ko": "포장된 간식과 말린 과일이 있습니다. 허용되나요?",
+     "audio": "audio/airport_customs_12.mp3"
+    },
+    {
+     "speaker": "Customs Officer",
+     "en": "Packaged snacks are generally fine, but fresh fruits and certain meats are prohibited.",
+     "ko": "포장된 간식은 일반적으로 괜찮지만, 신선한 과일과 특정 육류는 반입 금지입니다.",
+     "audio": "audio/airport_customs_13.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "I understand. I'll make sure there are no restricted items.",
+     "ko": "알겠습니다. 제한 품목이 없는지 확인하겠습니다.",
+     "audio": "audio/airport_customs_14.mp3"
+    },
+    {
+     "speaker": "Customs Officer",
+     "en": "Are you carrying more than ten thousand dollars in cash or monetary instruments?",
+     "ko": "10,000달러 이상의 현금이나 금융 상품을 소지하고 있습니까?",
+     "audio": "audio/airport_customs_15.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "No, I only have about five hundred dollars in cash.",
+     "ko": "아니요, 현금은 약 500달러만 가지고 있습니다.",
+     "audio": "audio/airport_customs_16.mp3"
+    },
+    {
+     "speaker": "Customs Officer",
+     "en": "Good. What about alcohol or tobacco products?",
+     "ko": "좋습니다. 술이나 담배 제품은요?",
+     "audio": "audio/airport_customs_17.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "I have one liter of wine and two cartons of cigarettes from duty-free.",
+     "ko": "와인 1리터와 면세 담배 2갑이 있습니다.",
+     "audio": "audio/airport_customs_18.mp3"
+    },
+    {
+     "speaker": "Customs Officer",
+     "en": "That's within the allowed limits. You're free to go. Have a safe trip.",
+     "ko": "허용 한도 이내입니다. 통과하셔도 됩니다. 안전한 여행 되세요.",
+     "audio": "audio/airport_customs_19.mp3"
+    },
+    {
+     "speaker": "Traveler",
+     "en": "Thank you for your help. Goodbye!",
+     "ko": "도움 주셔서 감사합니다. 안녕히 가세요!",
+     "audio": "audio/airport_customs_20.mp3"
+    }
+   ],
+   "icon": "📦"
+  },
+  {
+   "key": "airport_upgrade",
+   "title": "비행기 업그레이드 (Flight Upgrade)",
+   "subtitle": "좌석 업그레이드 요청, 마일리지, 좌석 가능 여부",
+   "dialogues": [
+    {
+     "speaker": "Passenger",
+     "en": "Hi, I'd like to ask about upgrading my seat to business class.",
+     "ko": "안녕하세요, 비즈니스 클래스로 좌석 업그레이드를 문의하고 싶습니다.",
+     "audio": "audio/airport_upgrade_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Let me check availability. May I see your booking confirmation?",
+     "ko": "좌석 가능 여부를 확인해 드리겠습니다. 예약 확인서를 보여주시겠습니까?",
+     "audio": "audio/airport_upgrade_2.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Here it is. I'm flying economy to London this evening.",
+     "ko": "여기 있습니다. 오늘 저녁 런던행 이코노미 클래스를 이용합니다.",
+     "audio": "audio/airport_upgrade_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I see business class availability. The upgrade fee would be four hundred fifty dollars.",
+     "ko": "비즈니스 클래스 좌석이 확인됩니다. 업그레이드 비용은 450달러입니다.",
+     "audio": "audio/airport_upgrade_4.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Can I use my frequent flyer miles for the upgrade instead of paying cash?",
+     "ko": "현금 대신 프리퀀트 플라이어 마일리지로 업그레이드할 수 있나요?",
+     "audio": "audio/airport_upgrade_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, you can. You'll need twenty-five thousand miles for an upgrade to business class.",
+     "ko": "네, 가능합니다. 비즈니스 클래스로 업그레이드하려면 25,000마일이 필요합니다.",
+     "audio": "audio/airport_upgrade_6.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "I have thirty thousand miles on my account. That should be enough, right?",
+     "ko": "제 계정에 30,000마일이 있습니다. 충분할까요?",
+     "audio": "audio/airport_upgrade_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Absolutely. I'll process the upgrade for you now. You'll receive a new boarding pass.",
+     "ko": "물론입니다. 지금 바로 업그레이드를 처리해 드리겠습니다. 새로운 탑승권을 받으실 것입니다.",
+     "audio": "audio/airport_upgrade_8.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "I'm a Gold member. Are there any complimentary upgrades available?",
+     "ko": "골드 회원입니다. 무료 업그레이드가 가능한가요?",
+     "audio": "audio/airport_upgrade_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Let me check your eligibility. Gold members can receive complimentary upgrades when available.",
+     "ko": "자격 여부를 확인해 드리겠습니다. 골드 회원은 좌석이 있을 경우 무료 업그레이드를 받으실 수 있습니다.",
+     "audio": "audio/airport_upgrade_10.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "Is there anything available for today's flight?",
+     "ko": "오늘 항공편에 가능한 좌석이 있나요?",
+     "audio": "audio/airport_upgrade_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Unfortunately, business class is full today. But I can put you on the waitlist.",
+     "ko": "죄송하지만 오늘 비즈니스 클래스는 만석입니다. 웨이트리스트에 올려드릴 수는 있습니다.",
+     "audio": "audio/airport_upgrade_12.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "That would be great. I'll wait and see if anything opens up.",
+     "ko": "감사합니다. 좌석이 열리면 기다려 보겠습니다.",
+     "audio": "audio/airport_upgrade_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We'll announce any upgrades at the gate before boarding.",
+     "ko": "탑승 전 게이트에서 업그레이드 가능 여부를 안내해 드리겠습니다.",
+     "audio": "audio/airport_upgrade_14.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "I'd like to upgrade to premium economy. Is that possible?",
+     "ko": "프리미엄 이코노미로 업그레이드하고 싶은데 가능한가요?",
+     "audio": "audio/airport_upgrade_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, premium economy upgrades are available. It's one hundred fifty dollars for this route.",
+     "ko": "네, 프리미엄 이코노미 업그레이드가 가능합니다. 이 노선은 150달러입니다.",
+     "audio": "audio/airport_upgrade_16.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "What's included in premium economy compared to regular economy?",
+     "ko": "프리미엄 이코노미에 일반 이코노미와 비교해 어떤 혜택이 있나요?",
+     "audio": "audio/airport_upgrade_17.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "You'll get extra legroom, wider seats, premium meals, and priority boarding.",
+     "ko": "좌석 간격이 넓고, 좌석이 더 넓으며, 프리미엄 식사와 우선 탑승 혜택이 있습니다.",
+     "audio": "audio/airport_upgrade_18.mp3"
+    },
+    {
+     "speaker": "Passenger",
+     "en": "That sounds great. I'll take it. Can I pay by credit card?",
+     "ko": "좋게 들립니다. 신청하겠습니다. 신용카드로 결제할 수 있나요?",
+     "audio": "audio/airport_upgrade_19.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. Just swipe your card here. Your new boarding pass is ready.",
+     "ko": "물론이죠. 여기 카드를 대주세요. 새로운 탑승권이 준비되었습니다.",
+     "audio": "audio/airport_upgrade_20.mp3"
+    }
+   ],
+   "icon": "💺"
+  }
+ ]
+}

@@ -1,0 +1,1277 @@
+{
+ "key": "shopping",
+ "scenarios": [
+  {
+   "key": "shopping_store",
+   "title": "가게 입장 & 물건 찾기",
+   "subtitle": "둘러보기, 직원 응대",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Hi, I'm just looking around.",
+     "ko": "안녕하세요, 그냥 둘러보는 중이에요.",
+     "audio": "audio/shopping_store_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Can I help you find something?",
+     "ko": "찾으시는 게 있으면 도와드릴까요?",
+     "audio": "audio/shopping_store_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, I'm looking for a jacket.",
+     "ko": "네, 재킷을 찾고 있어요.",
+     "audio": "audio/shopping_store_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "What size do you wear?",
+     "ko": "사이즈가 어떻게 되세요?",
+     "audio": "audio/shopping_store_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I wear medium.",
+     "ko": "미디엄 입어요.",
+     "audio": "audio/shopping_store_5.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Excuse me, which floor has the men's section?",
+     "ko": "실례합니다, 남성 코너는 몇 층인가요?",
+     "audio": "audio/shopping_store_6.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The second floor. The escalator is past the shoe display.",
+     "ko": "2층입니다. 에스컬레이터는 신발 진열대 지나서 있어요.",
+     "audio": "audio/shopping_store_7.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is the sale merchandise up there too?",
+     "ko": "세일 상품도 거기에 있나요?",
+     "audio": "audio/shopping_store_8.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, it's at the back, marked with red tags.",
+     "ko": "네, 안쪽에 있고 빨간 태그가 붙어 있습니다.",
+     "audio": "audio/shopping_store_9.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "What time do you close today?",
+     "ko": "오늘 몇 시에 문 닫나요?",
+     "audio": "audio/shopping_store_10.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Nine in the evening, but the fitting rooms close at eight thirty.",
+     "ko": "저녁 9시입니다. 다만 탈의실은 8시 30분에 닫아요.",
+     "audio": "audio/shopping_store_11.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Good to know. I'll come back after dinner then.",
+     "ko": "알겠습니다. 그럼 저녁 먹고 다시 올게요.",
+     "audio": "audio/shopping_store_12.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Sounds good. I can hold the jacket at the counter for you.",
+     "ko": "좋습니다. 재킷은 카운터에 맡아 둘게요.",
+     "audio": "audio/shopping_store_13.mp3"
+    }
+   ],
+   "icon": "🏪"
+  },
+  {
+   "key": "shopping_fitting",
+   "title": "탈의실 & 사이즈",
+   "subtitle": "탈의실 위치, 사이즈 변경",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Where is the fitting room?",
+     "ko": "탈의실이 어디인가요?",
+     "audio": "audio/shopping_fitting_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It's in the back, on the left.",
+     "ko": "안쪽 왼편에 있습니다.",
+     "audio": "audio/shopping_fitting_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "This is too small. Do you have a larger size?",
+     "ko": "이건 너무 작네요. 더 큰 사이즈 있나요?",
+     "audio": "audio/shopping_fitting_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Let me check for you.",
+     "ko": "확인해 드릴게요.",
+     "audio": "audio/shopping_fitting_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How many items can I take in at once?",
+     "ko": "한 번에 몇 개까지 들고 들어갈 수 있나요?",
+     "audio": "audio/shopping_fitting_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Up to six. I'll give you a tag with the number.",
+     "ko": "여섯 개까지요. 개수가 적힌 태그를 드릴게요.",
+     "audio": "audio/shopping_fitting_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "The large fits, but the sleeves are a bit long.",
+     "ko": "라지는 맞는데 소매가 조금 기네요.",
+     "audio": "audio/shopping_fitting_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We offer free alterations. It takes about three days.",
+     "ko": "무료 수선을 해드립니다. 3일 정도 걸려요.",
+     "audio": "audio/shopping_fitting_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'm flying home tomorrow, so that won't work.",
+     "ko": "내일 귀국해서 그건 어렵겠네요.",
+     "audio": "audio/shopping_fitting_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Then try the medium in this other cut. It runs longer.",
+     "ko": "그러면 다른 핏의 미디엄을 입어보세요. 기장이 더 깁니다.",
+     "audio": "audio/shopping_fitting_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That one fits much better. I'll take it.",
+     "ko": "이게 훨씬 잘 맞네요. 이걸로 할게요.",
+     "audio": "audio/shopping_fitting_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Great. I'll take the others back to the floor for you.",
+     "ko": "좋습니다. 나머지는 제가 매장에 다시 갖다 놓을게요.",
+     "audio": "audio/shopping_fitting_12.mp3"
+    }
+   ],
+   "icon": "👔"
+  },
+  {
+   "key": "shopping_price",
+   "title": "가격 & 할인",
+   "subtitle": "가격 문의, 할인 확인",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "How much is this?",
+     "ko": "이거 얼마인가요?",
+     "audio": "audio/shopping_price_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It's 50 dollars.",
+     "ko": "50달러입니다.",
+     "audio": "audio/shopping_price_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is there a discount?",
+     "ko": "할인이 있나요?",
+     "audio": "audio/shopping_price_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, it's 20% off today.",
+     "ko": "네, 오늘은 20% 할인입니다.",
+     "audio": "audio/shopping_price_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is the price on the tag before or after the discount?",
+     "ko": "택에 붙은 가격이 할인 전인가요, 후인가요?",
+     "audio": "audio/shopping_price_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Before. The register takes the discount off automatically.",
+     "ko": "할인 전입니다. 계산대에서 자동으로 빠져요.",
+     "audio": "audio/shopping_price_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Does the price include tax?",
+     "ko": "가격에 세금이 포함된 건가요?",
+     "audio": "audio/shopping_price_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "No, sales tax is added at checkout. It's about eight percent.",
+     "ko": "아니요, 판매세는 계산할 때 붙습니다. 8% 정도예요.",
+     "audio": "audio/shopping_price_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I get a tax refund as a tourist?",
+     "ko": "관광객인데 세금 환급을 받을 수 있나요?",
+     "audio": "audio/shopping_price_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, on purchases over one hundred dollars. Keep the receipt.",
+     "ko": "네, 100달러 이상 구매 시 가능합니다. 영수증을 보관하세요.",
+     "audio": "audio/shopping_price_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Where do I claim it?",
+     "ko": "어디서 환급받나요?",
+     "audio": "audio/shopping_price_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "At the airport, before security. Bring the item and your passport.",
+     "ko": "공항 보안검색 전에요. 물건과 여권을 가져가세요.",
+     "audio": "audio/shopping_price_12.mp3"
+    }
+   ],
+   "icon": "💰"
+  },
+  {
+   "key": "shopping_payment",
+   "title": "결제",
+   "subtitle": "구매 결정, 결제 방법",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "I'll take this one.",
+     "ko": "이걸로 할게요.",
+     "audio": "audio/shopping_payment_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Would you like a bag?",
+     "ko": "봉투 드릴까요?",
+     "audio": "audio/shopping_payment_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, please. Can I pay by card?",
+     "ko": "네, 주세요. 카드로 결제해도 되나요?",
+     "audio": "audio/shopping_payment_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. Here's your receipt.",
+     "ko": "물론입니다. 여기 영수증입니다.",
+     "audio": "audio/shopping_payment_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you. Have a nice day!",
+     "ko": "감사합니다. 좋은 하루 보내세요!",
+     "audio": "audio/shopping_payment_5.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Do you accept foreign credit cards?",
+     "ko": "해외 신용카드도 받나요?",
+     "audio": "audio/shopping_payment_6.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We do. Would you like to pay in dollars or your home currency?",
+     "ko": "받습니다. 달러로 하시겠어요, 자국 통화로 하시겠어요?",
+     "audio": "audio/shopping_payment_7.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Dollars, please. The conversion rate is usually better.",
+     "ko": "달러로 할게요. 보통 환율이 더 낫더라고요.",
+     "audio": "audio/shopping_payment_8.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Good choice. Please insert your card and enter your PIN.",
+     "ko": "잘 선택하셨어요. 카드를 넣고 비밀번호를 입력해 주세요.",
+     "audio": "audio/shopping_payment_9.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "The machine declined it. Can I try a different card?",
+     "ko": "결제가 거절됐네요. 다른 카드로 해도 될까요?",
+     "audio": "audio/shopping_payment_10.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Certainly. Or you can pay cash if that's easier.",
+     "ko": "그럼요. 편하시면 현금으로 하셔도 됩니다.",
+     "audio": "audio/shopping_payment_11.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Let me try tapping my phone instead.",
+     "ko": "휴대폰으로 태그해 볼게요.",
+     "audio": "audio/shopping_payment_12.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "That worked. Your receipt will be emailed to you.",
+     "ko": "결제됐습니다. 영수증은 이메일로 보내드릴게요.",
+     "audio": "audio/shopping_payment_13.mp3"
+    }
+   ],
+   "icon": "💳"
+  },
+  {
+   "key": "shopping_returns",
+   "title": "반품/교환 (Returns)",
+   "subtitle": "반품, 교환, 환불",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "I'd like to return this item.",
+     "ko": "이 물건을 반품하고 싶습니다.",
+     "audio": "audio/shopping_returns_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Do you have the receipt?",
+     "ko": "영수증 갖고 계신가요?",
+     "audio": "audio/shopping_returns_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, I bought it two days ago and never wore it.",
+     "ko": "네, 이틀 전에 샀고 한 번도 안 입었어요.",
+     "audio": "audio/shopping_returns_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Then I can refund it to your card right away.",
+     "ko": "그러면 카드로 바로 환불해 드릴 수 있습니다.",
+     "audio": "audio/shopping_returns_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I exchange this for a different size?",
+     "ko": "다른 사이즈로 교환할 수 있나요?",
+     "audio": "audio/shopping_returns_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. What size do you need?",
+     "ko": "물론입니다. 어떤 사이즈가 필요하세요?",
+     "audio": "audio/shopping_returns_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "A large. Is there a price difference?",
+     "ko": "라지요. 가격 차이가 있나요?",
+     "audio": "audio/shopping_returns_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "No, it's the same price. I'll swap it at the counter.",
+     "ko": "아니요, 같은 가격입니다. 카운터에서 바꿔드릴게요.",
+     "audio": "audio/shopping_returns_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How long do I have to return it?",
+     "ko": "반품 기한이 얼마나 되나요?",
+     "audio": "audio/shopping_returns_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Thirty days with the tags on and the receipt.",
+     "ko": "택이 붙어 있고 영수증이 있으면 30일입니다.",
+     "audio": "audio/shopping_returns_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'll be back in Korea by then. Can I return it there?",
+     "ko": "그때쯤이면 한국에 있을 텐데요. 거기서 반품 가능한가요?",
+     "audio": "audio/shopping_returns_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Only at our stores in this country, I'm afraid.",
+     "ko": "죄송하지만 이 나라에 있는 저희 매장에서만 가능합니다.",
+     "audio": "audio/shopping_returns_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'd like a refund please.",
+     "ko": "환불을 받고 싶습니다.",
+     "audio": "audio/shopping_returns_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Was there a problem with the item?",
+     "ko": "제품에 문제가 있었나요?",
+     "audio": "audio/shopping_returns_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "The zipper broke the first time I used it.",
+     "ko": "처음 썼을 때 지퍼가 고장 났어요.",
+     "audio": "audio/shopping_returns_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'm sorry about that. You'll get a full refund in five days.",
+     "ko": "죄송합니다. 5일 안에 전액 환불됩니다.",
+     "audio": "audio/shopping_returns_16.mp3"
+    }
+   ],
+   "icon": "🔄"
+  },
+  {
+   "key": "shopping_online",
+   "title": "온라인 쇼핑 (Online Shopping)",
+   "subtitle": "주문 조회, 배송, 반품",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Where is my order?",
+     "ko": "제 주문은 어디에 있나요?",
+     "audio": "audio/shopping_online_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Could I have the order number from your confirmation email?",
+     "ko": "확인 메일에 있는 주문 번호를 알려주시겠어요?",
+     "audio": "audio/shopping_online_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "It's four-four-one-nine-two. I ordered it a week ago.",
+     "ko": "44192입니다. 일주일 전에 주문했어요.",
+     "audio": "audio/shopping_online_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It shipped Monday and is out for delivery today.",
+     "ko": "월요일에 발송됐고 오늘 배송 중입니다.",
+     "audio": "audio/shopping_online_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I track my delivery?",
+     "ko": "배송 조회를 할 수 있나요?",
+     "audio": "audio/shopping_online_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, the tracking number is in your shipping email.",
+     "ko": "네, 운송장 번호가 발송 메일에 있습니다.",
+     "audio": "audio/shopping_online_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I didn't get that email. Could you resend it?",
+     "ko": "그 메일을 못 받았어요. 다시 보내주시겠어요?",
+     "audio": "audio/shopping_online_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I've sent it again. Check your spam folder if it doesn't arrive.",
+     "ko": "다시 보냈습니다. 안 오면 스팸함을 확인해 보세요.",
+     "audio": "audio/shopping_online_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "My package hasn't arrived yet.",
+     "ko": "소포가 아직 도착하지 않았어요.",
+     "audio": "audio/shopping_online_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The carrier marked it delivered yesterday at two in the afternoon.",
+     "ko": "택배사에서는 어제 오후 2시에 배송 완료로 표시했습니다.",
+     "audio": "audio/shopping_online_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Nothing was left at my hotel. Can you open an investigation?",
+     "ko": "호텔에는 아무것도 없었어요. 조사를 접수해 주실 수 있나요?",
+     "audio": "audio/shopping_online_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'll file a claim now. We'll refund or resend within five days.",
+     "ko": "지금 접수하겠습니다. 5일 안에 환불 또는 재발송해 드립니다.",
+     "audio": "audio/shopping_online_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How do I return an online purchase?",
+     "ko": "온라인으로 산 물건은 어떻게 반품하나요?",
+     "audio": "audio/shopping_online_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Start the return in your account and print the prepaid label.",
+     "ko": "계정에서 반품을 신청하시고 선불 라벨을 출력하세요.",
+     "audio": "audio/shopping_online_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'm travelling and don't have a printer. Any other option?",
+     "ko": "여행 중이라 프린터가 없는데요. 다른 방법이 있나요?",
+     "audio": "audio/shopping_online_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Show the QR code at the drop-off point and they'll print it there.",
+     "ko": "접수처에서 QR 코드를 보여주시면 거기서 출력해 줍니다.",
+     "audio": "audio/shopping_online_16.mp3"
+    }
+   ],
+   "icon": "📦"
+  },
+  {
+   "key": "shopping_giftwrapping",
+   "title": "선물 포장 (Gift Wrapping)",
+   "subtitle": "선물 포장, 메시지, 영수증",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Can you gift wrap this for me?",
+     "ko": "이거 선물 포장해 주실 수 있나요?",
+     "audio": "audio/shopping_giftwrapping_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course! What kind of wrapping would you like?",
+     "ko": "물론이죠! 어떤 포장지로 해드릴까요?",
+     "audio": "audio/shopping_giftwrapping_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Something simple, maybe the plain navy paper.",
+     "ko": "심플한 걸로요, 무지 남색 종이면 좋겠어요.",
+     "audio": "audio/shopping_giftwrapping_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Nice choice. Would you like a ribbon with it?",
+     "ko": "좋은 선택이세요. 리본도 달아드릴까요?",
+     "audio": "audio/shopping_giftwrapping_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'd like a gift receipt please.",
+     "ko": "선물 영수증도 주세요.",
+     "audio": "audio/shopping_giftwrapping_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Sure, would you like to add a gift message?",
+     "ko": "네, 선물 메시지도 넣어드릴까요?",
+     "audio": "audio/shopping_giftwrapping_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, just write happy birthday from Mina.",
+     "ko": "네, 미나가 생일 축하한다고만 써주세요.",
+     "audio": "audio/shopping_giftwrapping_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Done. The gift receipt won't show the price.",
+     "ko": "적었습니다. 선물 영수증에는 가격이 안 나옵니다.",
+     "audio": "audio/shopping_giftwrapping_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is there a charge for the wrapping?",
+     "ko": "포장 비용이 따로 있나요?",
+     "audio": "audio/shopping_giftwrapping_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It's free for purchases over thirty dollars.",
+     "ko": "30달러 이상 구매하시면 무료입니다.",
+     "audio": "audio/shopping_giftwrapping_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Perfect. Will it fit in my carry-on?",
+     "ko": "잘됐네요. 기내용 가방에 들어갈까요?",
+     "audio": "audio/shopping_giftwrapping_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It should. I'll keep the box flat so it packs easily.",
+     "ko": "들어갈 겁니다. 납작하게 포장해서 넣기 쉽게 해드릴게요.",
+     "audio": "audio/shopping_giftwrapping_12.mp3"
+    }
+   ],
+   "icon": "🎁"
+  },
+  {
+   "key": "shopping_sizecolor",
+   "title": "사이즈/색상 (Size & Color)",
+   "subtitle": "색상 변경, 사이즈 확인, 재고",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Do you have this in blue?",
+     "ko": "이거 파란색으로 있나요?",
+     "audio": "audio/shopping_sizecolor_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Let me check for you.",
+     "ko": "확인해 드릴게요.",
+     "audio": "audio/shopping_sizecolor_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'd take navy or light blue, either is fine.",
+     "ko": "남색이나 하늘색 둘 다 괜찮아요.",
+     "audio": "audio/shopping_sizecolor_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We have navy in your size. I'll bring it out.",
+     "ko": "손님 사이즈로 남색이 있습니다. 가져다드릴게요.",
+     "audio": "audio/shopping_sizecolor_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "When will this be back in stock?",
+     "ko": "이건 언제 재입고되나요?",
+     "audio": "audio/shopping_sizecolor_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The next shipment arrives Thursday morning.",
+     "ko": "다음 입고는 목요일 오전입니다.",
+     "audio": "audio/shopping_sizecolor_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can you hold one for me if it comes in?",
+     "ko": "들어오면 하나 맡아 주실 수 있나요?",
+     "audio": "audio/shopping_sizecolor_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, leave your name and number and I'll call you.",
+     "ko": "네, 성함과 번호를 남겨주시면 연락드리겠습니다.",
+     "audio": "audio/shopping_sizecolor_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I try a different color?",
+     "ko": "다른 색도 입어봐도 될까요?",
+     "audio": "audio/shopping_sizecolor_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Sure. The grey and the olive are both in stock.",
+     "ko": "그럼요. 회색과 올리브색이 재고에 있습니다.",
+     "audio": "audio/shopping_sizecolor_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Does this run small? I'm usually a medium.",
+     "ko": "이거 작게 나오나요? 저는 보통 미디엄이에요.",
+     "audio": "audio/shopping_sizecolor_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It does run small, so I'd try the large as well.",
+     "ko": "작게 나오는 편이라 라지도 같이 입어보시는 게 좋습니다.",
+     "audio": "audio/shopping_sizecolor_12.mp3"
+    }
+   ],
+   "icon": "🎨"
+  },
+  {
+   "key": "shopping_delivery",
+   "title": "배달/배송 (Delivery)",
+   "subtitle": "홈 딜리버리, 오늘 배송, 픽업",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Do you offer home delivery?",
+     "ko": "배달 서비스가 있나요?",
+     "audio": "audio/shopping_delivery_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, delivery is $5 for orders under $50.",
+     "ko": "네, 50달러 미만 주문은 배송비가 5달러입니다.",
+     "audio": "audio/shopping_delivery_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can you deliver to a hotel?",
+     "ko": "호텔로도 배송되나요?",
+     "audio": "audio/shopping_delivery_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We can. Just give us the hotel name and your room number.",
+     "ko": "가능합니다. 호텔 이름과 객실 번호만 알려주세요.",
+     "audio": "audio/shopping_delivery_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I get this delivered today?",
+     "ko": "오늘 배송받을 수 있나요?",
+     "audio": "audio/shopping_delivery_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "If you order before two, it arrives by this evening.",
+     "ko": "2시 전에 주문하시면 오늘 저녁까지 도착합니다.",
+     "audio": "audio/shopping_delivery_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'm checking out tomorrow at eleven. Will that work?",
+     "ko": "내일 11시에 체크아웃하는데, 괜찮을까요?",
+     "audio": "audio/shopping_delivery_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It should. The front desk can hold it if you're out.",
+     "ko": "괜찮을 겁니다. 안 계시면 프런트에서 보관해 줄 거예요.",
+     "audio": "audio/shopping_delivery_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'd like to pick up in store.",
+     "ko": "매장에서 픽업하고 싶습니다.",
+     "audio": "audio/shopping_delivery_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Sure, it will be ready in 2 hours.",
+     "ko": "네, 2시간 후에 준비됩니다.",
+     "audio": "audio/shopping_delivery_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "What do I need to bring to collect it?",
+     "ko": "찾으러 갈 때 뭘 가져가야 하나요?",
+     "audio": "audio/shopping_delivery_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The confirmation email and a photo ID.",
+     "ko": "확인 메일과 신분증을 가져오세요.",
+     "audio": "audio/shopping_delivery_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can someone else pick it up for me?",
+     "ko": "다른 사람이 대신 찾아가도 되나요?",
+     "audio": "audio/shopping_delivery_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, if they bring the email and their own ID.",
+     "ko": "네, 메일과 본인 신분증을 가져오면 됩니다.",
+     "audio": "audio/shopping_delivery_14.mp3"
+    }
+   ],
+   "icon": "🚚"
+  },
+  {
+   "key": "shopping_coupons",
+   "title": "쿠폰/할인 (Coupons & Discounts)",
+   "subtitle": "쿠폰 사용, 멤버십 할인, 프로모션",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "I have a coupon. Can I use it?",
+     "ko": "쿠폰이 있는데 사용할 수 있나요?",
+     "audio": "audio/shopping_coupons_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, but it can't be combined with other discounts.",
+     "ko": "네, 다만 다른 할인과 중복 적용은 안 됩니다.",
+     "audio": "audio/shopping_coupons_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Does it work on sale items?",
+     "ko": "세일 상품에도 적용되나요?",
+     "audio": "audio/shopping_coupons_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Not on sale items, only on regular-priced ones.",
+     "ko": "세일 상품에는 안 되고 정가 상품에만 됩니다.",
+     "audio": "audio/shopping_coupons_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Do you have any promotions today?",
+     "ko": "오늘 진행 중인 프로모션이 있나요?",
+     "audio": "audio/shopping_coupons_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Buy two, get one half off on all accessories.",
+     "ko": "액세서리 전 품목 두 개 사시면 하나는 반값입니다.",
+     "audio": "audio/shopping_coupons_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Does that include the scarves?",
+     "ko": "스카프도 포함인가요?",
+     "audio": "audio/shopping_coupons_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It does. They're on the table by the entrance.",
+     "ko": "포함됩니다. 입구 옆 테이블에 있어요.",
+     "audio": "audio/shopping_coupons_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I combine this with other discounts?",
+     "ko": "이걸 다른 할인과 같이 쓸 수 있나요?",
+     "audio": "audio/shopping_coupons_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Only one discount per item, but you can split your purchase.",
+     "ko": "품목당 할인은 하나만 가능하지만 나눠서 결제하실 수는 있어요.",
+     "audio": "audio/shopping_coupons_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How do I sign up for the loyalty program?",
+     "ko": "멤버십은 어떻게 가입하나요?",
+     "audio": "audio/shopping_coupons_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Just give us an email address. You'll get ten percent off today.",
+     "ko": "이메일 주소만 알려주시면 됩니다. 오늘 10% 할인받으세요.",
+     "audio": "audio/shopping_coupons_12.mp3"
+    }
+   ],
+   "icon": "🎫"
+  },
+  {
+   "key": "shopping_complaints",
+   "title": "불만/클레임 (Complaints)",
+   "subtitle": "파손, 가격 오류, 잘못된 요금",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "This item is damaged.",
+     "ko": "이 제품이 파손됐어요.",
+     "audio": "audio/shopping_complaints_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'm sorry. Would you like a replacement?",
+     "ko": "죄송합니다. 교환해 드릴까요?",
+     "audio": "audio/shopping_complaints_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, if you have another one in the same size.",
+     "ko": "네, 같은 사이즈로 하나 더 있으면요.",
+     "audio": "audio/shopping_complaints_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We do. I'll check this one carefully before wrapping it.",
+     "ko": "있습니다. 이번엔 포장 전에 꼼꼼히 확인하겠습니다.",
+     "audio": "audio/shopping_complaints_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I was charged the wrong amount.",
+     "ko": "금액이 잘못 청구됐어요.",
+     "audio": "audio/shopping_complaints_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "May I see the receipt? Let me compare it with the tag.",
+     "ko": "영수증을 보여주시겠어요? 택과 비교해 보겠습니다.",
+     "audio": "audio/shopping_complaints_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "The tag says thirty, but I was charged forty-five.",
+     "ko": "택에는 30달러인데 45달러가 청구됐어요.",
+     "audio": "audio/shopping_complaints_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "You're right. I'll refund the difference to your card now.",
+     "ko": "맞습니다. 차액을 지금 카드로 환불해 드리겠습니다.",
+     "audio": "audio/shopping_complaints_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I speak to the manager?",
+     "ko": "매니저와 이야기할 수 있을까요?",
+     "audio": "audio/shopping_complaints_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. May I tell her what it's regarding?",
+     "ko": "물론입니다. 어떤 일인지 전달해 드릴까요?",
+     "audio": "audio/shopping_complaints_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I've been waiting twenty minutes for an exchange.",
+     "ko": "교환하려고 20분째 기다리고 있어요.",
+     "audio": "audio/shopping_complaints_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I understand. She'll be right with you, and I'm sorry for the wait.",
+     "ko": "이해합니다. 곧 오실 거예요. 기다리게 해서 죄송합니다.",
+     "audio": "audio/shopping_complaints_12.mp3"
+    }
+   ],
+   "icon": "😤"
+  },
+  {
+   "key": "shopping_cosmetics",
+   "title": "화장품 (Cosmetics)",
+   "subtitle": "스킨케어, 메이크업, 샘플",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "I'm looking for a moisturizer for dry skin.",
+     "ko": "건성 피부용 수분 크림을 찾고 있어요.",
+     "audio": "audio/shopping_cosmetics_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We have several options. This one is very popular.",
+     "ko": "여러 제품이 있습니다. 이게 아주 인기가 많아요.",
+     "audio": "audio/shopping_cosmetics_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I try a sample first before buying?",
+     "ko": "사기 전에 샘플을 먼저 써볼 수 있나요?",
+     "audio": "audio/shopping_cosmetics_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course! Here's a free sample for you.",
+     "ko": "물론이죠! 여기 무료 샘플입니다.",
+     "audio": "audio/shopping_cosmetics_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is this fragrance-free? My skin is sensitive.",
+     "ko": "이건 무향인가요? 피부가 예민해서요.",
+     "audio": "audio/shopping_cosmetics_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It is, and it's also tested for sensitive skin.",
+     "ko": "무향이고 민감성 피부 테스트도 마쳤습니다.",
+     "audio": "audio/shopping_cosmetics_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "What shade of foundation would suit me?",
+     "ko": "저한테는 어떤 파운데이션 호수가 맞을까요?",
+     "audio": "audio/shopping_cosmetics_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Let me test two on your jawline and check them in daylight.",
+     "ko": "턱선에 두 가지를 발라보고 자연광에서 확인해 볼게요.",
+     "audio": "audio/shopping_cosmetics_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I take these in my carry-on bag?",
+     "ko": "이걸 기내용 가방에 넣어도 되나요?",
+     "audio": "audio/shopping_cosmetics_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Liquids need to be under one hundred milliliters. This one is fine.",
+     "ko": "액체는 100밀리리터 미만이어야 합니다. 이건 괜찮아요.",
+     "audio": "audio/shopping_cosmetics_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'll take the moisturizer and the smaller serum.",
+     "ko": "수분 크림과 작은 세럼으로 할게요.",
+     "audio": "audio/shopping_cosmetics_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Great. I'll add a few more samples for your trip.",
+     "ko": "좋습니다. 여행용으로 샘플 몇 개 더 넣어드릴게요.",
+     "audio": "audio/shopping_cosmetics_12.mp3"
+    }
+   ],
+   "icon": "💄"
+  },
+  {
+   "key": "shopping_electronics",
+   "title": "전자제품 (Electronics)",
+   "subtitle": "폰 액세서리, 보증, 제품 비교",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "I need a phone case for the iPhone 16.",
+     "ko": "아이폰 16용 케이스가 필요해요.",
+     "audio": "audio/shopping_electronics_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We have leather and silicone cases. Which do you prefer?",
+     "ko": "가죽과 실리콘 케이스가 있습니다. 어떤 걸 선호하세요?",
+     "audio": "audio/shopping_electronics_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How long is the warranty on this product?",
+     "ko": "이 제품 보증 기간은 얼마나 되나요?",
+     "audio": "audio/shopping_electronics_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It comes with a one-year manufacturer warranty.",
+     "ko": "제조사 보증 1년이 포함됩니다.",
+     "audio": "audio/shopping_electronics_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Does the warranty work outside this country?",
+     "ko": "보증이 해외에서도 적용되나요?",
+     "audio": "audio/shopping_electronics_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "For this brand, yes. Keep the receipt and the box.",
+     "ko": "이 브랜드는 됩니다. 영수증과 상자를 보관하세요.",
+     "audio": "audio/shopping_electronics_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Do you sell travel adapters for Korean plugs?",
+     "ko": "한국 플러그용 여행 어댑터도 파나요?",
+     "audio": "audio/shopping_electronics_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We do, in aisle two. The universal one covers most countries.",
+     "ko": "2번 통로에 있습니다. 만능 어댑터가 대부분의 나라에 맞아요.",
+     "audio": "audio/shopping_electronics_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Will this charger work with two hundred twenty volts?",
+     "ko": "이 충전기가 220볼트에서도 되나요?",
+     "audio": "audio/shopping_electronics_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, it's rated for one hundred to two hundred forty volts.",
+     "ko": "네, 100볼트에서 240볼트까지 지원합니다.",
+     "audio": "audio/shopping_electronics_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Then I'll take the charger and the silicone case.",
+     "ko": "그럼 충전기와 실리콘 케이스로 할게요.",
+     "audio": "audio/shopping_electronics_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'll test the charger at the counter before you go.",
+     "ko": "가시기 전에 카운터에서 충전기를 테스트해 드릴게요.",
+     "audio": "audio/shopping_electronics_12.mp3"
+    }
+   ],
+   "icon": "📱"
+  },
+  {
+   "key": "shopping_fashion",
+   "title": "패션 (Fashion)",
+   "subtitle": "트렌드, 코디, 수선",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "What are this season's trending colors?",
+     "ko": "이번 시즌 유행 색상이 뭔가요?",
+     "audio": "audio/shopping_fashion_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Earth tones and pastels are very popular right now.",
+     "ko": "지금은 어스톤과 파스텔이 아주 인기입니다.",
+     "audio": "audio/shopping_fashion_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can you help me match this top with pants?",
+     "ko": "이 상의에 어울리는 바지를 골라주실 수 있나요?",
+     "audio": "audio/shopping_fashion_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Sure! These beige trousers would look great.",
+     "ko": "그럼요! 이 베이지 바지가 잘 어울릴 거예요.",
+     "audio": "audio/shopping_fashion_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is this fabric warm enough for autumn?",
+     "ko": "이 원단이 가을에 입기 충분히 따뜻할까요?",
+     "audio": "audio/shopping_fashion_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It's a wool blend, so it works well into November.",
+     "ko": "울 혼방이라 11월까지는 괜찮습니다.",
+     "audio": "audio/shopping_fashion_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Does it need dry cleaning?",
+     "ko": "드라이클리닝을 해야 하나요?",
+     "audio": "audio/shopping_fashion_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Hand wash cold is fine. The care label is inside the collar.",
+     "ko": "찬물 손세탁이면 됩니다. 세탁 라벨은 깃 안쪽에 있어요.",
+     "audio": "audio/shopping_fashion_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Do you have anything similar in a lighter weight?",
+     "ko": "비슷한 디자인으로 더 얇은 건 없나요?",
+     "audio": "audio/shopping_fashion_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "This linen version is on the rack behind you.",
+     "ko": "린넨 버전이 뒤쪽 행거에 있습니다.",
+     "audio": "audio/shopping_fashion_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I like that one better. I'll try both on.",
+     "ko": "그게 더 마음에 드네요. 둘 다 입어볼게요.",
+     "audio": "audio/shopping_fashion_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'll start a fitting room for you on the left.",
+     "ko": "왼쪽에 탈의실을 준비해 드릴게요.",
+     "audio": "audio/shopping_fashion_12.mp3"
+    }
+   ],
+   "icon": "👗"
+  },
+  {
+   "key": "shopping_grocery",
+   "title": "식료품 (Groceries)",
+   "subtitle": "유기농 식품, 계산, 봉투",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Do you have organic vegetables here?",
+     "ko": "여기 유기농 채소가 있나요?",
+     "audio": "audio/shopping_grocery_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, the organic section is in aisle three.",
+     "ko": "네, 유기농 코너는 3번 통로에 있습니다.",
+     "audio": "audio/shopping_grocery_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I pay by card at this register?",
+     "ko": "이 계산대에서 카드로 결제할 수 있나요?",
+     "audio": "audio/shopping_grocery_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes. Would you like a bag?",
+     "ko": "네. 봉투 필요하세요?",
+     "audio": "audio/shopping_grocery_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How much is a bag?",
+     "ko": "봉투는 얼마인가요?",
+     "audio": "audio/shopping_grocery_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Ten cents for paper, or you can buy a reusable one for a dollar.",
+     "ko": "종이봉투는 10센트이고, 1달러에 장바구니를 사실 수도 있습니다.",
+     "audio": "audio/shopping_grocery_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Where can I find bottled water and snacks?",
+     "ko": "생수와 간식은 어디에 있나요?",
+     "audio": "audio/shopping_grocery_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Water is in aisle one, snacks are along the back wall.",
+     "ko": "물은 1번 통로, 간식은 안쪽 벽을 따라 있습니다.",
+     "audio": "audio/shopping_grocery_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is this fruit sold by weight or by piece?",
+     "ko": "이 과일은 무게로 파나요, 개수로 파나요?",
+     "audio": "audio/shopping_grocery_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "By weight. Use the scale there and stick the label on the bag.",
+     "ko": "무게로 팝니다. 저기 저울을 쓰시고 라벨을 봉지에 붙이세요.",
+     "audio": "audio/shopping_grocery_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Got it. Is the self-checkout faster at this hour?",
+     "ko": "알겠습니다. 이 시간엔 셀프 계산대가 더 빠른가요?",
+     "audio": "audio/shopping_grocery_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Usually yes, and it takes cards and phone payments.",
+     "ko": "보통은 그렇습니다. 카드와 모바일 결제 둘 다 됩니다.",
+     "audio": "audio/shopping_grocery_12.mp3"
+    }
+   ],
+   "icon": "🛒"
+  }
+ ]
+}

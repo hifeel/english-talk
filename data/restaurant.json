@@ -1,0 +1,1085 @@
+{
+ "key": "restaurant",
+ "scenarios": [
+  {
+   "key": "restaurant_seating",
+   "title": "좌석 안내 (Seating)",
+   "subtitle": "예약 확인, 자리 안내",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Good evening. Welcome to La Bella! Do you have a reservation?",
+     "ko": "저녁은 잘 보내셨나요? La Bella에 오신 것을 환영합니다! 예약 있으신가요?",
+     "audio": "audio/restaurant_1.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, I have a reservation for two under the name Park.",
+     "ko": "네, 박 이름으로 2명 예약했습니다.",
+     "audio": "audio/restaurant_2.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Perfect! Right this way, please. Here is your table by the window.",
+     "ko": "좋습니다! 이쪽으로 오세요. 창가 자리로 모시겠습니다.",
+     "audio": "audio/restaurant_3.mp3"
+    }
+   ],
+   "icon": "💺"
+  },
+  {
+   "key": "restaurant_ordering",
+   "title": "주문 (Ordering)",
+   "subtitle": "메뉴 선택, 주문하기",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Are you ready to order, or would you like a few more minutes?",
+     "ko": "주문하시겠어요, 아니면 조금 더 시간이 필요하신가요?",
+     "audio": "audio/restaurant_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "What do you recommend?",
+     "ko": "추천 메뉴가 뭐가 있나요?",
+     "audio": "audio/restaurant_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The grilled salmon and the pasta carbonara are our most popular dishes.",
+     "ko": "구운 연어와 파스타 카르보나라가 가장 인기 있는 메뉴입니다.",
+     "audio": "audio/restaurant_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'll have the grilled salmon with a side salad, please.",
+     "ko": "구운 연어에 샐러드 사이드로 주세요.",
+     "audio": "audio/restaurant_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Excellent choice. Would you like anything to drink?",
+     "ko": "훌륭한 선택이세요. 음료는 어떤 것으로 하시겠어요?",
+     "audio": "audio/restaurant_8.mp3"
+    }
+   ],
+   "icon": "📝"
+  },
+  {
+   "key": "restaurant_requests",
+   "title": "요청 (Requests)",
+   "subtitle": "추가 요청, 서비스 요청",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Excuse me, could I get some extra napkins, please?",
+     "ko": "실례합니다, 냅킨 좀 더 주실 수 있을까요?",
+     "audio": "audio/restaurant_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. Is there anything else you need?",
+     "ko": "물론이죠. 다른 필요한 것은 없으신가요?",
+     "audio": "audio/restaurant_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "No, that's all. Thank you very much.",
+     "ko": "아니요, 그게 다입니다. 대단히 감사합니다.",
+     "audio": "audio/restaurant_11.mp3"
+    }
+   ],
+   "icon": "🛎️"
+  },
+  {
+   "key": "restaurant_payment",
+   "title": "계산 (Payment)",
+   "subtitle": "계산, 결제 방법",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Excuse me, could we get the check, please?",
+     "ko": "실례합니다, 계산서 좀 주시겠어요?",
+     "audio": "audio/restaurant_12.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. That will be forty-five dollars and fifty cents.",
+     "ko": "물론이죠. 45달러 50센트입니다.",
+     "audio": "audio/restaurant_13.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Can I pay by credit card?",
+     "ko": "신용카드로 결제해도 될까요?",
+     "audio": "audio/restaurant_14.mp3"
+    }
+   ],
+   "icon": "💳"
+  },
+  {
+   "key": "restaurant_dietary",
+   "title": "알레르기 & 식단 (Dietary Restrictions)",
+   "subtitle": "알레르기, 비건, 글루텐 프리 등 식단 관련 회화",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Good evening. Have you had a chance to look at the menu? Do you have any allergies we should know about?",
+     "ko": "좋은 저녁이에요. 메뉴를 보셨나요? 저희가 알아야 할 알레르기가 있으신가요?",
+     "audio": "audio/restaurant_dietary_1.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, actually. I'm allergic to peanuts and tree nuts. Is there anything with nuts in it?",
+     "ko": "네, 사실이요. 땅콩과 견과류 알레르기가 있어요. 견과류가 들어간 음식이 있나요?",
+     "audio": "audio/restaurant_dietary_2.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I completely understand. Our kitchen takes allergies very seriously. Let me check which dishes are safe for you.",
+     "ko": "완전히 이해합니다. 저희 주방은 알레르기를 매우 심각하게 받아들입니다. 어떤 요리가 안전한지 확인해 드리겠습니다.",
+     "audio": "audio/restaurant_dietary_3.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you so much. I really appreciate you checking.",
+     "ko": "정말 감사합니다. 확인해 주셔서 정말 감사해요.",
+     "audio": "audio/restaurant_dietary_4.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Welcome! Are you ready to order?",
+     "ko": "환영합니다! 주문하시겠어요?",
+     "audio": "audio/restaurant_dietary_5.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'm vegetarian. What vegetarian options do you have?",
+     "ko": "저는 채식주의자예요. 채식 메뉴가 어떤 것들이 있나요?",
+     "audio": "audio/restaurant_dietary_6.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We have a grilled vegetable risotto, a Mediterranean salad, and a mushroom pasta. All are delicious!",
+     "ko": "구운 채식 리소토, 지중해식 샐러드, 버섯 파스타가 있어요. 모두 맛있답니다!",
+     "audio": "audio/restaurant_dietary_7.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "The mushroom pasta sounds great. Does it come with parmesan cheese?",
+     "ko": "버섯 파스타가 좋아 보여요. 파마산 치즈가 들어가나요?",
+     "audio": "audio/restaurant_dietary_8.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Here's the menu. Can I get you something to start?",
+     "ko": "메뉴판이에요. 먼저 뭔가 드시겠어요?",
+     "audio": "audio/restaurant_dietary_9.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I need to eat gluten-free. Do you have gluten-free options?",
+     "ko": "글루텐 프리로 먹어야 해요. 글루텐 프리 메뉴가 있나요?",
+     "audio": "audio/restaurant_dietary_10.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, we do! Most of our salads and grilled dishes can be made gluten-free. I'll mark it on your order.",
+     "ko": "네, 있습니다! 대부분의 샐러드와 구이 요리는 글루텐 프리로 만들 수 있어요. 주문에 표시해 드리겠습니다.",
+     "audio": "audio/restaurant_dietary_11.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That's perfect. I'll have the grilled chicken salad, please.",
+     "ko": "딱 좋네요. 구운 닭고기 샐러드로 주세요.",
+     "audio": "audio/restaurant_dietary_12.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Would you like to hear our specials today?",
+     "ko": "오늘의 특별 메뉴를 들어보시겠어요?",
+     "audio": "audio/restaurant_dietary_13.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Sure. But I should mention I'm vegan. I don't eat any animal products.",
+     "ko": "네, 들려주세요. 하지만 저는 비건이라고 말씀드려야겠어요. 동물성 제품은 먹지 않아요.",
+     "audio": "audio/restaurant_dietary_14.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "No problem at all. Our chef can prepare a vegan Buddha bowl with fresh vegetables and quinoa.",
+     "ko": "문제 없어요. 저희 셰프가 신선한 채소와 퀴노아가 들어간 비건 부다 볼을 만들어 드릴 수 있어요.",
+     "audio": "audio/restaurant_dietary_15.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That sounds wonderful. And is the dressing on the side vegan too?",
+     "ko": "정말 좋아요. 그리고 드레싱도 비건인가요?",
+     "audio": "audio/restaurant_dietary_16.mp3"
+    }
+   ],
+   "icon": "🥗"
+  },
+  {
+   "key": "restaurant_special",
+   "title": "불만 & 특별 occasions (Complaints & Special)",
+   "subtitle": "불만 제기, 생일, 기념일 등 특별한 상황 회화",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "How is everything? Are you enjoying your meal?",
+     "ko": "다 괜찮으세요? 식사는 즐기고 계신가요?",
+     "audio": "audio/restaurant_special_1.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Actually, my steak came out cold. I'm a little disappointed.",
+     "ko": "사실, 스테이크가 차가운 상태로 나왔어요. 좀 실망이에요.",
+     "audio": "audio/restaurant_special_2.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'm so sorry about that. Let me take it back to the kitchen and have them reheat it right away.",
+     "ko": "정말 죄송합니다. 주방으로 가져가서 바로 데워드리겠습니다.",
+     "audio": "audio/restaurant_special_3.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you. I was looking forward to this all week.",
+     "ko": "감사합니다. 일주일 내내 이 식사를 기다렸거든요.",
+     "audio": "audio/restaurant_special_4.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Happy birthday! I see we have a birthday guest at the table tonight.",
+     "ko": "생일 축하드립니다! 오늘 저녁 생일 손님이 계시는 것 같네요.",
+     "audio": "audio/restaurant_special_5.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you! It's my 30th birthday and I'm so excited to celebrate here.",
+     "ko": "감사합니다! 30번째 생일인데 여기서 축하하게 되어 정말 기뻐요.",
+     "audio": "audio/restaurant_special_6.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Congratulations! We have a special birthday dessert for you with a candle. Would you like us to bring it out after your main course?",
+     "ko": "축하드려요! 케이크에 초를 꽂은 특별한 생일 디저트가 준비되어 있습니다. 메인 코스 후에 가져다 드릴까요?",
+     "audio": "audio/restaurant_special_7.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That would be amazing. Thank you so much!",
+     "ko": "정말 좋겠어요. 너무 감사합니다!",
+     "audio": "audio/restaurant_special_8.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I see you're celebrating an anniversary tonight. How many years?",
+     "ko": "오늘 기념일을 축하하고 계시는 것 같네요. 몇 년째인가요?",
+     "audio": "audio/restaurant_special_9.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "It's our 10th wedding anniversary. We wanted to have a special dinner.",
+     "ko": "결혼 10주년이에요. 특별한 저녁 식사를 하고 싶었어요.",
+     "audio": "audio/restaurant_special_10.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "How lovely! May I suggest our chef's tasting menu with wine pairing? It's perfect for a celebration.",
+     "ko": "정말 멋지네요! 셰프의 테이스팅 메뉴와 와인 페어링을 추천드려도 될까요? 축하에 딱이에요.",
+     "audio": "audio/restaurant_special_11.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That sounds perfect. Let's go with that for both of us.",
+     "ko": "완벽하네요. 우리 둘 다 그걸로 할게요.",
+     "audio": "audio/restaurant_special_12.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Is everything alright with your order?",
+     "ko": "주문하신 것 괜찮으세요?",
+     "audio": "audio/restaurant_special_13.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'm sorry, but I ordered the salmon, and this looks like tuna.",
+     "ko": "죄송한데, 연어를 주문했는데 이건 참치처럼 보여요.",
+     "audio": "audio/restaurant_special_14.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "You're absolutely right. I apologize for the mix-up. I'll get your salmon out immediately.",
+     "ko": "맞으세요. 혼란을 드려 정말 죄송합니다. 연어를 바로 가져다 드리겠습니다.",
+     "audio": "audio/restaurant_special_15.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "No worries, these things happen. I appreciate you fixing it so quickly.",
+     "ko": "괜찮아요, 이런 일도 있는 거죠. 빨리 고쳐 주셔서 감사해요.",
+     "audio": "audio/restaurant_special_16.mp3"
+    }
+   ],
+   "icon": "🎂"
+  },
+  {
+   "key": "restaurant_reservation",
+   "title": "예약 (Reservations)",
+   "subtitle": "예약, 취소, 인원수, 특별 요청",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Thank you for calling Bella Vista. How can I help you today?",
+     "ko": "벨라 비스타에 전화주셔서 감사합니다. 오늘 어떻게 도와드릴까요?",
+     "audio": "audio/restaurant_reservation_1.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Hi, I'd like to make a reservation for this Saturday evening, please.",
+     "ko": "안녕하세요, 이번 토요일 저녁에 예약하고 싶습니다.",
+     "audio": "audio/restaurant_reservation_2.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Certainly. How many guests will be dining with us, and what time would you prefer?",
+     "ko": "물론이죠. 몇 분이서 식사하실 예정이고 몇 시가 편하신가요?",
+     "audio": "audio/restaurant_reservation_3.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "There will be four of us. We'd prefer a table near the window if possible, around seven thirty PM.",
+     "ko": "4명이서 갈 거예요. 가능하면 창가 근처 자리가 좋겠고, 저녁 7시 30분쯤이면 되겠어요.",
+     "audio": "audio/restaurant_reservation_4.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Perfect. I've reserved a window table for four at seven thirty PM on Saturday. May I have your name, please?",
+     "ko": "좋습니다. 토요일 저녁 7시 30분에 4명용 창가 자리로 예약해 드렸습니다. 성함을 알려주시겠어요?",
+     "audio": "audio/restaurant_reservation_5.mp3"
+    }
+   ],
+   "icon": "📅"
+  },
+  {
+   "key": "restaurant_takeout",
+   "title": "포장 (Takeout)",
+   "subtitle": "테이크아웃 주문, 포장, 픽업 시간",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Hello, welcome to Golden Dragon. Are you here to pick up an order or would you like to place one?",
+     "ko": "안녕하세요, 골든 드래곤에 오신 것을 환영합니다. 주문 픽업이신가요, 아니면 새로 주문하시겠어요?",
+     "audio": "audio/restaurant_takeout_1.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'd like to place a takeout order, please. Could I get two kung pao chicken and one fried rice?",
+     "ko": "테이크아웃 주문을 하고 싶습니다. 깐풍기 2개하고 볶음밥 1개 주세요.",
+     "audio": "audio/restaurant_takeout_2.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Great choice. Your order will be ready in about fifteen minutes. Would you like the sauce on the side?",
+     "ko": "좋은 선택이세요. 주문은 약 15분 후에 준비됩니다. 소스는 별도로 포장해드릴까요?",
+     "audio": "audio/restaurant_takeout_3.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, please put the sauce on the side. Also, could you double bag it? I'm walking home and I want to make sure nothing spills.",
+     "ko": "네, 소스는 따로 포장해주세요. 그리고 봉투를 겹겹이 싸줄 수 있나요? 걸어가는데 흘리기 싶어서요.",
+     "audio": "audio/restaurant_takeout_4.mp3"
+    }
+   ],
+   "icon": "🥡"
+  },
+  {
+   "key": "restaurant_complaint",
+   "title": "불만 처리 (Handling Complaints)",
+   "subtitle": "잘못된 주문, 차가운 음식, 느린 서비스, 매니저 요청",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Excuse me, I think there's been a mistake. I ordered the chicken breast, but this looks like fish.",
+     "ko": "실례합니다, 실수가 있는 것 같아요. 닭가슴살을 주문했는데 이건 생선처럼 보여요.",
+     "audio": "audio/restaurant_complaint_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Oh, I'm terribly sorry about that. Let me take this back right away and get you the correct order.",
+     "ko": "아, 정말 죄송합니다. 바로 가져가서 올바른 주문으로 교환해드리겠습니다.",
+     "audio": "audio/restaurant_complaint_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you. Also, the food has taken quite a long time. We've been waiting for over forty minutes now.",
+     "ko": "감사합니다. 그리고 음식이 너무 오래 걸렸어요. 벌써 40분 이상 기다렸습니다.",
+     "audio": "audio/restaurant_complaint_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I sincerely apologize for the delay. We had an unexpectedly busy evening. Let me bring you some complimentary appetizers while you wait.",
+     "ko": "지연에 대해 진심으로 사과드립니다. 예상치 못하게 붐빈 저녁이었어요. 기다리시는 동안 무료 에피타이저를 가져다드리겠습니다.",
+     "audio": "audio/restaurant_complaint_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I appreciate that, but I'd also like to speak with the manager, please. I'd like to discuss the wait time and see if a discount is possible.",
+     "ko": "감사하지만, 매니저님과도 말씀드리고 싶습니다. 대기 시간에 대해 논의하고 할인이 가능한지 확인하고 싶어요.",
+     "audio": "audio/restaurant_complaint_5.mp3"
+    }
+   ],
+   "icon": "😤"
+  },
+  {
+   "key": "restaurant_tipping",
+   "title": "팁 문화 (Tipping)",
+   "subtitle": "팁 액수, 팁 에티켓",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Excuse me, could you help me with something? I'm not sure about the tipping etiquette here.",
+     "ko": "실례합니다만, 좀 도와주시겠어요? 팁 에티켓이 잘 모르겠어서요.",
+     "audio": "audio/restaurant_tipping_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course! In the United States, it's customary to tip between fifteen and twenty percent of the total bill for good service.",
+     "ko": "물론이죠! 미국에서는 좋은 서비스에 대해 전체 금액의 15%에서 20% 정도 팁을 주는 것이 일반적입니다.",
+     "audio": "audio/restaurant_tipping_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I see. What if the service wasn't great? Should I still tip the full amount?",
+     "ko": "그렇군요. 서비스가 별로였으면요? 그래도 풀 야수 팁을 줘야 하나요?",
+     "audio": "audio/restaurant_tipping_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "That's really up to you. Most people tip at least fifteen percent even for average service. For exceptional service, some people go up to twenty-five percent.",
+     "ko": "그건 정말 본인 판단에 달려있습니다. 보통 평균적인 서비스에도 최소 15%는 팁을 줍니다. 훌륭한 서비스에는 25%까지 주는 분들도 계세요.",
+     "audio": "audio/restaurant_tipping_4.mp3"
+    }
+   ],
+   "icon": "💵"
+  },
+  {
+   "key": "restaurant_wine",
+   "title": "와인 (Wine)",
+   "subtitle": "와인 선택, 페어링, 코르키지 비용",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Good evening. Do you have a preference for red or white wine tonight?",
+     "ko": "좋은 저녁이에요. 오늘 저녁 레드 와인이나 화이트 와인 중에 선호하시는 게 있으신가요?",
+     "audio": "audio/restaurant_wine_1.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'm thinking red wine. What do you recommend with the steak?",
+     "ko": "레드 와인을 생각하고 있어요. 스테이크에 뭘 추천하시나요?",
+     "audio": "audio/restaurant_wine_2.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Our Napa Valley Cabernet Sauvignon pairs beautifully with our ribeye. It has rich dark fruit flavors with a hint of oak.",
+     "ko": "나파밸리 카베르네 소비뇽이 립아이와 잘 어울립니다. 오크 향이 가미된 풍부한 다크 프루트 맛이에요.",
+     "audio": "audio/restaurant_wine_3.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That sounds perfect. We'll take a bottle of that, please.",
+     "ko": "완벽하네요. 한 병 주세요.",
+     "audio": "audio/restaurant_wine_4.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Excellent choice. Would you like me to pour a taste first?",
+     "ko": "훌륭한 선택이에요. 먼저 시음해 보시겠어요?",
+     "audio": "audio/restaurant_wine_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I see you've ordered the tasting menu. Can I suggest some wine pairings?",
+     "ko": "테이스팅 메뉴를 주문하셨군요. 와인 페어링을 추천드려도 될까요?",
+     "audio": "audio/restaurant_wine_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, please! I'm not very familiar with wine pairings.",
+     "ko": "네, 부탁드려요! 와인 페어링에 대해 잘 모르거든요.",
+     "audio": "audio/restaurant_wine_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "For the appetizer, we'll start with a crisp Sauvignon Blanc. For the main course, I recommend a Pinot Noir. And we'll finish with a sweet Riesling for dessert.",
+     "ko": "에피타이저에는 상큼한 소비뇽 블랑으로 시작하겠습니다. 메인에는 피노 누아를 추천드리고, 디저트에는 달콤한 리슬링으로 마무리하겠습니다.",
+     "audio": "audio/restaurant_wine_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That sounds wonderful. How much is the wine pairing?",
+     "ko": "정말 좋네요. 와인 페어링은 얼마인가요?",
+     "audio": "audio/restaurant_wine_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "The full wine pairing is forty-five dollars per person.",
+     "ko": "풀 와인 페어링은 1인당 45달러입니다.",
+     "audio": "audio/restaurant_wine_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Excuse me, we brought our own bottle of wine. Is that okay?",
+     "ko": "실례합니다만, 저희가 직접 와인을 가져왔는데 괜찮을까요?",
+     "audio": "audio/restaurant_wine_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Absolutely! We do charge a corkage fee of twenty-five dollars per bottle.",
+     "ko": "물론이죠! 병당 코르키지 비용 25달러가 부과됩니다.",
+     "audio": "audio/restaurant_wine_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Twenty-five dollars? That's quite reasonable. Could you open it for us?",
+     "ko": "25달러요? 상당히 합리적이네요. 열어주시겠어요?",
+     "audio": "audio/restaurant_wine_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. Let me take care of that for you right away.",
+     "ko": "물론이죠. 바로 처리해 드리겠습니다.",
+     "audio": "audio/restaurant_wine_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you. Should we let it breathe before pouring?",
+     "ko": "감사합니다. 따르기 전에 숨을 쉬게 해줘야 하나요?",
+     "audio": "audio/restaurant_wine_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Are you ready to order drinks, or would you like to see our wine list?",
+     "ko": "음료를 주문하시겠어요, 아니면 와인 리스트를 보시겠어요?",
+     "audio": "audio/restaurant_wine_16.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'd love to see the wine list. I'm looking for something light and fruity.",
+     "ko": "와인 리스트를 보고 싶어요. 가볍고 과일향이 나는 걸 찾고 있어요.",
+     "audio": "audio/restaurant_wine_17.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "In that case, I'd recommend our Rosé from Provence. It's refreshing with notes of strawberry and citrus.",
+     "ko": "그렇다면 프로방스 로제를 추천드립니다. 딸기와 감귤 향이 나는 상큼한 와인이에요.",
+     "audio": "audio/restaurant_wine_18.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'll try a glass of that. My friend prefers bold reds. What would you suggest?",
+     "ko": "한 잔 시켜볼게요. 제 친구는 진한 레드를 좋아하는데 뭘 추천하시나요?",
+     "audio": "audio/restaurant_wine_19.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "For bold reds, our Malbec from Argentina is outstanding. Full-bodied with smooth tannins.",
+     "ko": "진한 레드라면 아르헨티나 말벡을 추천드립니다. 부드러운 탄닌의 풀바디 와인이에요.",
+     "audio": "audio/restaurant_wine_20.mp3"
+    }
+   ],
+   "icon": "🍷"
+  },
+  {
+   "key": "restaurant_kids",
+   "title": "어린이 메뉴 (Kids Menu)",
+   "subtitle": "키즈 메뉴, 하이체어, 알레르기",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Good afternoon! Welcome. Will you be dining with any children today?",
+     "ko": "좋은 오후에요! 환영합니다. 오늘 아이와 함께 식사하시나요?",
+     "audio": "audio/restaurant_kids_1.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, I have my four-year-old daughter with me.",
+     "ko": "네, 4살 딸아이와 함께 왔어요.",
+     "audio": "audio/restaurant_kids_2.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Wonderful! We have a kids menu with smaller portions. Would she like chicken fingers, mac and cheese, or a mini pizza?",
+     "ko": "좋네요! 소용량 키즈 메뉴가 있어요. 치킨 핑거, 맥 앤 치즈, 미니 피자 중 어떤 걸 원하시나요?",
+     "audio": "audio/restaurant_kids_3.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "She'd love the mac and cheese. Does it come with anything?",
+     "ko": "맥 앤 치즈를 좋아할 것 같아요. 다른 것도 함께 나오나요?",
+     "audio": "audio/restaurant_kids_4.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It comes with apple slices and a small drink. She can choose milk, juice, or water.",
+     "ko": "사과 조각과 작은 음료가 함께 나옵니다. 우유, 주스, 물 중에서 선택할 수 있어요.",
+     "audio": "audio/restaurant_kids_5.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Hi, we have a baby with us. Do you have a high chair available?",
+     "ko": "안녕하세요, 아기와 함께 왔는데 하이체어가 있나요?",
+     "audio": "audio/restaurant_kids_6.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course! Let me grab one for you right away.",
+     "ko": "물론이죠! 바로 가져다 드리겠습니다.",
+     "audio": "audio/restaurant_kids_7.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you. Is it sanitized?",
+     "ko": "감사합니다. 소독이 되어 있나요?",
+     "audio": "audio/restaurant_kids_8.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, all our high chairs are cleaned and sanitized between each use.",
+     "ko": "네, 모든 하이체어는 사용할 때마다 깨끗하게 세척하고 소독합니다.",
+     "audio": "audio/restaurant_kids_9.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Perfect. We also need a booster seat for our older child.",
+     "ko": "좋네요. 큰 아이를 위한 부스터 시트도 필요합니다.",
+     "audio": "audio/restaurant_kids_10.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Does your child have any food allergies we should know about?",
+     "ko": "알려야 할 아이의 음식 알레르기가 있나요?",
+     "audio": "audio/restaurant_kids_11.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, she's allergic to dairy and eggs. Is anything on the kids menu safe for her?",
+     "ko": "네, 유제품과 계란 알레르기가 있어요. 키즈 메뉴 중에 안전한 메뉴가 있나요?",
+     "audio": "audio/restaurant_kids_12.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'll check with the kitchen right away. We can definitely prepare something special for her.",
+     "ko": "주방에 바로 확인하겠습니다. 특별히 준비해 드릴 수 있어요.",
+     "audio": "audio/restaurant_kids_13.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That would be great. Sometimes we bring our own snacks just in case.",
+     "ko": "그렇게 해주면 좋겠어요. 가끔은 혹시 몰라서 직접 간식을 가져오기도 해요.",
+     "audio": "audio/restaurant_kids_14.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "You're welcome to do that, but our chef is very experienced with allergen-free meals.",
+     "ko": "그렇게 하셔도 되지만, 저희 셰프는 알레르겐 프리 요리에 매우 경험이 많으시답니다.",
+     "audio": "audio/restaurant_kids_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Your little one seems to be enjoying the food! Can I get her anything else?",
+     "ko": "아이가 음식을 잘 즐기고 있는 것 같아요! 다른 것을 더 가져다 드릴까요?",
+     "audio": "audio/restaurant_kids_16.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "She actually wants to try some of my pasta. Is that okay?",
+     "ko": "사실 제 파스타도 좀 맛보고 싶어 해요. 괜찮을까요?",
+     "audio": "audio/restaurant_kids_17.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course! Would you like me to bring a small plate for her?",
+     "ko": "물론이죠! 작은 접시를 가져다 드릴까요?",
+     "audio": "audio/restaurant_kids_18.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That would be lovely, thank you. And could we get some crayons and a coloring sheet?",
+     "ko": "감사합니다, 그것도 좋겠어요. 크레용과 색칠 공부 종이도 가져다 주실 수 있나요?",
+     "audio": "audio/restaurant_kids_19.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Absolutely! I'll bring those right out along with her plate.",
+     "ko": "물론이죠! 접시와 함께 바로 가져다 드리겠습니다.",
+     "audio": "audio/restaurant_kids_20.mp3"
+    }
+   ],
+   "icon": "👶"
+  },
+  {
+   "key": "restaurant_occasion",
+   "title": "특별한 날 (Special Occasion)",
+   "subtitle": "기념일 디너, 프러포즈, 단체 예약",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Hi, I made a reservation under the name Park for our anniversary dinner.",
+     "ko": "안녕하세요, 기념일 디너를 위해 박 이름으로 예약했어요.",
+     "audio": "audio/restaurant_occasion_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Welcome, Mr. and Mrs. Park! Happy anniversary! We've prepared a special table for you by the window.",
+     "ko": "박 부부님 환영합니다! 기념일 축하드립니다! 창가에 특별한 자리를 준비했습니다.",
+     "audio": "audio/restaurant_occasion_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That's wonderful, thank you so much.",
+     "ko": "정말 좋네요, 너무 감사합니다.",
+     "audio": "audio/restaurant_occasion_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I see you mentioned you'd like our anniversary dinner package. It includes a three-course meal with champagne.",
+     "ko": "기념일 디너 패키지를 원하신다고 하셨는데요. 코스 요리 3개와 샴페인이 포함되어 있습니다.",
+     "audio": "audio/restaurant_occasion_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes, that's exactly what we want. We're celebrating fifteen years together!",
+     "ko": "네, 그게 딱 좋습니다. 15주년을 축하하고 있어요!",
+     "audio": "audio/restaurant_occasion_5.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I need to speak with you privately. I'm planning to propose to my girlfriend during dinner tonight.",
+     "ko": "개인적으로 말씀드릴 것이 있어요. 오늘 저녁 식사 중에 여자친구에게 프러포즈하려고 합니다.",
+     "audio": "audio/restaurant_occasion_6.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "How exciting! We'd be happy to help make this special. What did you have in mind?",
+     "ko": "정말 멋지네요! 특별하게 만들어 드리겠습니다. 어떤 것을 원하시나요?",
+     "audio": "audio/restaurant_occasion_7.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Could you bring the ring in a dessert after the main course? Maybe with some sparklers?",
+     "ko": "메인 코스 후 디저트에 반지를 가져다 주실 수 있나요? 스파클러와 함께요?",
+     "audio": "audio/restaurant_occasion_8.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Absolutely! We'll prepare a chocolate fondant with the ring box hidden inside. We'll dim the lights and have our pianist play something romantic.",
+     "ko": "물론이죠! 반지 상자를 숨긴 초콜릿 퐁당을 준비하겠습니다. 조명을 어둡게 하고 피아니스트가 로맨틱한 곡을 연주하겠습니다.",
+     "audio": "audio/restaurant_occasion_9.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That's perfect. She's going to be so surprised!",
+     "ko": "완벽합니다. 깜짝 놀랄 거예요!",
+     "audio": "audio/restaurant_occasion_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Hello, I'd like to make a reservation for twelve people for a corporate dinner.",
+     "ko": "안녕하세요, 기업 디너를 위해 12명 예약을 하고 싶습니다.",
+     "audio": "audio/restaurant_occasion_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Certainly! What date were you thinking? And do you have a preferred time?",
+     "ko": "물론이죠! 어떤 날짜를 생각하고 계시나요? 선호하시는 시간이 있으신가요?",
+     "audio": "audio/restaurant_occasion_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Next Friday at seven PM. We need a private area if possible.",
+     "ko": "다음 금요일 저녁 7시요. 가능하면 프라이빗 공간이 필요합니다.",
+     "audio": "audio/restaurant_occasion_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We have a lovely private dining room that seats up to sixteen. There's a minimum spend of five hundred dollars for the room.",
+     "ko": "16명까지 수용할 수 있는 멋진 프라이빗 다이닝 룸이 있습니다. 방 최소 주문은 500달러입니다.",
+     "audio": "audio/restaurant_occasion_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That works for us. Could we see a group menu in advance?",
+     "ko": "저희에게는 괜찮습니다. 단체 메뉴를 미리 볼 수 있을까요?",
+     "audio": "audio/restaurant_occasion_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I understand you're celebrating a birthday tonight! How many guests will be joining the birthday person?",
+     "ko": "오늘 생일을 축하하신다고요! 생일 주인공과 함께 할 손님은 몇 분이신가요?",
+     "audio": "audio/restaurant_occasion_16.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "There will be eight of us. It's for my mother's sixtieth birthday.",
+     "ko": "8명이요. 어머니의 60번째 생일을 축하하러 왔습니다.",
+     "audio": "audio/restaurant_occasion_17.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "What a milestone! We can arrange a special cake and decorations. Would you like a personalized cake message?",
+     "ko": "대단한 기념일이네요! 특별한 케이크와 장식을 준비해 드릴 수 있습니다. 개인화된 케이크 문구를 원하시나요?",
+     "audio": "audio/restaurant_occasion_18.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Yes please! Could it say \"Happy 60th Birthday, Mom!\"? We'd also love a group photo opportunity.",
+     "ko": "네 부탁드립니다! \"Happy 60th Birthday, Mom!\"이라고 적어주세요! 단체 사진도 찍고 싶습니다.",
+     "audio": "audio/restaurant_occasion_19.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We'll set up a photo area with a balloon backdrop. Our staff can take the group photo for you.",
+     "ko": "풍선 배경이 있는 포토존을 마련해 드리겠습니다. 저희 직원이 단체 사진을 찍어드리겠습니다.",
+     "audio": "audio/restaurant_occasion_20.mp3"
+    }
+   ],
+   "icon": "🥂"
+  },
+  {
+   "key": "restaurant_delivery",
+   "title": "배달 (Delivery)",
+   "subtitle": "배달 주문, 배달 시간, 최소 주문",
+   "dialogues": [
+    {
+     "speaker": "Staff",
+     "en": "Thank you for calling Bella's Kitchen. How can I help you?",
+     "ko": "벨라스 키친에 전화주셔서 감사합니다. 어떻게 도와드릴까요?",
+     "audio": "audio/restaurant_delivery_1.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Hi, I'd like to place a delivery order, please.",
+     "ko": "안녕하세요, 배달 주문을 하고 싶습니다.",
+     "audio": "audio/restaurant_delivery_2.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course! What would you like to order tonight?",
+     "ko": "물론이죠! 오늘 저녁 뭘 주문하시겠어요?",
+     "audio": "audio/restaurant_delivery_3.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'll have the grilled chicken sandwich with fries and a Caesar salad for two, please.",
+     "ko": "구운 닭고기 샌드위치에 감자튀김, 그리고 2인용 시저 샐러드로 주세요.",
+     "audio": "audio/restaurant_delivery_4.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Great choices! That comes to thirty-two dollars and fifty cents. Can I get your delivery address?",
+     "ko": "훌륭한 선택이에요! 32달러 50센트입니다. 배달 주소를 알려주시겠어요?",
+     "audio": "audio/restaurant_delivery_5.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "How long will the delivery take? I'm really hungry.",
+     "ko": "배달이 얼마나 걸리나요? 정말 배가 고파요.",
+     "audio": "audio/restaurant_delivery_6.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We're currently running about thirty to forty minutes for delivery. We're a bit busy tonight.",
+     "ko": "현재 배달까지 30~40분 정도 걸립니다. 오늘 저녁 좀 바쁜 편이에요.",
+     "audio": "audio/restaurant_delivery_7.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "That's longer than I expected. Is there any way to get it faster?",
+     "ko": "예상보다 오래 걸리네요. 더 빨리 받을 방법이 있을까요?",
+     "audio": "audio/restaurant_delivery_8.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I can bump your order to priority, but there's a five-dollar express fee. That would cut it down to about twenty minutes.",
+     "ko": "주문을 우선순위로 올려드릴 수 있지만 5달러의 빠른 배송비가 있습니다. 그러면 약 20분으로 줄어듭니다.",
+     "audio": "audio/restaurant_delivery_9.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'll take the express option. That's worth it.",
+     "ko": "빠른 배송으로 할게요. 그만한 가치가 있네요.",
+     "audio": "audio/restaurant_delivery_10.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'm sorry, but our minimum order for delivery is twenty-five dollars. Your order is currently at eighteen dollars.",
+     "ko": "죄송합니다만, 배달 최소 주문 금액이 25달러입니다. 현재 주문은 18달러입니다.",
+     "audio": "audio/restaurant_delivery_11.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Oh, I didn't realize there was a minimum. What can I add to reach the minimum?",
+     "ko": "아, 최소 주문 금액이 있는지 몰랐어요. 최소 금액에 맞추려면 뭘 추가할 수 있나요?",
+     "audio": "audio/restaurant_delivery_12.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "You could add an appetizer like our mozzarella sticks for seven dollars, or a soup of the day for six.",
+     "ko": "모짜렐라 스틱 7달러 같은 에피타이저를 추가하시거나 오늘의 수프 6달러를 추가할 수 있습니다.",
+     "audio": "audio/restaurant_delivery_13.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "I'll add the soup and also a side of garlic bread. How much is that?",
+     "ko": "수프랑 마늘빵 사이드도 추가할게요. 그러면 얼마인가요?",
+     "audio": "audio/restaurant_delivery_14.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "That brings your total to thirty-one dollars. Perfect, that's above our minimum!",
+     "ko": "총 31달러입니다. 완벽합니다, 최소 금액 이상이네요!",
+     "audio": "audio/restaurant_delivery_15.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Hi, I placed an order an hour ago and it still hasn't arrived. Can you check on it?",
+     "ko": "안녕하세요, 한 시간 전에 주문했는데 아직 안 왔어요. 확인해 주실 수 있나요?",
+     "audio": "audio/restaurant_delivery_16.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'm so sorry about the delay. Let me look up your order right away. Can I get your name and order number?",
+     "ko": "늦어서 정말 죄송합니다. 바로 주문을 조회하겠습니다. 성함과 주문 번호를 알려주시겠어요?",
+     "audio": "audio/restaurant_delivery_17.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "It's Kim and the order number is 4521.",
+     "ko": "김이고 주문 번호는 4521번입니다.",
+     "audio": "audio/restaurant_delivery_18.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I see your order here. It says it was delivered forty minutes ago. Did you not receive it?",
+     "ko": "주문이 보입니다. 40분 전에 배달 완료로 표시되어 있는데 받지 못하셨나요?",
+     "audio": "audio/restaurant_delivery_19.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "No, I've been waiting at home the whole time. Something must have gone wrong.",
+     "ko": "아뇨, 계속 집에서 기다리고 있었어요. 뭔가 잘못된 것 같아요.",
+     "audio": "audio/restaurant_delivery_20.mp3"
+    }
+   ],
+   "icon": "🛵"
+  },
+  {
+   "key": "restaurant_cafe",
+   "title": "카페 (Coffee Shop)",
+   "subtitle": "음료 주문, 테이크아웃, 와이파이",
+   "icon": "☕",
+   "dialogues": [
+    {
+     "speaker": "Customer",
+     "en": "Hi, can I get a medium latte, please?",
+     "ko": "안녕하세요, 미디엄 라떼 한 잔 주세요.",
+     "audio": "audio/restaurant_cafe_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Sure. For here or to go?",
+     "ko": "네. 매장에서 드시나요, 가져가시나요?",
+     "audio": "audio/restaurant_cafe_2.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "To go, please. Could you make it with oat milk?",
+     "ko": "가져갈게요. 귀리 우유로 만들어 주실 수 있나요?",
+     "audio": "audio/restaurant_cafe_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Of course. That's an extra fifty cents. Anything else?",
+     "ko": "그럼요. 50센트 추가됩니다. 더 필요하신 건 없으세요?",
+     "audio": "audio/restaurant_cafe_4.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Could I get an iced americano with less ice?",
+     "ko": "아이스 아메리카노에 얼음을 적게 넣어 주실 수 있나요?",
+     "audio": "audio/restaurant_cafe_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "No problem. Would you like it sweetened?",
+     "ko": "가능합니다. 단맛을 추가해 드릴까요?",
+     "audio": "audio/restaurant_cafe_6.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Just one pump of vanilla, please. And not too strong.",
+     "ko": "바닐라 시럽 한 번만 넣어 주세요. 그리고 너무 진하지 않게요.",
+     "audio": "audio/restaurant_cafe_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Got it. One shot instead of two. Can I get a name for the order?",
+     "ko": "알겠습니다. 샷은 두 번 대신 한 번만요. 주문자 성함을 알려주시겠어요?",
+     "audio": "audio/restaurant_cafe_8.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Is it okay if I work here for a couple of hours?",
+     "ko": "여기서 두어 시간 일해도 괜찮을까요?",
+     "audio": "audio/restaurant_cafe_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Absolutely. There are outlets along the wall by the window.",
+     "ko": "물론입니다. 창가 쪽 벽을 따라 콘센트가 있어요.",
+     "audio": "audio/restaurant_cafe_10.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Great. What's the wifi password?",
+     "ko": "좋네요. 와이파이 비밀번호가 뭔가요?",
+     "audio": "audio/restaurant_cafe_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It's on the receipt, at the bottom. All lowercase.",
+     "ko": "영수증 하단에 적혀 있습니다. 전부 소문자예요.",
+     "audio": "audio/restaurant_cafe_12.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Sorry, I think this is a regular coffee. I ordered a cappuccino.",
+     "ko": "죄송한데 이건 일반 커피 같아요. 저는 카푸치노를 주문했는데요.",
+     "audio": "audio/restaurant_cafe_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "I'm so sorry about that. I'll make you a fresh one right now.",
+     "ko": "정말 죄송합니다. 지금 바로 새로 만들어 드릴게요.",
+     "audio": "audio/restaurant_cafe_14.mp3"
+    },
+    {
+     "speaker": "Customer",
+     "en": "Thank you. Do you offer free refills on drip coffee?",
+     "ko": "감사합니다. 드립 커피는 무료 리필이 되나요?",
+     "audio": "audio/restaurant_cafe_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We do, but only for here. Just bring your cup back to the counter.",
+     "ko": "됩니다, 다만 매장 이용 시에만요. 컵을 카운터로 가져오시면 됩니다.",
+     "audio": "audio/restaurant_cafe_16.mp3"
+    }
+   ]
+  }
+ ]
+}

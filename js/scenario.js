@@ -4,13 +4,12 @@ function etBuildScenarioPage() {
     var catKey = etGetParam('cat');
     var name = etGetParam('name');
 
-    etLoadData().then(function() {
-        var cat = etFindCategory(catKey);
+    etLoadCategory(catKey).then(function(cat) {
         if (!cat) {
             document.getElementById('scenarioContainer').innerHTML = '<p>카테고리를 찾을 수 없습니다.</p>';
             return;
         }
-        var scenario = etFindScenario(catKey, name);
+        var scenario = etFindScenario(cat, name);
         if (!scenario) {
             document.getElementById('scenarioContainer').innerHTML = '<p>대화문을 찾을 수 없습니다.</p>';
             return;

@@ -3,8 +3,7 @@
 function etBuildCategoryPage() {
     var catKey = etGetParam('cat');
 
-    etLoadData().then(function() {
-        var cat = etFindCategory(catKey);
+    etLoadCategory(catKey).then(function(cat) {
         if (!cat) {
             document.getElementById('scenarioList').innerHTML = '<p>카테고리를 찾을 수 없습니다.</p>';
             return;
@@ -14,7 +13,7 @@ function etBuildCategoryPage() {
         document.getElementById('pageSubtitle').textContent = cat.subtitle || '';
 
         // Progress bar
-        var prog = etCategoryProgress(catKey);
+        var prog = etCategoryProgress(cat);
         var progBar = document.getElementById('progressArea');
         progBar.innerHTML =
             '<div class="progress-text">공부 완료 ' + prog.done + ' / ' + prog.total + ' 시나리오 (' + prog.percent + '%)</div>' +

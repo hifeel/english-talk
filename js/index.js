@@ -1,8 +1,9 @@
 // Main index renderer - builds topic cards from JSON data
 
+// The main page is the one screen that genuinely needs every category: it shows
+// each one's sentence count and study progress.
 function etBuildIndex() {
-    etLoadData().then(function() {
-        var cats = etGetCategories();
+    etLoadAllCategories().then(function(cats) {
         var html = '';
         for (var i = 0; i < cats.length; i++) {
             var c = cats[i];
@@ -10,7 +11,7 @@ function etBuildIndex() {
             for (var j = 0; j < c.scenarios.length; j++) {
                 totalDialogues += c.scenarios[j].dialogues.length;
             }
-            var prog = etCategoryProgress(c.key);
+            var prog = etCategoryProgress(c);
             html +=
                 '<a href="category.html?cat=' + c.key + '" class="topic-card">' +
                 '<div class="topic-icon">' + etEsc(c.icon || '💬') + '</div>' +
@@ -25,7 +26,7 @@ function etBuildIndex() {
         }
 
         // Overall progress banner at top
-        var overall = etTotalProgress();
+        var overall = etTotalProgress(cats);
         var banner = document.getElementById('overallProgress');
         banner.innerHTML =
             '<div class="overall-text">📚 전체 공부 진행률: ' + overall.done + ' / ' + overall.total + ' 시나리오 (' + overall.percent + '%)</div>' +
