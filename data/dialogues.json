@@ -70,26 +70,98 @@
       {
        "speaker": "Guest",
        "en": "Excuse me, what time does breakfast start?",
-       "ko": "실례합니다, 아침 식사는 몇 시에 시작하나요?",
-       "audio": "audio/question_1.mp3"
+       "ko": "실례합니다, 조식이 몇 시에 시작하나요?",
+       "audio": "audio/hotel_questions_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Breakfast is served from six thirty to ten in the main restaurant.",
+       "ko": "조식은 6시 30분부터 10시까지 메인 레스토랑에서 제공됩니다.",
+       "audio": "audio/hotel_questions_2.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Is it included in my rate?",
+       "ko": "제 요금에 포함되어 있나요?",
+       "audio": "audio/hotel_questions_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "It is for your room type. Just give your room number at the door.",
+       "ko": "손님 객실 타입은 포함입니다. 입구에서 객실 번호만 알려주세요.",
+       "audio": "audio/hotel_questions_4.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Is there Wi-Fi in the room?",
-       "ko": "방에 와이파이가 있나요?",
-       "audio": "audio/question_2.mp3"
+       "ko": "객실에 와이파이가 있나요?",
+       "audio": "audio/hotel_questions_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Yes, and it's free. The network name is the hotel name.",
+       "ko": "네, 무료입니다. 네트워크 이름은 호텔 이름과 같아요.",
+       "audio": "audio/hotel_questions_6.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Do I need a password?",
+       "ko": "비밀번호가 필요한가요?",
+       "audio": "audio/hotel_questions_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Your room number and last name. It's printed on your key card holder.",
+       "ko": "객실 번호와 성을 입력하시면 됩니다. 카드키 봉투에 적혀 있어요.",
+       "audio": "audio/hotel_questions_8.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Where is the gym?",
-       "ko": "헬스장이 어디에 있나요?",
-       "audio": "audio/question_3.mp3"
+       "ko": "헬스장이 어디인가요?",
+       "audio": "audio/hotel_questions_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "On the fourth floor, next to the pool. It's open twenty-four hours.",
+       "ko": "4층 수영장 옆입니다. 24시간 운영해요.",
+       "audio": "audio/hotel_questions_10.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Do I need to book a time slot?",
+       "ko": "시간을 예약해야 하나요?",
+       "audio": "audio/hotel_questions_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "No, just tap your room key at the door to get in.",
+       "ko": "아니요, 문에서 카드키를 대시면 들어가실 수 있습니다.",
+       "audio": "audio/hotel_questions_12.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Could you call me a taxi, please?",
-       "ko": "택시 좀 불러주시겠어요?",
-       "audio": "audio/question_4.mp3"
+       "ko": "택시를 불러주시겠어요?",
+       "audio": "audio/hotel_questions_13.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Certainly. Where are you heading, and when do you need it?",
+       "ko": "물론입니다. 어디로 가시고, 언제 필요하신가요?",
+       "audio": "audio/hotel_questions_14.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "To the airport, in about twenty minutes.",
+       "ko": "공항으로요, 20분쯤 후에요.",
+       "audio": "audio/hotel_questions_15.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'll have one waiting at the entrance. It's about forty dollars.",
+       "ko": "입구에 대기시켜 두겠습니다. 요금은 40달러 정도입니다.",
+       "audio": "audio/hotel_questions_16.mp3"
       }
      ],
      "icon": "❓"
@@ -102,20 +174,74 @@
       {
        "speaker": "Guest",
        "en": "Could I get extra towels, please?",
-       "ko": "수건 추가로 받을 수 있을까요?",
-       "audio": "audio/request_1.mp3"
+       "ko": "수건을 더 받을 수 있을까요?",
+       "audio": "audio/hotel_requests_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Of course. How many would you like?",
+       "ko": "물론입니다. 몇 장 필요하세요?",
+       "audio": "audio/hotel_requests_2.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Two more, and an extra blanket if you have one.",
+       "ko": "두 장 더요, 담요도 하나 있으면 좋겠어요.",
+       "audio": "audio/hotel_requests_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'll send them up within ten minutes.",
+       "ko": "10분 안에 올려드리겠습니다.",
+       "audio": "audio/hotel_requests_4.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Can I have a wake-up call at 7 AM?",
-       "ko": "오전 7시에 모닝콜 부탁드려도 될까요?",
-       "audio": "audio/request_2.mp3"
+       "ko": "아침 7시에 모닝콜을 받을 수 있을까요?",
+       "audio": "audio/hotel_requests_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Certainly. Would you like a second call as a backup?",
+       "ko": "물론입니다. 혹시 몰라 한 번 더 드릴까요?",
+       "audio": "audio/hotel_requests_6.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Yes, please, ten minutes later.",
+       "ko": "네, 10분 뒤에 한 번 더 부탁드립니다.",
+       "audio": "audio/hotel_requests_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Done. Seven and seven ten, to room five-o-two.",
+       "ko": "완료했습니다. 502호로 7시와 7시 10분입니다.",
+       "audio": "audio/hotel_requests_8.mp3"
       },
       {
        "speaker": "Guest",
        "en": "I'd like to make a long-distance call.",
-       "ko": "장거리 전화를 걸고 싶습니다.",
-       "audio": "audio/request_3.mp3"
+       "ko": "국제 전화를 걸고 싶습니다.",
+       "audio": "audio/hotel_requests_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Dial nine first, then the country code. Rates are in the room folder.",
+       "ko": "먼저 9번을 누르고 국가 번호를 누르세요. 요금은 객실 안내책자에 있습니다.",
+       "audio": "audio/hotel_requests_10.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Is it cheaper to use the hotel Wi-Fi and call online?",
+       "ko": "호텔 와이파이로 인터넷 전화를 쓰는 게 더 싼가요?",
+       "audio": "audio/hotel_requests_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "Much cheaper, and the connection is stable in the rooms.",
+       "ko": "훨씬 저렴합니다. 객실에서는 연결도 안정적이에요.",
+       "audio": "audio/hotel_requests_12.mp3"
       }
      ],
      "icon": "🛎️"
@@ -128,20 +254,74 @@
       {
        "speaker": "Guest",
        "en": "The air conditioning isn't working.",
-       "ko": "에어컨이 작동하지 않습니다.",
-       "audio": "audio/problem_1.mp3"
+       "ko": "에어컨이 작동하지 않아요.",
+       "audio": "audio/hotel_problems_1.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'm sorry. Is it not turning on, or not cooling?",
+       "ko": "죄송합니다. 켜지지 않나요, 아니면 시원해지지 않나요?",
+       "audio": "audio/hotel_problems_2.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "It turns on, but the air stays warm.",
+       "ko": "켜지긴 하는데 바람이 계속 미지근해요.",
+       "audio": "audio/hotel_problems_3.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'll send maintenance up now. If it can't be fixed, we'll move you.",
+       "ko": "지금 시설팀을 올려보내겠습니다. 수리가 안 되면 객실을 옮겨드릴게요.",
+       "audio": "audio/hotel_problems_4.mp3"
       },
       {
        "speaker": "Guest",
        "en": "There's no hot water in my bathroom.",
-       "ko": "욕실에 뜨거운 물이 안 나옵니다.",
-       "audio": "audio/problem_2.mp3"
+       "ko": "욕실에 온수가 안 나와요.",
+       "audio": "audio/hotel_problems_5.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I apologize. Has it been like that since you checked in?",
+       "ko": "죄송합니다. 체크인하셨을 때부터 그랬나요?",
+       "audio": "audio/hotel_problems_6.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "No, it was fine last night. It started this morning.",
+       "ko": "아니요, 어젯밤엔 괜찮았어요. 오늘 아침부터 그러네요.",
+       "audio": "audio/hotel_problems_7.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "There's work on the boiler. It should be back within an hour.",
+       "ko": "보일러 작업 중입니다. 한 시간 안에 복구될 예정이에요.",
+       "audio": "audio/hotel_problems_8.mp3"
       },
       {
        "speaker": "Guest",
        "en": "Could you change my room? It's too noisy.",
-       "ko": "방을 바꿔주실 수 있나요? 너무 시끄러워요.",
-       "audio": "audio/problem_3.mp3"
+       "ko": "객실을 바꿔주실 수 있나요? 너무 시끄러워요.",
+       "audio": "audio/hotel_problems_9.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I'm sorry to hear that. Is it street noise or noise from another room?",
+       "ko": "불편을 드려 죄송합니다. 도로 소음인가요, 옆방 소음인가요?",
+       "audio": "audio/hotel_problems_10.mp3"
+      },
+      {
+       "speaker": "Guest",
+       "en": "Street noise. My room faces the main road.",
+       "ko": "도로 소음이요. 객실이 큰길 쪽을 향하고 있어요.",
+       "audio": "audio/hotel_problems_11.mp3"
+      },
+      {
+       "speaker": "Staff",
+       "en": "I have a quiet room facing the courtyard. I'll move you at no charge.",
+       "ko": "안뜰 쪽 조용한 객실이 있습니다. 추가 요금 없이 옮겨드리겠습니다.",
+       "audio": "audio/hotel_problems_12.mp3"
       }
      ],
      "icon": "🔧"
