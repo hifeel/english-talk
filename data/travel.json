@@ -266,6 +266,110 @@
    "icon": "💱"
   },
   {
+   "key": "travel_atm",
+   "title": "ATM & 카드 (ATM & Card Trouble)",
+   "subtitle": "인출 수수료, 카드 회수, 결제 차단, 한도",
+   "dialogues": [
+    {
+     "speaker": "Tourist",
+     "en": "Is there an ATM nearby that takes foreign cards?",
+     "ko": "근처에 해외 카드가 되는 ATM이 있나요?",
+     "audio": "audio/travel_atm_1.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "There's one inside the bank across the street. It takes Visa and Mastercard.",
+     "ko": "길 건너 은행 안에 있습니다. 비자와 마스터카드가 됩니다.",
+     "audio": "audio/travel_atm_2.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Does it charge a fee for withdrawals?",
+     "ko": "인출할 때 수수료가 붙나요?",
+     "audio": "audio/travel_atm_3.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Three dollars here, and your own bank may add one on top.",
+     "ko": "여기서는 3달러이고, 본인 은행에서 별도로 더 붙일 수 있습니다.",
+     "audio": "audio/travel_atm_4.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "The machine kept my card. It never came back out.",
+     "ko": "기계가 카드를 먹었어요. 다시 안 나옵니다.",
+     "audio": "audio/travel_atm_5.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "That happens when the card sits too long. Which machine was it?",
+     "ko": "카드를 오래 두면 그렇게 됩니다. 어느 기계였나요?",
+     "audio": "audio/travel_atm_6.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "The one by the entrance, about five minutes ago.",
+     "ko": "입구 옆에 있는 거요, 5분쯤 전입니다.",
+     "audio": "audio/travel_atm_7.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "We open it at nine tomorrow. Bring your passport to collect it.",
+     "ko": "내일 9시에 기계를 엽니다. 여권을 가지고 찾으러 오세요.",
+     "audio": "audio/travel_atm_8.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "My card was declined, but there's money in the account.",
+     "ko": "카드가 승인 거절됐는데 계좌에는 잔액이 있어요.",
+     "audio": "audio/travel_atm_9.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Overseas payments are often blocked as a precaution. Have you called your bank?",
+     "ko": "해외 결제는 예방 차원에서 차단되는 경우가 많습니다. 은행에 전화해 보셨나요?",
+     "audio": "audio/travel_atm_10.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Not yet. Is there a number I can call from here?",
+     "ko": "아직요. 여기서 전화할 수 있는 번호가 있나요?",
+     "audio": "audio/travel_atm_11.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "It's on the back of the card. Tell them the dates you're travelling.",
+     "ko": "카드 뒷면에 있습니다. 여행 기간을 알려주세요.",
+     "audio": "audio/travel_atm_12.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "The ATM says I've reached my daily limit. Can I take out more?",
+     "ko": "ATM에서 하루 한도에 도달했다고 나와요. 더 인출할 수 있나요?",
+     "audio": "audio/travel_atm_13.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Not until tomorrow, unless your bank raises the limit for you.",
+     "ko": "은행에서 한도를 올려주지 않는 한 내일까지는 안 됩니다.",
+     "audio": "audio/travel_atm_14.mp3"
+    },
+    {
+     "speaker": "Tourist",
+     "en": "Can I get cash over the counter with my passport instead?",
+     "ko": "대신 창구에서 여권으로 현금을 받을 수 있나요?",
+     "audio": "audio/travel_atm_15.mp3"
+    },
+    {
+     "speaker": "Staff",
+     "en": "Yes, with your card and passport. There's a one percent fee.",
+     "ko": "네, 카드와 여권이 있으면 됩니다. 수수료는 1퍼센트입니다.",
+     "audio": "audio/travel_atm_16.mp3"
+    }
+   ],
+   "icon": "🏧"
+  },
+  {
    "key": "travel_tips_sim",
    "title": "유심 구입 (Getting a SIM)",
    "subtitle": "구입처, 데이터 요금제, 여권 등록",
