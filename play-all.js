@@ -5,12 +5,32 @@
 //            etStopPlayAll()   - stop if running; safe to call anytime
 //            etPlayAllActive() - is a run in progress?
 //            etPlayAllSkip(n)  - move n sentences within a run; false if not running
+//            etGapMs()         - the pause between sentences, shared with toggle.js
 //   needs    etRepeatEnabled() from toggle.js, optional - without it, no repeat
 // Everything else here is private to this file. Load order does not matter:
 // function declarations hoist and the cross-file calls happen at click time.
 var isPlaying = false;
 var currentAudioIndex = 0;
 var audioElements = [];
+
+// A breath between sentences. trim_silence.py strips the padding edge-tts leaves
+// on each clip, so without this the next sentence starts the instant the last
+// one stops. Done here rather than by padding 1,412 mp3s: no second lossy
+// re-encode, and nobody has to re-download audio they already saved offline.
+var ET_GAP_MS = 200;
+var etGapTimer = null;
+
+function etClearGap() {
+    if (etGapTimer !== null) {
+        clearTimeout(etGapTimer);
+        etGapTimer = null;
+    }
+}
+
+// toggle.js reads this so the repeat loop pauses by the same amount
+function etGapMs() {
+    return ET_GAP_MS;
+}
 
 function initAudioList() {
     audioElements = Array.from(document.querySelectorAll('audio'));
@@ -26,6 +46,7 @@ function togglePlayAll() {
 
 function startAll() {
     initAudioList();
+    etClearGap();
     isPlaying = true;
     currentAudioIndex = 0;
     
@@ -69,7 +90,11 @@ function playNext() {
         unhighlightDialogue(currentAudioIndex);
         audio.removeAttribute('data-playall');
         currentAudioIndex++;
-        playNext();
+        etClearGap();
+        etGapTimer = setTimeout(function() {
+            etGapTimer = null;
+            playNext();
+        }, ET_GAP_MS);
     };
     
     audio.currentTime = 0;
@@ -80,7 +105,8 @@ function playNext() {
 
 function stopAll() {
     isPlaying = false;
-    
+    etClearGap();   // a pending gap would otherwise start the next sentence
+
     if (currentAudioIndex < audioElements.length) {
         audioElements[currentAudioIndex].pause();
         audioElements[currentAudioIndex].currentTime = 0;
@@ -144,6 +170,9 @@ function etPlayAllSkip(delta) {
     if (!isPlaying) return false;
     var target = currentAudioIndex + delta;
     if (target < 0 || target >= audioElements.length) return false;
+
+    // A skip is deliberate, so go now rather than sitting through a pending gap
+    etClearGap();
 
     var cur = audioElements[currentAudioIndex];
     cur.pause();

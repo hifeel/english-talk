@@ -101,6 +101,17 @@ function updateVisibility() {
     for (var i = 0; i < els.length; i++) els[i].style.display = showSpeaker ? '' : 'none';
 }
 
+// Same breath play-all leaves between sentences, so a repeating sentence does
+// not snap straight back to the start. play-all.js owns the length.
+var etRepeatTimer = null;
+
+function etClearRepeatGap() {
+    if (etRepeatTimer !== null) {
+        clearTimeout(etRepeatTimer);
+        etRepeatTimer = null;
+    }
+}
+
 function playAudioWithRepeat(audio) {
     var allAudios = document.querySelectorAll('audio');
     for (var i = 0; i < allAudios.length; i++) {
@@ -110,13 +121,21 @@ function playAudioWithRepeat(audio) {
             allAudios[i].onended = null;
         }
     }
-    
+    etClearRepeatGap();
+
     if (repeatMode) {
-        audio.onended = function() { audio.currentTime = 0; audio.play(); };
+        audio.onended = function() {
+            etClearRepeatGap();
+            etRepeatTimer = setTimeout(function() {
+                etRepeatTimer = null;
+                audio.currentTime = 0;
+                audio.play();
+            }, typeof etGapMs === 'function' ? etGapMs() : 0);
+        };
     } else {
         audio.onended = null;
     }
-    
+
     audio.currentTime = 0;
     audio.play();
 }
@@ -127,6 +146,7 @@ function etStopPlayAllIfLoaded() {
 }
 
 function stopAudio(audio) {
+    etClearRepeatGap();   // otherwise a pending repeat restarts it after the pause
     audio.pause();
     audio.currentTime = 0;
     audio.onended = null;

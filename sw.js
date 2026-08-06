@@ -17,7 +17,7 @@
 // Bump AUDIO_CACHE only when the audio files themselves change, since the URLs
 // stay the same and saved copies would otherwise never be replaced. v2 is the
 // silence-trimmed set; anyone holding v1 re-downloads on the next save.
-var CACHE = 'english-talk-v9';
+var CACHE = 'english-talk-v10';
 var AUDIO_CACHE = 'english-talk-audio-v2';
 
 // The shell plus every data file. 337KB in total, so precaching all of it costs
