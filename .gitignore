@@ -1,0 +1,34 @@
+# Data & Audio generation / processing scripts & tools
+scripts/
+tools/
+*.py
+*.sh
+__pycache__/
+*.pyc
+
+# Raw/temporary data and audio files
+audio/conversations/
+raw_audio/
+temp_audio/
+data_raw/
+*.tmp
+*.log
+
+# Environment variables & API keys
+.env
+.env.*
+*.secret
+*.key
+
+# OS & Editor files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
