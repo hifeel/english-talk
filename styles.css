@@ -743,3 +743,25 @@ footer {
     }
     .marks-link:hover { background: #352d1d; }
 }
+
+/* Progress and bookmarks live in localStorage, so they do not follow the user
+   to another phone or survive clearing site data. Said once on the home
+   screen, quietly - it is a caveat, not a warning. */
+.local-only-note {
+    margin: 0 0 14px;
+    padding: 10px 14px;
+    background: #f4f5f9;
+    border-left: 3px solid #c7cbe0;
+    border-radius: 8px;
+    color: #6b6f80;
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+@media (prefers-color-scheme: dark) {
+    .local-only-note {
+        background: #1c1c22;
+        border-left-color: #45495c;
+        color: #9a9eb0;
+    }
+}
