@@ -82,12 +82,11 @@ function playNext() {
     }
     
     updateProgress();
-    highlightDialogue(currentAudioIndex);
+    scrollToDialogue(currentAudioIndex);
     
     var audio = audioElements[currentAudioIndex];
     
     audio.onended = function() {
-        unhighlightDialogue(currentAudioIndex);
         audio.removeAttribute('data-playall');
         currentAudioIndex++;
         etClearGap();
@@ -137,19 +136,11 @@ function updateProgress() {
     document.getElementById('progressText').textContent = current + ' / ' + total;
 }
 
-function highlightDialogue(index) {
+// The .playing mark belongs to toggle.js, which sets it from the audio events -
+// this only has to bring the sentence into view.
+function scrollToDialogue(index) {
     var dialogue = audioElements[index].closest('.dialogue');
-    if (dialogue) {
-        dialogue.classList.add('playing');
-        dialogue.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
-}
-
-function unhighlightDialogue(index) {
-    var dialogue = audioElements[index].closest('.dialogue');
-    if (dialogue) {
-        dialogue.classList.remove('playing');
-    }
+    if (dialogue) dialogue.scrollIntoView({ behavior: 'smooth', block: 'center' });
 }
 
 // Entry point for other scripts: stop play-all if it is running, else do nothing
@@ -178,7 +169,6 @@ function etPlayAllSkip(delta) {
     cur.pause();
     cur.onended = null;
     cur.removeAttribute('data-playall');
-    unhighlightDialogue(currentAudioIndex);
 
     currentAudioIndex = target;
     playNext();

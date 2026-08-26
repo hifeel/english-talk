@@ -4,6 +4,9 @@
 //   exposes  etRepeatEnabled()  - is the 반복 toggle on? read by play-all.js
 //            initEnglishTalk()  - (re)bind the UI, called by js/scenario.js
 //                                 after it renders dialogues
+//   owns     the .playing mark on .dialogue - set from the audio events, so a
+//            sentence started by a click, a key, 전체 재생 or the lock screen
+//            all look the same. Nothing else should add or remove it.
 //   needs    etStopPlayAll() from play-all.js, optional
 // The display flags below are private to this file.
 var showEnglish = true;
@@ -241,6 +244,46 @@ function addGoogleButton(dialogue) {
     
     dialogue.appendChild(searchBtn);
 }
+
+// ============ Playing highlight ============
+//
+// Which sentence is sounding right now. 전체 재생 used to be the only thing that
+// showed it, so a line started by a click, an arrow key or the lock screen
+// played with nothing on screen to point at it. Driving the mark off the audio
+// events instead covers every route in, including ones added later.
+//
+// Audio events do not bubble, hence capture-phase listeners on the document:
+// that reaches dialogues js/scenario.js and js/marks.js build after this runs.
+
+function etDialogueOfAudio(audio) {
+    return audio && audio.closest ? audio.closest('.dialogue') : null;
+}
+
+function etClearPlayingMark() {
+    var marked = document.querySelectorAll('.dialogue.playing');
+    for (var i = 0; i < marked.length; i++) marked[i].classList.remove('playing');
+}
+
+function etInitPlayingHighlight() {
+    document.addEventListener('play', function(e) {
+        if (!e.target || e.target.tagName !== 'AUDIO') return;
+        etClearPlayingMark();               // only ever one at a time
+        var d = etDialogueOfAudio(e.target);
+        if (d) d.classList.add('playing');
+    }, true);
+
+    // Covers stopping, pausing and reaching the end. During 전체 재생 the gap
+    // between sentences briefly clears it, which is honest: nothing is sounding.
+    function drop(e) {
+        if (!e.target || e.target.tagName !== 'AUDIO') return;
+        var d = etDialogueOfAudio(e.target);
+        if (d) d.classList.remove('playing');
+    }
+    document.addEventListener('pause', drop, true);
+    document.addEventListener('ended', drop, true);
+}
+
+etInitPlayingHighlight();
 
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initEnglishTalk);
