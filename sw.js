@@ -17,7 +17,7 @@
 // Bump AUDIO_CACHE only when the audio files themselves change, since the URLs
 // stay the same and saved copies would otherwise never be replaced. v2 is the
 // silence-trimmed set; anyone holding v1 re-downloads on the next save.
-var CACHE = 'english-talk-v12';
+var CACHE = 'english-talk-v13';
 var AUDIO_CACHE = 'english-talk-audio-v2';
 
 // The shell plus every data file. About 500KB in total, so precaching all of it
@@ -53,9 +53,15 @@ var PRECACHE = [
 self.addEventListener('install', function(e) {
     e.waitUntil(
         caches.open(CACHE).then(function(c) {
-            // addAll is all-or-nothing; one 404 would leave the worker uninstalled
+            // addAll is all-or-nothing; one 404 would leave the worker
+            // uninstalled. cache: 'reload' is what keeps this honest: a plain
+            // add() reads through the HTTP cache, and GitHub Pages serves these
+            // with max-age=600 - install inside that window right after a
+            // deploy and the worker precaches the file the deploy replaced,
+            // then serves it for as long as this cache name lives.
             return Promise.all(PRECACHE.map(function(url) {
-                return c.add(url).catch(function(err) {
+                var req = new Request(url, {cache: 'reload'});
+                return c.add(req).catch(function(err) {
                     console.warn('[sw] precache skipped', url, err);
                 });
             }));
@@ -157,9 +163,14 @@ self.addEventListener('fetch', function(e) {
     e.respondWith(
         caches.open(CACHE).then(function(cache) {
             return cache.match(cacheKey).then(function(hit) {
-                var fresh = fetch(req).then(function(res) {
+                // no-cache: revalidate against the server rather than take
+                // whatever the HTTP cache is still holding, which would write
+                // the stale copy straight back into this cache
+                var fresh = fetch(req, {cache: 'no-cache'}).then(function(res) {
                     if (res && res.ok && res.type === 'basic') {
-                        cache.put(cacheKey, res.clone());
+                        return cache.put(cacheKey, res.clone()).then(function() {
+                            return res;
+                        });
                     }
                     return res;
                 }).catch(function() {
@@ -167,6 +178,15 @@ self.addEventListener('fetch', function(e) {
                     // per-scenario URL, say - so land on the home screen.
                     return hit || cache.match('index.html');
                 });
+
+                // Hold the worker open until the fresh copy is written. On a
+                // cache hit respondWith settles at once, and without this the
+                // browser is free to kill the worker mid-fetch: the write never
+                // lands and the next visit reads the same stale file, and the
+                // one after that. A deploy then never arrives at all - not on
+                // the next visit, which is what this strategy promises.
+                try { e.waitUntil(fresh); } catch (err) {}
+
                 return hit || fresh;
             });
         })
