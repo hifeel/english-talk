@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2563eb">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<title>English Talk</title>
+</head>
+<body>
+<div class="container">
+  <div class="topbar"><a class="back" href="index.html">← 메인</a></div>
+  <header>
+    <h1 id="title"></h1>
+    <p id="subtitle"></p>
+  </header>
+
+  <div class="progress" id="progress"></div>
+  <div class="offline" id="offlineArea"></div>
+  <div id="list"></div>
+
+  <footer>제작: hyundam</footer>
+</div>
+
+<script src="data.js"></script>
+<script src="offline.js"></script>
+<script>
+function build() {
+  var key = v2Param('cat');
+  v2LoadCategory(key).then(function (cat) {
+    if (!cat) {
+      document.getElementById('list').innerHTML = '<p class="empty">카테고리를 찾을 수 없습니다.</p>';
+      return;
+    }
+    document.title = cat.title + ' | English Talk';
+    document.getElementById('title').textContent = (cat.icon || '') + ' ' + cat.title;
+    document.getElementById('subtitle').textContent = cat.subtitle || '';
+
+    var p = v2CategoryProgress(cat);
+    document.getElementById('progress').innerHTML =
+      '<div class="progress-text">공부 완료 ' + p.done + ' / ' + p.total +
+      ' 시나리오 (' + p.percent + '%)</div>' +
+      '<div class="track"><div class="fill" style="width:' + p.percent + '%"></div></div>';
+
+    v2RenderOffline(cat);
+
+    var html = '';
+    for (var i = 0; i < cat.scenarios.length; i++) {
+      var s = cat.scenarios[i];
+      var done = v2IsDone(s.key);
+      html +=
+        '<div class="card' + (done ? ' done' : '') + '">' +
+        '<a href="lesson.html?cat=' + encodeURIComponent(cat.key) +
+        '&name=' + encodeURIComponent(s.key) + '">' +
+        '<div class="title-row">' +
+        '<span class="badge">' + v2Esc(s.icon || '💬') + '</span>' +
+        '<h2>' + v2Esc(s.title) + '</h2>' +
+        (done ? '<span class="done-mark">완료</span>'
+              : '<span class="count">' + s.dialogues.length + '문장</span>') +
+        '</div>' +
+        '<p>' + v2Esc(s.subtitle || '') + '</p>' +
+        '</a></div>';
+    }
+    document.getElementById('list').innerHTML = html;
+  });
+}
+build();
+window.addEventListener('pageshow', function (e) { if (e.persisted) build(); });
+</script>
+</body>
+</html>
