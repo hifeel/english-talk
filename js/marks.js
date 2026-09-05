@@ -2,11 +2,18 @@
 // list, newest first. Reuses the .dialogue markup so toggle.js and play-all.js
 // work here unchanged; the only difference is each line says where it came from.
 
+// The rows are rebuilt on every render - including a bfcache return - but the
+// container element is not, so the click handler is bound once at init against
+// whatever the last render left here. Binding it per render stacked handlers,
+// and the second one re-added the bookmark the first had just removed.
+var ET_MARK_ITEMS = [];
+
 function etBuildMarksPage() {
     etLoadAllCategories().then(function(cats) {
         var items = etResolveMarks(cats);
         var container = document.getElementById('marksContainer');
         var subtitle = document.getElementById('markSubtitle');
+        ET_MARK_ITEMS = items;
 
         if (!items.length) {
             subtitle.textContent = '아직 북마크한 문장이 없습니다';
@@ -42,29 +49,38 @@ function etBuildMarksPage() {
         }
         container.innerHTML = html;
 
-        container.addEventListener('click', function(e) {
-            var btn = e.target.closest('.mark-btn');
-            if (!btn) return;
-            e.stopPropagation();
-            var it = items[parseInt(btn.getAttribute('data-n'), 10)];
-            etToggleMark(it.scenarioKey, it.index, it.dialogue, it.catKey);
-            // Drop the row rather than leaving a hollow ☆ behind on a page
-            // whose whole point is that everything on it is bookmarked.
-            var row = btn.closest('.dialogue');
-            if (row) row.parentNode.removeChild(row);
-            var left = container.querySelectorAll('.dialogue').length;
-            subtitle.textContent = left ? left + '개 문장' : '아직 북마크한 문장이 없습니다';
-            if (typeof initAudioList === 'function') initAudioList();
-        });
-
         if (typeof initEnglishTalk === 'function') initEnglishTalk();
     });
 }
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', etBuildMarksPage);
-} else {
+function etOnMarkClick(e) {
+    var btn = e.target.closest('.mark-btn');
+    if (!btn) return;
+    e.stopPropagation();
+    var it = ET_MARK_ITEMS[parseInt(btn.getAttribute('data-n'), 10)];
+    if (!it) return;
+    etToggleMark(it.scenarioKey, it.index, it.dialogue, it.catKey);
+    // Drop the row rather than leaving a hollow ☆ behind on a page
+    // whose whole point is that everything on it is bookmarked.
+    var row = btn.closest('.dialogue');
+    if (row) row.parentNode.removeChild(row);
+    var container = document.getElementById('marksContainer');
+    var left = container.querySelectorAll('.dialogue').length;
+    document.getElementById('markSubtitle').textContent =
+        left ? left + '개 문장' : '아직 북마크한 문장이 없습니다';
+    if (typeof initAudioList === 'function') initAudioList();
+}
+
+function etInitMarksPage() {
+    var container = document.getElementById('marksContainer');
+    if (container) container.addEventListener('click', etOnMarkClick);
     etBuildMarksPage();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', etInitMarksPage);
+} else {
+    etInitMarksPage();
 }
 
 window.addEventListener('pageshow', function(e) {

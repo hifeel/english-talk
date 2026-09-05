@@ -71,8 +71,11 @@ function stopAllIndividualAudio() {
 
 function playNext() {
     if (!isPlaying || currentAudioIndex >= audioElements.length) {
-        // toggle.js owns the repeat setting; if it isn't loaded, just don't repeat
-        if (isPlaying && typeof etRepeatEnabled === 'function' && etRepeatEnabled()) {
+        // toggle.js owns the repeat setting; if it isn't loaded, just don't repeat.
+        // The length check is what keeps an empty list from recursing forever:
+        // marks.html keeps its 전체 재생 button with no bookmarks on the page.
+        if (isPlaying && audioElements.length &&
+            typeof etRepeatEnabled === 'function' && etRepeatEnabled()) {
             currentAudioIndex = 0;
             playNext();
         } else {
