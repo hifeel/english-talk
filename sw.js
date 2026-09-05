@@ -163,8 +163,8 @@ self.addEventListener('fetch', function(e) {
                     }
                     return res;
                 }).catch(function() {
-                    // Offline. Unknown pages (the old redirect stubs) have
-                    // nothing cached, so land on the home screen.
+                    // Offline and nothing cached under this path - an old
+                    // per-scenario URL, say - so land on the home screen.
                     return hit || cache.match('index.html');
                 });
                 return hit || fresh;
