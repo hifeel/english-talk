@@ -23,6 +23,7 @@
   <p class="note">진행률과 북마크는 이 기기에만 저장됩니다.</p>
 
   <div class="progress" id="overall"></div>
+  <button class="recommend" id="recommendBtn" disabled>오늘 공부할 거 고르는 중…</button>
   <div id="marksLink"></div>
   <div class="tiles" id="list"></div>
 
@@ -61,8 +62,63 @@ function build() {
     var n = v2MarkCount();
     document.getElementById('marksLink').innerHTML = n
       ? '<a class="marks-link" href="marks.html">⭐ 북마크한 문장 ' + n + '개</a>' : '';
+
+    HOME_CATS = cats;
+    paintRecommend();
   });
 }
+
+/* ---- today's pick ----
+ * 161 scenarios is enough that choosing one is its own small obstacle, so this
+ * makes the choice: a scenario that is not marked done yet, at random, entered
+ * straight away. Once everything is done it keeps working as a way back in to
+ * something at random rather than going dead.
+ */
+var HOME_CATS = null;
+
+function undoneScenarios(cats) {
+  var done = v2GetDone(), pool = [];
+  for (var i = 0; i < cats.length; i++) {
+    for (var j = 0; j < cats[i].scenarios.length; j++) {
+      if (!done[cats[i].scenarios[j].key]) {
+        pool.push({ cat: cats[i], scenario: cats[i].scenarios[j] });
+      }
+    }
+  }
+  return pool;
+}
+
+function allScenarios(cats) {
+  var pool = [];
+  for (var i = 0; i < cats.length; i++) {
+    for (var j = 0; j < cats[i].scenarios.length; j++) {
+      pool.push({ cat: cats[i], scenario: cats[i].scenarios[j] });
+    }
+  }
+  return pool;
+}
+
+function paintRecommend() {
+  var btn = document.getElementById('recommendBtn');
+  if (!btn || !HOME_CATS) return;
+  var left = undoneScenarios(HOME_CATS).length;
+  btn.disabled = false;
+  btn.innerHTML = left
+    ? '🎯 오늘 공부할 거 추천<span class="sub">아직 안 한 ' + left + '개 중에서 하나</span>'
+    : '🎉 전부 완료했습니다<span class="sub">아무거나 하나 다시 보기</span>';
+}
+
+function goRecommended() {
+  if (!HOME_CATS) return;
+  var pool = undoneScenarios(HOME_CATS);
+  if (!pool.length) pool = allScenarios(HOME_CATS);
+  if (!pool.length) return;
+  var pick = pool[Math.floor(Math.random() * pool.length)];
+  location.href = 'scenario.html?cat=' + encodeURIComponent(pick.cat.key) +
+                  '&name=' + encodeURIComponent(pick.scenario.key);
+}
+
+document.getElementById('recommendBtn').addEventListener('click', goRecommended);
 build();
 // Coming back from the bookmark or dialogue page should show the new progress
 window.addEventListener('pageshow', function (e) { if (e.persisted) build(); });
