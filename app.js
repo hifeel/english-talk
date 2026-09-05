@@ -1,14 +1,13 @@
-/* v2 player.
+/* Player.
  *
  * The shape of this is travel-english's app.js - one player driving .turn
  * cards, a play-all that walks them, a browser-TTS fallback when an mp3 is
- * missing. What is new here:
+ * missing. Added here:
  *
- *   - saved audio is played straight out of the Cache API. These pages are in
- *     a subfolder, so a service worker registered here could not intercept
- *     ../audio/ anyway (scope). Reading the cache in the page sidesteps both
- *     that and the Range/206 dance the root app's worker has to do.
- *   - the display toggles persist, sharing englishTalk_states with the root app
+ *   - saved audio is played straight out of the Cache API as a blob, so a
+ *     downloaded category plays offline whether or not the service worker is
+ *     in control, and without the Range/206 response it has to build
+ *   - the display toggles persist in englishTalk_states
  *   - keyboard control (arrows move, space stops)
  */
 (function (global) {

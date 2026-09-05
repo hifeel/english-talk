@@ -8,10 +8,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#2563eb">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="styles.css">
 <title>English Talk - 상황별 영어 회화</title>
+<style>
+/* B안: 진도를 원형 링으로 두고 아이콘을 그 안에 놓는다 */
+.rings .tile { text-align:center; padding:18px 12px; }
+.ring { position:relative; width:76px; height:76px; margin:0 auto 10px; }
+.ring svg { transform:rotate(-90deg); display:block; }
+.ring .bg { stroke:#e2e8f0; }
+.ring .fg { stroke:var(--primary); transition:stroke-dashoffset .4s; }
+.ring .emoji {
+  position:absolute; inset:0; display:flex; align-items:center;
+  justify-content:center; font-size:28px;
+}
+.rings .tile-sub { margin-bottom:0; }
+.rings .tile-pct { font-size:11px; color:var(--primary); font-weight:700; margin-top:6px; }
+.rings .tile.done .fg { stroke:#22c55e; }
+</style>
 </head>
 <body>
 <div class="container">
@@ -24,7 +39,7 @@
 
   <div class="progress" id="overall"></div>
   <div id="marksLink"></div>
-  <div class="tiles" id="list"></div>
+  <div class="tiles rings" id="list"></div>
 
   <footer>제작: hyundam</footer>
 </div>
@@ -39,14 +54,22 @@ function build() {
       var sentences = 0;
       for (var j = 0; j < c.scenarios.length; j++) sentences += c.scenarios[j].dialogues.length;
       var p = v2CategoryProgress(c);
+      var R = 34, C = 2 * Math.PI * R;
       html +=
         '<a class="tile' + (p.total && p.done === p.total ? ' done' : '') +
         '" href="category.html?cat=' + encodeURIComponent(c.key) + '">' +
-        '<div class="tile-icon">' + v2Esc(c.icon || '💬') + '</div>' +
+        '<div class="ring">' +
+        '<svg width="76" height="76" viewBox="0 0 76 76">' +
+        '<circle class="bg" cx="38" cy="38" r="' + R + '" fill="none" stroke-width="7"/>' +
+        '<circle class="fg" cx="38" cy="38" r="' + R + '" fill="none" stroke-width="7"' +
+        ' stroke-linecap="round" stroke-dasharray="' + C.toFixed(1) + '"' +
+        ' stroke-dashoffset="' + (C * (1 - p.percent / 100)).toFixed(1) + '"/>' +
+        '</svg>' +
+        '<span class="emoji">' + v2Esc(c.icon || '💬') + '</span>' +
+        '</div>' +
         '<div class="tile-title">' + v2Esc(c.title) + '</div>' +
         '<div class="tile-sub">' + c.scenarios.length + '개 · ' + sentences + '문장</div>' +
-        '<div class="track"><div class="fill" style="width:' + p.percent + '%"></div></div>' +
-        '<div class="tile-num">' + p.done + ' / ' + p.total + '</div>' +
+        '<div class="tile-pct">' + p.done + ' / ' + p.total + ' 완료</div>' +
         '</a>';
     }
     document.getElementById('list').innerHTML = html;
@@ -67,5 +90,6 @@ build();
 // Coming back from the bookmark or dialogue page should show the new progress
 window.addEventListener('pageshow', function (e) { if (e.persisted) build(); });
 </script>
+<script src="pwa.js"></script>
 </body>
 </html>

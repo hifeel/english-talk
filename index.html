@@ -1,40 +1,75 @@
+<!-- 메인 화면은 두 가지 안을 보관합니다.
+     index-a.html  A안 - 격자 타일 + 막대 진도
+     index-b.html  B안 - 아이콘을 감싼 원형 진도 링
+     이 파일(index.html)은 그중 지금 쓰는 안의 사본입니다. 바꾸려면 원본을
+     덮어쓰기만 하면 됩니다: cp index-b.html index.html
+     하위 화면의 '메인' 링크는 전부 index.html 을 가리키므로 링크는 손댈 것이 없습니다.
+     현재: A안 -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🗣️ English Talk - 영어 회화 학습</title>
-    <meta name="theme-color" content="#667eea">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2563eb">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<title>English Talk - 상황별 영어 회화</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🗣️ English Talk</h1>
-            <p>상황별 영어 회화 학습</p>
-        </header>
+<div class="container">
+  <header>
+    <h1>🗣️ English Talk</h1>
+    <p>상황별 영어 회화</p>
+  </header>
 
-        <p class="local-only-note">
-            진행률과 북마크는 이 기기에만 저장됩니다. 다른 기기에서는 보이지 않고,
-            브라우저 데이터를 지우면 함께 사라집니다.
-        </p>
+  <p class="note">진행률과 북마크는 이 기기에만 저장됩니다.</p>
 
-        <div class="overall-progress" id="overallProgress"></div>
+  <div class="progress" id="overall"></div>
+  <div id="marksLink"></div>
+  <div class="tiles" id="list"></div>
 
-        <div id="marksLink"></div>
+  <footer>제작: hyundam</footer>
+</div>
 
-        <div class="topics-grid" id="topicsGrid"></div>
+<script src="data.js"></script>
+<script>
+function build() {
+  v2LoadAll().then(function (cats) {
+    var html = '';
+    for (var i = 0; i < cats.length; i++) {
+      var c = cats[i];
+      var sentences = 0;
+      for (var j = 0; j < c.scenarios.length; j++) sentences += c.scenarios[j].dialogues.length;
+      var p = v2CategoryProgress(c);
+      html +=
+        '<a class="tile' + (p.total && p.done === p.total ? ' done' : '') +
+        '" href="category.html?cat=' + encodeURIComponent(c.key) + '">' +
+        '<div class="tile-icon">' + v2Esc(c.icon || '💬') + '</div>' +
+        '<div class="tile-title">' + v2Esc(c.title) + '</div>' +
+        '<div class="tile-sub">' + c.scenarios.length + '개 · ' + sentences + '문장</div>' +
+        '<div class="track"><div class="fill" style="width:' + p.percent + '%"></div></div>' +
+        '<div class="tile-num">' + p.done + ' / ' + p.total + '</div>' +
+        '</a>';
+    }
+    document.getElementById('list').innerHTML = html;
 
-        <footer>
-            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
-            <p>제작: hyundam</p>
-        </footer>
-    </div>
+    var o = v2TotalProgress(cats);
+    document.getElementById('overall').innerHTML =
+      '<div class="progress-text">📚 전체 진행률 ' + o.done + ' / ' + o.total +
+      ' 시나리오 (' + o.percent + '%)</div>' +
+      '<div class="track"><div class="fill" style="width:' + o.percent + '%"></div></div>';
 
-    <script src="js/data.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/pwa.js"></script>
+    // Only offer the review page once there is something on it
+    var n = v2MarkCount();
+    document.getElementById('marksLink').innerHTML = n
+      ? '<a class="marks-link" href="marks.html">⭐ 북마크한 문장 ' + n + '개</a>' : '';
+  });
+}
+build();
+// Coming back from the bookmark or dialogue page should show the new progress
+window.addEventListener('pageshow', function (e) { if (e.persisted) build(); });
+</script>
+<script src="pwa.js"></script>
 </body>
 </html>

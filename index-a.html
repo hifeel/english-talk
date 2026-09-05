@@ -1,18 +1,15 @@
 <!-- 메인 화면은 두 가지 안을 보관합니다.
      index-a.html  A안 - 격자 타일 + 막대 진도
      index-b.html  B안 - 아이콘을 감싼 원형 진도 링
-     이 파일(index.html)은 그중 지금 쓰는 안의 사본입니다. 바꾸려면 원본을
-     덮어쓰기만 하면 됩니다: cp v2/index-b.html v2/index.html
-     하위 화면의 '메인' 링크는 전부 index.html 을 가리키므로 링크는 손댈 것이 없습니다.
-     현재: A안 -->
+     이 파일은 원본 보관용입니다. 쓰려면 index.html 로 복사하세요. -->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#2563eb">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="styles.css">
 <title>English Talk - 상황별 영어 회화</title>
 </head>
@@ -70,5 +67,6 @@ build();
 // Coming back from the bookmark or dialogue page should show the new progress
 window.addEventListener('pageshow', function (e) { if (e.persisted) build(); });
 </script>
+<script src="pwa.js"></script>
 </body>
 </html>

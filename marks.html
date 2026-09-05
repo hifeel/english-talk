@@ -1,61 +1,114 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Talk - 북마크</title>
-    <meta name="theme-color" content="#667eea">
-    <link rel="manifest" href="manifest.json">
-    <link rel="apple-touch-icon" href="icons/icon-192.png">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="toggle.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2563eb">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<title>북마크 | English Talk</title>
 </head>
-<body class="scenario-page">
-    <div class="container">
-        <div class="sticky-top">
-            <div class="nav-row">
-                <div class="back-nav"><a href="index.html" class="back-link">🏠 메인</a></div>
-            </div>
-        </div>
-        <header>
-            <h1>⭐ 북마크</h1>
-            <p id="markSubtitle">표시해 둔 문장</p>
-        </header>
-        <div class="sticky-controls">
-            <div class="control-bar">
-                <div class="toggle-container">
-                    <button id="toggleEnglishBtn" class="toggle-btn" onclick="toggleEnglish()">영어</button>
-                    <button id="toggleKoreanBtn" class="toggle-btn" onclick="toggleKorean()">한국어</button>
-                    <button id="toggleSpeakerBtn" class="toggle-btn" onclick="toggleSpeaker()">화자</button>
-                    <button id="repeatBtn" class="repeat-btn" onclick="toggleRepeat()">반복</button>
-                </div>
-                <div class="right-controls">
-                    <div class="play-controls">
-                        <div id="playAllProgress" class="play-all-progress" style="display: none;">
-                            <span id="progressText">0 / 0</span>
-                        </div>
-                        <button id="playAllBtn" class="play-all-btn" onclick="togglePlayAll()">
-                            <span id="playAllIcon">▶️</span>
-                            <span id="playAllText">전체 재생</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body>
+<div class="container">
+  <div class="topbar"><a class="back" href="index.html">← 메인</a></div>
+  <header>
+    <h1>⭐ 북마크</h1>
+    <p id="subtitle">표시해 둔 문장</p>
+  </header>
 
-        <div class="scenario" id="marksContainer"></div>
-
-        <footer>
-            <p>🗣️ English Talk - 상황별 영어 회화 학습</p>
-            <p>제작: hyundam</p>
-        </footer>
+  <div class="toolbar">
+    <div class="toggles">
+      <button class="toggle-btn" id="toggleEn"><span class="dot"></span> 영어</button>
+      <button class="toggle-btn" id="toggleKo"><span class="dot"></span> 한국어</button>
+      <button class="toggle-btn" id="toggleRepeat"><span class="dot"></span> 반복</button>
     </div>
+    <button class="play-all-btn" id="playAllBtn">▶ 전체 재생</button>
+  </div>
 
-    <script src="play-all.js"></script>
-    <script src="toggle.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/marks.js"></script>
-    <script src="js/keyboard.js"></script>
-    <script src="js/pwa.js"></script>
+  <div class="dialogue" id="dialogue"></div>
+  <footer>제작: hyundam</footer>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+<script>
+var GICON = '<svg viewBox="0 0 24 24" aria-hidden="true">' +
+  '<path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>' +
+  '<path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>' +
+  '<path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>' +
+  '<path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>';
+
+function build() {
+  v2LoadAll().then(function (cats) {
+    var items = v2ResolveMarks(cats);
+    var box = document.getElementById('dialogue');
+    var subtitle = document.getElementById('subtitle');
+    box.innerHTML = '';
+
+    if (!items.length) {
+      subtitle.textContent = '아직 북마크한 문장이 없습니다';
+      box.innerHTML = '<p class="empty">대화문에서 문장 옆의 ☆ 를 누르면 여기에 모입니다.</p>';
+      return;
+    }
+
+    items.sort(function (a, b) { return (b.mark.at || 0) - (a.mark.at || 0); });
+    subtitle.textContent = items.length + '개 문장';
+
+    items.forEach(function (it) {
+      var d = it.dialogue;
+      var side = v2Side(d.speaker);
+      var q = encodeURIComponent((d.en || '') + ' 이 영어 문장을 번역하고 설명해줘');
+      var href = 'scenario.html?cat=' + encodeURIComponent(it.catKey) +
+                 '&name=' + encodeURIComponent(it.scenarioKey);
+
+      var el = document.createElement('div');
+      el.className = 'turn ' + side;
+      el.setAttribute('data-src', v2AudioUrl(d.audio));
+      el.innerHTML =
+        '<div class="source"><a href="' + href + '">' + v2Esc(it.catTitle) + ' › ' +
+        v2Esc(it.scenarioTitle) + '</a></div>' +
+        '<div class="turn-head">' +
+        '<div class="speaker ' + side + '">' + v2Esc(d.speaker) + '</div>' +
+        '<div class="turn-btns">' +
+        '<button class="mark-btn marked" type="button" title="북마크 해제">★</button>' +
+        '<button class="play-btn" type="button">▶</button>' +
+        '</div></div>' +
+        '<div class="en">' + v2Esc(d.en) + '</div>' +
+        '<div class="ko-line"><div class="ko">' + v2Esc(d.ko) + '</div>' +
+        '<a class="search-btn" href="https://www.google.com/search?q=' + q +
+        '" target="_blank" rel="noopener noreferrer">' + GICON + '</a></div>';
+
+      el.addEventListener('click', function () { V2Player.playTurn(el); });
+      el.querySelector('.play-btn').addEventListener('click', function (e) {
+        e.stopPropagation();
+        V2Player.playTurn(el);
+      });
+      el.querySelector('.search-btn').addEventListener('click', function (e) { e.stopPropagation(); });
+      el.querySelector('.mark-btn').addEventListener('click', function (e) {
+        e.stopPropagation();
+        v2ToggleMark(it.scenarioKey, it.index, it.dialogue, it.catKey);
+        // Drop the row rather than leave a hollow ☆ on a page where everything
+        // is, by definition, bookmarked
+        if (el.parentNode) el.parentNode.removeChild(el);
+        var left = box.querySelectorAll('.turn').length;
+        subtitle.textContent = left ? left + '개 문장' : '아직 북마크한 문장이 없습니다';
+      });
+      box.appendChild(el);
+    });
+  });
+}
+
+document.getElementById('toggleEn').addEventListener('click', function () { V2Player.toggleLang('en'); });
+document.getElementById('toggleKo').addEventListener('click', function () { V2Player.toggleLang('ko'); });
+document.getElementById('toggleRepeat').addEventListener('click', function () { V2Player.toggleRepeat(); });
+document.getElementById('playAllBtn').addEventListener('click', function () { V2Player.playAll(); });
+
+V2Player.applyStates();
+V2Player.initKeyboard();
+build();
+window.addEventListener('pageshow', function (e) { if (e.persisted) build(); });
+</script>
+<script src="pwa.js"></script>
 </body>
 </html>

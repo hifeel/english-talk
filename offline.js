@@ -1,13 +1,12 @@
 /* Per-category audio download.
  *
- * Ported from the root app's js/offline.js. Two things differ:
+ * URLs are resolved through v2AudioUrl(), which makes them absolute - the same
+ * keys anything saved before this interface landed was stored under, so those
+ * downloads carry over rather than having to be fetched again.
  *
- *   - URLs are resolved through v2AudioUrl(), which makes them absolute and so
- *     identical to the keys the root app writes. The two UIs share one store:
- *     save a category in either and the other already has it.
- *   - nothing here depends on a service worker. app.js reads the cache itself
- *     when it plays, because a worker registered from this subfolder could not
- *     intercept ../audio/ requests anyway.
+ * Playback does not depend on the service worker: app.js reads this cache
+ * itself and plays from a blob, so a saved category works even before the
+ * worker is in control.
  *
  * There is no separate record of what is saved - the cache is the state, so it
  * cannot drift the way a flag would.

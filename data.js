@@ -1,15 +1,17 @@
-/* v2 data layer.
+/* Data layer.
  *
- * Reads the repository's existing data/ and audio/ - nothing is converted or
- * copied. These pages sit one level down, so every path from the JSON (which
- * is written relative to the repository root) gets BASE put in front of it.
+ * Reads data/ and audio/ as the JSON writes them - paths there are relative to
+ * the repository root, which is where these pages sit, so BASE is empty. It
+ * exists because these pages lived one level down while the interface was
+ * being built, and audio URLs are still resolved through it so they stay
+ * absolute and match the keys already in the audio cache.
  *
  * Progress, bookmarks and display toggles use the SAME localStorage keys as
  * the app at the root, so the two UIs are interchangeable: study in one, the
  * other already knows what you finished.
  */
 
-var V2_BASE = '../';
+var V2_BASE = '';
 
 var V2_INDEX = null;
 var V2_INDEX_PROMISE = null;
@@ -111,7 +113,7 @@ function v2Side(speaker) {
   return V2_YOU[speaker] ? 'you' : 'them';
 }
 
-/* ---- study progress (shared with the root app) ---- */
+/* ---- study progress ---- */
 
 var V2_DONE_KEY = 'englishTalk_done';
 
@@ -152,7 +154,7 @@ function v2TotalProgress(cats) {
   return { done: count, total: total, percent: total ? Math.round(count / total * 100) : 0 };
 }
 
-/* ---- bookmarks (shared with the root app) ----
+/* ---- bookmarks ----
  * Entries carry the English sentence as well as the position, and are repaired
  * by text when the position no longer holds that sentence - scenarios here have
  * been split and renumbered more than once.
