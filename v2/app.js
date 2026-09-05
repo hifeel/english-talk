@@ -22,7 +22,11 @@
   var playAllIndex = 0;
   var advanceTimer = null;
 
-  var showEn = true, showKo = true, showSpeaker = true, repeatOn = false;
+  var showEn = true, showKo = true, repeatOn = false;
+  // v2 has no speaker toggle - the speaker line carries the buttons, so hiding
+  // it would hide them. The root app still offers it, and the key is shared, so
+  // the value is carried through untouched rather than overwritten.
+  var speakerPref = true;
 
   /* ---- display state, shared with the root app ---- */
 
@@ -31,7 +35,7 @@
       var s = JSON.parse(localStorage.getItem('englishTalk_states') || '{}');
       showEn = s.showEnglish !== false;
       showKo = s.showKorean !== false;
-      showSpeaker = s.showSpeaker !== false;
+      speakerPref = s.showSpeaker !== false;
       repeatOn = s.repeatMode === true;
     } catch (e) {}
   }
@@ -39,17 +43,15 @@
     try {
       localStorage.setItem('englishTalk_states', JSON.stringify({
         showEnglish: showEn, showKorean: showKo,
-        showSpeaker: showSpeaker, repeatMode: repeatOn
+        showSpeaker: speakerPref, repeatMode: repeatOn
       }));
     } catch (e) {}
   }
   function paint() {
     document.body.classList.toggle('hide-en', !showEn);
     document.body.classList.toggle('hide-ko', !showKo);
-    document.body.classList.toggle('hide-speaker', !showSpeaker);
     setOff('toggleEn', !showEn);
     setOff('toggleKo', !showKo);
-    setOff('toggleSpeaker', !showSpeaker);
     setOff('toggleRepeat', !repeatOn);
   }
   function setOff(id, off) {
@@ -60,8 +62,7 @@
 
   function toggleLang(which) {
     if (which === 'en') showEn = !showEn;
-    else if (which === 'ko') showKo = !showKo;
-    else showSpeaker = !showSpeaker;
+    else showKo = !showKo;
     paint();
     saveStates();
   }

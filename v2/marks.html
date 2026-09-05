@@ -21,7 +21,6 @@
     <div class="toggles">
       <button class="toggle-btn" id="toggleEn"><span class="dot"></span> 영어</button>
       <button class="toggle-btn" id="toggleKo"><span class="dot"></span> 한국어</button>
-      <button class="toggle-btn" id="toggleSpeaker"><span class="dot"></span> 화자</button>
       <button class="toggle-btn" id="toggleRepeat"><span class="dot"></span> 반복</button>
     </div>
     <button class="play-all-btn" id="playAllBtn">▶ 전체 재생</button>
@@ -67,13 +66,14 @@ function build() {
       el.className = 'turn ' + side;
       el.setAttribute('data-src', v2AudioUrl(d.audio));
       el.innerHTML =
+        '<div class="source"><a href="' + href + '">' + v2Esc(it.catTitle) + ' › ' +
+        v2Esc(it.scenarioTitle) + '</a></div>' +
+        '<div class="turn-head">' +
+        '<div class="speaker ' + side + '">' + v2Esc(d.speaker) + '</div>' +
         '<div class="turn-btns">' +
         '<button class="mark-btn marked" type="button" title="북마크 해제">★</button>' +
         '<button class="play-btn" type="button">▶</button>' +
-        '</div>' +
-        '<div class="source"><a href="' + href + '">' + v2Esc(it.catTitle) + ' › ' +
-        v2Esc(it.scenarioTitle) + '</a></div>' +
-        '<div class="speaker ' + side + '">' + v2Esc(d.speaker) + '</div>' +
+        '</div></div>' +
         '<div class="en">' + v2Esc(d.en) + '</div>' +
         '<div class="ko-line"><div class="ko">' + v2Esc(d.ko) + '</div>' +
         '<a class="search-btn" href="https://www.google.com/search?q=' + q +
@@ -101,7 +101,6 @@ function build() {
 
 document.getElementById('toggleEn').addEventListener('click', function () { V2Player.toggleLang('en'); });
 document.getElementById('toggleKo').addEventListener('click', function () { V2Player.toggleLang('ko'); });
-document.getElementById('toggleSpeaker').addEventListener('click', function () { V2Player.toggleLang('speaker'); });
 document.getElementById('toggleRepeat').addEventListener('click', function () { V2Player.toggleRepeat(); });
 document.getElementById('playAllBtn').addEventListener('click', function () { V2Player.playAll(); });
 
